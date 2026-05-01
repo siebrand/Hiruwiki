@@ -100,33 +100,34 @@ document.querySelectorAll( '.hiruwiki[data-module="positive-coordinates"]' ).for
     host.innerHTML = [
       '<div class="cex-wrapper">',
       '  <div class="cex-mode-bar">',
-      '    <button class="cex-mode-btn cex-active" data-mode="explorer">🔭 Esploratu</button>',
-      '    <button class="cex-mode-btn" data-mode="challenge">🎯 Erronka</button>',
+      '    <button class="cex-mode-btn cex-active" data-mode="explorer">' + t('btnExplore') + '</button>',
+      '    <button class="cex-mode-btn" data-mode="challenge">' + t('btnChallenge') + '</button>',
       '  </div>',
       '  <div class="cex-body">',
       '    <canvas class="cex-canvas"></canvas>',
       '    <div class="cex-sidebar">',
       '      <div class="cex-explorer-panel">',
-      '        <div class="cex-sidebar-title">Esploratu koordenatuen sistema</div>',
+      '        <div class="cex-sidebar-title">' + t('titleExplore') + '</div>',
       '        <div class="cex-info-bar">',
-      '          Puntua:<br>',
+      '          ' + t('pointLabel') + '<br>',
       '          (<span class="cex-cx"></span>, <span class="cex-cy"></span>)',
       '        </div>',
-      '        <div class="cex-hint">Mugi ezazu ★ bere gainean klik eginez — zenbaki arruntak erabiltzen ditu</div>',
+      '        <div class="cex-hint">' + t('hintExplore') + '</div>',
       '      </div>',
       '      <div class="cex-challenge-panel">',
       '        <div class="cex-challenge-prompt"></div>',
       '        <div class="cex-feedback"></div>',
       '        <div class="cex-btn-col">',
-      '          <button class="cex-action-btn cex-check-btn">Zuzendu ✓</button>',
-      '          <button class="cex-action-btn cex-next-btn">Hurrengoa →</button>',
+      '          <button class="cex-action-btn cex-check-btn">' + t('btnCheck') + '</button>',
+      '          <button class="cex-action-btn cex-next-btn">' + t('btnNext') + '</button>',
       '        </div>',
-      '        <div class="cex-hint">Mugi ezazu ★ proposatutako koordenatuetara eta klik egin Zuzendu botoian</div>',
+      '        <div class="cex-hint">' + t('hintChallenge') + '</div>',
       '      </div>',
       '    </div>',
       '  </div>',
       '</div>'
     ].join( '\n' );
+
 
     initInstance( host );
   } );

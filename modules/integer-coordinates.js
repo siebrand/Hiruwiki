@@ -100,33 +100,34 @@ document.querySelectorAll( '.hiruwiki[data-module="integer-coordinates"]' ).forE
     host.innerHTML = [
       '<div class="icx-wrapper">',
       '  <div class="icx-mode-bar">',
-      '    <button class="icx-mode-btn icx-active" data-mode="explorer">🔭 Esploratu</button>',
-      '    <button class="icx-mode-btn" data-mode="challenge">🎯 Erronka</button>',
+      '    <button class="icx-mode-btn icx-active" data-mode="explorer">' + t('btnExplore') + '</button>',
+      '    <button class="icx-mode-btn" data-mode="challenge">' + t('btnChallenge') + '</button>',
       '  </div>',
       '  <div class="icx-body">',
       '    <canvas class="icx-canvas"></canvas>',
       '    <div class="icx-sidebar">',
       '      <div class="icx-explorer-panel">',
-      '        <div class="icx-sidebar-title">Esploratu koordenatuen sistema</div>',
+      '        <div class="icx-sidebar-title">' + t('titleExplore') + '</div>',
       '        <div class="icx-info-bar">',
-      '          Puntua:<br>',
+      '          ' + t('pointLabel') + '<br>',
       '          (<span class="icx-cx"></span>, <span class="icx-cy"></span>)',
       '        </div>',
-      '        <div class="icx-hint">Mugi ezazu ★ bere gainean klik eginez — zenbaki arruntak erabiltzen ditu</div>',
+      '        <div class="icx-hint">' + t('hintExplore') + '</div>',
       '      </div>',
       '      <div class="icx-challenge-panel">',
       '        <div class="icx-challenge-prompt"></div>',
       '        <div class="icx-feedback"></div>',
       '        <div class="icx-btn-col">',
-      '          <button class="icx-action-btn icx-check-btn">Zuzendu ✓</button>',
-      '          <button class="icx-action-btn icx-next-btn">Hurrengoa →</button>',
+      '          <button class="icx-action-btn icx-check-btn">' + t('btnCheck') + '</button>',
+      '          <button class="icx-action-btn icx-next-btn">' + t('btnNext') + '</button>',
       '        </div>',
-      '        <div class="icx-hint">Mugi ezazu ★ proposatutako koordenatuetara eta klik egin Zuzendu botoian</div>',
+      '        <div class="icx-hint">' + t('hintChallenge') + '</div>',
       '      </div>',
       '    </div>',
       '  </div>',
       '</div>'
     ].join( '\n' );
+
 
     initInstance( host );
   } );
