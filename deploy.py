@@ -146,7 +146,27 @@ class MediaWikiClient:
             raise Exception(f"Save failed: {res['error']['info']}")
         return res
 
+    def delete_page(self, title, reason):
+        if not self.edit_token:
+            self.get_edit_token()
+
+        data = {
+            "action": "delete",
+            "title": title,
+            "reason": reason,
+            "token": self.edit_token,
+            "format": "json"
+        }
+        res = self.request(data)
+        if "error" in res:
+            # If the page is already gone, don't treat it as a hard error
+            if res["error"]["code"] == "missingtitle":
+                return res
+            raise Exception(f"Delete failed: {res['error']['info']}")
+        return res
+
 def get_git_hash():
+
     try:
         return subprocess.check_output(["git", "rev-parse", "--short", "HEAD"]).decode().strip()
     except:
@@ -193,7 +213,9 @@ def main():
     parser.add_argument("-d", "--dry", action="store_true", help="Dry run: show diffs only")
     parser.add_argument("-c", "--create", action="store_true", help="Create pages if missing")
     parser.add_argument("-y", "--yes", action="store_true", help="Skip confirmation prompts")
-    parser.add_argument("files", nargs="*", help="Specific files to deploy (default: all)")
+    parser.add_argument("--delete", action="store_true", help="Delete the specified files/templates from the wiki")
+    parser.add_argument("files", nargs="*", help="Specific files to deploy/delete (default: all)")
+
 
     args = parser.parse_args()
     creds = load_credentials()
@@ -234,15 +256,17 @@ def main():
                     deploy_list.append((rel_path, MODULES_BASE + f))
 
     if not deploy_list:
-        print("No files found to deploy.")
+        print("No files found to process.")
         sys.exit(0)
 
+    action_name = "Deleting" if args.delete else "Deploying"
     if not args.dry and not args.yes:
-        print(f"Deploying {len(deploy_list)} files to {api_url}")
+        print(f"{action_name} {len(deploy_list)} files on {api_url}")
         confirm = input("Proceed? (y/n): ").lower()
         if confirm != "y":
             print("Aborted.")
             sys.exit(0)
+
 
     client = MediaWikiClient(api_url, username, password, token)
     try:
@@ -273,55 +297,73 @@ def main():
 
         remote_content = remote_page.get("content", "")
 
-        if not remote_page["missing"] and remote_content.strip() == local_content.strip():
-            print("  No changes, skipping.")
-        elif remote_page["missing"] and not args.create:
-            print("  Page missing on-wiki, skipping (use --create to create).")
-        elif args.dry:
-            print("  Dry run: Differences:")
-            diff = difflib.unified_diff(
-                remote_content.splitlines(),
-                local_content.splitlines(),
-                fromfile=f"on-wiki: {remote_title}",
-                tofile=f"local: {local_path}",
-                lineterm=""
-            )
-            print("\n".join(diff))
+        if args.delete:
+            if args.dry:
+                print(f"  Dry run: Would delete {remote_title}")
+            else:
+                try:
+                    client.delete_page(remote_title, "Hiruwiki cleanup/deletion")
+                    print(f"  Successfully deleted {remote_title}.")
+                except Exception as e:
+                    print(f"  Error deleting {remote_title}: {e}")
         else:
-            summary = f"Repo at {git_hash}: Deployment update"
-            try:
-                client.save_page(remote_title, local_content, summary, nocreate=not args.create)
-                print(f"  Successfully deployed.")
-            except Exception as e:
-                print(f"  Error saving {remote_title}: {e}")
+            if not remote_page["missing"] and remote_content.strip() == local_content.strip():
+                print("  No changes, skipping.")
+            elif remote_page["missing"] and not args.create:
+                print("  Page missing on-wiki, skipping (use --create to create).")
+            elif args.dry:
+                print("  Dry run: Differences:")
+                diff = difflib.unified_diff(
+                    remote_content.splitlines(),
+                    local_content.splitlines(),
+                    fromfile=f"on-wiki: {remote_title}",
+                    tofile=f"local: {local_path}",
+                    lineterm=""
+                )
+                print("\n".join(diff))
+            else:
+                summary = f"Repo at {git_hash}: Deployment update"
+                try:
+                    client.save_page(remote_title, local_content, summary, nocreate=not args.create)
+                    print(f"  Successfully deployed.")
+                except Exception as e:
+                    print(f"  Error saving {remote_title}: {e}")
 
-        # Automated Template Creation Logic
-        if args.create and local_path.startswith(MODULES_DIR + "/") and local_path.endswith(".js"):
+        # Automated Template Creation/Deletion Logic
+        if local_path.startswith(MODULES_DIR + "/") and local_path.endswith(".js"):
             module_id = os.path.basename(local_path).replace(".js", "")
             translated_name = i18n_data.get(module_id, {}).get(target_lang, {}).get("_name", module_id)
             all_modules.append((translated_name, module_id))
             template_title = f"{TEMPLATES_BASE}/{translated_name}"
-
-
             
-            print(f"  Checking module template {template_title} ({module_id})...")
-            try:
-                tpl_page = client.read_page(template_title)
-                if tpl_page["missing"]:
-                    tpl_content = (
-                        f'<div class="hiruwiki" data-module="{module_id}"></div>\n'
-                        f'<includeonly>[[{CATEGORY_BASE}]]</includeonly>'
-                    )
-                    tpl_summary = f"Create Hiruwiki module template for {module_id} ({translated_name})"
-                    client.save_page(template_title, tpl_content, tpl_summary)
-                    print(f"    Successfully created template.")
-
+            if args.delete:
+                if args.dry:
+                    print(f"  Dry run: Would delete template {template_title}")
                 else:
-                    print(f"    Template already exists.")
-            except Exception as e:
-                print(f"    Error processing module template: {e}")
+                    try:
+                        client.delete_page(template_title, f"Hiruwiki cleanup: delete template for {module_id}")
+                        print(f"    Successfully deleted template.")
+                    except Exception as e:
+                        print(f"    Error deleting template: {e}")
+            elif args.create:
+                print(f"  Checking module template {template_title} ({module_id})...")
+                try:
+                    tpl_page = client.read_page(template_title)
+                    if tpl_page["missing"]:
+                        tpl_content = (
+                            f'<div class="hiruwiki" data-module="{module_id}"></div>\n'
+                            f'<includeonly>[[{CATEGORY_BASE}]]</includeonly>'
+                        )
+                        tpl_summary = f"Create Hiruwiki module template for {module_id} ({translated_name})"
+                        client.save_page(template_title, tpl_content, tpl_summary)
+                        print(f"    Successfully created template.")
+                    else:
+                        print(f"    Template already exists.")
+                except Exception as e:
+                    print(f"    Error processing module template: {e}")
 
     # Create master template list
+
     if args.create and all_modules:
         print(f"Updating master template list at {TEMPLATES_BASE}...")
         all_modules.sort(key=lambda x: x[0])  # Sort by translated name
