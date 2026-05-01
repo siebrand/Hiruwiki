@@ -10,19 +10,14 @@
 
         loadedModules.add(name);
 
-        const jsPage  = 'MediaWiki:Hiruwiki/modules/' + encodeURIComponent(name) + '.js';
-        const cssPage = 'MediaWiki:Hiruwiki/modules/' + encodeURIComponent(name) + '.css';
+        const jsUrl  = 'https://www.mediawiki.org/w/index.php?title=MediaWiki:Hiruwiki/modules/' + encodeURIComponent(name) + '.js&action=raw&ctype=text/javascript';
+        const cssUrl = 'https://www.mediawiki.org/w/index.php?title=MediaWiki:Hiruwiki/modules/' + encodeURIComponent(name) + '.css&action=raw&ctype=text/css';
 
         // load JS
-        mw.loader.load(
-            mw.util.getUrl(jsPage, { action: 'raw', ctype: 'text/javascript' })
-        );
+        mw.loader.load(jsUrl);
 
         // load CSS
-        mw.loader.load(
-            mw.util.getUrl(cssPage, { action: 'raw', ctype: 'text/css' }),
-            'text/css'
-        );
+        mw.loader.load(cssUrl, 'text/css');
     }
 
     function scanPage() {
