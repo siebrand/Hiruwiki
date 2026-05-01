@@ -1,0 +1,164 @@
+.quadrangle-angles {
+  display: flex;
+  align-items: stretch;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 940px;
+}
+
+.quadrangle-angles .qa-svg {
+  flex: 1 1 auto;
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  cursor: crosshair;
+}
+
+.quadrangle-angles .qa-panel {
+  width: 210px;
+  flex-shrink: 0;
+  border: 1px solid #ccc;
+  border-left: none;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 14px 13px;
+  gap: 7px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+@media (max-width: 599px) {
+  .quadrangle-angles {
+    flex-direction: column;
+  }
+  .quadrangle-angles .qa-svg {
+    width: 100%;
+    border-bottom: none;
+  }
+  .quadrangle-angles .qa-panel {
+    width: 100%;
+    border-top: none;
+    overflow-y: visible;
+  }
+}
+
+/* ── Component styles ─────────────────────────── */
+
+.quadrangle-angles .qa-panel h3 {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #999;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+  margin: 0 0 2px 0;
+}
+
+.quadrangle-angles .qa-angle-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quadrangle-angles .qa-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.quadrangle-angles .qa-letter {
+  font-weight: bold;
+  font-size: 13px;
+  width: 14px;
+}
+
+.quadrangle-angles .qa-bar-wrap {
+  flex: 1;
+  height: 5px;
+  background: #eee;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.quadrangle-angles .qa-bar {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.05s;
+}
+
+.quadrangle-angles .qa-val {
+  font-size: 12px;
+  font-weight: bold;
+  min-width: 46px;
+  text-align: right;
+}
+
+.quadrangle-angles .qa-sum-section {
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.quadrangle-angles .qa-pie-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #999;
+}
+
+.quadrangle-angles .qa-equation {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.quadrangle-angles .qa-total-row {
+  border-top: 1px solid #eee;
+  padding-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.quadrangle-angles .qa-total-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #999;
+}
+
+.quadrangle-angles .qa-total-val {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.quadrangle-angles .qa-reset-btn {
+  font-size: 12px;
+background-color: var(--background-color-destructive, #bf3c2c);
+  border: 1px solid #ccc;
+  color: white;
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+}
+
+.quadrangle-angles .qa-reset-btn:hover {
+  border-color: #333;
+ background-color: var(--background-color-destructive--hover, #9f3526);
+}
+
+.quadrangle-angles .qa-reset-btn:active {
+	background-color: var(--background-color-destructive--active, #612419);
+}

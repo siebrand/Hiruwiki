@@ -1,0 +1,228 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   Hiruwiki module: fibonacci
+   All selectors namespaced with .hw-fib to avoid collisions.
+   No CSS custom properties — compatible with all MediaWiki skins.
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.hw-fib {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #202122;
+    padding: 0.75em 0;
+    max-width: 680px;
+}
+
+/* ── Section labels ─────────────────────────────────────────────────────────── */
+.hw-fib-sec {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.06em;
+    color: #72777d;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* ── Controls ───────────────────────────────────────────────────────────────── */
+.hw-fib-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1.25em;
+}
+
+.hw-fib-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1.5px solid #c8ccd1;
+    background: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #202122;
+    flex-shrink: 0;
+    transition: background 0.15s;
+}
+
+.hw-fib-btn:hover { background: #f8f9fa; }
+.hw-fib-btn:disabled { opacity: 0.3; cursor: default; }
+
+.hw-fib-step-label {
+    font-size: 13px;
+    color: #72777d;
+    flex: 1;
+    text-align: center;
+}
+
+/* ── Sequence row ───────────────────────────────────────────────────────────── */
+.hw-fib-seq-row {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 1.25em;
+}
+
+.hw-fib-seq-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-size: 13px;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+    border: 1.5px solid transparent;
+    transition: transform 0.35s, background 0.35s;
+}
+
+.hw-fib-seq-sep {
+    font-size: 13px;
+    color: #72777d;
+}
+
+/* ── Addition block ─────────────────────────────────────────────────────────── */
+.hw-fib-addition {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    background: #f8f9fa;
+    border: 1px solid #eaecf0;
+    border-radius: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 1.25em;
+}
+
+.hw-fib-num {
+    font-size: 42px;
+    font-weight: bold;
+    font-variant-numeric: tabular-nums;
+    border-radius: 10px;
+    padding: 8px 18px;
+    border: 2px solid transparent;
+    transition: background 0.4s, color 0.4s, border-color 0.4s;
+}
+
+.hw-fib-op {
+    font-size: 32px;
+    color: #72777d;
+    font-weight: 300;
+}
+
+/* ── Cards ──────────────────────────────────────────────────────────────────── */
+.hw-fib-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 1.25em;
+}
+
+.hw-fib-rcard {
+    background: #f8f9fa;
+    border: 2px solid #eaecf0;
+    border-radius: 4px;
+    padding: 14px 16px;
+    transition: border-color 0.3s, background 0.3s;
+}
+
+.hw-fib-rcard-lbl {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #72777d;
+    margin-bottom: 8px;
+}
+
+.hw-fib-rcard-val {
+    font-size: 28px;
+    font-weight: bold;
+    font-variant-numeric: tabular-nums;
+    margin-bottom: 4px;
+}
+
+.hw-fib-rcard-sub {
+    font-size: 12px;
+    color: #72777d;
+    margin-top: 6px;
+}
+
+/* Ratio equation inside card */
+.hw-fib-ratio-eq {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+}
+
+.hw-fib-ratio-pill {
+    font-size: 22px;
+    font-weight: bold;
+    font-variant-numeric: tabular-nums;
+    border-radius: 8px;
+    padding: 4px 12px;
+    border: 2px solid transparent;
+    transition: background 0.4s, color 0.4s, border-color 0.4s;
+}
+
+.hw-fib-ratio-op {
+    font-size: 18px;
+    color: #72777d;
+}
+
+.hw-fib-ratio-result {
+    font-size: 24px;
+    font-weight: bold;
+    font-variant-numeric: tabular-nums;
+    transition: color 0.3s;
+}
+
+.hw-fib-phi-error {
+    font-weight: bold;
+}
+
+/* ── Chart ──────────────────────────────────────────────────────────────────── */
+.hw-fib-chart {
+    width: 100%;
+    height: 180px;
+    display: block;
+    margin-bottom: 1.25em;
+}
+
+/* ── Insight ────────────────────────────────────────────────────────────────── */
+.hw-fib-insight {
+    background: #f8f9fa;
+    border: 1px solid #eaecf0;
+    border-radius: 4px;
+    padding: 10px 14px;
+    font-size: 13px;
+    color: #54595d;
+    line-height: 1.7;
+    min-height: 48px;
+}
+
+.hw-fib-insight strong {
+    color: #202122;
+    font-weight: bold;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────────── */
+@media ( max-width: 480px ) {
+    .hw-fib-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .hw-fib-num {
+        font-size: 32px;
+        padding: 6px 12px;
+    }
+
+    .hw-fib-op {
+        font-size: 24px;
+    }
+}

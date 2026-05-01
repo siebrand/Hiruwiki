@@ -1,0 +1,122 @@
+.pythagoras-gadget {
+  width: 100%;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+.pytha-controls {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pytha-controls input[type="number"] {
+  width: 60px;
+}
+
+.pytha-controls label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.equation {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+/* SVG styling */
+.pythagoras-gadget svg {
+  background: linear-gradient(0deg, #f0f0f0 1px, transparent 1px), 
+              linear-gradient(90deg, #f0f0f0 1px, transparent 1px);
+  background-size: 38px 38px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Squares */
+.sqA { fill: #FF9999; stroke: #FF6666; stroke-width: 2; }
+.sqB { fill: #99CCFF; stroke: #3399FF; stroke-width: 2; }
+.sqC { fill: #99FF99; stroke: #33CC33; stroke-width: 2; }
+
+/* Triangle sides matching squares */
+.sideA { stroke: #FF6666; stroke-width: 3; }
+.sideB { stroke: #3399FF; stroke-width: 3; }
+.sideC { stroke: #33CC33; stroke-width: 3; }
+
+/* Labels for segment lengths, darker than squares */
+.lenLabel {
+  font-size: 14px;
+  font-weight: bold;
+  fill: #cc3333; /* darker red for a */
+}
+
+.lenLabel:nth-of-type(2) { fill: #0066cc; } /* darker blue for b */
+.lenLabel:nth-of-type(3) { fill: #009900; } /* darker green for c */
+
+/* Area labels, centered in squares, matching square color */
+.areaLabel {
+  font-size: 14px;
+  font-weight: bold;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+.areaLabel:nth-of-type(1) { fill: #660000; } /* a^2 */
+.areaLabel:nth-of-type(2) { fill: #003366; } /* b^2 */
+.areaLabel:nth-of-type(3) { fill: #006600; } /* c^2 */
+
+/* Angles labels */
+.angleLabel {
+  font-size: 12px;
+  fill: black;
+  font-style: italic;
+}
+
+.mainAngle {font-weight: bold;}
+
+.inputA, .inputB, .inputAngle {
+  padding: 6px 9px;
+  width: 100%;
+  outline: none;
+  background: #FFFFFF;
+	font-size: 18px;
+  border-width: 0;
+  border-radius: 0px;
+  transition: .3s ease;
+}
+
+.inputA:focus, .inputB:focus. .inputAngle:focus {
+  background: #F2F2F2;
+  border-radius: 10px;
+}
+
+.pytha-a, .pytha-b {
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.inputA:focus { border: 1px solid #CC3333;}
+.inputB:focus { border: 1px solid #3399FF;}
+
+.inputA, .inputA::placeholder, .pytha-a {color: #CC3333;}
+.inputB, .inputB::placeholder, .pytha-b {color: #3399FF;}
+
+.resetBtn {
+	background-color: var(--background-color-destructive, #bf3c2c);
+	color: white;
+	border: 0px;padding: 6px;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+.resetBtn:hover {
+	background-color: var(--background-color-destructive--hover, #9f3526);
+}
+.resetBtn:active {
+	background-color: var(--background-color-destructive--active, #612419);
+}

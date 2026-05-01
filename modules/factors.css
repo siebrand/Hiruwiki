@@ -1,0 +1,200 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   Hiruwiki module: factors
+   All selectors namespaced with .hw-factors to avoid collisions.
+   No CSS custom properties — compatible with all MediaWiki skins.
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.hw-factors {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #202122;
+    padding: 0.75em 0;
+    max-width: 720px;
+}
+
+/* ── Section labels ─────────────────────────────────────────────────────────── */
+.hw-fct-sec {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.06em;
+    color: #72777d;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+/* ── Sliders ────────────────────────────────────────────────────────────────── */
+.hw-fct-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 1.25em;
+}
+
+.hw-fct-ctrl-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hw-fct-ctrl-row input[type="range"] {
+    flex: 1;
+    cursor: pointer;
+}
+
+.hw-fct-badge {
+    font-size: 32px;
+    font-weight: bold;
+    min-width: 44px;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+.hw-fct-badgeA { color: #378ADD; }
+.hw-fct-badgeB { color: #C0392B; }
+
+/* ── Factor strip rows ──────────────────────────────────────────────────────── */
+.hw-fct-strip-wrap {
+    margin-bottom: 1em;
+}
+
+.hw-fct-strip-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+.hw-fct-strip-label {
+    font-size: 14px;
+    font-weight: bold;
+    min-width: 28px;
+    color: #54595d;
+}
+
+.hw-fct-sym {
+    font-size: 15px;
+    color: #72777d;
+    margin: 0 1px;
+}
+
+/* ── Factor pills ───────────────────────────────────────────────────────────── */
+.hw-fct-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: default;
+    transition: transform 0.15s;
+}
+
+.hw-fct-pill:hover {
+    transform: scale(1.15);
+}
+
+/* ── Legend ─────────────────────────────────────────────────────────────────── */
+.hw-fct-legend {
+    display: flex;
+    gap: 16px;
+    font-size: 12px;
+    color: #54595d;
+    margin-bottom: 1.25em;
+    flex-wrap: wrap;
+}
+
+.hw-fct-leg {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.hw-fct-leg-sq {
+    width: 13px;
+    height: 13px;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.hw-fct-leg-onlyA {
+    background: #B5D4F4;
+    border: 1.5px solid #378ADD;
+}
+
+.hw-fct-leg-onlyB {
+    background: #F7C1C1;
+    border: 1.5px solid #C0392B;
+}
+
+.hw-fct-leg-shared {
+    background: #C0DD97;
+    border: 1.5px solid #639922;
+}
+
+/* ── Result cards ───────────────────────────────────────────────────────────── */
+.hw-fct-results {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 1.25em;
+}
+
+.hw-fct-rcard {
+    background: #f8f9fa;
+    border: 1px solid #eaecf0;
+    border-radius: 4px;
+    padding: 12px 16px;
+}
+
+.hw-fct-rcard-lbl {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #72777d;
+    margin-bottom: 6px;
+}
+
+.hw-fct-rcard-val {
+    font-size: 28px;
+    font-weight: bold;
+    font-variant-numeric: tabular-nums;
+    margin-bottom: 8px;
+}
+
+.hw-fct-rcard-formula {
+    font-size: 12px;
+    color: #72777d;
+    font-variant-numeric: tabular-nums;
+    margin-top: 6px;
+}
+
+.hw-fct-none {
+    font-size: 12px;
+    color: #72777d;
+}
+
+/* ── Insight box ────────────────────────────────────────────────────────────── */
+.hw-fct-insight {
+    background: #f8f9fa;
+    border: 1px solid #eaecf0;
+    border-radius: 4px;
+    padding: 10px 14px;
+    font-size: 13px;
+    color: #54595d;
+    line-height: 1.7;
+    min-height: 48px;
+}
+
+.hw-fct-insight strong {
+    color: #202122;
+    font-weight: bold;
+}
+
+/* ── Responsive: stack cards on narrow screens ──────────────────────────────── */
+@media ( max-width: 480px ) {
+    .hw-fct-controls,
+    .hw-fct-results {
+        grid-template-columns: 1fr;
+    }
+}

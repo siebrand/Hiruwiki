@@ -1,0 +1,44 @@
+/* Hiruwiki Triangle Angles Module */
+
+.hiruwiki[data-module="triangle-angles"] {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    margin: 1em 0;
+}
+
+.hiruwiki[data-module="triangle-angles"] svg {
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    cursor: crosshair;
+    touch-action: none;
+}
+
+.hiruwiki[data-module="triangle-angles"] .angle-label {
+    font-weight: bold;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+.hiruwiki[data-module="triangle-angles"] .angleA { fill: red; }
+.hiruwiki[data-module="triangle-angles"] .angleB { fill: green; }
+.hiruwiki[data-module="triangle-angles"] .angleC { fill: blue; }
+
+.hiruwiki[data-module="triangle-angles"] .angle-letter {
+    font-weight: bold;
+}
+
+.hiruwiki[data-module="triangle-angles"] .resetBtn {
+	background-color: var(--background-color-destructive, #bf3c2c);
+	color: white;
+	border: 0px;padding: 6px;
+	border-radius: 2px;
+	    cursor: pointer;
+}
+
+.hiruwiki[data-module="triangle-angles"] .resetBtn:hover {
+	background-color: var(--background-color-destructive--hover, #9f3526);
+}
+.hiruwiki[data-module="triangle-angles"] .resetBtn:active {
+	background-color: var(--background-color-destructive--active, #612419);
+}

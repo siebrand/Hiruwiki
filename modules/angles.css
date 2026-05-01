@@ -1,0 +1,38 @@
+.hiruwiki-angles {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    margin: 10px 0;
+}
+
+.hiruwiki-angles canvas {
+    border: 1px solid #bbb;
+    background: white;
+}
+
+.hiruwiki-angles-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 150px;
+}
+
+.hiruwiki-angles-panel button {
+    padding: 6px 8px;
+    cursor: pointer;
+    border: 1px solid #aaa;
+    background: #f6f6f6;
+}
+
+.hiruwiki-angles-panel button:hover {
+    background: #eaeaea;
+}
+
+.hiruwiki-angles-info {
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+.hiruwiki-angles-info .invalid {
+    color: #c00;
+}

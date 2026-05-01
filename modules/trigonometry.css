@@ -1,0 +1,217 @@
+/* Hiruwiki module: trigonometry
+ * Companion stylesheet for trigonometry.js
+ */
+
+/* ── Layout ──────────────────────────────────────────────────────── */
+.htrig-wrap {
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #3d3d3a;
+    padding: 0.75em 0;
+}
+
+.htrig-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    align-items: flex-start;
+}
+
+/* ── Canvas column ───────────────────────────────────────────────── */
+.htrig-canvas-col {
+    flex: 1 1 260px;
+    min-width: 220px;
+    max-width: 420px;
+}
+
+.htrig-canvas {
+    width: 100%;
+    display: block;
+    border: 1px solid #d3d1c7;
+    border-radius: 6px;
+    background: #ffffff;
+}
+
+/* ── Angle slider row ────────────────────────────────────────────── */
+.htrig-angle-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.htrig-angle-label {
+    font-size: 13px;
+    color: #5f5e5a;
+    white-space: nowrap;
+}
+
+.htrig-slider {
+    flex: 1;
+    cursor: pointer;
+    accent-color: #993556;
+}
+
+.htrig-angle-val {
+    font-size: 15px;
+    font-weight: bold;
+    color: #1a1a18;
+    min-width: 42px;
+    text-align: right;
+}
+
+/* ── Function cards column ───────────────────────────────────────── */
+.htrig-cards {
+    flex: 1 1 200px;
+    min-width: 180px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.htrig-card {
+    border: 1px solid #d3d1c7;
+    border-radius: 8px;
+    padding: 10px 12px;
+    background: #f5f5f2;
+}
+
+.htrig-card-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.htrig-fn-name {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.htrig-sin { color: #1D9E75; }
+.htrig-cos { color: #185FA5; }
+.htrig-tan { color: #BA7517; }
+
+.htrig-fn-val {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1a1a18;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.01em;
+}
+
+.htrig-formula {
+    font-size: 11px;
+    color: #888780;
+    margin-bottom: 8px;
+}
+
+/* ── Prove it button ─────────────────────────────────────────────── */
+.htrig-btn {
+    font-size: 12px;
+    padding: 4px 10px;
+    border: 1px solid #b4b2a9;
+    border-radius: 5px;
+    background: transparent;
+    cursor: pointer;
+    color: #5f5e5a;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.htrig-btn:hover {
+    background: #ffffff;
+    color: #1a1a18;
+    border-color: #888780;
+}
+
+.htrig-btn-active.htrig-btn-sin {
+    border-color: #1D9E75;
+    color: #1D9E75;
+    background: rgba(29, 158, 117, 0.08);
+}
+
+.htrig-btn-active.htrig-btn-cos {
+    border-color: #185FA5;
+    color: #185FA5;
+    background: rgba(24, 95, 165, 0.08);
+}
+
+.htrig-btn-active.htrig-btn-tan {
+    border-color: #BA7517;
+    color: #BA7517;
+    background: rgba(186, 117, 23, 0.08);
+}
+
+/* ── Description text ────────────────────────────────────────────── */
+.htrig-desc {
+    font-size: 11px;
+    color: #5f5e5a;
+    line-height: 1.55;
+    margin-top: 7px;
+    min-height: 0;
+}
+
+/* ── Dark mode ───────────────────────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+    .htrig-wrap {
+        color: #c2c0b6;
+    }
+
+    .htrig-canvas {
+        border-color: #444441;
+        background: #1e1e1c;
+    }
+
+    .htrig-angle-label {
+        color: #888780;
+    }
+
+    .htrig-angle-val {
+        color: #e8e6de;
+    }
+
+    .htrig-card {
+        background: #2a2a28;
+        border-color: #444441;
+    }
+
+    .htrig-fn-val {
+        color: #e8e6de;
+    }
+
+    .htrig-formula {
+        color: #5f5e5a;
+    }
+
+    .htrig-btn {
+        color: #888780;
+        border-color: #5f5e5a;
+    }
+
+    .htrig-btn:hover {
+        background: #333330;
+        color: #c2c0b6;
+        border-color: #888780;
+    }
+
+    .htrig-btn-active.htrig-btn-sin { background: rgba(29, 158, 117, 0.15); }
+    .htrig-btn-active.htrig-btn-cos { background: rgba(24, 95, 165, 0.15); }
+    .htrig-btn-active.htrig-btn-tan { background: rgba(186, 117, 23, 0.15); }
+
+    .htrig-desc {
+        color: #888780;
+    }
+}
+
+/* ── Narrow screens ──────────────────────────────────────────────── */
+@media (max-width: 500px) {
+    .htrig-cards {
+        max-width: 100%;
+    }
+
+    .htrig-canvas-col {
+        max-width: 100%;
+    }
+}

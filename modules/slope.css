@@ -1,0 +1,32 @@
+.hiruwiki[data-module="slope"] {
+  text-align: center;
+  margin: 1em 0;
+}
+
+.hiruwiki[data-module="slope"] canvas {
+  border: 1px solid #aaa;
+  background: #fff;
+  touch-action: none;
+}
+
+.hiruwiki[data-module="slope"] .slope-formula {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.hiruwiki[data-module="slope"] .fraction {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.hiruwiki[data-module="slope"] .fraction .top {
+  border-bottom: 2px solid #000;
+  display: block;
+  padding: 0 4px;
+}
+
+.hiruwiki[data-module="slope"] .fraction .bottom {
+  display: block;
+}

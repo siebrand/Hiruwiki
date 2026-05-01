@@ -1,0 +1,185 @@
+/* integer-coordinates — Hiruwiki module */
+
+.icx-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #fff;
+  border: 2px solid #c8d6e5;
+  border-radius: 12px;
+  padding: 10px 12px 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.10);
+  font-family: Montserrat, Arial, sans-serif
+  max-width: 940px;
+}
+
+/* ---- Mode switcher ---- */
+.icx-mode-bar {
+  display: flex;
+  align-items: center;
+  background: #edf2f7;
+  border-radius: 8px;
+  padding: 3px;
+  margin-bottom: 8px;
+  align-self: flex-start;
+}
+
+.icx-mode-btn {
+  padding: 5px 16px;
+  border: none;
+  border-radius: 6px;
+  font-family: Montserrat, Arial, sans-serif
+  font-size: 0.83rem;
+  cursor: pointer;
+  background: transparent;
+  color: #7f8c8d;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  letter-spacing: 0.02em;
+}
+
+.icx-mode-btn.icx-active {
+  background: #fff;
+  color: #2c3e50;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.13);
+  font-weight: bold;
+}
+
+/* ---- Body: canvas + sidebar side by side ---- */
+.icx-body {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 12px;
+}
+
+/* ---- Canvas ---- */
+.icx-canvas {
+  display: block;
+  cursor: grab;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.icx-canvas.icx-dragging {
+  cursor: grabbing;
+}
+
+/* ---- Sidebar ---- */
+.icx-sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 130px;
+  flex-shrink: 0;
+}
+
+/* Explorer panel */
+.icx-explorer-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.icx-sidebar-title {
+  font-size: 0.85rem;
+  color: #7f8c8d;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.icx-info-bar {
+  font-size: 0.95rem;
+  color: #34495e;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+}
+
+/* Challenge panel */
+.icx-challenge-panel {
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.icx-challenge-prompt {
+  font-size: 0.95rem;
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+.icx-target-x {
+  color: #e74c3c;
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+
+.icx-target-y {
+  color: #2980b9;
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+
+.icx-feedback {
+  font-size: 0.83rem;
+  font-weight: bold;
+  min-height: 16px;
+  line-height: 1.4;
+}
+
+.icx-feedback-ok  { color: #27ae60; }
+.icx-feedback-err { color: #e74c3c; }
+
+/* Buttons stacked vertically */
+.icx-btn-col {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.icx-action-btn {
+  padding: 6px 0;
+  width: 100%;
+  border: none;
+  border-radius: 7px;
+  font-family: Montserrat, Arial, sans-serif
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.15s, transform 0.1s;
+  text-align: center;
+}
+
+.icx-action-btn:active {
+  transform: scale(0.96);
+}
+
+.icx-check-btn {
+  background: #2980b9;
+  color: #fff;
+}
+
+.icx-check-btn:hover:not(:disabled) {
+  background: #2471a3;
+}
+
+.icx-check-btn:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.icx-next-btn {
+  background: #27ae60;
+  color: #fff;
+  visibility: hidden;
+}
+
+.icx-next-btn:hover {
+  background: #1e8449;
+}
+
+.icx-hint {
+  font-size: 0.73rem;
+  color: #95a5a6;
+  font-style: italic;
+  line-height: 1.4;
+}

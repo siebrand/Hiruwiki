@@ -1,0 +1,19 @@
+/* radian.css */
+.radius { stroke:black; stroke-width:2; }
+.arc { fill:none; stroke-width:6; }
+
+.tickSmall { stroke:#aaa; stroke-width:1; }
+.tickMedium { stroke:#777; stroke-width:2; }
+.tickMajor { stroke:#333; stroke-width:3; }
+
+.tickLabel { font-size:12px; fill:#333; }
+.radianTick { stroke-width:2; }
+
+.handle { fill:white; stroke:black; stroke-width:2; cursor:pointer; }
+
+.label { font-size:16px; font-weight:bold; dominant-baseline:middle; }
+
+.baseIndicator { stroke-width:6; }
+.baseDot { stroke:black; stroke-width:2; fill:white; }
+
+svg.hiruwiki-svg { background:#fafafa; border:1px solid #ccc; touch-action:none; }

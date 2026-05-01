@@ -1,0 +1,21 @@
+.hiruwiki[data-module="triangle-centroid"] {
+    position: relative;
+    width: 100%;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.hiruwiki[data-module="triangle-centroid"] canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    cursor: default;
+    touch-action: none;
+}
+
+.hiruwiki[data-module="triangle-centroid"] .tc-caption {
+    text-align: center;
+    font-size: 0.85em;
+    color: #555;
+    margin: 0.4em 0 0;
+}

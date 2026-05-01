@@ -1,0 +1,215 @@
+.hiruwiki[data-module="quadrangles"] {
+  font-family: sans-serif;
+  margin: 1em 0;
+}
+
+.hiruwiki[data-module="quadrangles"] .quad-wrap {
+  display: flex;
+  gap: 0;
+  min-height: 520px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.hiruwiki[data-module="quadrangles"] .quad-canvas-col {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.hiruwiki[data-module="quadrangles"] .quad-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 10px;
+}
+
+.hiruwiki[data-module="quadrangles"] .quad-controls button {
+  font-size: 12px;
+  padding: 4px 9px;
+  background-color: var(--background-color-destructive, #bf3c2c);
+  color: white;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.hiruwiki[data-module="quadrangles"] .quad-controls button:hover {
+  background-color: var(--background-color-destructive--hover, #9f3526);
+}
+
+.hiruwiki[data-module="quadrangles"] .quad-controls button:active {
+  background-color: var(--background-color-destructive--active, #612419);
+}
+
+.hiruwiki[data-module="quadrangles"] svg {
+  width: 100%;
+  flex: 1;
+  display: block;
+  min-height: 420px;
+}
+
+.hiruwiki[data-module="quadrangles"] .quad-grid line {
+  stroke: #ddd;
+  stroke-width: 0.5px;
+}
+
+.hiruwiki[data-module="quadrangles"] .quad-shape {
+  fill: rgba(25, 118, 210, 0.07);
+  stroke: #1976d2;
+  stroke-width: 2;
+}
+
+.hiruwiki[data-module="quadrangles"] .quad-diagonal {
+  stroke: #888;
+  stroke-dasharray: 5 4;
+  stroke-width: 1;
+  fill: none;
+  opacity: 0.45;
+}
+
+.hiruwiki[data-module="quadrangles"] .quad-vertex {
+  fill: #f44336;
+  cursor: pointer;
+}
+
+.hiruwiki[data-module="quadrangles"] .quad-side-label {
+  font-size: 11px;
+  text-anchor: middle;
+  fill: #888;
+}
+
+.hiruwiki[data-module="quadrangles"] .quad-point-label {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.hiruwiki[data-module="quadrangles"] .quad-angle-arc {
+  fill: none;
+  stroke: #1bb934;
+  stroke-width: 1.5;
+}
+
+.hiruwiki[data-module="quadrangles"] .quad-angle-label {
+  fill: #1bb934;
+  font-size: 10px;
+  text-anchor: middle;
+}
+
+.hiruwiki[data-module="quadrangles"] .quad-right-marker {
+  fill: none;
+  stroke: #ff9800;
+  stroke-width: 1.5;
+}
+
+/* ── Side panel ── */
+
+.hiruwiki[data-module="quadrangles"] .quad-side {
+  width: 230px;
+  flex-shrink: 0;
+  border-left: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  background: #f8f8f8;
+  font-size: 13px;
+}
+
+.hiruwiki[data-module="quadrangles"] .quad-side-section {
+  padding: 12px 14px 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.hiruwiki[data-module="quadrangles"] .quad-side-section:last-child {
+  border-bottom: none;
+  flex: 1;
+}
+
+.hiruwiki[data-module="quadrangles"] .quad-side-label {
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.hiruwiki[data-module="quadrangles"] .quad-badge {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: bold;
+  color: #0645ad;
+  background: #eaf0fb;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.hiruwiki[data-module="quadrangles"] .quad-stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 5px;
+}
+
+.hiruwiki[data-module="quadrangles"] .quad-stat-key {
+  font-size: 12px;
+  color: #555;
+}
+
+.hiruwiki[data-module="quadrangles"] .quad-stat-key.quad-diag-key {
+  color: #999;
+}
+
+.hiruwiki[data-module="quadrangles"] .quad-stat-val {
+  font-size: 13px;
+  font-weight: bold;
+  font-variant-numeric: tabular-nums;
+  color: #111;
+}
+
+.hiruwiki[data-module="quadrangles"] .quad-stat-val.quad-diag-val {
+  color: #888;
+  font-weight: normal;
+}
+
+.hiruwiki[data-module="quadrangles"] .quad-stat-divider {
+  margin-top: 5px;
+  padding-top: 5px;
+  border-top: 1px solid #ddd;
+}
+
+.hiruwiki[data-module="quadrangles"] .quad-stat-key.quad-perim-key {
+  font-weight: bold;
+  color: #111;
+}
+
+.hiruwiki[data-module="quadrangles"] .quad-area-box {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  margin-top: 4px;
+}
+
+.hiruwiki[data-module="quadrangles"] .quad-area-steps {
+  font-size: 12px;
+  color: #555;
+  line-height: 1.7;
+  white-space: pre-line;
+}
+
+.hiruwiki[data-module="quadrangles"] .quad-area-result {
+  font-size: 18px;
+  font-weight: bold;
+  color: #111;
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid #ddd;
+}
+
+.hiruwiki[data-module="quadrangles"] .quad-area-unit {
+  font-size: 12px;
+  font-weight: normal;
+  color: #888;
+}

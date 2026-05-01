@@ -1,0 +1,295 @@
+.hiruwiki[data-module="triangles"] {
+  font-family: Montserrat, Arial, sans-serif;
+  margin: 1em 0;
+  --blue: #1976d2;
+  --red: #f44336;
+  --green: #1bb934;
+  --orange: #ff9800;
+  --panel-bg: #f8f9fc;
+  --panel-border: #e2e6f0;
+  --canvas-bg: #ffffff;
+  --text-main: #1a1d2e;
+  --text-muted: #7a8099;
+  --accent: #1976d2;
+--color-destructive: #bf3c2c;
+}
+
+/* ── Layout ── */
+.hiruwiki[data-module="triangles"] .triangle-layout {
+  display: flex;
+  gap: 0;
+  border: 1.5px solid var(--panel-border);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(25,118,210,0.07);
+  min-height: 420px;
+}
+
+.hiruwiki[data-module="triangles"] .triangle-canvas-wrap {
+  flex: 1 1 0;
+  min-width: 0;
+  position: relative;
+  background: var(--canvas-bg);
+}
+
+.hiruwiki[data-module="triangles"] svg {
+  width: 100%;
+  aspect-ratio: 20 / 14;
+  height: auto;
+  display: block;
+  touch-action: none;
+}
+
+/* ── Control Panel ── */
+.hiruwiki[data-module="triangles"] .triangle-panel {
+  width: 210px;
+  flex-shrink: 0;
+  background: var(--panel-bg);
+  border-left: 1.5px solid var(--panel-border);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.hiruwiki[data-module="triangles"] .triangle-panel-header {
+  background: var(--text-main);
+  color: #fff;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 14px 18px 12px;
+}
+
+.hiruwiki[data-module="triangles"] .triangle-panel-section {
+  padding: 14px 18px 10px;
+  border-bottom: 1px solid var(--panel-border);
+}
+
+.hiruwiki[data-module="triangles"] .triangle-panel-section:last-child {
+  border-bottom: none;
+}
+
+.hiruwiki[data-module="triangles"] .triangle-panel-label {
+  font-size: 12pt;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+/* ── Classification badge wrappers ── */
+.hiruwiki[data-module="triangles"] .triangle-badge-wrap {
+  margin-bottom: 5px;
+}
+
+.hiruwiki[data-module="triangles"] .triangle-badge-sublabel {
+  font-size: 10px;
+  color: var(--text-muted);
+  font-family: Arial, sans-serif;
+  display: inline-block;
+  margin-bottom: 2px;
+}
+
+/* ── Angle key colour ── */
+.hiruwiki[data-module="triangles"] .triangle-measure-key--angle {
+  color: var(--green);
+}
+
+/* ── Invisible touch targets ── */
+.hiruwiki[data-module="triangles"] .triangle-touch-target {
+  fill: transparent;
+  cursor: grab;
+}
+
+.hiruwiki[data-module="triangles"] .triangle-touch-target:active {
+  cursor: grabbing;
+}
+
+/* ── Side dot colours ── */
+.hiruwiki[data-module="triangles"] .triangle-dot--a { background: #1976d2; }
+.hiruwiki[data-module="triangles"] .triangle-dot--b { background: #9c27b0; }
+.hiruwiki[data-module="triangles"] .triangle-dot--c { background: #e65100; }
+
+/* ── Side label colours (SVG) ── */
+.hiruwiki[data-module="triangles"] .triangle-side-label--a { fill: #1976d2; }
+.hiruwiki[data-module="triangles"] .triangle-side-label--b { fill: #9c27b0; }
+.hiruwiki[data-module="triangles"] .triangle-side-label--c { fill: #e65100; }
+
+
+.hiruwiki[data-module="triangles"] .triangle-badge {
+  display: inline-block;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+  margin-top: 2px;
+}
+
+.hiruwiki[data-module="triangles"] .triangle-badge-sides {
+  background: #e3f0fd;
+  color: var(--blue);
+}
+
+.hiruwiki[data-module="triangles"] .triangle-badge-angles {
+  background: #e6f9ea;
+  color: #158a25;
+}
+
+/* ── Measurements table ── */
+.hiruwiki[data-module="triangles"] .triangle-measure-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 0;
+}
+
+.hiruwiki[data-module="triangles"] .triangle-measure-key {
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 12px;
+  color: var(--text-muted);
+  min-width: 28px;
+}
+
+.hiruwiki[data-module="triangles"] .triangle-measure-val {
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-main);
+  text-align: right;
+}
+
+.hiruwiki[data-module="triangles"] .triangle-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 5px;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+/* ── Controls ── */
+.hiruwiki[data-module="triangles"] .triangle-controls {
+  padding: 16px 18px;
+  margin-top: auto;
+}
+
+.hiruwiki[data-module="triangles"] .triangle-controls button {
+  width: 100%;
+  background: var(--color-destructive);
+  color: #fff;
+  border: none;
+  padding: 9px 12px;
+  border-radius: 5px;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.hiruwiki[data-module="triangles"] .triangle-controls button:hover {
+  background: #9f3526;
+}
+
+.hiruwiki[data-module="triangles"] .triangle-controls button:active {
+  background: #612419;
+}
+
+/* ── SVG elements ── */
+.hiruwiki[data-module="triangles"] .triangle-grid line {
+  stroke: #e8ecf5;
+}
+
+.hiruwiki[data-module="triangles"] .triangle-fill {
+  fill: rgba(25, 118, 210, 0.04);
+  stroke: none;
+}
+
+.hiruwiki[data-module="triangles"] .triangle-shape {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.hiruwiki[data-module="triangles"] .triangle-shape--a { stroke: #1976d2; }
+.hiruwiki[data-module="triangles"] .triangle-shape--b { stroke: #9c27b0; }
+.hiruwiki[data-module="triangles"] .triangle-shape--c { stroke: #e65100; }
+
+.hiruwiki[data-module="triangles"] .triangle-vertex {
+  fill: var(--red);
+  cursor: grab;
+  transition: r 0.1s;
+}
+
+.hiruwiki[data-module="triangles"] .triangle-vertex:active {
+  cursor: grabbing;
+}
+
+.hiruwiki[data-module="triangles"] .triangle-side-label {
+  font-size: 11px;
+  text-anchor: middle;
+  font-family: Montserrat, Arial, sans-serif;
+  fill: var(--blue);
+}
+
+.hiruwiki[data-module="triangles"] .triangle-point-label {
+  font-size: 13px;
+  font-weight: bold;
+  font-family: Montserrat, Arial, sans-serif;
+  fill: var(--text-main);
+}
+
+.hiruwiki[data-module="triangles"] .triangle-angle-arc {
+  fill: none;
+  stroke: var(--green);
+  stroke-width: 1.5;
+}
+
+.hiruwiki[data-module="triangles"] .triangle-angle-label {
+  fill: var(--green);
+  font-size: 11px;
+  text-anchor: middle;
+  font-family: Montserrat, Arial, sans-serif;
+}
+
+.hiruwiki[data-module="triangles"] .triangle-right-marker {
+  fill: none;
+  stroke: var(--orange);
+  stroke-width: 1.8;
+}
+
+/* ── Responsive: stack on small screens ── */
+@media (max-width: 540px) {
+  .hiruwiki[data-module="triangles"] .triangle-layout {
+    flex-direction: column;
+  }
+
+  .hiruwiki[data-module="triangles"] .triangle-panel {
+    width: 100%;
+    border-left: none;
+    border-top: 1.5px solid var(--panel-border);
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .hiruwiki[data-module="triangles"] .triangle-panel-header {
+    width: 100%;
+  }
+
+  .hiruwiki[data-module="triangles"] .triangle-panel-section {
+    flex: 1 1 120px;
+    border-bottom: none;
+    border-right: 1px solid var(--panel-border);
+  }
+
+  .hiruwiki[data-module="triangles"] .triangle-controls {
+    width: 100%;
+  }
+}

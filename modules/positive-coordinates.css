@@ -1,0 +1,184 @@
+/* positive-coordinates — Hiruwiki module */
+
+.cex-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #fff;
+  border: 2px solid #c8d6e5;
+  border-radius: 12px;
+  padding: 12px 14px 14px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.10);
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+/* ---- Mode switcher ---- */
+.cex-mode-bar {
+  display: flex;
+  align-items: center;
+  background: #edf2f7;
+  border-radius: 8px;
+  padding: 3px;
+  margin-bottom: 10px;
+  align-self: flex-start;
+}
+
+.cex-mode-btn {
+  padding: 5px 18px;
+  border: none;
+  border-radius: 6px;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 0.85rem;
+  cursor: pointer;
+  background: transparent;
+  color: #7f8c8d;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  letter-spacing: 0.02em;
+	font-size: 1.2em;
+}
+
+.cex-mode-btn.cex-active {
+  background: #fff;
+  color: #2c3e50;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.13);
+  font-weight: bold;
+}
+
+/* ---- Body: canvas + sidebar side by side ---- */
+.cex-body {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 14px;
+}
+
+/* ---- Canvas ---- */
+.cex-canvas {
+  display: block;
+  cursor: grab;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.cex-canvas.cex-dragging {
+  cursor: grabbing;
+}
+
+/* ---- Sidebar ---- */
+.cex-sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 130px;
+  flex-shrink: 0;
+}
+
+/* Explorer panel inside sidebar */
+.cex-explorer-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cex-sidebar-title {
+  font-size: 0.88rem;
+  color: #7f8c8d;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.cex-info-bar {
+  font-size: 1.0rem;
+  color: #34495e;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+}
+
+/* Challenge panel inside sidebar */
+.cex-challenge-panel {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cex-challenge-prompt {
+  font-size: 1.0rem;
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+.cex-target-x {
+  color: #e74c3c;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.cex-target-y {
+  color: #2980b9;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.cex-feedback {
+  font-size: 0.9rem;
+  font-weight: bold;
+  min-height: 18px;
+}
+
+.cex-feedback-ok  { color: #27ae60; }
+.cex-feedback-err { color: #e74c3c; }
+
+/* Buttons stacked vertically in sidebar */
+.cex-btn-col {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.cex-action-btn {
+  padding: 6px 0;
+  width: 100%;
+  border: none;
+  border-radius: 7px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 0.88rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.15s, transform 0.1s;
+  text-align: center;
+}
+
+.cex-action-btn:active {
+  transform: scale(0.96);
+}
+
+.cex-check-btn {
+  background: #2980b9;
+  color: #fff;
+}
+
+.cex-check-btn:hover:not(:disabled) {
+  background: #2471a3;
+}
+
+.cex-check-btn:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.cex-next-btn {
+  background: #27ae60;
+  color: #fff;
+  visibility: hidden;
+}
+
+.cex-next-btn:hover {
+  background: #1e8449;
+}
+
+.cex-hint {
+  font-size: 0.75rem;
+  color: #95a5a6;
+  font-style: italic;
+  line-height: 1.4;
+}
