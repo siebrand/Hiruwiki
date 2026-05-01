@@ -18,6 +18,15 @@ MODULES_BASE = "MediaWiki:Hiruwiki/modules/"
 CORE_FILE = "Gadget-hiruwiki-core.js"
 MODULES_DIR = "modules"
 
+ONWIKI_HEADER = """/* 
+ * DO NOT EDIT THIS PAGE DIRECTLY ON-WIKI!
+ * This page is automatically deployed from GitHub.
+ * Any changes made here will be overwritten by the next deployment.
+ * Source: https://github.com/ItsNyoty/Hiruwiki
+ */
+"""
+
+
 class MediaWikiClient:
     def __init__(self, api_url, username=None, password=None, token=None):
         self.api_url = api_url
@@ -228,8 +237,9 @@ def main():
         
         try:
             with open(local_path, "r", encoding="utf-8") as f:
-                local_content = f.read()
+                local_content = ONWIKI_HEADER + f.read()
         except Exception as e:
+
             print(f"  Error reading {local_path}: {e}")
             continue
 
