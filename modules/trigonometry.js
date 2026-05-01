@@ -160,7 +160,9 @@ function initTrigonometry(container) {
         };
 
         function isDark() {
-            return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            return document.documentElement.classList.contains('skin-theme-clientpref-night') || 
+                   document.documentElement.classList.contains('client-dark-mode') ||
+                   document.body.classList.contains('mw-dark-mode');
         }
 
         function palette() {
@@ -172,6 +174,7 @@ function initTrigonometry(container) {
                 text: dark ? '#c2c0b6' : '#3d3d3a'
             };
         }
+
 
         /* ── Drawing ────────────────────────────────────────────── */
         function draw(proofT) {
@@ -382,12 +385,13 @@ function initTrigonometry(container) {
             }
         });
 
-        /* ── Dark mode live update ──────────────────────────────── */
-        if (window.matchMedia) {
-            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () {
-                draw(activeProof ? 1 : 1);
-            });
-        }
+        /* ── Dark mode live update (MediaWiki) ─────────────────── */
+        var observer = new MutationObserver(function () {
+            draw(activeProof ? 1 : 1);
+        });
+        observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+        observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+
 
         /* ── Init ───────────────────────────────────────────────── */
         updateValues();

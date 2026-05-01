@@ -153,57 +153,84 @@
     min-height: 0;
 }
 
-/* ── Dark mode ───────────────────────────────────────────────────── */
-@media (prefers-color-scheme: dark) {
-    .htrig-wrap {
-        color: #c2c0b6;
-    }
-
-    .htrig-canvas {
-        border-color: #444441;
-        background: #1e1e1c;
-    }
-
-    .htrig-angle-label {
-        color: #888780;
-    }
-
-    .htrig-angle-val {
-        color: #e8e6de;
-    }
-
-    .htrig-card {
-        background: #2a2a28;
-        border-color: #444441;
-    }
-
-    .htrig-fn-val {
-        color: #e8e6de;
-    }
-
-    .htrig-formula {
-        color: #5f5e5a;
-    }
-
-    .htrig-btn {
-        color: #888780;
-        border-color: #5f5e5a;
-    }
-
-    .htrig-btn:hover {
-        background: #333330;
-        color: #c2c0b6;
-        border-color: #888780;
-    }
-
-    .htrig-btn-active.htrig-btn-sin { background: rgba(29, 158, 117, 0.15); }
-    .htrig-btn-active.htrig-btn-cos { background: rgba(24, 95, 165, 0.15); }
-    .htrig-btn-active.htrig-btn-tan { background: rgba(186, 117, 23, 0.15); }
-
-    .htrig-desc {
-        color: #888780;
-    }
+/* ── Dark mode (MediaWiki integration) ─────────────────────────── */
+html.skin-theme-clientpref-night .htrig-wrap,
+html.client-dark-mode .htrig-wrap,
+.mw-dark-mode .htrig-wrap {
+    color: #c2c0b6;
 }
+
+html.skin-theme-clientpref-night .htrig-canvas,
+html.client-dark-mode .htrig-canvas,
+.mw-dark-mode .htrig-canvas {
+    border-color: #444441;
+    background: #1e1e1c;
+}
+
+html.skin-theme-clientpref-night .htrig-angle-label,
+html.client-dark-mode .htrig-angle-label,
+.mw-dark-mode .htrig-angle-label {
+    color: #888780;
+}
+
+html.skin-theme-clientpref-night .htrig-angle-val,
+html.client-dark-mode .htrig-angle-val,
+.mw-dark-mode .htrig-angle-val {
+    color: #e8e6de;
+}
+
+html.skin-theme-clientpref-night .htrig-card,
+html.client-dark-mode .htrig-card,
+.mw-dark-mode .htrig-card {
+    background: #2a2a28;
+    border-color: #444441;
+}
+
+html.skin-theme-clientpref-night .htrig-fn-val,
+html.client-dark-mode .htrig-fn-val,
+.mw-dark-mode .htrig-fn-val {
+    color: #e8e6de;
+}
+
+html.skin-theme-clientpref-night .htrig-formula,
+html.client-dark-mode .htrig-formula,
+.mw-dark-mode .htrig-formula {
+    color: #5f5e5a;
+}
+
+html.skin-theme-clientpref-night .htrig-btn,
+html.client-dark-mode .htrig-btn,
+.mw-dark-mode .htrig-btn {
+    color: #888780;
+    border-color: #5f5e5a;
+}
+
+html.skin-theme-clientpref-night .htrig-btn:hover,
+html.client-dark-mode .htrig-btn:hover,
+.mw-dark-mode .htrig-btn:hover {
+    background: #333330;
+    color: #c2c0b6;
+    border-color: #888780;
+}
+
+html.skin-theme-clientpref-night .htrig-btn-active.htrig-btn-sin,
+html.client-dark-mode .htrig-btn-active.htrig-btn-sin,
+.mw-dark-mode .htrig-btn-active.htrig-btn-sin { background: rgba(29, 158, 117, 0.15); }
+
+html.skin-theme-clientpref-night .htrig-btn-active.htrig-btn-cos,
+html.client-dark-mode .htrig-btn-active.htrig-btn-cos,
+.mw-dark-mode .htrig-btn-active.htrig-btn-cos { background: rgba(24, 95, 165, 0.15); }
+
+html.skin-theme-clientpref-night .htrig-btn-active.htrig-btn-tan,
+html.client-dark-mode .htrig-btn-active.htrig-btn-tan,
+.mw-dark-mode .htrig-btn-active.htrig-btn-tan { background: rgba(186, 117, 23, 0.15); }
+
+html.skin-theme-clientpref-night .htrig-desc,
+html.client-dark-mode .htrig-desc,
+.mw-dark-mode .htrig-desc {
+    color: #888780;
+}
+
 
 /* ── Narrow screens ──────────────────────────────────────────────── */
 @media (max-width: 500px) {
