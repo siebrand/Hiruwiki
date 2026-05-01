@@ -25,22 +25,27 @@ Add the following to **`MediaWiki:Gadgets-definition`**:
 * hiruwiki[ResourceLoader|default|dependencies=mediawiki.util,mediawiki.api,mediawiki.language]|hiruwiki-core.js
 ```
 
+Then, create the page **`MediaWiki:Gadget-hiruwiki-core.js`** on your wiki and add the following line to it:
+```javascript
+mw.loader.load('https://www.mediawiki.org/w/index.php?title=MediaWiki:Gadget-hiruwiki-core.js&action=raw&ctype=text/javascript');
+```
+
 ## Deployment
 
-To deploy the gadget to a wiki:
+To deploy the gadget to a mediawiki:
 1.  **Configure Credentials**:
     - Copy `credentials.json.template` to `credentials.json`.
     - Fill in your MediaWiki username and password.
-    - You can generate a **Bot Password** at `Special:BotPasswords` on your target wiki (e.g., `https://en.wikipedia.org/wiki/Special:BotPasswords`).
+    - You can generate a **Bot Password** at `Special:BotPasswords` on any wiki (e.g., `https://en.wikipedia.org/wiki/Special:BotPasswords`).
 2.  **Run Deployment**:
     ```bash
     # Dry run to see what would change
-    python deploy.py --site enwiki --dry
+    python deploy.py --site mediawiki --dry
 
     # Deploy all files (will prompt for confirmation)
-    python deploy.py --site enwiki --create --template-prefix Hiruwiki
+    python deploy.py --site mediawiki
     ```
-    The script automatically maps local files to the correct `MediaWiki:` namespace pages and can optionally create `Template:Prefix/ModuleName` templates.
+    The script automatically maps local files to the correct `MediaWiki:` namespace pages on MediaWiki.org.
 
 
     > [!IMPORTANT]
