@@ -15,12 +15,30 @@ Currently, the system supports:
 ## Project Structure
 - **`i18n.yaml`**: The master registry for all translations.
 - **`build_i18n.py`**: Automated script to inject translations from the YAML file into the individual module JS files.
+- **`deploy.py`**: A zero-dependency Python script to deploy files to MediaWiki.
 - **`modules/`**: Directory containing 25+ interactive geometric proof widgets.
 - **`Gadget-hiruwiki-core.js`**: The main MediaWiki gadget loader.
+
+## Deployment
+To deploy the gadget to a wiki:
+1.  **Configure Credentials**:
+    - Copy `credentials.json.template` to `credentials.json`.
+    - Fill in your MediaWiki username and password.
+    - You can generate a **Bot Password** at `Special:BotPasswords` on your target wiki (e.g., `https://en.wikipedia.org/wiki/Special:BotPasswords`).
+2.  **Run Deployment**:
+    ```bash
+    # Dry run to see what would change
+    python deploy.py --site enwiki --dry
+
+    # Deploy all files (will prompt for confirmation)
+    python deploy.py --site enwiki --create
+    ```
+    The script automatically maps local files to the correct `MediaWiki:` namespace pages.
 
 ## How to Contribute Translations
 1. Edit the strings in [i18n.yaml](i18n.yaml).
 2. Run the build script:
+
    ```bash
    python build_i18n.py
    ```
