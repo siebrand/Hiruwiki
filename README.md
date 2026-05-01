@@ -19,7 +19,14 @@ Currently, the system supports:
 - **`modules/`**: Directory containing 25+ interactive geometric proof widgets.
 - **`Gadget-hiruwiki-core.js`**: The main MediaWiki gadget loader.
 
+## MediaWiki Configuration
+Add the following to **`MediaWiki:Gadgets-definition`**:
+```text
+* hiruwiki[ResourceLoader|default|dependencies=mediawiki.util,mediawiki.api,mediawiki.language]|hiruwiki-core.js
+```
+
 ## Deployment
+
 To deploy the gadget to a wiki:
 1.  **Configure Credentials**:
     - Copy `credentials.json.template` to `credentials.json`.
@@ -31,9 +38,10 @@ To deploy the gadget to a wiki:
     python deploy.py --site enwiki --dry
 
     # Deploy all files (will prompt for confirmation)
-    python deploy.py --site enwiki --create
+    python deploy.py --site enwiki --create --template-prefix Hiruwiki
     ```
-    The script automatically maps local files to the correct `MediaWiki:` namespace pages.
+    The script automatically maps local files to the correct `MediaWiki:` namespace pages and can optionally create `Template:Prefix/ModuleName` templates.
+
 
     > [!IMPORTANT]
     > **Permissions**: To deploy JS/CSS files to the `MediaWiki:` namespace, your account must have **Interface Administrator** rights on the target wiki. If you get a permission error, visit `Special:UserRights` to grant yourself the `interface-admin` group (if you are an administrator).

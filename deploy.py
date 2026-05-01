@@ -14,9 +14,35 @@ from datetime import datetime
 DEFAULT_SITE = "https://en.wikipedia.org/w/api.php"
 GADGET_BASE = "MediaWiki:Gadget-"
 MODULES_BASE = "MediaWiki:Hiruwiki/modules/"
+CATEGORY_BASE = "Category:Hiruwiki"
+TEMPLATES_BASE = "Template:Hiruwiki"
 
 CORE_FILE = "Gadget-hiruwiki-core.js"
 MODULES_DIR = "modules"
+
+# Documentation template content (translated to English)
+DOC_TEMPLATE_CONTENT = """<!--
+  Start of the green documentation box.
+--><div class="template-documentation" style="background-color:#ecfcf4; border:1px solid #aaa; padding:12px;">{{#ifeq:{{{title|μ}}}|<!--**Defined but empty**-->
+  |<!--**Nothing**-->
+  |<div style="padding-bottom: 3px; border-bottom: 1px solid #aaa; margin-bottom: 1ex;">{{#ifeq:{{{content|μ}}}|μ
+   |<span class="mw-editsection-like plainlinks" id="doc_editlinks" style="float:right; font-size:100%;">{{#ifexist: {{{1|{{FULLPAGENAME}}/doc}}}
+    |<!--**Exists /doc**   -->[[{{fullurl:{{{1|{{FULLPAGENAME}}/doc}}}}} view]] [[{{fullurl:{{{1|{{FULLPAGENAME}}/doc}}}|action=edit}} edit]] [{{fullurl:{{FULLPAGENAME}}|action=purge}} purge] 
+    |<!--**Doesn't exist /doc**-->[[{{fullurl:{{{1|{{FULLPAGENAME}}/doc}}}|action=edit&preload=Template:Hiruwiki_documentation/preload}} create]]
+   }}</span>
+  }} <span style="{{#if:{{{title_style|}}}|{{{title_style}}}|{{#ifeq:{{NAMESPACE}}|{{ns:template}}|font-weight: bold; font-size: 125%|font-size: 150%}}}}">{{#if:{{{title|}}}|{{{title}}}|{{#ifeq:{{NAMESPACE}}|{{ns:template}}|[[File:Test Template Info-Icon - Version (2).svg|50px|link=]] Template documentation |Documentation}}}}</span></div>
+ }}<!--
+
+ --><div id="template_doc_page_transcluded" style="font-style: italic; padding-left: 2em; margin-bottom: 0.5em;"><!--
+  -->{{#ifexist: {{{1|{{FULLPAGENAME}}/doc}}}
+  |<!--**Exists /doc**-->This [[Wikipedia:Template documentation|documentation]] is transcluded from [[{{{1|{{FULLPAGENAME}}/doc}}}]] <small style="font-style: normal">([{{fullurl:{{FULLPAGENAME}}/doc|action=edit}} edit] &#124; [{{fullurl:{{FULLPAGENAME}}/doc|action=history}} history])</small> page.<br />
+ }}
+ </div>
+{{#if:{{{content|}}}|{{{content}}}|{{#ifexist:{{{1|{{FULLPAGENAME}}/doc}}} | {{ {{{1|{{FULLPAGENAME}}/doc}}} }} }}}}
+<div style="clear: both;"></div></div><!--End of green documentation box--><noinclude>
+[[{CATEGORY_BASE} documentation templates]]
+</noinclude>""".format(CATEGORY_BASE=CATEGORY_BASE)
+
 
 ONWIKI_HEADER = """/* 
  * DO NOT EDIT THIS PAGE DIRECTLY ON-WIKI!
@@ -25,7 +51,6 @@ ONWIKI_HEADER = """/*
  * Source: https://github.com/ItsNyoty/Hiruwiki
  */
 """
-
 
 class MediaWikiClient:
     def __init__(self, api_url, username=None, password=None, token=None):
@@ -55,7 +80,6 @@ class MediaWikiClient:
         if self.token:
             return True
 
-        # Login Step 1: Get login token
         res = self.request({
             "action": "query",
             "meta": "tokens",
@@ -64,7 +88,6 @@ class MediaWikiClient:
         })
         logintoken = res["query"]["tokens"]["logintoken"]
 
-        # Login Step 2: Authenticate
         res = self.request({
             "action": "login",
             "lgname": self.username,
@@ -171,7 +194,6 @@ def resolve_api_url(site):
         return site
     return site
 
-
 def main():
     parser = argparse.ArgumentParser(description="Deploy Hiruwiki files to MediaWiki")
     parser.add_argument("-s", "--site", help="Wiki site URL or shorthand (enwiki, testwiki)")
@@ -205,7 +227,6 @@ def main():
     if not args.files or CORE_FILE in args.files:
         deploy_list.append((CORE_FILE, "MediaWiki:" + CORE_FILE))
 
-
     if os.path.exists(MODULES_DIR):
         for f in sorted(os.listdir(MODULES_DIR)):
             if f.endswith((".js", ".css")):
@@ -233,6 +254,18 @@ def main():
 
     git_hash = get_git_hash()
     
+    # Pre-create documentation template if missing
+    if args.create:
+        doc_tpl_title = f"{TEMPLATES_BASE} documentation"
+        print(f"Checking {doc_tpl_title}...")
+        try:
+            doc_tpl_page = client.read_page(doc_tpl_title)
+            if doc_tpl_page["missing"]:
+                client.save_page(doc_tpl_title, DOC_TEMPLATE_CONTENT, "Initialize Hiruwiki documentation template")
+                print(f"  Successfully created documentation template.")
+        except Exception as e:
+            print(f"  Error creating documentation template: {e}")
+
     for local_path, remote_title in deploy_list:
         print(f"Processing {local_path} -> {remote_title}...")
         
@@ -240,7 +273,6 @@ def main():
             with open(local_path, "r", encoding="utf-8") as f:
                 local_content = ONWIKI_HEADER + f.read()
         except Exception as e:
-
             print(f"  Error reading {local_path}: {e}")
             continue
 
@@ -254,13 +286,9 @@ def main():
 
         if not remote_page["missing"] and remote_content.strip() == local_content.strip():
             print("  No changes, skipping.")
-            continue
-
-        if remote_page["missing"] and not args.create:
+        elif remote_page["missing"] and not args.create:
             print("  Page missing on-wiki, skipping (use --create to create).")
-            continue
-
-        if args.dry:
+        elif args.dry:
             print("  Dry run: Differences:")
             diff = difflib.unified_diff(
                 remote_content.splitlines(),
@@ -270,15 +298,37 @@ def main():
                 lineterm=""
             )
             print("\n".join(diff))
-            continue
+        else:
+            summary = f"Repo at {git_hash}: Deployment update"
+            try:
+                client.save_page(remote_title, local_content, summary, nocreate=not args.create)
+                print(f"  Successfully deployed.")
+            except Exception as e:
+                print(f"  Error saving {remote_title}: {e}")
 
-        summary = f"Repo at {git_hash}: Deployment update"
-        
-        try:
-            client.save_page(remote_title, local_content, summary, nocreate=not args.create)
-            print(f"  Successfully deployed.")
-        except Exception as e:
-            print(f"  Error saving {remote_title}: {e}")
+        # Automated Template Creation Logic
+        if args.create and local_path.startswith(MODULES_DIR + "/") and local_path.endswith(".js"):
+            module_name = os.path.basename(local_path).replace(".js", "")
+            # Using Template: prefix for canonical namespace identification
+            template_title = f"{TEMPLATES_BASE}/{module_name}"
+
+            
+            print(f"  Checking module template {template_title}...")
+            try:
+                tpl_page = client.read_page(template_title)
+                if tpl_page["missing"]:
+                    tpl_content = (
+                        f'<div class="hiruwiki" data-module="{module_name}"></div>\n'
+                        f'<includeonly>[[{CATEGORY_BASE}]]</includeonly><noinclude>{{{{{TEMPLATES_BASE} documentation}}}}</noinclude>'
+                    )
+
+                    tpl_summary = f"Create Hiruwiki module template for {module_name}"
+                    client.save_page(template_title, tpl_content, tpl_summary)
+                    print(f"    Successfully created template.")
+                else:
+                    print(f"    Template already exists.")
+            except Exception as e:
+                print(f"    Error processing module template: {e}")
 
 if __name__ == "__main__":
     main()
