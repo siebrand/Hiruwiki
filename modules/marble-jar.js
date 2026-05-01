@@ -299,8 +299,9 @@ function t( key, vars ) {
                 if (total === 0 || n === 0) {
                     var imp = document.createElement('span');
                     imp.className = 'hmj-impossible';
-                    imp.textContent = 'Ezinezkoa';
+                    imp.textContent = t('impossible');
                     wrap.appendChild(imp);
+
                 } else {
                     wrap.appendChild(makeFrac(n, total, c.hex));
                     var simp = simplify(n, total);
