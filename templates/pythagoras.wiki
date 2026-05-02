@@ -1,0 +1,2 @@
+<div class="hiruwiki" data-module="pythagoras"></div>
+<includeonly>[[Category:Hiruwiki]]</includeonly>

@@ -1,0 +1,2 @@
+<div class="hiruwiki" data-module="angles"></div>
+<includeonly>[[Category:Hiruwiki]]</includeonly>

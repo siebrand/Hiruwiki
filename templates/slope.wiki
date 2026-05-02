@@ -1,0 +1,2 @@
+<div class="hiruwiki" data-module="slope"></div>
+<includeonly>[[Category:Hiruwiki]]</includeonly>

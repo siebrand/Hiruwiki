@@ -1,0 +1,2 @@
+<div class="hiruwiki" data-module="integer-coordinates"></div>
+<includeonly>[[Category:Hiruwiki]]</includeonly>
