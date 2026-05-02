@@ -63,7 +63,7 @@ angle-guess:
     roundOver: Ronde afgelopen
     target: 'Doel:'
     tryAgain: Probeer opnieuw
-    yourGuess: 'Jouw gok:'
+    yourGuess: 'Jouw gok:'x
 angles:
   en:
     _name: Angles

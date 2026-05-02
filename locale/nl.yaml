@@ -1,0 +1,341 @@
+nl:
+  angle-guess:
+    _name: Hoek gokken
+    difference: 'Verschil:'
+    finalScore: Eindscore
+    hint: Verplaats de blauwe stip om de hoek in te stellen
+    nextAngle: Volgende hoek &rsaquo;
+    points: 'Punten:'
+    pts: ptn
+    round: 'Ronde:'
+    roundOver: Ronde afgelopen
+    target: 'Doel:'
+    tryAgain: Probeer opnieuw
+    yourGuess: 'Jouw gok:'x
+  angles:
+    _name: Hoeken
+    bisector: Bissectrice
+    bisectorResult: 'Bissectrice: {0}°'
+    complement: Complementair
+    explement: Explementair
+    notDefined: Niet gedefinieerd voor deze hoek
+    resultAngle: 'Hoek {0}: {1}°'
+    supplement: Supplementair
+  circle-proof:
+    _name: Cirkel bewijs
+    animStopped: Animatie gestopt.
+    area: Oppervlakte
+    areaAnimStatus: 'De sectoren vormen een rechthoek: breedte = πr, hoogte = r.'
+    areaReviewStatus: ✓ Breedte = πr, hoogte = r → A = πr².
+    circAnimStatus: Elke halve cirkel (πr) rolt uit tot een lijn, wat in totaal 2πr
+      maakt.
+    circReviewStatus: ✓ Bovenste πr + Onderste πr = C = 2πr.
+    circumference: Omtrek
+    initStatus: Kies een bewijs en klik op 'Bewijs het'.
+    proveIt: Bewijs het ▶
+    radius: Straal
+    readyStatus: Klik op 'Bewijs het' om de animatie te zien.
+    review: Beoordelen ▶
+    stop: Stop ■
+    tabArea: Oppervlakte
+    tabCirc: Omtrek
+    title: Cirkel Calculator
+    visualProof: Visueel bewijs
+  dividend:
+    _name: Deeltal en deler
+    eq_lbl_dividend: deeltal
+    eq_lbl_divisor: deler
+    eq_lbl_quotient: quotiënt
+    eq_lbl_remainder: rest
+    insight_exact: <strong>{N} ÷ {D} = {Q}</strong> precies — geen rest. De balk past
+      perfect in <strong>{Q}</strong> gelijke stukken. Dit betekent dat <strong>{D}</strong>
+      een deler is van <strong>{N}</strong>.
+    insight_less: <strong>{N}</strong> is kleiner dan de deler <strong>{D}</strong>,
+      dus het past in <strong>0</strong> hele stukken. De hele waarde is de rest.
+      De rest is altijd kleiner dan de deler.
+    insight_normal: '<strong>{N} ÷ {D} = {Q}</strong> rest <strong>{R}</strong>. Merk
+      op dat het rode stuk (<strong>{R}</strong>) altijd korter is dan een blauw stuk
+      (<strong>{D}</strong>). De rest is altijd strikt kleiner dan de deler. Controle:
+      <strong>{Q} × {D} + {R} = {QD} + {R} = {N}</strong> ✓'
+    label_bar: Balkweergave — elk blauw stuk =
+    label_bar_units: eenheden
+    label_choose: Kies deeltal en deler
+    label_dividend: Deeltal (het getal dat gedeeld wordt)
+    label_divisor: Deler (de grootte van het stuk)
+    label_equation: Deelvergelijking
+    label_repadd: Herhaalde optelling
+    repadd_exact: — is precies deelbaar!
+    repadd_leftover: blijft over
+    repadd_less: '{N} is kleiner dan {D}, dus het quotiënt is 0 en de gehele waarde
+      is de rest.'
+  factors:
+    _name: Priemfactoren
+    gcd_formula_eq: ' = '
+    gcd_none: (geen — onderling ondeelbaar)
+    gcd_title: GGD — behoud alleen gedeelde factoren
+    insight_coprime: '<strong>{A}</strong> en <strong>{B}</strong> zijn onderling
+      ondeelbaar — ze delen geen priemfactoren, dus GGD = 1. Het KGV is simpelweg
+      hun product. Altijd waar: <strong>{A} × {B} = {AB}</strong> = GGD × KGV = <strong>1
+      × {L} = {L}</strong>.'
+    insight_shared_many: '<strong>{A}</strong> en <strong>{B}</strong> delen de priemfactoren
+      <strong>{primes}</strong>. De GGD neemt alleen de groene gedeelde blokken. Het
+      KGV neemt alle blokken — groen gedeeld, blauw extra van A, rood extra van B
+      — zonder een priemfactor twee keer te tellen. Altijd waar: <strong>{A} × {B}
+      = {AB}</strong> = GGD × KGV = <strong>{G} × {L} = {GL}</strong>.'
+    insight_shared_one: '<strong>{A}</strong> en <strong>{B}</strong> delen de priemfactor
+      <strong>{primes}</strong>. De GGD neemt alleen de groene gedeelde blokken. Het
+      KGV neemt alle blokken — groen gedeeld, blauw extra van A, rood extra van B
+      — zonder een priemfactor twee keer te tellen. Altijd waar: <strong>{A} × {B}
+      = {AB}</strong> = GGD × KGV = <strong>{G} × {L} = {GL}</strong>.'
+    label_choose: Kies twee getallen
+    label_factors: Priemfactoren
+    label_how: Hoe GGD en KGV worden opgebouwd
+    lcm_formula_eq: ' = '
+    lcm_title: KGV — unie van alle factoren
+    legend_onlyA: alleen van A
+    legend_onlyB: alleen van B
+    legend_shared: gedeeld (voor GGD)
+  fibonacci:
+    _name: Rij van Fibonacci
+    card_phi_lbl: Gulden snede φ
+    card_phi_sub: (1 + √5) / 2 = 1.6180339887…
+    card_ratio_error: 'fout ten opzichte van φ:'
+    card_ratio_lbl: Huidige verhouding F(n+1) ÷ F(n)
+    chart_step: stap
+    diff: 'verschil: '
+    insight_close: <strong>{fa} + {fb} = {fr}</strong>. De verhouding = <strong>{ratio}</strong>
+      — binnen <strong>{error}</strong> van φ. Bijna volledig geconvergeerd.
+    insight_converged: <strong>{fa} + {fb} = {fr}</strong>. De verhouding = <strong>{ratio}</strong>
+      — binnen <strong>{error}</strong> van φ. De reeks is geconvergeerd tot 6 decimalen.
+    insight_normal: <strong>{fa} + {fb} = {fr}</strong>. De verhouding = <strong>{ratio}</strong>,
+      nog <strong>{error}</strong> verwijderd van φ = 1.61803…
+    insight_step1: We beginnen met <strong>1 + 1 = 2</strong>. De verhouding 2 ÷ 1
+      = <strong>2.000000</strong> — nog ver van φ ≈ 1.61803.
+    insight_step2: <strong>1 + 2 = 3</strong>. De verhouding 3 ÷ 2 = <strong>1.500000</strong>
+      — al dichterbij. Elke stap verkleint het verschil.
+    sec_addition: Optelling
+    sec_chart: Convergentie naar φ
+    sec_sequence: Reeks tot nu toe
+    sec_steps: Stap door de Fibonacci-reeks
+    step_label: Stap {step} van {total}
+  hexagon-angles:
+    2quads: 2 vierhoeken × 360°
+    4triangles: 4 driehoeken × 180°
+    _name: Hoeken van een zeshoek
+    interiorAngles: Binnenhoeken
+    reset: ↺ Reset
+    total: Totaal
+  incentre:
+    _name: Incentrum
+    angleA: Hoek A
+    angleB: Hoek B
+    angleC: Hoek C
+    area: Oppervlakte
+    centre: Middelpunt I
+    circumference: Omtrek
+    formula: r = Oppervlakte / s
+    hint: 'Sleep een hoekpunt · Schaal: 1 cm = 40 px'
+    incircle: Ingebedde cirkel
+    perimeter: Omtrek
+    radius: Straal (r)
+    scaleUnit: cm
+    sideA: Zijde a (BC)
+    sideB: Zijde b (CA)
+    sideC: Zijde c (AB)
+    touchAB: Raakpunt AB
+    touchBC: Raakpunt BC
+    touchCA: Raakpunt CA
+    triangle: Driehoek
+  marble-jar:
+    _name: Kanspot
+    colorBlue: Blauw
+    colorGreen: Groen
+    colorRed: Rood
+    colorYellow: Geel
+    impossible: Onmogelijk
+    probTitle: Kans om een knikker te pakken en de kleur te raden…
+    shake: Schudden!
+    total: Totaal
+  monte-carlo:
+    _name: Monte Carlo Pi
+    addPoints: + Punten toevoegen
+    approxPi: Benadering van π
+    insideCircle: Binnen de cirkel
+    insideRed: Binnen (rood)
+    outsideBlue: Buiten (blauw)
+    outsideCircle: Buiten de cirkel
+    pointsPerStep: Punten per stap
+    reset: ↺ Reset
+    totalPoints: Totaal aantal punten
+  pentagon-angles:
+    3triangles: 3 driehoeken × 180°
+    _name: Hoeken van een vijfhoek
+    interiorAngles: Binnenhoeken
+    reset: ↺ Reset
+    total: Totaal
+  percent:
+    _name: Percentages
+    axis_neg: −100%
+    axis_pos: +100%
+    axis_zero: 0%
+    hint: Sleep de schuifregelaar naar links voor verlies, naar rechts voor winst.
+    insight_full_loss: Een verlies van <strong>100%</strong> brengt de waarde naar
+      <strong>0</strong>. Herstel vanaf nul is <strong>onmogelijk</strong> — elk percentage
+      van 0 is nog steeds 0.
+    insight_gain: Een winst van <strong>+{pct}%</strong> brengt 100 omhoog naar <strong>{result}</strong>.
+      De groene balk bovenaan en de rode balk onderaan zijn even breed — maar de percentages
+      verschillen. Om terug te keren naar 100 is slechts <strong>{recovery}%</strong>
+      nodig, niet −{pct}%.
+    insight_loss: Een verlies van <strong>{pct}%</strong> brengt 100 terug naar <strong>{result}</strong>.
+      De rode balk bovenaan en de groene balk onderaan bedekken dezelfde fysieke afstand
+      — maar de percentages verschillen omdat ze op verschillende bases worden toegepast.
+      Om te herstellen is <strong>+{recovery}%</strong> nodig, niet +{pct}%.
+    insight_zero: Geen verandering toegepast. Sleep de schuifregelaar om te verkennen.
+    label_after: na verandering
+    label_apply: PAS EEN PROCENTUELE VERANDERING TOE
+    label_recovered: hersteld
+    label_scale: 'SCHAAL: VOLLEDIGE BREEDTE = 200'
+    label_start: start
+  pythagoras:
+    _name: Stelling van Pythagoras
+    angleDeg: 'hoek = '
+    lockRight: rechte hoek
+    reset: Reset
+  quadrangle-angles:
+    _name: Hoeken van een vierhoek
+    interiorAngles: Binnenhoeken
+    reset: Reset
+    sum: Som
+    total: Totaal
+  quadrangles:
+    _name: Vierhoeken
+    areaDiagHalf: 'Formule: A = (d₁ × d₂) / 2
+
+      d₁ (AC) = {0} cm
+
+      d₂ (BD) = {1} cm
+
+      = ({0} × {1}) / 2'
+    areaGaussHeader: 'Gauss formule (shoelace):
+
+      A = ½ |Σ(xᵢ·yᵢ₊₁ − xᵢ₊₁·yᵢ)|
+
+      '
+    areaGaussSum: '
+
+      Σ = {0}
+
+      A = ½ × |{0}|'
+    areaGaussTerm: '  (x{0}·y{1} − x{1}·y{0}) = {2}'
+    areaParallelogram: 'Formule: A = basis × hoogte
+
+      basis (AB) = {0} cm
+
+      hoogte = {1} cm
+
+      = {0} × {1}'
+    areaRectangle: 'Formule: A = breedte × hoogte
+
+      = {0} × {1}'
+    areaSquare: 'Formule: A = zijde²
+
+      = {0}²'
+    areaTrapezoid: 'Formule: A = (b₁ + b₂) / 2 × h
+
+      b₁ (AB) = {0} cm
+
+      b₂ (CD) = {1} cm
+
+      hoogte = {2} cm
+
+      = ({0} + {1}) / 2 × {2}'
+    headingArea: Oppervlakte
+    headingClassification: Classificatie
+    headingSides: Zijden en diagonalen
+    labelDiag1: d₁ (AC)
+    labelDiag2: d₂ (BD)
+    labelPerimeter: Omtrek
+    presetKite: Vlieger
+    presetParallelogram: Parallellogram
+    presetRectangle: Rechthoek
+    presetSquare: Vierkant
+    presetTrapezoid: Trapezium
+    shapeCrossed: gekruiste vierhoek
+    shapeGeneral: algemene vierhoek
+    shapeKite: vlieger
+    shapeParallelogram: parallellogram
+    shapeRectangle: rechthoek
+    shapeRhombus: ruit
+    shapeSquare: vierkant
+    shapeTrapezoid: trapezium
+    unitCm: cm
+    unitCm2: cm²
+  radian:
+    _name: Radialen
+    rad: rad
+  slope:
+    _name: Helling
+    undefined: Verticale lijn → helling ongedefinieerd
+  transformation:
+    _name: Transformaties
+    angle: Hoek
+    enlargement: Vergroting
+    hintEnlargement: Verplaats het oranje punt om het centrum van de vergroting in
+      te stellen.
+    hintReflection: Verplaats beide oranje punten om de spiegellijn te maken.
+    hintRotation: Verplaats het oranje punt om het draaipunt in te stellen.
+    hintTranslation: Gebruik de schuifregelaars om het object te verplaatsen.
+    horizontal: Horizontaal
+    reflection: Spiegeling
+    rotation: Rotatie
+    transformations: Transformaties
+    translation: Translatie
+    vertical: Verticaal
+  triangle-angles:
+    _name: Hoeken van een driehoek
+    reset: Reset
+  triangle-area:
+    _name: Oppervlakte van een driehoek
+    btnProve: Bewijs het
+    btnReset: Reset
+    labelArea: Oppervlakte
+    labelBase: Basis (b)
+    labelHeight: Hoogte (h)
+    proofResultPara: Oppervlakte parallellogram = b × h = <strong>{b} × {h} = {area}
+      cm²</strong>
+    proofResultTri: ' → Driehoek = ½ × {area} = <strong>{triArea} cm²</strong>'
+  triangle-centroid:
+    _name: Zwaartepunt van een driehoek
+    centroid: Zwaartepunt
+    hint: Verplaats de hoekpunten om te zien hoe de positie van het zwaartepunt verandert.
+  triangles:
+    _name: Driehoeken
+    acute: scherphoekig
+    angles: Hoeken
+    area: Oppervlakte
+    byAngles: 'Op basis van hoeken: '
+    bySides: 'Op basis van zijden: '
+    classification: Classificatie
+    equilateral: gelijkzijdig
+    isosceles: gelijkbenig
+    measurements: Afmetingen
+    obtuse: stomphoekig
+    perimeter: Omtrek
+    reset: ↺ Reset
+    right: rechthoekig
+    scalene: ongelijkzijdig
+    sides: Zijden
+  trigonometry:
+    _name: Goniometrie
+    angle: Hoek &theta;
+    cosDesc: De blauwe lijn is de <strong>aanliggende</strong> zijde &mdash; de horizontale
+      afstand van de oorsprong tot de basis van de loodlijn. cos&nbsp;&theta;&nbsp;=&nbsp;aanliggende&nbsp;&divide;&nbsp;schuine&nbsp;zijde&nbsp;(=&nbsp;1).
+    cosFormula: aanliggende / schuine
+    hideProof: Verberg bewijs
+    prove: Bewijs
+    sinDesc: De groene lijn is de <strong>overstaande</strong> zijde &mdash; de verticale
+      afstand van het punt op de cirkel tot de x-as. sin&nbsp;&theta;&nbsp;=&nbsp;overstaande&nbsp;&divide;&nbsp;schuine&nbsp;zijde&nbsp;(=&nbsp;1).
+    sinFormula: overstaande / schuine
+    tanDesc: De oranje lijn is getekend op x&nbsp;=&nbsp;1, rakend aan de cirkel.
+      De hoogte is tan&nbsp;&theta;, aangezien tan&nbsp;&theta;&nbsp;=&nbsp;overstaande&nbsp;&divide;&nbsp;aanliggende&nbsp;=&nbsp;sin&nbsp;&theta;&nbsp;&divide;&nbsp;cos&nbsp;&theta;.
+    tanFormula: overstaande / aanliggende

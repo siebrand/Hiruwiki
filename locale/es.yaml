@@ -1,0 +1,341 @@
+es:
+  angle-guess:
+    _name: Adivinar ángulo
+    difference: 'Diferencia:'
+    finalScore: Puntuación final
+    hint: Mueve el punto azul para establecer el ángulo
+    nextAngle: Siguiente ángulo &rsaquo;
+    points: 'Puntos:'
+    pts: pts
+    round: 'Ronda:'
+    roundOver: Ronda terminada
+    target: 'Objetivo:'
+    tryAgain: Intentar de nuevo
+    yourGuess: 'Tu elección:'
+  angles:
+    _name: Ángulos
+    bisector: Bisectriz
+    bisectorResult: 'Bisectriz: {0}°'
+    complement: Complementario
+    explement: Explementario
+    notDefined: No definido para este ángulo
+    resultAngle: 'Ángulo {0}: {1}°'
+    supplement: Suplementario
+  circle-proof:
+    _name: Prueba del círculo
+    animStopped: Animación detenida.
+    area: Área
+    areaAnimStatus: 'Los sectores se vuelven a ensamblar en un rectángulo: ancho =
+      πr, alto = r.'
+    areaReviewStatus: ✓ Ancho = πr, alto = r → A = πr².
+    circAnimStatus: Cada semicírculo (πr) se desenrolla en una línea, haciendo 2πr
+      en total.
+    circReviewStatus: ✓ Superior πr + Inferior πr = C = 2πr.
+    circumference: Circunferencia
+    initStatus: Elige una prueba y haz clic en 'Pruébalo'.
+    proveIt: Pruébalo ▶
+    radius: Radio
+    readyStatus: Haz clic en 'Pruébalo' para ver la animación.
+    review: Revisar ▶
+    stop: Detener ■
+    tabArea: Área
+    tabCirc: Circunferencia
+    title: Calculadora de Círculos
+    visualProof: Prueba visual
+  dividend:
+    _name: Dividendo y divisor
+    eq_lbl_dividend: dividendo
+    eq_lbl_divisor: divisor
+    eq_lbl_quotient: cociente
+    eq_lbl_remainder: resto
+    insight_exact: <strong>{N} ÷ {D} = {Q}</strong> exacto — sin resto. La barra se
+      llena perfectamente en <strong>{Q}</strong> fragmentos iguales. Esto significa
+      que <strong>{D}</strong> es un divisor de <strong>{N}</strong>.
+    insight_less: <strong>{N}</strong> es menor que el divisor <strong>{D}</strong>,
+      por lo que cabe en <strong>0</strong> fragmentos enteros. Todo el valor es el
+      resto. El resto es siempre menor que el divisor.
+    insight_normal: '<strong>{N} ÷ {D} = {Q}</strong> resto <strong>{R}</strong>.
+      Nota que la pieza roja (<strong>{R}</strong>) siempre es más corta que un fragmento
+      azul (<strong>{D}</strong>). El resto siempre es estrictamente menor que el
+      divisor. Comprobación: <strong>{Q} × {D} + {R} = {QD} + {R} = {N}</strong> ✓'
+    label_bar: Vista de barra — cada fragmento azul =
+    label_bar_units: unidades
+    label_choose: Elige el dividendo y el divisor
+    label_dividend: Dividendo (el número a dividir)
+    label_divisor: Divisor (el tamaño del fragmento)
+    label_equation: Ecuación de división
+    label_repadd: Suma repetida
+    repadd_exact: — se divide exactamente!
+    repadd_leftover: sobra
+    repadd_less: '{N} es menor que {D}, por lo que el cociente es 0 y el valor completo
+      es el resto.'
+  factors:
+    _name: Factores primos
+    gcd_formula_eq: ' = '
+    gcd_none: (ninguno — coprimos)
+    gcd_title: MCD — conservar solo los factores compartidos
+    insight_coprime: '<strong>{A}</strong> y <strong>{B}</strong> son coprimos — no
+      comparten factores primos, por lo que el MCD = 1. El MCM es simplemente su producto.
+      Siempre es cierto: <strong>{A} × {B} = {AB}</strong> = MCD × MCM = <strong>1
+      × {L} = {L}</strong>.'
+    insight_shared_many: '<strong>{A}</strong> y <strong>{B}</strong> comparten los
+      primos <strong>{primes}</strong>. El MCD toma solo los bloques verdes compartidos.
+      El MCM toma todos los bloques — verdes compartidos, azules adicionales de A,
+      rojos adicionales de B — sin contar ningún primo dos veces. Siempre es cierto:
+      <strong>{A} × {B} = {AB}</strong> = MCD × MCM = <strong>{G} × {L} = {GL}</strong>.'
+    insight_shared_one: '<strong>{A}</strong> y <strong>{B}</strong> comparten el
+      primo <strong>{primes}</strong>. El MCD toma solo los bloques verdes compartidos.
+      El MCM toma todos los bloques — verdes compartidos, azules adicionales de A,
+      rojos adicionales de B — sin contar ningún primo dos veces. Siempre es cierto:
+      <strong>{A} × {B} = {AB}</strong> = MCD × MCM = <strong>{G} × {L} = {GL}</strong>.'
+    label_choose: Elige dos números
+    label_factors: Factores primos
+    label_how: Cómo se construyen el MCD y el MCM
+    lcm_formula_eq: ' = '
+    lcm_title: MCM — unión de todos los factores
+    legend_onlyA: solo de A
+    legend_onlyB: solo de B
+    legend_shared: compartidos (usados para MCD)
+  fibonacci:
+    _name: Sucesión de Fibonacci
+    card_phi_lbl: Proporción áurea φ
+    card_phi_sub: (1 + √5) / 2 = 1.6180339887…
+    card_ratio_error: 'error respecto a φ:'
+    card_ratio_lbl: Proporción actual F(n+1) ÷ F(n)
+    chart_step: paso
+    diff: 'dif: '
+    insight_close: <strong>{fa} + {fb} = {fr}</strong>. La proporción = <strong>{ratio}</strong>
+      — a menos de <strong>{error}</strong> de φ. Casi completamente convergido.
+    insight_converged: <strong>{fa} + {fb} = {fr}</strong>. La proporción = <strong>{ratio}</strong>
+      — a menos de <strong>{error}</strong> de φ. La secuencia ha convergido a 6 decimales.
+    insight_normal: <strong>{fa} + {fb} = {fr}</strong>. La proporción = <strong>{ratio}</strong>,
+      todavía a <strong>{error}</strong> de φ = 1.61803…
+    insight_step1: Empezamos con <strong>1 + 1 = 2</strong>. La proporción 2 ÷ 1 =
+      <strong>2.000000</strong> — todavía lejos de φ ≈ 1.61803.
+    insight_step2: <strong>1 + 2 = 3</strong>. La proporción 3 ÷ 2 = <strong>1.500000</strong>
+      — ya más cerca. Cada paso reduce la brecha.
+    sec_addition: Suma
+    sec_chart: Convergencia hacia φ
+    sec_sequence: Secuencia hasta ahora
+    sec_steps: Pasos de la secuencia de Fibonacci
+    step_label: Paso {step} de {total}
+  hexagon-angles:
+    2quads: 2 cuadriláteros × 360°
+    4triangles: 4 triángulos × 180°
+    _name: Ángulos del hexágono
+    interiorAngles: Ángulos interiores
+    reset: ↺ Reiniciar
+    total: Total
+  incentre:
+    _name: Incentro
+    angleA: Ángulo A
+    angleB: Ángulo B
+    angleC: Ángulo C
+    area: Área
+    centre: Centro I
+    circumference: Circunferencia
+    formula: r = Área / s
+    hint: 'Arrastra un vértice · Escala: 1 cm = 40 px'
+    incircle: Incírculo
+    perimeter: Perímetro
+    radius: Radio (r)
+    scaleUnit: cm
+    sideA: Lado a (BC)
+    sideB: Lado b (CA)
+    sideC: Lado c (AB)
+    touchAB: Pt. tangencia AB
+    touchBC: Pt. tangencia BC
+    touchCA: Pt. tangencia CA
+    triangle: Triángulo
+  marble-jar:
+    _name: Frasco de probabilidades
+    colorBlue: Azul
+    colorGreen: Verde
+    colorRed: Rojo
+    colorYellow: Amarillo
+    impossible: Imposible
+    probTitle: Probabilidad de sacar una canica y adivinar su color…
+    shake: ¡Agitar!
+    total: Total
+  monte-carlo:
+    _name: Monte Carlo Pi
+    addPoints: + Añadir puntos
+    approxPi: Aproximación de π
+    insideCircle: Dentro del círculo
+    insideRed: Dentro (rojo)
+    outsideBlue: Fuera (azul)
+    outsideCircle: Fuera del círculo
+    pointsPerStep: Puntos por paso
+    reset: ↺ Reiniciar
+    totalPoints: Total de puntos
+  pentagon-angles:
+    3triangles: 3 triángulos × 180°
+    _name: Ángulos del pentágono
+    interiorAngles: Ángulos interiores
+    reset: ↺ Reiniciar
+    total: Total
+  percent:
+    _name: Porcentajes
+    axis_neg: −100%
+    axis_pos: +100%
+    axis_zero: 0%
+    hint: Arrastra el control deslizante a la izquierda para una pérdida, a la derecha
+      para una ganancia.
+    insight_full_loss: Una pérdida del <strong>100%</strong> lleva el valor a <strong>0</strong>.
+      La recuperación desde cero es <strong>imposible</strong> — cualquier porcentaje
+      de 0 sigue siendo 0.
+    insight_gain: Una ganancia del <strong>+{pct}%</strong> aumenta 100 a <strong>{result}</strong>.
+      La barra verde de arriba y la barra roja de abajo tienen el mismo ancho — pero
+      los porcentajes difieren. Volver a 100 sólo requiere <strong>{recovery}%</strong>,
+      no −{pct}%.
+    insight_loss: Una pérdida del <strong>{pct}%</strong> reduce 100 a <strong>{result}</strong>.
+      La barra roja de arriba y la barra verde de abajo cubren la misma distancia
+      física — pero los porcentajes difieren porque se aplican a bases diferentes.
+      Para recuperarse se necesita <strong>+{recovery}%</strong>, no +{pct}%.
+    insight_zero: No se ha aplicado ningún cambio. Arrastra el control para explorar.
+    label_after: después del cambio
+    label_apply: APLICAR UN CAMBIO PORCENTUAL
+    label_recovered: recuperado
+    label_scale: 'ESCALA: ANCHO TOTAL = 200'
+    label_start: inicio
+  pythagoras:
+    _name: Teorema de Pitágoras
+    angleDeg: 'ángulo = '
+    lockRight: ángulo recto
+    reset: Reiniciar
+  quadrangle-angles:
+    _name: Ángulos del cuadrilátero
+    interiorAngles: Ángulos interiores
+    reset: Reiniciar
+    sum: Suma
+    total: Total
+  quadrangles:
+    _name: Cuadriláteros
+    areaDiagHalf: 'Fórmula: A = (d₁ × d₂) / 2
+
+      d₁ (AC) = {0} cm
+
+      d₂ (BD) = {1} cm
+
+      = ({0} × {1}) / 2'
+    areaGaussHeader: 'Fórmula de Gauss (shoelace):
+
+      A = ½ |Σ(xᵢ·yᵢ₊₁ − xᵢ₊₁·yᵢ)|
+
+      '
+    areaGaussSum: '
+
+      Σ = {0}
+
+      A = ½ × |{0}|'
+    areaGaussTerm: '  (x{0}·y{1} − x{1}·y{0}) = {2}'
+    areaParallelogram: 'Fórmula: A = base × altura
+
+      base (AB) = {0} cm
+
+      altura = {1} cm
+
+      = {0} × {1}'
+    areaRectangle: 'Fórmula: A = base × altura
+
+      = {0} × {1}'
+    areaSquare: 'Fórmula: A = lado²
+
+      = {0}²'
+    areaTrapezoid: 'Fórmula: A = (b₁ + b₂) / 2 × h
+
+      b₁ (AB) = {0} cm
+
+      b₂ (CD) = {1} cm
+
+      altura = {2} cm
+
+      = ({0} + {1}) / 2 × {2}'
+    headingArea: Área
+    headingClassification: Clasificación
+    headingSides: Lados y diagonales
+    labelDiag1: d₁ (AC)
+    labelDiag2: d₂ (BD)
+    labelPerimeter: Perímetro
+    presetKite: Cometa
+    presetParallelogram: Paralelogramo
+    presetRectangle: Rectángulo
+    presetSquare: Cuadrado
+    presetTrapezoid: Trapecio
+    shapeCrossed: complejo
+    shapeGeneral: trapezoide
+    shapeKite: cometa
+    shapeParallelogram: paralelogramo
+    shapeRectangle: rectángulo
+    shapeRhombus: rombo
+    shapeSquare: cuadrado
+    shapeTrapezoid: trapecio
+    unitCm: cm
+    unitCm2: cm²
+  radian:
+    _name: Radianes
+    rad: rad
+  slope:
+    _name: Pendiente
+    undefined: Línea vertical → pendiente indefinida
+  transformation:
+    _name: Transformaciones
+    angle: Ángulo
+    enlargement: Homotecia
+    hintEnlargement: Mueve el punto naranja para establecer el centro de la homotecia.
+    hintReflection: Mueve ambos puntos naranjas para crear la línea de simetría.
+    hintRotation: Mueve el punto naranja para establecer el centro de rotación.
+    hintTranslation: Usa los controles deslizantes para trasladar el objeto.
+    horizontal: Horizontal
+    reflection: Simetría
+    rotation: Rotación
+    transformations: Transformaciones
+    translation: Traslación
+    vertical: Vertical
+  triangle-angles:
+    _name: Ángulos del triángulo
+    reset: Reiniciar
+  triangle-area:
+    _name: Área del triángulo
+    btnProve: Pruébalo
+    btnReset: Reiniciar
+    labelArea: Área
+    labelBase: Base (b)
+    labelHeight: Altura (h)
+    proofResultPara: Área del paralelogramo = b × h = <strong>{b} × {h} = {area} cm²</strong>
+    proofResultTri: ' → Triángulo = ½ × {area} = <strong>{triArea} cm²</strong>'
+  triangle-centroid:
+    _name: Baricentro del triángulo
+    centroid: Baricentro
+    hint: Mueve los vértices para ver cómo cambia la posición del baricentro.
+  triangles:
+    _name: Triángulos
+    acute: acutángulo
+    angles: Ángulos
+    area: Área
+    byAngles: 'Por ángulos: '
+    bySides: 'Por lados: '
+    classification: Clasificación
+    equilateral: equilátero
+    isosceles: isósceles
+    measurements: Medidas
+    obtuse: obtusángulo
+    perimeter: Perímetro
+    reset: ↺ Reiniciar
+    right: rectángulo
+    scalene: escaleno
+    sides: Lados
+  trigonometry:
+    _name: Trigonometría
+    angle: Ángulo &theta;
+    cosDesc: La línea azul es el lado <strong>adyacente</strong> &mdash; la distancia
+      horizontal desde el origen hasta la base de la perpendicular. cos&nbsp;&theta;&nbsp;=&nbsp;adyacente&nbsp;&divide;&nbsp;hipotenusa&nbsp;(=&nbsp;1).
+    cosFormula: adyacente / hipotenusa
+    hideProof: Ocultar demostración
+    prove: Demostrar
+    sinDesc: La línea verde es el lado <strong>opuesto</strong> &mdash; la distancia
+      vertical desde el punto en el círculo hasta el eje x. sen&nbsp;&theta;&nbsp;=&nbsp;opuesto&nbsp;&divide;&nbsp;hipotenusa&nbsp;(=&nbsp;1).
+    sinFormula: opuesto / hipotenusa
+    tanDesc: La línea naranja se dibuja en x&nbsp;=&nbsp;1, tangente al círculo. Su
+      altura es tan&nbsp;&theta;, ya que tan&nbsp;&theta;&nbsp;=&nbsp;opuesto&nbsp;&divide;&nbsp;adyacente&nbsp;=&nbsp;sen&nbsp;&theta;&nbsp;&divide;&nbsp;cos&nbsp;&theta;.
+    tanFormula: opuesto / adyacente

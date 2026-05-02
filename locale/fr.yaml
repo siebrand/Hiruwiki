@@ -1,0 +1,343 @@
+  fr:
+  angle-guess:
+    _name: Deviner l’angle
+    difference: 'Différence :'
+    finalScore: Score final
+    hint: Déplacez le point bleu pour régler l'angle
+    nextAngle: Angle suivant &rsaquo;
+    points: 'Points :'
+    pts: pts
+    round: 'Manche :'
+    roundOver: Manche terminée
+    target: 'Cible :'
+    tryAgain: Réessayer
+    yourGuess: 'Votre estimation :'
+  angles:
+    _name: Angles
+    bisector: Bissectrice
+    bisectorResult: 'Bissectrice : {0}°'
+    complement: Complémentaire
+    explement: Explémentaire
+    notDefined: Non défini pour cet angle
+    resultAngle: 'Angle {0} : {1}°'
+    supplement: Supplémentaire
+  circle-proof:
+    _name: Preuve du cercle
+    animStopped: Animation arrêtée.
+    area: Aire
+    areaAnimStatus: 'Les secteurs se réassemblent en un rectangle : largeur = πr,
+      hauteur = r.'
+    areaReviewStatus: ✓ Largeur = πr, hauteur = r → A = πr².
+    circAnimStatus: Chaque demi-cercle (πr) se déroule en une ligne, totalisant 2πr.
+    circReviewStatus: ✓ Haut πr + Bas πr = C = 2πr.
+    circumference: Circonférence
+    initStatus: Choisissez une preuve et cliquez sur 'Prouver'.
+    proveIt: Prouver ▶
+    radius: Rayon
+    readyStatus: Cliquez sur 'Prouver' pour voir l'animation.
+    review: Réviser ▶
+    stop: Arrêter ■
+    tabArea: Aire
+    tabCirc: Circonférence
+    title: Calculateur de Cercle
+    visualProof: Preuve visuelle
+  dividend:
+    _name: Dividende et diviseur
+    eq_lbl_dividend: dividende
+    eq_lbl_divisor: diviseur
+    eq_lbl_quotient: quotient
+    eq_lbl_remainder: reste
+    insight_exact: <strong>{N} ÷ {D} = {Q}</strong> exactement — pas de reste. La
+      barre se remplit parfaitement en <strong>{Q}</strong> morceaux égaux. Cela signifie
+      que <strong>{D}</strong> est un diviseur de <strong>{N}</strong>.
+    insight_less: <strong>{N}</strong> est plus petit que le diviseur <strong>{D}</strong>,
+      donc il contient <strong>0</strong> morceau entier. Toute la valeur est le reste.
+      Le reste est toujours inférieur au diviseur.
+    insight_normal: '<strong>{N} ÷ {D} = {Q}</strong> reste <strong>{R}</strong>.
+      Notez que la pièce rouge (<strong>{R}</strong>) est toujours plus courte qu''un
+      morceau bleu (<strong>{D}</strong>). Le reste est toujours strictement inférieur
+      au diviseur. Vérification : <strong>{Q} × {D} + {R} = {QD} + {R} = {N}</strong>
+      ✓'
+    label_bar: Vue en barre — chaque morceau bleu =
+    label_bar_units: unités
+    label_choose: Choisissez le dividende et le diviseur
+    label_dividend: Dividende (le nombre à diviser)
+    label_divisor: Diviseur (la taille du morceau)
+    label_equation: Équation de division
+    label_repadd: Addition répétée
+    repadd_exact: — divise exactement !
+    repadd_leftover: reste
+    repadd_less: '{N} est inférieur à {D}, donc le quotient est 0 et toute la valeur
+      est le reste.'
+  factors:
+    _name: Facteurs premiers
+    gcd_formula_eq: ' = '
+    gcd_none: (aucun — premiers entre eux)
+    gcd_title: PGCD — ne garder que les facteurs partagés
+    insight_coprime: '<strong>{A}</strong> et <strong>{B}</strong> sont premiers entre
+      eux — ils ne partagent aucun facteur premier, donc PGCD = 1. Le PPCM est simplement
+      leur produit. Toujours vrai : <strong>{A} × {B} = {AB}</strong> = PGCD × PPCM
+      = <strong>1 × {L} = {L}</strong>.'
+    insight_shared_many: '<strong>{A}</strong> et <strong>{B}</strong> partagent les
+      nombres premiers <strong>{primes}</strong>. Le PGCD ne prend que les blocs verts
+      partagés. Le PPCM prend tous les blocs — verts partagés, bleus de A, rouges
+      de B — sans compter aucun nombre premier deux fois. Toujours vrai : <strong>{A}
+      × {B} = {AB}</strong> = PGCD × PPCM = <strong>{G} × {L} = {GL}</strong>.'
+    insight_shared_one: '<strong>{A}</strong> et <strong>{B}</strong> partagent le
+      nombre premier <strong>{primes}</strong>. Le PGCD ne prend que les blocs verts
+      partagés. Le PPCM prend tous les blocs — verts partagés, bleus de A, rouges
+      de B — sans compter aucun nombre premier deux fois. Toujours vrai : <strong>{A}
+      × {B} = {AB}</strong> = PGCD × PPCM = <strong>{G} × {L} = {GL}</strong>.'
+    label_choose: Choisissez deux nombres
+    label_factors: Facteurs premiers
+    label_how: Comment le PGCD et le PPCM sont construits
+    lcm_formula_eq: ' = '
+    lcm_title: PPCM — union de tous les facteurs
+    legend_onlyA: unique à A
+    legend_onlyB: unique à B
+    legend_shared: partagé (utilisé pour le PGCD)
+  fibonacci:
+    _name: Suite de Fibonacci
+    card_phi_lbl: Nombre d'or φ
+    card_phi_sub: (1 + √5) / 2 = 1.6180339887…
+    card_ratio_error: 'erreur par rapport à φ :'
+    card_ratio_lbl: Rapport actuel F(n+1) ÷ F(n)
+    chart_step: étape
+    diff: 'diff : '
+    insight_close: <strong>{fa} + {fb} = {fr}</strong>. Le rapport = <strong>{ratio}</strong>
+      — à <strong>{error}</strong> de φ près. Presque totalement convergé.
+    insight_converged: <strong>{fa} + {fb} = {fr}</strong>. Le rapport = <strong>{ratio}</strong>
+      — à <strong>{error}</strong> de φ près. La suite a convergé à 6 décimales.
+    insight_normal: <strong>{fa} + {fb} = {fr}</strong>. Le rapport = <strong>{ratio}</strong>,
+      encore à <strong>{error}</strong> de φ = 1.61803…
+    insight_step1: On commence par <strong>1 + 1 = 2</strong>. Le rapport 2 ÷ 1 =
+      <strong>2.000000</strong> — encore loin de φ ≈ 1.61803.
+    insight_step2: <strong>1 + 2 = 3</strong>. Le rapport 3 ÷ 2 = <strong>1.500000</strong>
+      — déjà plus proche. Chaque étape réduit l'écart.
+    sec_addition: Addition
+    sec_chart: Convergence vers φ
+    sec_sequence: Suite jusqu'ici
+    sec_steps: Étapes de la suite de Fibonacci
+    step_label: Étape {step} sur {total}
+  hexagon-angles:
+    2quads: 2 quadrilatères × 360°
+    4triangles: 4 triangles × 180°
+    _name: Angles de l’hexagone
+    interiorAngles: Angles intérieurs
+    reset: ↺ Réinitialiser
+    total: Total
+  incentre:
+    _name: Incentre
+    angleA: Angle A
+    angleB: Angle B
+    angleC: Angle C
+    area: Aire
+    centre: Centre I
+    circumference: Circonférence
+    formula: r = Aire / s
+    hint: 'Faites glisser un sommet · Échelle : 1 cm = 40 px'
+    incircle: Cercle inscrit
+    perimeter: Périmètre
+    radius: Rayon (r)
+    scaleUnit: cm
+    sideA: Côté a (BC)
+    sideB: Côté b (CA)
+    sideC: Côté c (AB)
+    touchAB: Pt de contact AB
+    touchBC: Pt de contact BC
+    touchCA: Pt de contact CA
+    triangle: Triangle
+  marble-jar:
+    _name: Pot de probabilités
+    colorBlue: Bleu
+    colorGreen: Vert
+    colorRed: Rouge
+    colorYellow: Jaune
+    impossible: Impossible
+    probTitle: Probabilité de tirer une bille et de deviner sa couleur…
+    shake: Secouer !
+    total: Total
+  monte-carlo:
+    _name: Monte Carlo Pi
+    addPoints: + Ajouter des points
+    approxPi: Approximation de π
+    insideCircle: À l'intérieur du cercle
+    insideRed: À l'intérieur (rouge)
+    outsideBlue: À l'extérieur (bleu)
+    outsideCircle: À l'extérieur du cercle
+    pointsPerStep: Points par étape
+    reset: ↺ Réinitialiser
+    totalPoints: Total des points
+  pentagon-angles:
+    3triangles: 3 triangles × 180°
+    _name: Angles du pentagone
+    interiorAngles: Angles intérieurs
+    reset: ↺ Réinitialiser
+    total: Total
+  percent:
+    _name: Pourcentages
+    axis_neg: −100%
+    axis_pos: +100%
+    axis_zero: 0%
+    hint: Faites glisser le curseur vers la gauche pour une perte, vers la droite
+      pour un gain.
+    insight_full_loss: Une perte de <strong>100%</strong> ramène la valeur à <strong>0</strong>.
+      La récupération à partir de zéro est <strong>impossible</strong> — n'importe
+      quel pourcentage de 0 est toujours 0.
+    insight_gain: Un gain de <strong>+{pct}%</strong> porte 100 à <strong>{result}</strong>.
+      La barre verte en haut et la barre rouge en bas ont la même largeur — mais les
+      pourcentages diffèrent. Revenir à 100 ne prend que <strong>{recovery}%</strong>,
+      pas −{pct}%.
+    insight_loss: Une perte de <strong>{pct}%</strong> ramène 100 à <strong>{result}</strong>.
+      La barre rouge en haut et la barre verte en bas couvrent la même distance physique
+      — mais les pourcentages diffèrent car ils s'appliquent à des bases différentes.
+      La récupération nécessite <strong>+{recovery}%</strong>, pas +{pct}%.
+    insight_zero: Aucun changement appliqué. Faites glisser le curseur pour explorer.
+    label_after: après changement
+    label_apply: APPLIQUER UN CHANGEMENT EN POURCENTAGE
+    label_recovered: récupéré
+    label_scale: 'ÉCHELLE : LARGEUR TOTALE DE LA BARRE = 200'
+    label_start: début
+  pythagoras:
+    _name: Théorème de Pythagore
+    angleDeg: 'angle = '
+    lockRight: angle droit
+    reset: Réinitialiser
+  quadrangle-angles:
+    _name: Angles du quadrilatère
+    interiorAngles: Angles intérieurs
+    reset: Réinitialiser
+    sum: Somme
+    total: Total
+  quadrangles:
+    _name: Quadrilatères
+    areaDiagHalf: 'Formule : A = (d₁ × d₂) / 2
+
+      d₁ (AC) = {0} cm
+
+      d₂ (BD) = {1} cm
+
+      = ({0} × {1}) / 2'
+    areaGaussHeader: 'Formule de Gauss (shoelace) :
+
+      A = ½ |Σ(xᵢ·yᵢ₊₁ − xᵢ₊₁·yᵢ)|
+
+      '
+    areaGaussSum: '
+
+      Σ = {0}
+
+      A = ½ × |{0}|'
+    areaGaussTerm: '  (x{0}·y{1} − x{1}·y{0}) = {2}'
+    areaParallelogram: 'Formule : A = base × hauteur
+
+      base (AB) = {0} cm
+
+      hauteur = {1} cm
+
+      = {0} × {1}'
+    areaRectangle: 'Formule : A = largeur × hauteur
+
+      = {0} × {1}'
+    areaSquare: 'Formule : A = côté²
+
+      = {0}²'
+    areaTrapezoid: 'Formule : A = (b₁ + b₂) / 2 × h
+
+      b₁ (AB) = {0} cm
+
+      b₂ (CD) = {1} cm
+
+      hauteur = {2} cm
+
+      = ({0} + {1}) / 2 × {2}'
+    headingArea: Aire
+    headingClassification: Classification
+    headingSides: Côtés et diagonales
+    labelDiag1: d₁ (AC)
+    labelDiag2: d₂ (BD)
+    labelPerimeter: Périmètre
+    presetKite: Cerf-volant
+    presetParallelogram: Parallélogramme
+    presetRectangle: Rectangle
+    presetSquare: Carré
+    presetTrapezoid: Trapèze
+    shapeCrossed: quadrilatère croisé
+    shapeGeneral: quadrilatère quelconque
+    shapeKite: cerf-volant
+    shapeParallelogram: parallélogramme
+    shapeRectangle: rectangle
+    shapeRhombus: losange
+    shapeSquare: carré
+    shapeTrapezoid: trapèze
+    unitCm: cm
+    unitCm2: cm²
+  radian:
+    _name: Radians
+    rad: rad
+  slope:
+    _name: Pente
+    undefined: Ligne verticale → pente indéfinie
+  transformation:
+    _name: Transformations
+    angle: Angle
+    enlargement: Homothétie
+    hintEnlargement: Déplacez le point orange pour définir le centre de l'homothétie.
+    hintReflection: Déplacez les deux points oranges pour créer la ligne de symétrie.
+    hintRotation: Déplacez le point orange pour définir le centre de rotation.
+    hintTranslation: Utilisez les curseurs pour translater l'objet.
+    horizontal: Horizontal
+    reflection: Symétrie
+    rotation: Rotation
+    transformations: Transformations
+    translation: Translation
+    vertical: Vertical
+  triangle-angles:
+    _name: Angles du triangle
+    reset: Réinitialiser
+  triangle-area:
+    _name: Aire du triangle
+    btnProve: Prouver
+    btnReset: Réinitialiser
+    labelArea: Aire
+    labelBase: Base (b)
+    labelHeight: Hauteur (h)
+    proofResultPara: Aire du parallélogramme = b × h = <strong>{b} × {h} = {area}
+      cm²</strong>
+    proofResultTri: ' → Triangle = ½ × {area} = <strong>{triArea} cm²</strong>'
+  triangle-centroid:
+    _name: Centre de gravité du triangle
+    centroid: Centre de gravité
+    hint: Déplacez les sommets pour voir comment la position du centre de gravité
+      change.
+  triangles:
+    _name: Triangles
+    acute: acutangle
+    angles: Angles
+    area: Aire
+    byAngles: 'Par angles : '
+    bySides: 'Par côtés : '
+    classification: Classification
+    equilateral: équilatéral
+    isosceles: isocèle
+    measurements: Mesures
+    obtuse: obtusangle
+    perimeter: Périmètre
+    reset: ↺ Réinitialiser
+    right: rectangle
+    scalene: scalène
+    sides: Côtés
+  trigonometry:
+    _name: Trigonométrie
+    angle: Angle &theta;
+    cosDesc: La ligne bleue est le côté <strong>adjacent</strong> &mdash; la distance
+      horizontale de l'origine à la base de la perpendiculaire. cos&nbsp;&theta;&nbsp;=&nbsp;adyacente&nbsp;&divide;&nbsp;hypoténuse&nbsp;(=&nbsp;1).
+    cosFormula: adjacent / hypoténuse
+    hideProof: Masquer la preuve
+    prove: Prouver
+    sinDesc: La ligne verte est le côté <strong>opposé</strong> &mdash; la distance
+      verticale du point sur le cercle à l'axe x. sin&nbsp;&theta;&nbsp;=&nbsp;opposé&nbsp;&divide;&nbsp;hypoténuse&nbsp;(=&nbsp;1).
+    sinFormula: opposé / hypoténuse
+    tanDesc: La ligne orange est tracée à x&nbsp;=&nbsp;1, tangente au cercle. Sa
+      hauteur est tan&nbsp;&theta;, car tan&nbsp;&theta;&nbsp;=&nbsp;opposé&nbsp;&divide;&nbsp;adjacent&nbsp;=&nbsp;sin&nbsp;&theta;&nbsp;&divide;&nbsp;cos&nbsp;&theta;.
+    tanFormula: opposé / adjacent

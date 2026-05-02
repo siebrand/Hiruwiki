@@ -1,0 +1,342 @@
+  eu:
+  angle-guess:
+    _name: Angelua asmatu
+    difference: 'Aldea:'
+    finalScore: Azken emaitza
+    hint: Puntu urdina mugitu angelua zehazteko
+    nextAngle: Hurrengo angelua &rsaquo;
+    points: 'Puntuak:'
+    pts: pt
+    round: 'Txanda:'
+    roundOver: Txanda amaitu da
+    target: 'Helburua:'
+    tryAgain: Berriz saiatu
+    yourGuess: 'Zure aukera:'
+  angles:
+    _name: Angeluak
+    bisector: Erdikaria
+    bisectorResult: 'Erdikaria: {0}°'
+    complement: Osagarria
+    explement: Konjubatua
+    notDefined: Angelu honentzat definitu gabe
+    resultAngle: 'Angelu {0}: {1}°'
+    supplement: Betegarria
+  circle-proof:
+    _name: Zirkuluaren froga
+    animStopped: Animazioa gelditu da.
+    area: Azalera
+    areaAnimStatus: 'Zatiak elkartzen dira laukizuzen bat egiteko: zabalera = πr,
+      altuera = r.'
+    areaReviewStatus: ✓ Zabalera = πr, altuera = r → A = πr².
+    circAnimStatus: Zirkulu-erdi bakoitza (πr) lerro bat izatera pasatzen da, eta
+      bi 2πr dira.
+    circReviewStatus: ✓ Goiko πr + Beheko πr = C = 2πr.
+    circumference: Zirkunferentzia
+    initStatus: Aukeratu froga bat eta sakatu 'Froga ezazu'.
+    proveIt: Froga ezazu ▶
+    radius: Erradioa
+    readyStatus: Sakatu 'Froga ezazu' animazioa ikusteko.
+    review: Berrikusi ▶
+    stop: Gelditu ■
+    tabArea: Azalera
+    tabCirc: Zirkunferentzia
+    title: Zirkulu kalkuladorea
+    visualProof: Froga bisuala
+  dividend:
+    _name: Zatikizuna eta zatitzailea
+    eq_lbl_dividend: zatikizuna
+    eq_lbl_divisor: zatitzailea
+    eq_lbl_quotient: zatidura
+    eq_lbl_remainder: hondarra
+    insight_exact: <strong>{N} ÷ {D} = {Q}</strong> zenbaki osoa — hondarrik gabe.
+      Barra <strong>{Q}</strong> zati berdinetan betetzen da. Horrek esan nahi du
+      <strong>{D}</strong> <strong>{N}</strong>-ren zatitzailea dela.
+    insight_less: <strong>{N}</strong> zatitzailea baino txikiagoa da (<strong>{D}</strong>),
+      beraz ez da zati oso bat sartzen. Balio osoa hondarra da. Hondarra beti zatitzailea
+      baino txikiagoa da.
+    insight_normal: '<strong>{N} ÷ {D} = {Q}</strong> hondarra <strong>{R}</strong>.
+      Kontuan hartu pieza gorria (<strong>{R}</strong>) beti zati urdin bat (<strong>{D}</strong>)
+      baino motzagoa dela. Hondarra beti zatitzailea baino txikiagoa da. Egiaztatu:
+      <strong>{Q} × {D} + {R} = {QD} + {R} = {N}</strong> ✓'
+    label_bar: Barra ikuspegia — zati urdin bakoitza =
+    label_bar_units: unitate
+    label_choose: Aukeratu zatikizuna eta zatitzailea
+    label_dividend: Zatikizuna (zatitu beharreko zenbakia)
+    label_divisor: Zatitzailea (zatiaren tamaina)
+    label_equation: Zatiketa ekuazioa
+    label_repadd: Batuketa errepikatua
+    repadd_exact: — zehaztasunez zatitzen da!
+    repadd_leftover: hondarra
+    repadd_less: '{N} {D} baino txikiagoa da, beraz zatidura 0 da eta balio osoa hondarra
+      da.'
+  factors:
+    _name: Faktore lehenak
+    gcd_formula_eq: ' = '
+    gcd_none: (bat ere ez — elkarrekiko lehenak)
+    gcd_title: ZKH — partekatutako faktoreak bakarrik gordetzen dira
+    insight_coprime: '<strong>{A}</strong> eta <strong>{B}</strong> elkarrekiko lehenak
+      dira — ez dute zenbaki lehenik partekatzen, beraz ZKH = 1. MKT haien biderkadura
+      da, zuzenean. Beti egia: <strong>{A} × {B} = {AB}</strong> = <strong>ZKH × MKT</strong>
+      = <strong>1 × {L} = {L}</strong>.'
+    insight_shared_many: '<strong>{A}</strong> eta <strong>{B}</strong>-k <strong>{primes}</strong>
+      zenbaki lehenak partekatzen dituzte. ZKHk bloke berde partekatuak bakarrik hartzen
+      ditu. MKTk bloke guztiak hartzen ditu — berde partekatuak, A-ren soberakinak
+      urdin, B-renak gorri — zenbaki lehenik birritan zenbatu gabe. Beti egia: <strong>{A}
+      × {B} = {AB}</strong> = <strong>ZKH × MKT</strong> = <strong>{G} × {L} = {GL}</strong>.'
+    insight_shared_one: '<strong>{A}</strong> eta <strong>{B}</strong>-k <strong>{primes}</strong>
+      zenbaki lehena partekatzen dute. ZKHk bloke berde partekatuak bakarrik hartzen
+      ditu. MKTk bloke guztiak hartzen ditu — berde partekatuak, A-ren soberakin urdinak,
+      B-renak gorri — zenbaki lehenik birritan zenbatu gabe. Beti egia: <strong>{A}
+      × {B} = {AB}</strong> = <strong>ZKH × MKT</strong> = <strong>{G} × {L} = {GL}</strong>.'
+    label_choose: Aukeratu bi zenbaki
+    label_factors: Zenbaki lehenen faktorizazioa
+    label_how: Nola eraikitzen dira ZKH eta MKT
+    lcm_formula_eq: ' = '
+    lcm_title: MKT — faktore guztien biderketa
+    legend_onlyA: Ari bakarrik dagokiona
+    legend_onlyB: Bri bakarrik dagokiona
+    legend_shared: partekatua (ZKHrako erabilia)
+  fibonacci:
+    _name: Fibonacci sekuentzia
+    card_phi_lbl: Urrezko arrazoia φ
+    card_phi_sub: (1 + √5) / 2 = 1,6180339887…
+    card_ratio_error: 'φ-rekiko errorea:'
+    card_ratio_lbl: Uneko erlazioa F(n+1) ÷ F(n)
+    chart_step: urratsa
+    diff: 'aldea: '
+    insight_close: <strong>{fa} + {fb} = {fr}</strong>. Erlazioa = <strong>{ratio}</strong>
+      — φ-tik <strong>{error}</strong>-ra. Ia erabat hurbildu da.
+    insight_converged: <strong>{fa} + {fb} = {fr}</strong>. Erlazioa = <strong>{ratio}</strong>
+      — φ-tik <strong>{error}</strong>-ra. Segida 6 dezimaletara hurbildu da.
+    insight_normal: <strong>{fa} + {fb} = {fr}</strong>. Erlazioa = <strong>{ratio}</strong>,
+      oraindik <strong>{error}</strong> urrun φ = 1,61803…-tik.
+    insight_step1: <strong>1 + 1 = 2</strong>-rekin hasten gara. 2 ÷ 1 = <strong>2,000000</strong>
+      erlazioa — oraindik urrun φ ≈ 1,61803-tik.
+    insight_step2: <strong>1 + 2 = 3</strong>. 3 ÷ 2 = <strong>1,500000</strong> erlazioa
+      — hurbilago dagoeneko. Urrats bakoitzak tartea murriztuko du.
+    sec_addition: Batuketa
+    sec_chart: φ-rantz konbergentzia
+    sec_sequence: Orain arteko segida
+    sec_steps: Fibonacci segidaren urratsak
+    step_label: '{step}. urratsa {total}tik'
+  hexagon-angles:
+    2quads: 2 lauki × 360°
+    4triangles: 4 triangelu × 180°
+    _name: Hexagonoaren angeluak
+    interiorAngles: Barne angeluak
+    reset: ↺ Berrezarri
+    total: Guztira
+  incentre:
+    _name: Inzentroa
+    angleA: A angelua
+    angleB: B angelua
+    angleC: C angelua
+    area: Azalera
+    centre: I intzentroa
+    circumference: Zirkunferentzia
+    formula: r = Azalera / s
+    hint: 'Erpinak mugitu ditzakezu - Eskala: 1 cm= 40 px'
+    incircle: Zirkulu inskribatua
+    perimeter: Perimetroa
+    radius: Erradioa (r)
+    scaleUnit: cm
+    sideA: a aldea (BC)
+    sideB: b aldea (CA)
+    sideC: c aldea (AB)
+    touchAB: AB tangentea
+    touchBC: BC tangentea
+    touchCA: CA tangentea
+    triangle: Triangelua
+  marble-jar:
+    _name: Probabilitate ontzia
+    colorBlue: Urdina
+    colorGreen: Berdea
+    colorRed: Gorria
+    colorYellow: Horia
+    impossible: Ezinezkoa
+    probTitle: Kanika bat atera eta kolorea asmatzeko probabilitatea…
+    shake: Astindu!
+    total: Guztira
+  monte-carlo:
+    _name: Monte Carlo Pi
+    addPoints: + Puntuak gehitu
+    approxPi: π-ren hurbilketa
+    insideCircle: Zirkuluaren barruan
+    insideRed: Barruan (gorria)
+    outsideBlue: Kanpoan (urdina)
+    outsideCircle: Zirkuluaren kanpoan
+    pointsPerStep: Urrats bakoitzeko
+    reset: ↺ Berrezarri
+    totalPoints: Puntu kopurua
+  pentagon-angles:
+    3triangles: 3 triangelu × 180°
+    _name: Pentagonoaren angeluak
+    interiorAngles: Barne angeluak
+    reset: ↺ Berrezarri
+    total: Guztira
+  percent:
+    _name: Ehunekoak
+    axis_neg: −% 100
+    axis_pos: +% 100
+    axis_zero: '% 0'
+    hint: Arrastatu kontrol-barra ezkerrera galera ikusteko, eskuinera irabazia ikusteko.
+    insight_full_loss: <strong>% 100</strong>eko galera batek balioa <strong>0</strong>ra
+      eramaten du. Zerotik berreskuratzea <strong>ezinezkoa</strong> da — edozein
+      ehuneko 0 izanda ere 0 izango da.
+    insight_gain: <strong>% +{pct}</strong>-ko irabaziak 100etik <strong>{result}</strong>-ra
+      igotzen du. Goiko barra berdeak eta beheko barra gorriak zabalera bera dute
+      — baina ehunekoek desberdintasuna dute. 100era itzultzeko <strong>% {recovery}</strong>
+      besterik ez da behar, ez % −{pct}.
+    insight_loss: <strong>% {pct}</strong>-ko galera batek 100 <strong>{result}</strong>-era
+      jaisten du. Goiko barra gorriak eta beheko barra berdeak distantzia fisiko bera
+      hartzen dute — baina ehunekoek desberdintasuna dute, base ezberdinei aplikatzen
+      zaizkie eta. Berreskuratzeko <strong>% +{recovery}</strong> behar da, ez % +{pct}.
+    insight_zero: Aldaketarik aplikatu gabe. Arrastatu kontrol-barra esploratzeko.
+    label_after: aldaketaren ostean
+    label_apply: EHUNEKO ALDAKETA BAT EZARRI
+    label_recovered: berrezartzeko
+    label_scale: 'ESKALA: BARRA OSOA = 200'
+    label_start: hasiera
+  pythagoras:
+    _name: Pitagorasen teorema
+    angleDeg: 'angelua = '
+    lockRight: angelu zuzena
+    reset: Berrezarri
+  quadrangle-angles:
+    _name: Koadrilateroaren angeluak
+    interiorAngles: Barne angeluak
+    reset: Berrezarri
+    sum: Batuketa
+    total: Guztira
+  quadrangles:
+    _name: Koadrilateroak
+    areaDiagHalf: 'Formula: A = (d₁ × d₂) / 2
+
+      d₁ (AC) = {0} cm
+
+      d₂ (BD) = {1} cm
+
+      = ({0} × {1}) / 2'
+    areaGaussHeader: 'Gaussen formula:
+
+      A = ½ |Σ(xᵢ·yᵢ₊₁ − xᵢ₊₁·yᵢ)|
+
+      '
+    areaGaussSum: '
+
+      Σ = {0}
+
+      A = ½ × |{0}|'
+    areaGaussTerm: '  (x{0}·y{1} − x{1}·y{0}) = {2}'
+    areaParallelogram: 'Formula: A = oinarria × altuera
+
+      oinarria (AB) = {0} cm
+
+      altuera = {1} cm
+
+      = {0} × {1}'
+    areaRectangle: 'Formula: A = zabalera × altuera
+
+      = {0} × {1}'
+    areaSquare: 'Formula: A = aldea²
+
+      = {0}²'
+    areaTrapezoid: 'Formula: A = (b₁ + b₂) / 2 × h
+
+      b₁ (AB) = {0} cm
+
+      b₂ (CD) = {1} cm
+
+      altuera = {2} cm
+
+      = ({0} + {1}) / 2 × {2}'
+    headingArea: Azalera
+    headingClassification: Sailkapena
+    headingSides: Aldeak eta diagonalak
+    labelDiag1: d₁ (AC)
+    labelDiag2: d₂ (BD)
+    labelPerimeter: Perimetroa
+    presetKite: Kometa
+    presetParallelogram: Paralelogramoa
+    presetRectangle: Laukizuzena
+    presetSquare: Karratua
+    presetTrapezoid: Trapezioa
+    shapeCrossed: konplexua
+    shapeGeneral: trapezoidea
+    shapeKite: kometa
+    shapeParallelogram: paralelogramoa
+    shapeRectangle: laukizuzena
+    shapeRhombus: erronboa
+    shapeSquare: karratua
+    shapeTrapezoid: trapezioa
+    unitCm: cm
+    unitCm2: cm²
+  radian:
+    _name: Radianak
+    rad: rad
+  slope:
+    _name: Maldia
+    undefined: Lerro bertikala → malda ezarri gabe
+  transformation:
+    _name: Transformazioak
+    angle: Angelua
+    enlargement: Eskala
+    hintEnlargement: Puntu laranja mugitu eskalaren jatorria ezartzeko.
+    hintReflection: Bi puntu laranjak mugitu ispilu lerroa sortzeko.
+    hintRotation: Puntu laranja mugitu errotazio zentroa ezartzeko.
+    hintTranslation: Erabili barrak objektuaren translazioa egiteko.
+    horizontal: Horizontala
+    reflection: Islapena
+    rotation: Biraketa
+    transformations: Transformazioak
+    translation: Translazioa
+    vertical: Bertikala
+  triangle-angles:
+    _name: Hirukiaren angeluak
+    reset: Berrezarri
+  triangle-area:
+    _name: Hirukiaren azalera
+    btnProve: Froga ezazu
+    btnReset: Berrezarri
+    labelArea: Azalera
+    labelBase: Oinarria (b)
+    labelHeight: Altuera (h)
+    proofResultPara: Paralelogramoaren azalera = b × h = <strong>{b} × {h} = {area}
+      cm²</strong>
+    proofResultTri: ' → Triangeluarena = ½ × {area} = <strong>{triArea} cm²</strong>'
+  triangle-centroid:
+    _name: Hirukiaren barizentroa
+    centroid: Zentroidea
+    hint: Mugitu erpinak barizentroaren kokapena nola aldatzen den ikusteko
+  triangles:
+    _name: Hirukiak
+    acute: zorrotza
+    angles: Angeluak
+    area: Azalera
+    byAngles: 'Angeluen arabera: '
+    bySides: 'Aldeen arabera: '
+    classification: Sailkapena
+    equilateral: aldekidea
+    isosceles: isoszelea
+    measurements: Neurriak
+    obtuse: kamutsa
+    perimeter: Perimetroa
+    reset: Berrezarri ↺
+    right: zuzena
+    scalene: eskaleno
+    sides: Aldeak
+  trigonometry:
+    _name: Trigonometria
+    angle: Angelua &theta;
+    cosDesc: Lerro urdina alde <strong>auzokidea</strong> da &mdash; jatorritik elkartzutaren
+      oinarrira dagoen distantzia horizontala. cos&nbsp;&theta;&nbsp;=&nbsp;auzokidea&nbsp;&divide;&nbsp;hipotenisa&nbsp;(=&nbsp;1).
+    cosFormula: auzokidea / hipotenusa
+    hideProof: Froga ezkutatu
+    prove: Frogatu
+    sinDesc: Lerro berdea <strong>aurkako</strong> aldea da &mdash; zirkulu puntutik
+      x-ardatzera dagoen distantzia bertikala sin&nbsp;&theta;&nbsp;=&nbsp;aurkakoa&nbsp;&divide;&nbsp;hipotenusa&nbsp;(=&nbsp;1).
+    sinFormula: aurkakoa / hipotenusa
+    tanDesc: Lerro laranja x&nbsp;=&nbsp;1 denean marrazten da, zirkuluarekiko tangentea.
+      Bere altuera tan&nbsp;&theta; da, tan&nbsp;=&nbsp;aurkakoa&nbsp;&divide;&nbsp;auzokidea&nbsp;=&nbsp;sin&nbsp;&theta;&nbsp;&divide;&nbsp;cos&nbsp;&theta;
+      baita.
+    tanFormula: aurkakoa / auzokidea
