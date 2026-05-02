@@ -275,44 +275,44 @@ document.querySelectorAll( '.hiruwiki[data-module="positive-coordinates"]' ).for
       lx = pt.x + 18; ly = pt.y - 18;
       if ( lx + totalW + 8 > CW - 4 ) { lx = pt.x - totalW - 18; }
       if ( ly - FS < 4 )              { ly = pt.y + 26; }
-      ctx.fillStyle = 'rgba(255,255,255,0.90)';
+      ctx.fillStyle = hiruwiki.getThemeColor('background-color-neutral', '#ffffff');
       ctx.beginPath(); ctx.roundRect( lx - 4, ly - FS, totalW + 8, FS + 6, 4 ); ctx.fill();
-      ctx.strokeStyle = '#bdc3c7'; ctx.lineWidth = 1; ctx.stroke();
+      ctx.strokeStyle = hiruwiki.getThemeColor('border-color-base', '#bdc3c7'); ctx.lineWidth = 1; ctx.stroke();
       cx2 = lx;
-      ctx.fillStyle = '#2c3e50'; ctx.fillText( p1,   cx2, ly ); cx2 += wP1;
+      ctx.fillStyle = hiruwiki.getThemeColor('color-base', '#2c3e50'); ctx.fillText( p1,   cx2, ly ); cx2 += wP1;
       ctx.fillStyle = xColor;    ctx.fillText( xStr, cx2, ly ); cx2 += wX;
-      ctx.fillStyle = '#2c3e50'; ctx.fillText( cm,   cx2, ly ); cx2 += wCm;
+      ctx.fillStyle = hiruwiki.getThemeColor('color-base', '#2c3e50'); ctx.fillText( cm,   cx2, ly ); cx2 += wCm;
       ctx.fillStyle = yColor;    ctx.fillText( yStr, cx2, ly ); cx2 += wY;
-      ctx.fillStyle = '#2c3e50'; ctx.fillText( p2,   cx2, ly );
+      ctx.fillStyle = hiruwiki.getThemeColor('color-base', '#2c3e50'); ctx.fillText( p2,   cx2, ly );
       ctx.restore();
     }
 
     function draw() {
       var i, j, x, y, originC, p, pc, tp;
       ctx.clearRect( 0, 0, CW, CH );
-      ctx.fillStyle = '#fafcff'; ctx.fillRect( 0, 0, CW, CH );
+      ctx.fillStyle = hiruwiki.getThemeColor('background-color-neutral-subtle', '#fafcff'); ctx.fillRect( 0, 0, CW, CH );
       originC = toCanvas( 0, 0 );
 
       for ( i = 0; i <= X_MAX; i++ ) {
         x = PAD_LEFT + i * CELL;
         ctx.beginPath();
-        ctx.strokeStyle = ( i === 0 ) ? '#2c3e50' : '#d5e0ec';
+        ctx.strokeStyle = ( i === 0 ) ? hiruwiki.getThemeColor('color-base', '#2c3e50') : hiruwiki.getThemeColor('border-color-base', '#d5e0ec');
         ctx.lineWidth   = ( i === 0 ) ? 2 : 1;
         ctx.moveTo( x, PAD_TOP ); ctx.lineTo( x, CH - PAD_BOTTOM ); ctx.stroke();
       }
       for ( j = 0; j <= Y_MAX; j++ ) {
         y = CH - PAD_BOTTOM - j * CELL;
         ctx.beginPath();
-        ctx.strokeStyle = ( j === 0 ) ? '#2c3e50' : '#d5e0ec';
+        ctx.strokeStyle = ( j === 0 ) ? hiruwiki.getThemeColor('color-base', '#2c3e50') : hiruwiki.getThemeColor('border-color-base', '#d5e0ec');
         ctx.lineWidth   = ( j === 0 ) ? 2 : 1;
         ctx.moveTo( PAD_LEFT, y ); ctx.lineTo( PAD_LEFT + X_MAX * CELL, y ); ctx.stroke();
       }
 
-      drawArrow( PAD_LEFT, originC.y, PAD_LEFT + X_MAX * CELL + 16, originC.y, '#2c3e50', 2 );
-      drawArrow( PAD_LEFT, originC.y, PAD_LEFT, PAD_TOP - 12, '#2c3e50', 2 );
+      drawArrow( PAD_LEFT, originC.y, PAD_LEFT + X_MAX * CELL + 16, originC.y, hiruwiki.getThemeColor('color-base', '#2c3e50'), 2 );
+      drawArrow( PAD_LEFT, originC.y, PAD_LEFT, PAD_TOP - 12, hiruwiki.getThemeColor('color-base', '#2c3e50'), 2 );
 
       ctx.save();
-      ctx.font = 'italic bold 14px Montserrat, Arial, sans-serif'; ctx.fillStyle = '#2c3e50'; ctx.textAlign = 'center';
+      ctx.font = 'italic bold 14px Montserrat, Arial, sans-serif'; ctx.fillStyle = hiruwiki.getThemeColor('color-base', '#2c3e50'); ctx.textAlign = 'center';
       ctx.fillText( 'x', PAD_LEFT + X_MAX * CELL + 24, originC.y + 5 );
       ctx.fillText( 'y', PAD_LEFT, PAD_TOP - 18 );
       ctx.restore();

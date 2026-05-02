@@ -100,7 +100,7 @@ var SVG_W  = 540, SVG_H = 480;
 
     var quadEl = document.createElementNS( SVG_NS, 'polygon' );
     quadEl.setAttribute( 'fill', 'none' );
-    quadEl.setAttribute( 'stroke', 'black' );
+    quadEl.setAttribute( 'stroke', hiruwiki.getThemeColor('color-base', 'black') );
     quadEl.setAttribute( 'stroke-width', '2' );
     svgEl.appendChild( quadEl );
 
@@ -124,7 +124,7 @@ var SVG_W  = 540, SVG_H = 480;
       var circ = document.createElementNS( SVG_NS, 'circle' );
       circ.setAttribute( 'r', '8' );
       circ.setAttribute( 'fill', COLORS[k] );
-      circ.setAttribute( 'stroke', 'white' );
+      circ.setAttribute( 'stroke', hiruwiki.getThemeColor('background-color-base', 'white') );
       circ.setAttribute( 'stroke-width', '2' );
       circ.style.cursor = 'pointer';
       svgEl.appendChild( circ );
@@ -303,7 +303,7 @@ var SVG_W  = 540, SVG_H = 480;
         start = end;
       } );
       var c = document.createElementNS( SVG_NS, 'circle' );
-      c.setAttribute( 'r', '14' ); c.setAttribute( 'fill', 'white' );
+      c.setAttribute( 'r', '14' ); c.setAttribute( 'fill', hiruwiki.getThemeColor('background-color-base', 'white') );
       pieSVG.appendChild( c );
       var t = document.createElementNS( SVG_NS, 'text' );
       t.setAttribute( 'text-anchor', 'middle' );

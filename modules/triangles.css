@@ -182,22 +182,23 @@
 
 .hiruwiki[data-module="triangles"] .triangle-controls button {
   width: 100%;
-  background: var(--color-destructive);
-  color: var(--background-color-success-subtle, #e6f9ea);
+  background: var(--background-color-destructive, #bf3c2c);
+  color: white;
   border: none;
-  padding: 9px 12px;
+  padding: 10px 12px;
   border-radius: 5px;
   font-family: Montserrat, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   cursor: pointer;
-  transition: background 0.15s;
+  transition: background 0.2s;
 }
 
 .hiruwiki[data-module="triangles"] .triangle-controls button:hover {
-  background: #9f3526;
+  background: var(--background-color-destructive--hover, #9f3526);
 }
+
 
 .hiruwiki[data-module="triangles"] .triangle-controls button:active {
   background: #612419;

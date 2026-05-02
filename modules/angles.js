@@ -233,7 +233,9 @@ function initAngleApplet(container){
 
     function draw(){
 
-        ctx.clearRect(0,0,canvas.width,canvas.height);
+        ctx.fillStyle = hiruwiki.getThemeColor('background-color-base', 'white');
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
 
         drawGrid();
 

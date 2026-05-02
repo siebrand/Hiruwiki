@@ -11,7 +11,7 @@
 
 .handle { fill: var(--background-color-base, white); stroke: var(--color-base, black); stroke-width:2; cursor:pointer; }
 
-.label { font-size:16px; font-weight:bold; dominant-baseline:middle; }
+.label { font-size:16px; font-weight:bold; dominant-baseline:middle; fill: var(--color-base, black); }
 
 .baseIndicator { stroke-width:6; }
 .baseDot { stroke: var(--color-base, black); stroke-width:2; fill: var(--background-color-base, white); }

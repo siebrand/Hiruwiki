@@ -105,21 +105,21 @@ var SVG_W  = 580, SVG_H = 520;
 
     // Polygon outline
     var polyEl = document.createElementNS(SVG_NS,'polygon');
-    polyEl.setAttribute('fill','none'); polyEl.setAttribute('stroke','black');
+    polyEl.setAttribute('fill','none'); polyEl.setAttribute('stroke', hiruwiki.getThemeColor('color-base', 'black'));
     polyEl.setAttribute('stroke-width','2'); svgEl.appendChild(polyEl);
 
     // Fan diagonals (3 for hexagon fan)
     var fanDiags = [];
     for (var di=0;di<3;di++){
       var dl = document.createElementNS(SVG_NS,'line');
-      dl.setAttribute('stroke',hiruwiki.getThemeColor('color-placeholder', '#aaa'); dl.setAttribute('stroke-width','1');
+      dl.setAttribute('stroke', hiruwiki.getThemeColor('color-placeholder', '#aaa')); dl.setAttribute('stroke-width','1');
       dl.setAttribute('stroke-dasharray','5,4'); svgEl.appendChild(dl);
       fanDiags.push(dl);
     }
 
     // Quad split diagonal (1, different style)
     var quadDiag = document.createElementNS(SVG_NS,'line');
-    quadDiag.setAttribute('stroke',hiruwiki.getThemeColor('color-placeholder', '#888'); quadDiag.setAttribute('stroke-width','1.5');
+    quadDiag.setAttribute('stroke', hiruwiki.getThemeColor('color-placeholder', '#888')); quadDiag.setAttribute('stroke-width','1.5');
     quadDiag.setAttribute('stroke-dasharray','8,4'); svgEl.appendChild(quadDiag);
 
     // Arcs, labels, circles
@@ -134,7 +134,7 @@ var SVG_W  = 580, SVG_H = 520;
       lbl.setAttribute('pointer-events','none'); svgEl.appendChild(lbl); lbls[k]=lbl;
       var circ=document.createElementNS(SVG_NS,'circle');
       circ.setAttribute('r','8'); circ.setAttribute('fill',COLORS[k]);
-      circ.setAttribute('stroke','white'); circ.setAttribute('stroke-width','2');
+      circ.setAttribute('stroke', hiruwiki.getThemeColor('background-color-base', 'white')); circ.setAttribute('stroke-width','2');
       circ.style.cursor='pointer'; svgEl.appendChild(circ); circs[k]=circ;
     });
 

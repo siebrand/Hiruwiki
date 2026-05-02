@@ -112,7 +112,7 @@
   border-left: 1px solid var(--border-color-base, #ccc);
   display: flex;
   flex-direction: column;
-  background: #f8f8f8;
+  background: var(--background-color-neutral-subtle, #f8f8f8);
   font-size: 13px;
 }
 

@@ -358,10 +358,10 @@ function drawChart( root, step ) {
     function xPos( i ) { return pad.left + ( i / ( MAX_STEPS - 1 ) ) * cw; }
     function yPos( v ) { return pad.top + ch - ( v - yMin ) / ( yMax - yMin ) * ch; }
 
-    ctx.fillStyle = '#f8f8f7'; ctx.fillRect( 0, 0, W, H );
+    ctx.fillStyle = hiruwiki.getThemeColor('background-color-neutral-subtle', '#f8f8f7'); ctx.fillRect( 0, 0, W, H );
     ctx.fillStyle = hiruwiki.getThemeColor('background-color-base', '#ffffff'); ctx.fillRect( pad.left, pad.top, cw, ch );
 
-    ctx.strokeStyle = '#e5e5e5'; ctx.lineWidth = 1;
+    ctx.strokeStyle = hiruwiki.getThemeColor('border-color-base', '#e5e5e5'); ctx.lineWidth = 1;
     [ 1.2, 1.4, 1.6, 1.8, 2.0 ].forEach( function ( v ) {
         var y = yPos( v );
         ctx.beginPath(); ctx.moveTo( pad.left, y ); ctx.lineTo( pad.left + cw, y ); ctx.stroke();

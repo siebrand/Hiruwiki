@@ -187,7 +187,7 @@ function init( el ) {
             ctx.fillStyle = hiruwiki.getThemeColor('background-color-base', '#fff');
             ctx.fillRect( 0, 0, W, H );
 
-            ctx.strokeStyle = 'rgba(0,0,0,0.07)';
+            ctx.strokeStyle = hiruwiki.getThemeColor('border-color-base', 'rgba(0,0,0,0.07)');
             ctx.lineWidth = 0.5;
             var x, y;
             for ( x = GX[0]; x <= GX[1]; x++ ) {
@@ -197,13 +197,13 @@ function init( el ) {
                 ctx.beginPath(); ctx.moveTo( 0, gy( y ) ); ctx.lineTo( W, gy( y ) ); ctx.stroke();
             }
 
-            ctx.strokeStyle = 'rgba(0,0,0,0.25)';
+            ctx.strokeStyle = hiruwiki.getThemeColor('color-base', 'rgba(0,0,0,0.25)');
             ctx.lineWidth = 1;
             ctx.beginPath(); ctx.moveTo( gx( 0 ), 0 ); ctx.lineTo( gx( 0 ), H ); ctx.stroke();
             ctx.beginPath(); ctx.moveTo( 0, gy( 0 ) ); ctx.lineTo( W, gy( 0 ) ); ctx.stroke();
 
             var fs = Math.max( 10, Math.round( W / 70 ) );
-            ctx.fillStyle = 'rgba(0,0,0,0.35)';
+            ctx.fillStyle = hiruwiki.getThemeColor('color-placeholder', 'rgba(0,0,0,0.35)');
             ctx.font = fs + 'px sans-serif';
             ctx.textAlign = 'center';
             for ( x = GX[0]; x <= GX[1]; x += 5 ) {

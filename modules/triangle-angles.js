@@ -59,13 +59,13 @@ container.innerHTML = `
 
 <defs>
 <pattern id="${gridId}" width="20" height="20" patternUnits="userSpaceOnUse">
-<path d="M 20 0 L 0 0 0 20" fill="none" stroke=hiruwiki.getThemeColor('border-color-base', '#ccc') stroke-width="0.5"/>
+<path d="M 20 0 L 0 0 0 20" fill="none" stroke="${hiruwiki.getThemeColor('border-color-base', '#ccc')}" stroke-width="0.5"/>
 </pattern>
 </defs>
 
 <rect width="100%" height="100%" fill="url(#${gridId})"/>
 
-<polygon class="triangle" fill="none" stroke="black" stroke-width="2"/>
+<polygon class="triangle" fill="none" stroke="${hiruwiki.getThemeColor('color-base', 'black')}" stroke-width="2"/>
 
 <path class="arcA" fill="red" opacity="0.4"></path>
 <path class="arcB" fill="green" opacity="0.4"></path>
@@ -87,7 +87,7 @@ container.innerHTML = `
 
 <g class="angleSumVisual" transform="translate(300,430) rotate(180)"></g>
 
-<text x="300" y="470" text-anchor="middle" font-size="20">
+<text x="300" y="470" text-anchor="middle" font-size="20" fill="${hiruwiki.getThemeColor('color-base', 'black')}">
 <tspan class="angle-letter angleA">A</tspan> +
 <tspan class="angle-letter angleB">B</tspan> +
 <tspan class="angle-letter angleC">C</tspan> = 180°

@@ -113,7 +113,7 @@ var SVG_W  = 540, SVG_H = 480;
     // Pentagon outline
     var polyEl = document.createElementNS( SVG_NS, 'polygon' );
     polyEl.setAttribute( 'fill', 'none' );
-    polyEl.setAttribute( 'stroke', 'black' );
+    polyEl.setAttribute( 'stroke', hiruwiki.getThemeColor('color-base', 'black') );
     polyEl.setAttribute( 'stroke-width', '2' );
     svgEl.appendChild( polyEl );
 
@@ -148,7 +148,7 @@ var SVG_W  = 540, SVG_H = 480;
       var circ = document.createElementNS( SVG_NS, 'circle' );
       circ.setAttribute( 'r', '8' );
       circ.setAttribute( 'fill', COLORS[k] );
-      circ.setAttribute( 'stroke', 'white' );
+      circ.setAttribute( 'stroke', hiruwiki.getThemeColor('background-color-base', 'white') );
       circ.setAttribute( 'stroke-width', '2' );
       circ.style.cursor = 'pointer';
       svgEl.appendChild( circ );
