@@ -11,7 +11,7 @@ nl:
     roundOver: Ronde afgelopen
     target: 'Doel:'
     tryAgain: Probeer opnieuw
-    yourGuess: 'Jouw gok:'
+    yourGuess: 'Uw gok:'
   angles:
     _name: Hoeken
     bisector: Bissectrice
