@@ -183,7 +183,7 @@
 .hiruwiki[data-module="triangles"] .triangle-controls button {
   width: 100%;
   background: var(--color-destructive);
-  color: var(--background-color-base, #fff);
+  color: var(--background-color-success-subtle, #e6f9ea);
   border: none;
   padding: 9px 12px;
   border-radius: 5px;
@@ -196,11 +196,11 @@
 }
 
 .hiruwiki[data-module="triangles"] .triangle-controls button:hover {
-  background: var(--background-color-destructive-subtle, #fbe4e4);
+  background: #9f3526;
 }
 
 .hiruwiki[data-module="triangles"] .triangle-controls button:active {
-  background: var(--background-color-destructive-subtle, #fbe4e4);
+  background: #612419;
 }
 
 /* ── SVG elements ── */
