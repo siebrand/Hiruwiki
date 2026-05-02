@@ -4,14 +4,55 @@ import os
 import re
 
 def main():
-    # Load translations from YAML
-    yaml_path = 'i18n.yaml'
-    if not os.path.exists(yaml_path):
-        print(f"Error: {yaml_path} not found.")
+    # Load translations from locale directory
+    translations = {}
+    locale_dir = 'locale'
+    
+    if not os.path.exists(locale_dir):
+        print(f"Error: {locale_dir} directory not found.")
         return
 
-    with open(yaml_path, 'r', encoding='utf-8') as f:
-        translations = yaml.safe_load(f)
+    for filename in os.listdir(locale_dir):
+        if not filename.endswith('.yaml'):
+            continue
+            
+        lang = filename[:-5] # remove .yaml
+        filepath = os.path.join(locale_dir, filename)
+        
+        with open(filepath, 'r', encoding='utf-8') as f:
+            content = f.read()
+            file_data = yaml.safe_load(content)
+            
+            # If the file was incorrectly split and has leading indentation on all lines,
+            # safe_load might return a dict with None values or just fail to nest.
+            # We check if we need to dedent.
+            if file_data and all(v is None for v in file_data.values()):
+                import textwrap
+                file_data = yaml.safe_load(textwrap.dedent(content))
+
+            if not file_data:
+                continue
+            
+            # The structure is { lang_code: { module_name: { key: val } } }
+            for actual_lang, modules in file_data.items():
+                if not isinstance(modules, dict):
+                    continue
+                for module_name, messages in modules.items():
+                    if not isinstance(messages, dict):
+                        continue
+                        
+                    if module_name not in translations:
+                        translations[module_name] = {}
+                    
+                    # Clean up messages (strip whitespace)
+                    cleaned_messages = {}
+                    for k, v in messages.items():
+                        if isinstance(v, str):
+                            cleaned_messages[k] = v.strip()
+                        else:
+                            cleaned_messages[k] = v
+                            
+                    translations[module_name][actual_lang] = cleaned_messages
 
     modules_dir = 'modules'
     if not os.path.exists(modules_dir):

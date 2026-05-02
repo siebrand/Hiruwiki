@@ -15,7 +15,7 @@ var messages = /* I18N_START */ {
         "labelBase": "Base (b)",
         "labelHeight": "Height (h)",
         "proofResultPara": "Parallelogram area = b × h = <strong>{b} × {h} = {area} cm²</strong>",
-        "proofResultTri": " → Triangle = ½ × {area} = <strong>{triArea} cm²</strong>"
+        "proofResultTri": "→ Triangle = ½ × {area} = <strong>{triArea} cm²</strong>"
     },
     "es": {
         "_name": "Área del triángulo",
@@ -25,7 +25,7 @@ var messages = /* I18N_START */ {
         "labelBase": "Base (b)",
         "labelHeight": "Altura (h)",
         "proofResultPara": "Área del paralelogramo = b × h = <strong>{b} × {h} = {area} cm²</strong>",
-        "proofResultTri": " → Triángulo = ½ × {area} = <strong>{triArea} cm²</strong>"
+        "proofResultTri": "→ Triángulo = ½ × {area} = <strong>{triArea} cm²</strong>"
     },
     "eu": {
         "_name": "Hirukiaren azalera",
@@ -35,7 +35,7 @@ var messages = /* I18N_START */ {
         "labelBase": "Oinarria (b)",
         "labelHeight": "Altuera (h)",
         "proofResultPara": "Paralelogramoaren azalera = b × h = <strong>{b} × {h} = {area} cm²</strong>",
-        "proofResultTri": " → Triangeluarena = ½ × {area} = <strong>{triArea} cm²</strong>"
+        "proofResultTri": "→ Triangeluarena = ½ × {area} = <strong>{triArea} cm²</strong>"
     },
     "fr": {
         "_name": "Aire du triangle",
@@ -45,7 +45,7 @@ var messages = /* I18N_START */ {
         "labelBase": "Base (b)",
         "labelHeight": "Hauteur (h)",
         "proofResultPara": "Aire du parallélogramme = b × h = <strong>{b} × {h} = {area} cm²</strong>",
-        "proofResultTri": " → Triangle = ½ × {area} = <strong>{triArea} cm²</strong>"
+        "proofResultTri": "→ Triangle = ½ × {area} = <strong>{triArea} cm²</strong>"
     },
     "nl": {
         "_name": "Oppervlakte van een driehoek",
@@ -55,7 +55,7 @@ var messages = /* I18N_START */ {
         "labelBase": "Basis (b)",
         "labelHeight": "Hoogte (h)",
         "proofResultPara": "Oppervlakte parallellogram = b × h = <strong>{b} × {h} = {area} cm²</strong>",
-        "proofResultTri": " → Driehoek = ½ × {area} = <strong>{triArea} cm²</strong>"
+        "proofResultTri": "→ Driehoek = ½ × {area} = <strong>{triArea} cm²</strong>"
     }
 } /* I18N_END */;
 function t( key, vars ) {
