@@ -302,9 +302,12 @@ fr:
     labelArea: Aire
     labelBase: Base (b)
     labelHeight: Hauteur (h)
-    proofResultPara: Aire du parallélogramme = b × h = <strong>{b} × {h} = {area}
-      cm²</strong>
+    labelBaseShort: b
+    labelHeightShort: h
+    proofResultPara: Aire du parallélogramme = b × h = <strong>{b} × {h} = {area} cm²</strong>
     proofResultTri: ' → Triangle = ½ × {area} = <strong>{triArea} cm²</strong>'
+    unitCm: cm
+    unitCm2: cm²
   triangle-centroid:
     _name: Centre de gravité du triangle
     centroid: Centre de gravité
@@ -327,6 +330,11 @@ fr:
     right: rectangle
     scalene: scalène
     sides: Côtés
+    sideA: côté a (BC)
+    sideB: côté b (CA)
+    sideC: côté c (AB)
+    unitCm: cm
+    unitCm2: cm²
   trigonometry:
     _name: Trigonométrie
     angle: Angle &theta;

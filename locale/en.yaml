@@ -298,8 +298,12 @@ en:
     labelArea: Area
     labelBase: Base (b)
     labelHeight: Height (h)
+    labelBaseShort: b
+    labelHeightShort: h
     proofResultPara: Parallelogram area = b × h = <strong>{b} × {h} = {area} cm²</strong>
     proofResultTri: ' → Triangle = ½ × {area} = <strong>{triArea} cm²</strong>'
+    unitCm: cm
+    unitCm2: cm²
   triangle-centroid:
     _name: Triangle Centroid
     centroid: Centroid
@@ -321,6 +325,11 @@ en:
     right: right
     scalene: scalene
     sides: Sides
+    sideA: side a (BC)
+    sideB: side b (CA)
+    sideC: side c (AB)
+    unitCm: cm
+    unitCm2: cm²
   trigonometry:
     _name: Trigonometry
     angle: Angle &theta;

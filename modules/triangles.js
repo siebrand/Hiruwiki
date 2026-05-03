@@ -19,7 +19,12 @@ var messages = /* I18N_START */ {
         "reset": "Reset ↺",
         "right": "right",
         "scalene": "scalene",
-        "sides": "Sides"
+        "sides": "Sides",
+        "sideA": "side a (BC)",
+        "sideB": "side b (CA)",
+        "sideC": "side c (AB)",
+        "unitCm": "cm",
+        "unitCm2": "cm²"
     },
     "es": {
         "_name": "Triángulos",
@@ -37,7 +42,12 @@ var messages = /* I18N_START */ {
         "reset": "↺ Reiniciar",
         "right": "rectángulo",
         "scalene": "escaleno",
-        "sides": "Lados"
+        "sides": "Lados",
+        "sideA": "lado a (BC)",
+        "sideB": "lado b (CA)",
+        "sideC": "lado c (AB)",
+        "unitCm": "cm",
+        "unitCm2": "cm²"
     },
     "eu": {
         "_name": "Hirukiak",
@@ -55,7 +65,12 @@ var messages = /* I18N_START */ {
         "reset": "Berrezarri ↺",
         "right": "zuzena",
         "scalene": "eskaleno",
-        "sides": "Aldeak"
+        "sides": "Aldeak",
+        "sideA": "a aldea (BC)",
+        "sideB": "b aldea (CA)",
+        "sideC": "c aldea (AB)",
+        "unitCm": "cm",
+        "unitCm2": "cm²"
     },
     "fr": {
         "_name": "Triangles",
@@ -73,7 +88,12 @@ var messages = /* I18N_START */ {
         "reset": "↺ Réinitialiser",
         "right": "rectangle",
         "scalene": "scalène",
-        "sides": "Côtés"
+        "sides": "Côtés",
+        "sideA": "côté a (BC)",
+        "sideB": "côté b (CA)",
+        "sideC": "côté c (AB)",
+        "unitCm": "cm",
+        "unitCm2": "cm²"
     },
     "nl": {
         "_name": "Driehoeken",
@@ -91,7 +111,12 @@ var messages = /* I18N_START */ {
         "reset": "↺ Reset",
         "right": "rechthoekig",
         "scalene": "ongelijkzijdig",
-        "sides": "Zijden"
+        "sides": "Zijden",
+        "sideA": "zijde a (BC)",
+        "sideB": "zijde b (CA)",
+        "sideC": "zijde c (AB)",
+        "unitCm": "cm",
+        "unitCm2": "cm²"
     },
     "qqq": {
         "_name": "Name of the Triangles module",
@@ -109,7 +134,12 @@ var messages = /* I18N_START */ {
         "reset": "Button label to reset the triangle",
         "right": "Classification name for a right triangle (one angle = 90°)",
         "scalene": "Classification name for a scalene triangle (no sides equal)",
-        "sides": "Section heading for the sides display"
+        "sides": "Section heading for the sides display",
+        "sideA": "Label for side a (the one connecting vertices B and C)",
+        "sideB": "Label for side b (the one connecting vertices C and A)",
+        "sideC": "Label for side c (the one connecting vertices A and B)",
+        "unitCm": "Unit of length (centimeters)",
+        "unitCm2": "Unit of area (square centimeters)"
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -187,7 +217,7 @@ var dotClasses       = ["triangle-dot--a",        "triangle-dot--b",        "tri
 /* sides[i] labels vertices[i]→vertices[(i+1)%3]:
    i=0: A→B = side c, i=1: B→C = side a, i=2: C→A = side b */
 var sideLabelClasses = ["triangle-side-label--c", "triangle-side-label--a", "triangle-side-label--b"];
-var sideNames        = ["a  (BC)", "b  (CA)", "c  (AB)"];
+var sideNames        = [t('sideA'), t('sideB'), t('sideC')];
 var sideValEls       = [];
 for (var si = 0; si < 3; si++) {
   var srow = document.createElement("div");
@@ -549,9 +579,9 @@ function updatePanel() {
   var a = dist(vertices[1], vertices[2]);
   var b = dist(vertices[2], vertices[0]);
   var c = dist(vertices[0], vertices[1]);
-  sideValEls[0].textContent = a.toFixed(2) + " cm";
-  sideValEls[1].textContent = b.toFixed(2) + " cm";
-  sideValEls[2].textContent = c.toFixed(2) + " cm";
+  sideValEls[0].textContent = a.toFixed(2) + " " + t('unitCm');
+  sideValEls[1].textContent = b.toFixed(2) + " " + t('unitCm');
+  sideValEls[2].textContent = c.toFixed(2) + " " + t('unitCm');
 
   var A = angleBetween(vertices[1], vertices[0], vertices[2]) * 180 / Math.PI;
   var B = angleBetween(vertices[2], vertices[1], vertices[0]) * 180 / Math.PI;
@@ -560,8 +590,8 @@ function updatePanel() {
   angleValEls[1].textContent = B.toFixed(1) + "\u00b0";
   angleValEls[2].textContent = C.toFixed(1) + "\u00b0";
 
-  perimVal.textContent = (a + b + c).toFixed(2) + " cm";
-  areaVal.textContent  = triangleArea().toFixed(2) + " cm\u00b2";
+  perimVal.textContent = (a + b + c).toFixed(2) + " " + t('unitCm');
+  areaVal.textContent  = triangleArea().toFixed(2) + " " + t('unitCm2');
 
   badgeSides.textContent  = classifySides();
   badgeAngles.textContent = classifyAngles();

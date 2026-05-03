@@ -301,9 +301,13 @@ eu:
     labelArea: Azalera
     labelBase: Oinarria (b)
     labelHeight: Altuera (h)
+    labelBaseShort: b
+    labelHeightShort: h
     proofResultPara: Paralelogramoaren azalera = b × h = <strong>{b} × {h} = {area}
       cm²</strong>
     proofResultTri: ' → Triangeluarena = ½ × {area} = <strong>{triArea} cm²</strong>'
+    unitCm: cm
+    unitCm2: cm²
   triangle-centroid:
     _name: Hirukiaren barizentroa
     centroid: Zentroidea
@@ -325,6 +329,11 @@ eu:
     right: zuzena
     scalene: eskaleno
     sides: Aldeak
+    sideA: a aldea (BC)
+    sideB: b aldea (CA)
+    sideC: c aldea (AB)
+    unitCm: cm
+    unitCm2: cm²
   trigonometry:
     _name: Trigonometria
     angle: Angelua &theta;

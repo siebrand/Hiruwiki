@@ -302,8 +302,12 @@ es:
     labelArea: Área
     labelBase: Base (b)
     labelHeight: Altura (h)
+    labelBaseShort: b
+    labelHeightShort: h
     proofResultPara: Área del paralelogramo = b × h = <strong>{b} × {h} = {area} cm²</strong>
     proofResultTri: ' → Triángulo = ½ × {area} = <strong>{triArea} cm²</strong>'
+    unitCm: cm
+    unitCm2: cm²
   triangle-centroid:
     _name: Baricentro del triángulo
     centroid: Baricentro
@@ -325,6 +329,11 @@ es:
     right: rectángulo
     scalene: escaleno
     sides: Lados
+    sideA: lado a (BC)
+    sideB: lado b (CA)
+    sideC: lado c (AB)
+    unitCm: cm
+    unitCm2: cm²
   trigonometry:
     _name: Trigonometría
     angle: Ángulo &theta;

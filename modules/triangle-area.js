@@ -14,8 +14,12 @@ var messages = /* I18N_START */ {
         "labelArea": "Area",
         "labelBase": "Base (b)",
         "labelHeight": "Height (h)",
+        "labelBaseShort": "b",
+        "labelHeightShort": "h",
         "proofResultPara": "Parallelogram area = b × h = <strong>{b} × {h} = {area} cm²</strong>",
-        "proofResultTri": "→ Triangle = ½ × {area} = <strong>{triArea} cm²</strong>"
+        "proofResultTri": "→ Triangle = ½ × {area} = <strong>{triArea} cm²</strong>",
+        "unitCm": "cm",
+        "unitCm2": "cm²"
     },
     "es": {
         "_name": "Área del triángulo",
@@ -24,8 +28,12 @@ var messages = /* I18N_START */ {
         "labelArea": "Área",
         "labelBase": "Base (b)",
         "labelHeight": "Altura (h)",
+        "labelBaseShort": "b",
+        "labelHeightShort": "h",
         "proofResultPara": "Área del paralelogramo = b × h = <strong>{b} × {h} = {area} cm²</strong>",
-        "proofResultTri": "→ Triángulo = ½ × {area} = <strong>{triArea} cm²</strong>"
+        "proofResultTri": "→ Triángulo = ½ × {area} = <strong>{triArea} cm²</strong>",
+        "unitCm": "cm",
+        "unitCm2": "cm²"
     },
     "eu": {
         "_name": "Hirukiaren azalera",
@@ -34,8 +42,12 @@ var messages = /* I18N_START */ {
         "labelArea": "Azalera",
         "labelBase": "Oinarria (b)",
         "labelHeight": "Altuera (h)",
+        "labelBaseShort": "b",
+        "labelHeightShort": "h",
         "proofResultPara": "Paralelogramoaren azalera = b × h = <strong>{b} × {h} = {area} cm²</strong>",
-        "proofResultTri": "→ Triangeluarena = ½ × {area} = <strong>{triArea} cm²</strong>"
+        "proofResultTri": "→ Triangeluarena = ½ × {area} = <strong>{triArea} cm²</strong>",
+        "unitCm": "cm",
+        "unitCm2": "cm²"
     },
     "fr": {
         "_name": "Aire du triangle",
@@ -44,8 +56,12 @@ var messages = /* I18N_START */ {
         "labelArea": "Aire",
         "labelBase": "Base (b)",
         "labelHeight": "Hauteur (h)",
+        "labelBaseShort": "b",
+        "labelHeightShort": "h",
         "proofResultPara": "Aire du parallélogramme = b × h = <strong>{b} × {h} = {area} cm²</strong>",
-        "proofResultTri": "→ Triangle = ½ × {area} = <strong>{triArea} cm²</strong>"
+        "proofResultTri": "→ Triangle = ½ × {area} = <strong>{triArea} cm²</strong>",
+        "unitCm": "cm",
+        "unitCm2": "cm²"
     },
     "nl": {
         "_name": "Oppervlakte van een driehoek",
@@ -54,8 +70,12 @@ var messages = /* I18N_START */ {
         "labelArea": "Oppervlakte",
         "labelBase": "Basis (b)",
         "labelHeight": "Hoogte (h)",
+        "labelBaseShort": "b",
+        "labelHeightShort": "h",
         "proofResultPara": "Oppervlakte parallellogram = b × h = <strong>{b} × {h} = {area} cm²</strong>",
-        "proofResultTri": "→ Driehoek = ½ × {area} = <strong>{triArea} cm²</strong>"
+        "proofResultTri": "→ Driehoek = ½ × {area} = <strong>{triArea} cm²</strong>",
+        "unitCm": "cm",
+        "unitCm2": "cm²"
     },
     "qqq": {
         "_name": "Name of the Triangle Area module",
@@ -64,8 +84,12 @@ var messages = /* I18N_START */ {
         "labelArea": "Label for the computed area value",
         "labelBase": "Label for the base measurement, with variable name in parentheses",
         "labelHeight": "Label for the height measurement, with variable name in parentheses",
+        "labelBaseShort": "Short symbol for base (usually 'b')",
+        "labelHeightShort": "Short symbol for height (usually 'h')",
         "proofResultPara": "Proof result text for the parallelogram area. Uses HTML. Parameters: {b} = base, {h} = height, {area} = parallelogram area.",
-        "proofResultTri": "Proof result text for the triangle area (half the parallelogram). Uses HTML. Parameters: {area} = parallelogram area, {triArea} = triangle area."
+        "proofResultTri": "Proof result text for the triangle area (half the parallelogram). Uses HTML. Parameters: {area} = parallelogram area, {triArea} = triangle area.",
+        "unitCm": "Unit of length (centimeters)",
+        "unitCm2": "Unit of area (square centimeters)"
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -186,9 +210,9 @@ var W = 680, H = 430, CM = 37.8, DUR = 1600;
 
         function updateUI() {
             var m = metrics();
-            elB.textContent    = m.bCm + ' cm';
-            elH.textContent    = m.hCm + ' cm';
-            elArea.textContent = m.areaCm + ' cm²';
+            elB.textContent    = m.bCm + ' ' + t('unitCm');
+            elH.textContent    = m.hCm + ' ' + t('unitCm');
+            elArea.textContent = m.areaCm + ' ' + t('unitCm2');
         }
 
         // --- Drawing ---
@@ -264,7 +288,7 @@ var W = 680, H = 430, CM = 37.8, DUR = 1600;
             var mx = (P3.x + foot.x) / 2, my = (P3.y + foot.y) / 2;
             ctx.save(); ctx.font = '500 15px sans-serif';
             ctx.fillStyle = hiruwiki.getThemeColor('color-warning', '#BA7517'); ctx.textAlign = 'center';
-            ctx.fillText('h = ' + m.hCm + ' cm', mx - fdy / flen * 16, my + fdx / flen * 16);
+            ctx.fillText(t('labelHeightShort') + ' = ' + m.hCm + ' ' + t('unitCm'), mx - fdy / flen * 16, my + fdx / flen * 16);
             ctx.restore();
 
             // b label (offset away from P3)
@@ -275,7 +299,7 @@ var W = 680, H = 430, CM = 37.8, DUR = 1600;
             var sign = (toCx * bnx + toCy * bny) > 0 ? -1 : 1;
             ctx.save(); ctx.font = '500 15px sans-serif';
             ctx.fillStyle = hiruwiki.getThemeColor('color-base', '#333'); ctx.textAlign = 'center';
-            ctx.fillText('b = ' + m.bCm + ' cm',
+            ctx.fillText(t('labelBaseShort') + ' = ' + m.bCm + ' ' + t('unitCm'),
                 (P1.x + P2.x) / 2 + sign * bnx * 24,
                 (P1.y + P2.y) / 2 + sign * bny * 24);
             ctx.restore();

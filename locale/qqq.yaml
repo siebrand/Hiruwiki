@@ -282,10 +282,14 @@ qqq:
     labelArea: Label for the computed area value
     labelBase: Label for the base measurement, with variable name in parentheses
     labelHeight: Label for the height measurement, with variable name in parentheses
+    labelBaseShort: Short symbol for base (usually 'b')
+    labelHeightShort: Short symbol for height (usually 'h')
     proofResultPara: 'Proof result text for the parallelogram area. Uses HTML. Parameters:
       {b} = base, {h} = height, {area} = parallelogram area.'
     proofResultTri: 'Proof result text for the triangle area (half the parallelogram).
       Uses HTML. Parameters: {area} = parallelogram area, {triArea} = triangle area.'
+    unitCm: Unit of length (centimeters)
+    unitCm2: Unit of area (square centimeters)
   triangle-centroid:
     _name: Name of the Triangle Centroid module
     centroid: Label for the centroid point
@@ -309,6 +313,11 @@ qqq:
     right: Classification name for a right triangle (one angle = 90°)
     scalene: Classification name for a scalene triangle (no sides equal)
     sides: Section heading for the sides display
+    sideA: Label for side a (the one connecting vertices B and C)
+    sideB: Label for side b (the one connecting vertices C and A)
+    sideC: Label for side c (the one connecting vertices A and B)
+    unitCm: Unit of length (centimeters)
+    unitCm2: Unit of area (square centimeters)
   trigonometry:
     _name: Name of the Trigonometry module
     angle: Label for the angle θ slider. Uses &theta; HTML entity.

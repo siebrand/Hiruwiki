@@ -301,9 +301,12 @@ nl:
     labelArea: Oppervlakte
     labelBase: Basis (b)
     labelHeight: Hoogte (h)
-    proofResultPara: Oppervlakte parallellogram = b × h = <strong>{b} × {h} = {area}
-      cm²</strong>
+    labelBaseShort: b
+    labelHeightShort: h
+    proofResultPara: Oppervlakte parallellogram = b × h = <strong>{b} × {h} = {area} cm²</strong>
     proofResultTri: ' → Driehoek = ½ × {area} = <strong>{triArea} cm²</strong>'
+    unitCm: cm
+    unitCm2: cm²
   triangle-centroid:
     _name: Zwaartepunt van een driehoek
     centroid: Zwaartepunt
@@ -325,6 +328,11 @@ nl:
     right: rechthoekig
     scalene: ongelijkzijdig
     sides: Zijden
+    sideA: zijde a (BC)
+    sideB: zijde b (CA)
+    sideC: zijde c (AB)
+    unitCm: cm
+    unitCm2: cm²
   trigonometry:
     _name: Goniometrie
     angle: Hoek &theta;
