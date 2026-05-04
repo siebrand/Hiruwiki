@@ -1,0 +1,102 @@
+# Messages for Italian (italiano)
+# Exported from translatewiki.net
+# Export driver: phpyaml
+# Author: Beta16
+# Author: ItsNyoty
+---
+it:
+  angle-guess:
+    _name: Indovina l'angolo
+    difference: 'Differenza:'
+    finalScore: Punteggio finale
+    hint: Sposta il punto blu per impostare l'angolo
+    nextAngle: Prossimo angolo &rsaquo;
+    points: 'Punti:'
+    round: 'Turno:'
+    roundOver: Gioco terminato
+    target: 'Obiettivo:'
+    tryAgain: Riprova
+    yourGuess: 'La tua ipotesi:'
+  angles:
+    _name: Angoli
+    bisector: Bisettrice
+    bisectorResult: 'Bisettrice: {0}°'
+    complement: Complementare
+    explement: Esplementare
+    notDefined: Non definito per questo angolo
+    resultAngle: '{0} angolo: {1}°'
+    supplement: Supplementare
+  circle-proof:
+    animStopped: Animazione interrotta.
+    area: Area
+    areaAnimStatus: 'I settori si riassemblano in un rettangolo: larghezza = πr, altezza
+      = r.'
+    areaReviewStatus: ✓ Larghezza = πr, altezza = r → A = πr².
+    circAnimStatus: Ogni semicerchio (πr) si srotola in una linea, per un totale di
+      2πr.
+    circumference: Circonferenza
+    initStatus: Scegli una prova e fai clic su "Dimostrala".
+    proveIt: Dimostralo ▶
+    radius: Raggio
+    readyStatus: Clicca su 'Dimostralo' per guardare l'animazione.
+    review: Rivedi ▶
+    stop: Stop ■
+    tabArea: Area
+    tabCirc: Circonferenza
+    visualProof: Prova visiva
+  dividend:
+    _name: Dividendo e divisore
+    eq_lbl_dividend: dividendo
+    eq_lbl_divisor: divisore
+    eq_lbl_quotient: quoziente
+    eq_lbl_remainder: resto
+    label_bar_units: unità
+    repadd_exact: — divide esattamente!
+  factors:
+    gcd_formula_eq: ' ='
+    gcd_none: (nessuno — coprimo)
+    label_choose: Scegli due numeri
+    lcm_formula_eq: ' ='
+    lcm_title: mcm — unione di tutti i fattori
+  incentre:
+    angleA: Angolo A
+  marble-jar:
+    colorBlue: Blu
+    colorGreen: Verde
+    colorRed: Rosso
+    colorYellow: Giallo
+  monte-carlo:
+    approxPi: Approssimazione di π
+  percent:
+    _name: Percentuali
+  quadrangles:
+    headingSides: Lati e diagonali
+    presetRectangle: Rettangolo
+    shapeRectangle: rettangolo
+  triangle-area:
+    unitCm: cm
+    unitCm2: cm²
+  triangles:
+    angles: Angoli
+    area: Area
+    byAngles: 'Per angoli:'
+    bySides: 'Per lati:'
+    classification: Classificazione
+    measurements: Misure
+    perimeter: Perimetro
+    unitCm: cm
+    unitCm2: cm²
+  trigonometry:
+    _name: Trigonometria
+    prove: Dimostra
+  integer-coordinates:
+    _name: Coordinate positive
+    btnNext: Successivo →
+    feedbackCorrect: ✓ Corretto!
+    pointLabel: 'Punto:'
+  positive-coordinates:
+    btnCheck: Verifica ✓
+    btnNext: Successivo →
+    feedbackCorrect: ✓ Corretto!
+    pointLabel: 'Punti:'
+...

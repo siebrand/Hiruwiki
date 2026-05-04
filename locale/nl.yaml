@@ -1,6 +1,12 @@
+# Messages for Dutch (Nederlands)
+# Exported from translatewiki.net
+# Export driver: phpyaml
+# Author: Siebrand
+# Author: Sneeuwvlakte
+---
 nl:
   angle-guess:
-    _name: Hoek gokken
+    _name: Hoek schatten
     difference: 'Verschil:'
     finalScore: Eindscore
     hint: Verplaats de blauwe stip om de hoek in te stellen
@@ -8,10 +14,10 @@ nl:
     points: 'Punten:'
     pts: ptn
     round: 'Ronde:'
-    roundOver: Ronde afgelopen
+    roundOver: Spel voorbij
     target: 'Doel:'
     tryAgain: Probeer opnieuw
-    yourGuess: 'Uw gok:'
+    yourGuess: 'Uw schatting:'
   angles:
     _name: Hoeken
     bisector: Bissectrice
@@ -48,7 +54,7 @@ nl:
     eq_lbl_quotient: quotiënt
     eq_lbl_remainder: rest
     insight_exact: <strong>{N} ÷ {D} = {Q}</strong> precies — geen rest. De balk past
-      perfect in <strong>{Q}</strong> gelijke stukken. Dit betekent dat <strong>{D}</strong>
+      perfect in <strong>{Q}</strong> gelijke stukken{s}. Dit betekent dat <strong>{D}</strong>
       een deler is van <strong>{N}</strong>.
     insight_less: <strong>{N}</strong> is kleiner dan de deler <strong>{D}</strong>,
       dus het past in <strong>0</strong> hele stukken. De hele waarde is de rest.
@@ -70,7 +76,7 @@ nl:
       is de rest.'
   factors:
     _name: Priemfactoren
-    gcd_formula_eq: ' = '
+    gcd_formula_eq: ' ='
     gcd_none: (geen — onderling ondeelbaar)
     gcd_title: GGD — behoud alleen gedeelde factoren
     insight_coprime: '<strong>{A}</strong> en <strong>{B}</strong> zijn onderling
@@ -90,7 +96,7 @@ nl:
     label_choose: Kies twee getallen
     label_factors: Priemfactoren
     label_how: Hoe GGD en KGV worden opgebouwd
-    lcm_formula_eq: ' = '
+    lcm_formula_eq: ' ='
     lcm_title: KGV — unie van alle factoren
     legend_onlyA: alleen van A
     legend_onlyB: alleen van B
@@ -102,7 +108,7 @@ nl:
     card_ratio_error: 'fout ten opzichte van φ:'
     card_ratio_lbl: Huidige verhouding F(n+1) ÷ F(n)
     chart_step: stap
-    diff: 'verschil: '
+    diff: 'verschil:'
     insight_close: <strong>{fa} + {fb} = {fr}</strong>. De verhouding = <strong>{ratio}</strong>
       — binnen <strong>{error}</strong> van φ. Bijna volledig geconvergeerd.
     insight_converged: <strong>{fa} + {fb} = {fr}</strong>. De verhouding = <strong>{ratio}</strong>
@@ -198,7 +204,7 @@ nl:
     label_start: start
   pythagoras:
     _name: Stelling van Pythagoras
-    angleDeg: 'hoek = '
+    angleDeg: hoek =
     lockRight: rechte hoek
     reset: Reset
   quadrangle-angles:
@@ -209,46 +215,36 @@ nl:
     total: Totaal
   quadrangles:
     _name: Vierhoeken
-    areaDiagHalf: 'Formule: A = (d₁ × d₂) / 2
-
+    areaDiagHalf: |-
+      Formule: A = (d₁ × d₂) / 2
       d₁ (AC) = {0} cm
-
       d₂ (BD) = {1} cm
-
-      = ({0} × {1}) / 2'
-    areaGaussHeader: 'Gauss formule (shoelace):
-
+      = ({0} × {1}) / 2
+    areaGaussHeader: |-
+      Gauss formule (shoelace):
       A = ½ |Σ(xᵢ·yᵢ₊₁ − xᵢ₊₁·yᵢ)|
-
-      '
-    areaGaussSum: '
+    areaGaussSum: |2-
 
       Σ = {0}
-
-      A = ½ × |{0}|'
+      A = ½ × |{0}|
     areaGaussTerm: '  (x{0}·y{1} − x{1}·y{0}) = {2}'
-    areaParallelogram: 'Formule: A = basis × hoogte
-
+    areaParallelogram: |-
+      Formule: A = basis × hoogte
       basis (AB) = {0} cm
-
       hoogte = {1} cm
-
-      = {0} × {1}'
-    areaRectangle: 'Formule: A = breedte × hoogte
-
-      = {0} × {1}'
-    areaSquare: 'Formule: A = zijde²
-
-      = {0}²'
-    areaTrapezoid: 'Formule: A = (b₁ + b₂) / 2 × h
-
+      = {0} × {1}
+    areaRectangle: |-
+      Formule: A = breedte × hoogte
+      = {0} × {1}
+    areaSquare: |-
+      Formule: A = zijde²
+      = {0}²
+    areaTrapezoid: |-
+      Formule: A = (b₁ + b₂) / 2 × h
       b₁ (AB) = {0} cm
-
       b₂ (CD) = {1} cm
-
       hoogte = {2} cm
-
-      = ({0} + {1}) / 2 × {2}'
+      = ({0} + {1}) / 2 × {2}
     headingArea: Oppervlakte
     headingClassification: Classificatie
     headingSides: Zijden en diagonalen
@@ -303,7 +299,8 @@ nl:
     labelHeight: Hoogte (h)
     labelBaseShort: b
     labelHeightShort: h
-    proofResultPara: Oppervlakte parallellogram = b × h = <strong>{b} × {h} = {area} cm²</strong>
+    proofResultPara: Oppervlakte parallellogram = b × h = <strong>{b} × {h} = {area}
+      cm²</strong>
     proofResultTri: ' → Driehoek = ½ × {area} = <strong>{triArea} cm²</strong>'
     unitCm: cm
     unitCm2: cm²
@@ -316,8 +313,8 @@ nl:
     acute: scherphoekig
     angles: Hoeken
     area: Oppervlakte
-    byAngles: 'Op basis van hoeken: '
-    bySides: 'Op basis van zijden: '
+    byAngles: 'Op basis van hoeken:'
+    bySides: 'Op basis van zijden:'
     classification: Classificatie
     equilateral: gelijkzijdig
     isosceles: gelijkbenig
@@ -349,9 +346,9 @@ nl:
     tanFormula: overstaande / aanliggende
   integer-coordinates:
     _name: Positieve coördinaten
-    btnChallenge: 🎯 Uitdaging
+    btnChallenge: "\U0001F3AF Uitdaging"
     btnCheck: Controleren ✓
-    btnExplore: 🔭 Verkennen
+    btnExplore: "\U0001F52D Verkennen"
     btnNext: Volgende →
     feedbackCorrect: ✓ Klopt!
     feedbackWrong: ✗ Onjuist. De zwakke ster was het juiste antwoord.
@@ -362,9 +359,9 @@ nl:
     titleExplore: Verken het coördinatenstelsel
   positive-coordinates:
     _name: Positieve coördinaten
-    btnChallenge: 🎯 Uitdaging
+    btnChallenge: "\U0001F3AF Uitdaging"
     btnCheck: Controleren ✓
-    btnExplore: 🔭 Verkennen
+    btnExplore: "\U0001F52D Verkennen"
     btnNext: Volgende →
     feedbackCorrect: ✓ Klopt!
     feedbackWrong: ✗ Onjuist. De zwakke ster was het juiste antwoord.
@@ -373,3 +370,4 @@ nl:
     movePrompt: Verplaats ★ naar:<br>({targetX}, {targetY})
     pointLabel: 'Punt:'
     titleExplore: Verken het coördinatenstelsel
+...

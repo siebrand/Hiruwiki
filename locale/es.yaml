@@ -1,3 +1,8 @@
+# Messages for Spanish (español)
+# Exported from translatewiki.net
+# Export driver: phpyaml
+# Author: Theklan
+---
 es:
   angle-guess:
     _name: Adivinar ángulo
@@ -8,7 +13,7 @@ es:
     points: 'Puntos:'
     pts: pts
     round: 'Ronda:'
-    roundOver: Ronda terminada
+    roundOver: Juego terminado
     target: 'Objetivo:'
     tryAgain: Intentar de nuevo
     yourGuess: 'Tu elección:'
@@ -50,7 +55,7 @@ es:
     eq_lbl_remainder: resto
     insight_exact: <strong>{N} ÷ {D} = {Q}</strong> exacto — sin resto. La barra se
       llena perfectamente en <strong>{Q}</strong> fragmentos iguales. Esto significa
-      que <strong>{D}</strong> es un divisor de <strong>{N}</strong>.
+      que <strong>{D}</strong> es un divisor de <strong>{N}</strong>.<!--{{s}}-->
     insight_less: <strong>{N}</strong> es menor que el divisor <strong>{D}</strong>,
       por lo que cabe en <strong>0</strong> fragmentos enteros. Todo el valor es el
       resto. El resto es siempre menor que el divisor.
@@ -71,7 +76,7 @@ es:
       es el resto.'
   factors:
     _name: Factores primos
-    gcd_formula_eq: ' = '
+    gcd_formula_eq: ' ='
     gcd_none: (ninguno — coprimos)
     gcd_title: MCD — conservar solo los factores compartidos
     insight_coprime: '<strong>{A}</strong> y <strong>{B}</strong> son coprimos — no
@@ -91,7 +96,7 @@ es:
     label_choose: Elige dos números
     label_factors: Factores primos
     label_how: Cómo se construyen el MCD y el MCM
-    lcm_formula_eq: ' = '
+    lcm_formula_eq: ' ='
     lcm_title: MCM — unión de todos los factores
     legend_onlyA: solo de A
     legend_onlyB: solo de B
@@ -103,7 +108,7 @@ es:
     card_ratio_error: 'error respecto a φ:'
     card_ratio_lbl: Proporción actual F(n+1) ÷ F(n)
     chart_step: paso
-    diff: 'dif: '
+    diff: 'dif:'
     insight_close: <strong>{fa} + {fb} = {fr}</strong>. La proporción = <strong>{ratio}</strong>
       — a menos de <strong>{error}</strong> de φ. Casi completamente convergido.
     insight_converged: <strong>{fa} + {fb} = {fr}</strong>. La proporción = <strong>{ratio}</strong>
@@ -200,7 +205,7 @@ es:
     label_start: inicio
   pythagoras:
     _name: Teorema de Pitágoras
-    angleDeg: 'ángulo = '
+    angleDeg: ángulo =
     lockRight: ángulo recto
     reset: Reiniciar
   quadrangle-angles:
@@ -211,46 +216,36 @@ es:
     total: Total
   quadrangles:
     _name: Cuadriláteros
-    areaDiagHalf: 'Fórmula: A = (d₁ × d₂) / 2
-
+    areaDiagHalf: |-
+      Fórmula: A = (d₁ × d₂) / 2
       d₁ (AC) = {0} cm
-
       d₂ (BD) = {1} cm
-
-      = ({0} × {1}) / 2'
-    areaGaussHeader: 'Fórmula de Gauss (shoelace):
-
+      = ({0} × {1}) / 2
+    areaGaussHeader: |-
+      Fórmula de Gauss (shoelace):
       A = ½ |Σ(xᵢ·yᵢ₊₁ − xᵢ₊₁·yᵢ)|
-
-      '
-    areaGaussSum: '
+    areaGaussSum: |2-
 
       Σ = {0}
-
-      A = ½ × |{0}|'
+      A = ½ × |{0}|
     areaGaussTerm: '  (x{0}·y{1} − x{1}·y{0}) = {2}'
-    areaParallelogram: 'Fórmula: A = base × altura
-
+    areaParallelogram: |-
+      Fórmula: A = base × altura
       base (AB) = {0} cm
-
       altura = {1} cm
-
-      = {0} × {1}'
-    areaRectangle: 'Fórmula: A = base × altura
-
-      = {0} × {1}'
-    areaSquare: 'Fórmula: A = lado²
-
-      = {0}²'
-    areaTrapezoid: 'Fórmula: A = (b₁ + b₂) / 2 × h
-
+      = {0} × {1}
+    areaRectangle: |-
+      Fórmula: A = base × altura
+      = {0} × {1}
+    areaSquare: |-
+      Fórmula: A = lado²
+      = {0}²
+    areaTrapezoid: |-
+      Fórmula: A = (b₁ + b₂) / 2 × h
       b₁ (AB) = {0} cm
-
       b₂ (CD) = {1} cm
-
       altura = {2} cm
-
-      = ({0} + {1}) / 2 × {2}'
+      = ({0} + {1}) / 2 × {2}
     headingArea: Área
     headingClassification: Clasificación
     headingSides: Lados y diagonales
@@ -317,8 +312,8 @@ es:
     acute: acutángulo
     angles: Ángulos
     area: Área
-    byAngles: 'Por ángulos: '
-    bySides: 'Por lados: '
+    byAngles: 'Por ángulos:'
+    bySides: 'Por lados:'
     classification: Clasificación
     equilateral: equilátero
     isosceles: isósceles
@@ -350,9 +345,9 @@ es:
     tanFormula: opuesto / adyacente
   integer-coordinates:
     _name: Coordenadas positivas
-    btnChallenge: 🎯 Reto
+    btnChallenge: "\U0001F3AF Reto"
     btnCheck: Comprobar ✓
-    btnExplore: 🔭 Explorar
+    btnExplore: "\U0001F52D Explorar"
     btnNext: Siguiente →
     feedbackCorrect: ✓ ¡Correcto!
     feedbackWrong: ✗ Incorrecto. La estrella tenue era la respuesta correcta.
@@ -363,9 +358,9 @@ es:
     titleExplore: Explorar el sistema de coordenadas
   positive-coordinates:
     _name: Coordenadas positivas
-    btnChallenge: 🎯 Reto
+    btnChallenge: "\U0001F3AF Reto"
     btnCheck: Comprobar ✓
-    btnExplore: 🔭 Explorar
+    btnExplore: "\U0001F52D Explorar"
     btnNext: Siguiente →
     feedbackCorrect: ✓ ¡Correcto!
     feedbackWrong: ✗ Incorrecto. La estrella tenue era la respuesta correcta.
@@ -374,3 +369,4 @@ es:
     movePrompt: Mueve ★ a:<br>({targetX}, {targetY})
     pointLabel: 'Punto:'
     titleExplore: Explorar el sistema de coordenadas
+...

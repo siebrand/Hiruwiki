@@ -1,3 +1,8 @@
+# Messages for Basque (euskara)
+# Exported from translatewiki.net
+# Export driver: phpyaml
+# Author: Theklan
+---
 eu:
   angle-guess:
     _name: Angelua asmatu
@@ -8,7 +13,7 @@ eu:
     points: 'Puntuak:'
     pts: pt
     round: 'Txanda:'
-    roundOver: Txanda amaitu da
+    roundOver: Jokoa amaitu da
     target: 'Helburua:'
     tryAgain: Berriz saiatu
     yourGuess: 'Zure aukera:'
@@ -50,7 +55,7 @@ eu:
     eq_lbl_remainder: hondarra
     insight_exact: <strong>{N} ÷ {D} = {Q}</strong> zenbaki osoa — hondarrik gabe.
       Barra <strong>{Q}</strong> zati berdinetan betetzen da. Horrek esan nahi du
-      <strong>{D}</strong> <strong>{N}</strong>-ren zatitzailea dela.
+      <strong>{D}</strong> <strong>{N}</strong>-ren zatitzailea dela.<!--{s}-->
     insight_less: <strong>{N}</strong> zatitzailea baino txikiagoa da (<strong>{D}</strong>),
       beraz ez da zati oso bat sartzen. Balio osoa hondarra da. Hondarra beti zatitzailea
       baino txikiagoa da.
@@ -71,7 +76,7 @@ eu:
       da.'
   factors:
     _name: Faktore lehenak
-    gcd_formula_eq: ' = '
+    gcd_formula_eq: ' ='
     gcd_none: (bat ere ez — elkarrekiko lehenak)
     gcd_title: ZKH — partekatutako faktoreak bakarrik gordetzen dira
     insight_coprime: '<strong>{A}</strong> eta <strong>{B}</strong> elkarrekiko lehenak
@@ -91,7 +96,7 @@ eu:
     label_choose: Aukeratu bi zenbaki
     label_factors: Zenbaki lehenen faktorizazioa
     label_how: Nola eraikitzen dira ZKH eta MKT
-    lcm_formula_eq: ' = '
+    lcm_formula_eq: ' ='
     lcm_title: MKT — faktore guztien biderketa
     legend_onlyA: Ari bakarrik dagokiona
     legend_onlyB: Bri bakarrik dagokiona
@@ -103,7 +108,7 @@ eu:
     card_ratio_error: 'φ-rekiko errorea:'
     card_ratio_lbl: Uneko erlazioa F(n+1) ÷ F(n)
     chart_step: urratsa
-    diff: 'aldea: '
+    diff: 'aldea:'
     insight_close: <strong>{fa} + {fb} = {fr}</strong>. Erlazioa = <strong>{ratio}</strong>
       — φ-tik <strong>{error}</strong>-ra. Ia erabat hurbildu da.
     insight_converged: <strong>{fa} + {fb} = {fr}</strong>. Erlazioa = <strong>{ratio}</strong>
@@ -199,7 +204,7 @@ eu:
     label_start: hasiera
   pythagoras:
     _name: Pitagorasen teorema
-    angleDeg: 'angelua = '
+    angleDeg: angelua =
     lockRight: angelu zuzena
     reset: Berrezarri
   quadrangle-angles:
@@ -210,46 +215,36 @@ eu:
     total: Guztira
   quadrangles:
     _name: Koadrilateroak
-    areaDiagHalf: 'Formula: A = (d₁ × d₂) / 2
-
+    areaDiagHalf: |-
+      Formula: A = (d₁ × d₂) / 2
       d₁ (AC) = {0} cm
-
       d₂ (BD) = {1} cm
-
-      = ({0} × {1}) / 2'
-    areaGaussHeader: 'Gaussen formula:
-
+      = ({0} × {1}) / 2
+    areaGaussHeader: |-
+      Gaussen formula:
       A = ½ |Σ(xᵢ·yᵢ₊₁ − xᵢ₊₁·yᵢ)|
-
-      '
-    areaGaussSum: '
+    areaGaussSum: |2-
 
       Σ = {0}
-
-      A = ½ × |{0}|'
+      A = ½ × |{0}|
     areaGaussTerm: '  (x{0}·y{1} − x{1}·y{0}) = {2}'
-    areaParallelogram: 'Formula: A = oinarria × altuera
-
+    areaParallelogram: |-
+      Formula: A = oinarria × altuera
       oinarria (AB) = {0} cm
-
       altuera = {1} cm
-
-      = {0} × {1}'
-    areaRectangle: 'Formula: A = zabalera × altuera
-
-      = {0} × {1}'
-    areaSquare: 'Formula: A = aldea²
-
-      = {0}²'
-    areaTrapezoid: 'Formula: A = (b₁ + b₂) / 2 × h
-
+      = {0} × {1}
+    areaRectangle: |-
+      Formula: A = zabalera × altuera
+      = {0} × {1}
+    areaSquare: |-
+      Formula: A = aldea²
+      = {0}²
+    areaTrapezoid: |-
+      Formula: A = (b₁ + b₂) / 2 × h
       b₁ (AB) = {0} cm
-
       b₂ (CD) = {1} cm
-
       altuera = {2} cm
-
-      = ({0} + {1}) / 2 × {2}'
+      = ({0} + {1}) / 2 × {2}
     headingArea: Azalera
     headingClassification: Sailkapena
     headingSides: Aldeak eta diagonalak
@@ -317,8 +312,8 @@ eu:
     acute: zorrotza
     angles: Angeluak
     area: Azalera
-    byAngles: 'Angeluen arabera: '
-    bySides: 'Aldeen arabera: '
+    byAngles: 'Angeluen arabera:'
+    bySides: 'Aldeen arabera:'
     classification: Sailkapena
     equilateral: aldekidea
     isosceles: isoszelea
@@ -351,9 +346,9 @@ eu:
     tanFormula: aurkakoa / auzokidea
   integer-coordinates:
     _name: Koordenatu positiboak
-    btnChallenge: 🎯 Erronka
+    btnChallenge: "\U0001F3AF Erronka"
     btnCheck: Zuzendu ✓
-    btnExplore: 🔭 Esploratu
+    btnExplore: "\U0001F52D Esploratu"
     btnNext: Hurrengoa →
     feedbackCorrect: ✓ Zuzen!
     feedbackWrong: ✗ Ez da zuzena. Izar ahula zen erantzun zuzena.
@@ -366,9 +361,9 @@ eu:
     titleExplore: Esploratu koordenatuen sistema
   positive-coordinates:
     _name: Koordenatu positiboak
-    btnChallenge: 🎯 Erronka
+    btnChallenge: "\U0001F3AF Erronka"
     btnCheck: Zuzendu ✓
-    btnExplore: 🔭 Esploratu
+    btnExplore: "\U0001F52D Esploratu"
     btnNext: Hurrengoa →
     feedbackCorrect: ✓ Zuzen!
     feedbackWrong: ✗ Ez da zuzena. Izar ahula zen erantzun zuzena.
@@ -379,3 +374,4 @@ eu:
     movePrompt: Mugitu ★ hona:<br>({targetX}, {targetY})
     pointLabel: 'Puntua:'
     titleExplore: Esploratu koordenatuen sistema
+...

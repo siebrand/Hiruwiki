@@ -1,0 +1,152 @@
+# Messages for Catalan (català)
+# Exported from translatewiki.net
+# Export driver: phpyaml
+# Author: Paucabot
+# Author: Theklan
+---
+ca:
+  angle-guess:
+    _name: Endevina l'angle
+    difference: Diferència
+    finalScore: Puntuació final
+    hint: Mou el punt blau per definir l'angle
+    nextAngle: Angle següent &rsaquo;
+    points: 'Punts:'
+    pts: pts
+    round: 'Ronda:'
+    roundOver: Final de la partida
+    target: 'Objectiu:'
+    tryAgain: Torneu-ho a provar
+    yourGuess: La vostra estimació
+  angles:
+    _name: Angles
+    bisector: Bisectriu
+    bisectorResult: 'Bisectriu: {0}°'
+    complement: Complementari
+    explement: Explementari
+    notDefined: No definit per a aquest angle
+    supplement: Suplementari
+  circle-proof:
+    animStopped: S'ha aturat l'animació.
+    area: Àrea
+    areaReviewStatus: ✓ Amplada = πr, alçada = r → A = πr².
+    circumference: Circumferència
+    initStatus: Trieu una prova i feu clic a "Demostra-ho".
+    proveIt: Demostra-ho ▶
+    radius: Radi
+    stop: Atura ■
+    tabArea: Àrea
+    tabCirc: Circumferència
+    title: Calculadora de cercles
+    visualProof: Prova visual
+  dividend:
+    _name: Dividend i Divisor
+    eq_lbl_dividend: dividend
+    eq_lbl_divisor: divisor
+    eq_lbl_quotient: quocient
+    eq_lbl_remainder: residu
+    label_bar: 'Vista de barra: cada tros blau ='
+    label_bar_units: unitats
+    label_choose: Trieu el dividend i el divisor
+  factors:
+    gcd_formula_eq: =
+    lcm_formula_eq: =
+  fibonacci:
+    diff: 'dif:'
+  hexagon-angles:
+    total: Total
+  incentre:
+    angleA: Angle A
+    angleB: Angle B
+    angleC: Angle C
+    area: Àrea
+    circumference: Circumferència
+    scaleUnit: cm
+  marble-jar:
+    total: Total
+  monte-carlo:
+    totalPoints: Punts totals
+  pentagon-angles:
+    3triangles: 3 triangles × 180°
+    _name: Angles del Pentàgon
+    interiorAngles: Angles interiors
+    total: Total
+  percent:
+    _name: Percentatges
+    axis_neg: −100%
+    axis_pos: +100%
+    axis_zero: 0%
+    label_after: després del canvi
+    label_recovered: recuperat
+    label_start: inicia
+  pythagoras:
+    _name: Teorema de Pitàgores
+    angleDeg: angle =
+    lockRight: angle recte
+    reset: Reinicia
+  quadrangle-angles:
+    interiorAngles: Angles interiors
+    reset: Reinicia
+    sum: Suma
+    total: Total
+  quadrangles:
+    _name: Quadrilàters
+    areaDiagHalf: |-
+      Fórmula: A = (d₁ × d₂) / 2
+      d₁ (AC) = {0} cm
+      d₂ (BD) = {1} cm
+      = ({0} × {1}) / 2
+    areaGaussHeader: |-
+      Fórmula de Gauss:
+      A = ½ |Σ(xᵢ·yᵢ₊₁ − xᵢ₊₁·yᵢ)|
+    areaGaussSum: |-
+      Σ = {0}
+      A = ½ × |{0}|
+    areaGaussTerm: '  (x{0}·y{1} − x{1}·y{0}) = {2}'
+    headingArea: Àrea
+    labelDiag1: d₁ (AC)
+    labelDiag2: d₂ (BD)
+    labelPerimeter: Perímetre
+    presetParallelogram: Paral·lelogram
+    presetRectangle: Rectangle
+    presetSquare: Quadrat
+    presetTrapezoid: Trapezoide
+    shapeParallelogram: paral·lelogram
+    shapeRectangle: rectangle
+    shapeRhombus: rombe
+    shapeSquare: quadrat
+    shapeTrapezoid: trapezoide
+    unitCm: cm
+    unitCm2: cm²
+  radian:
+    _name: Radians
+    rad: rad
+  transformation:
+    angle: Angle
+    enlargement: Ampliació
+    horizontal: Horitzontal
+    rotation: Rotació
+    vertical: Vertical
+  triangle-angles:
+    reset: Reinicia
+  triangle-area:
+    btnReset: Reinicia
+    labelArea: Àrea
+    labelBaseShort: b
+    labelHeightShort: h
+    unitCm: cm
+    unitCm2: cm²
+  triangles:
+    angles: Angles
+    right: recte
+    unitCm: cm
+    unitCm2: cm²
+  trigonometry:
+    _name: Trigonometria
+    angle: Angle &theta;
+  integer-coordinates:
+    btnNext: Endavant →
+    feedbackCorrect: ✓ Correcte!
+  positive-coordinates:
+    btnNext: Endavant →
+...

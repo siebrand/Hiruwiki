@@ -1,20 +1,24 @@
+# Messages for Message documentation (Message documentation)
+# Exported from translatewiki.net
+# Export driver: phpyaml
+---
 qqq:
   angle-guess:
     _name: Name of the Angle Guess module
-    difference: 'Label for the difference between the target angle and the player''s
-      guess. Followed by a value in degrees.'
+    difference: Label for the difference between the target angle and the player's
+      guess. Followed by a value in degrees.
     finalScore: Heading shown when all rounds are complete, above the total score
     hint: Instruction telling the user how to set their angle guess
     nextAngle: Button label to proceed to the next angle. Uses &rsaquo; as a right-pointing
       arrow.
-    points: 'Label for the points earned. Followed by a numeric value.'
+    points: Label for the points earned. Followed by a numeric value.
     pts: Abbreviation for "points", displayed after a numeric score
-    round: 'Label for the current round number. Followed by "X / Y".'
+    round: Label for the current round number. Followed by "X / Y".
     roundOver: Heading shown in the overlay when all rounds are finished
-    target: 'Label for the target angle the player must guess. Followed by a value
-      in degrees.'
+    target: Label for the target angle the player must guess. Followed by a value
+      in degrees.
     tryAgain: Button label to start a new game after all rounds are complete
-    yourGuess: 'Label for the angle the player guessed. Followed by a value in degrees.'
+    yourGuess: Label for the angle the player guessed. Followed by a value in degrees.
   angles:
     _name: Name of the Angles module
     bisector: Button label for the bisector mode
@@ -106,11 +110,11 @@ qqq:
     _name: Name of the Fibonacci Sequence module
     card_phi_lbl: Label for the golden ratio φ card
     card_phi_sub: Subtitle showing the formula and decimal value of the golden ratio
-    card_ratio_error: 'Label for the error from φ, followed by a numeric value'
+    card_ratio_error: Label for the error from φ, followed by a numeric value
     card_ratio_lbl: Label for the current ratio F(n+1) ÷ F(n) card
     chart_step: X-axis label for the convergence chart
-    diff: 'Label prefix for the difference value in the sequence display. Followed
-      by a number.'
+    diff: Label prefix for the difference value in the sequence display. Followed
+      by a number.
     insight_close: 'Insight text shown when the ratio is close to φ but not yet converged.
       Uses HTML. Parameters: {fa} = left addend, {fb} = right addend, {fr} = sum,
       {ratio} = current ratio, {error} = error from φ.'
@@ -207,7 +211,7 @@ qqq:
     label_start: Label on the bar visualisation for the starting value
   pythagoras:
     _name: Name of the Pythagorean Theorem module
-    angleDeg: 'Label prefix for the angle value. Followed by a number in degrees.'
+    angleDeg: Label prefix for the angle value. Followed by a number in degrees.
     lockRight: Checkbox label to lock the triangle to a right angle
     reset: Button label to reset the triangle
   quadrangle-angles:
@@ -299,10 +303,10 @@ qqq:
     acute: Classification name for an acute triangle (all angles < 90°)
     angles: Section heading for the angles display
     area: Label for the triangle area
-    byAngles: 'Label prefix for the angle-based classification. Followed by the classification
-      name.'
-    bySides: 'Label prefix for the side-based classification. Followed by the classification
-      name.'
+    byAngles: Label prefix for the angle-based classification. Followed by the classification
+      name.
+    bySides: Label prefix for the side-based classification. Followed by the classification
+      name.
     classification: Section heading for the triangle classification
     equilateral: Classification name for an equilateral triangle (all sides equal)
     isosceles: Classification name for an isosceles triangle (two sides equal)
@@ -344,7 +348,7 @@ qqq:
     hintExplore: Instruction text shown in explore mode
     movePrompt: 'Prompt telling the player where to move the star. Uses HTML. Parameters:
       {targetX} = target X coordinate, {targetY} = target Y coordinate.'
-    pointLabel: 'Label for the current point coordinates. Followed by coordinate values.'
+    pointLabel: Label for the current point coordinates. Followed by coordinate values.
     titleExplore: Title shown in explore mode
   positive-coordinates:
     _name: Name of the Positive Coordinates module
@@ -358,5 +362,6 @@ qqq:
     hintExplore: Instruction text shown in explore mode
     movePrompt: 'Prompt telling the player where to move the star. Uses HTML. Parameters:
       {targetX} = target X coordinate, {targetY} = target Y coordinate.'
-    pointLabel: 'Label for the current point coordinates. Followed by coordinate values.'
+    pointLabel: Label for the current point coordinates. Followed by coordinate values.
     titleExplore: Title shown in explore mode
+...

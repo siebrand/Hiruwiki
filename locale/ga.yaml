@@ -1,0 +1,374 @@
+# Messages for Irish (Gaeilge)
+# Exported from translatewiki.net
+# Export driver: phpyaml
+# Author: Aindriu80
+---
+ga:
+  angle-guess:
+    _name: Buille faoi thuairim uillinn
+    difference: 'Difríocht:'
+    finalScore: Scór deiridh
+    hint: Bog an ponc gorm chun an uillinn a shocrú
+    nextAngle: An chéad uillinn eile &rsquo;
+    points: 'Pointí:'
+    pts: pointí
+    round: 'Babhta:'
+    roundOver: Cluiche thart
+    target: 'Sprioc:'
+    tryAgain: Déan iarracht arís
+    yourGuess: 'Do bhuille faoi thuairim:'
+  angles:
+    _name: Uillinneacha
+    bisector: Déroinnteoir
+    bisectorResult: 'Déroinnteoir: {0}°'
+    complement: Comhlántach
+    explement: Turgnamhach
+    notDefined: Gan sainmhíniú don uillinn seo
+    resultAngle: 'uillinn {0}: {1}°'
+    supplement: Forlíontach
+  circle-proof:
+    _name: Cruthúnas Ciorcail
+    animStopped: Stopadh an beochan.
+    area: Limistéar
+    areaAnimStatus: 'Athcheanglaíonn earnálacha i ndronuilleog: leithead = πr, airde
+      = r.'
+    areaReviewStatus: ✓ Leithead = πr, airde = r → A = πr².
+    circAnimStatus: Rollaíonn gach leathchiorcal (πr) isteach i líne, rud a fhágann
+      2πr san iomlán.
+    circReviewStatus: ✓ Barr πr + Bun πr = C = 2πr.
+    circumference: Imlíne
+    initStatus: Roghnaigh cruthúnas agus cliceáil 'Cruthaigh é'.
+    proveIt: Cruthaigh é ▶
+    radius: Ga
+    readyStatus: Cliceáil 'Cruthaigh é' chun an beochan a fheiceáil.
+    review: Athbhreithniú ▶
+    stop: Stop ■
+    tabArea: Limistéar
+    tabCirc: Imlíne
+    title: Áireamhán Ciorcail
+    visualProof: Cruthúnas amhairc
+  dividend:
+    _name: Díbhinn agus Roinnteoir
+    eq_lbl_dividend: díbhinn
+    eq_lbl_divisor: roinnteoir
+    eq_lbl_quotient: cóimheas
+    eq_lbl_remainder: fuílleach
+    insight_exact: <strong>{N} ÷ {D} = {Q}</strong> go díreach — gan aon fhuíoll.
+      Líonann an barra go foirfe isteach i <strong>{Q}</strong> píosa{s} cothroma.
+      Ciallaíonn sé seo gur roinnteoir de <strong>{N}</strong> é <strong>{D}</strong>.
+    insight_less: Tá <strong>{N}</strong> níos lú ná an roinnteoir <strong>{D}</strong>,
+      mar sin oireann sé do <strong>0</strong> píosa iomlán. Is é an luach iomlán
+      an t-iarmhar. Bíonn an t-iarmhar níos lú ná an roinnteoir i gcónaí.
+    insight_normal: '<strong>{N} ÷ {D} = {Q}</strong> fuílleach <strong>{R}</strong>.
+      Tabhair faoi deara go mbíonn an píosa dearg (<strong>{R}</strong>) i gcónaí
+      níos giorra ná smután gorm amháin (<strong>{D}</strong>). Bíonn an fuílleach
+      i gcónaí níos lú ná an roinnteoir. Seiceáil: <strong>{Q} × {D} + {R} = {QD}
+      + {R} = {N}</strong> ✓'
+    label_bar: Radharc barra — gach píosa gorm =
+    label_bar_units: aonaid
+    label_choose: Roghnaigh díbhinn agus roinnteoir
+    label_dividend: Díbhinn (an uimhir atá á roinnt)
+    label_divisor: Roinnteoir (méid an phíosa)
+    label_equation: Cothromóid roinnte
+    label_repadd: Breisiú arís agus arís eile
+    repadd_exact: — roinneann go díreach!
+    repadd_leftover: fágtha
+    repadd_less: Tá {N} níos lú ná {D}, mar sin is é 0 an cóimheas agus is é an luach
+      iomlán an fuíoll.
+  factors:
+    _name: Príomhfhachtóirí
+    gcd_formula_eq: ' ='
+    gcd_none: (níl aon cheann — comhphríomh)
+    gcd_title: GCD — coinnigh fachtóirí comhroinnte amháin
+    insight_coprime: 'Is comhphríomha iad <strong>{A} agus <strong>{B} — níl aon phríomhfhachtóirí
+      roinnte acu, mar sin tá GCD = 1. Níl san LCM ach a dtáirge. Fíor i gcónaí: <strong>{A}
+      × {B} = {AB}/strong> = GCD × LCM = <strong>1 × {L} = {L}</strong>.'
+    insight_shared_many: 'Roinneann <strong>{A}</strong> agus <strong>{B}</strong>
+      na príomhuimhreacha <strong>{primes}</strong>. Ní ghlacann an GCD ach na bloic
+      chomhroinnte glasa. Glacann an LCM na blocanna uile — comhroinnte glasa, breiseáin
+      ghorma ó A, breiseáin dhearga ó B — gan aon phríomh a chomhaireamh faoi dhó.
+      Fíor i gcónaí: <strong>{A} × {B} = {AB}</strong> = GCD × LCM = <strong>{G} ×
+      {L} = {GL}</strong>.'
+    insight_shared_one: 'Roinneann <strong>{A}/<strong> agus <strong>{B}/<strong>
+      na príomhuimhreacha <strong>{primes}</strong>. Ní ghlacann an GCD ach na bloic
+      chomhroinnte glasa. Glacann an LCM na bloic uile — bloic chomhroinnte glasa,
+      breiseáin ghorma ó A, breiseáin dhearga ó B — gan aon phríomhuimhreacha a chomhaireamh
+      faoi dhó. Fíor i gcónaí: <strong>{A} × {B} = {AB}/<strong> = GCD × LCM = <strong>{G}
+      × {L} = {GL}/<strong>.'
+    label_choose: Roghnaigh dhá uimhir
+    label_factors: Príomhfhachtóirí
+    label_how: Conas a thógtar GCD agus LCM
+    lcm_formula_eq: ' ='
+    lcm_title: LCM — aontas na bhfachtóirí uile
+    legend_onlyA: uathúil do A
+    legend_onlyB: uathúil do B
+    legend_shared: roinnte (a úsáidtear le haghaidh GCD)
+  fibonacci:
+    _name: Seicheamh Fibonacci
+    card_phi_lbl: Cóimheas órga φ
+    card_phi_sub: (1 + √5) / 2 = 1.6180339887…
+    card_ratio_error: 'earráid ó φ:'
+    card_ratio_lbl: Cóimheas reatha F(n+1) ÷ F(n)
+    chart_step: céim
+    diff: 'difríocht:'
+    insight_close: <strong>{fa} + {fb} = {fr}</strong>. An cóimheas = <strong>{ratio}</strong>
+      — laistigh de <strong>{error}</strong> de φ. Beagnach comhtháite go hiomlán.
+    insight_converged: <strong>{fa} + {fb} = {fr}</strong>. An cóimheas = <strong>{ratio}</strong>
+      — laistigh de <strong>{error}</strong> de φ. Tá an seicheamh comhtháite go 6
+      ionad deachúil.
+    insight_normal: <strong>{fa} + {fb} = {fr}</strong>. An cóimheas = <strong>{ratio}</strong>,
+      fós <strong>{error}</strong> ar shiúl ó φ = 1.61803…
+    insight_step1: Tosaímid le *1 + 1 = 2*. Tá an cóimheas 2 ÷ 1 = *2.000000* — fós
+      i bhfad ó φ ≈ 1.61803.
+    insight_step2: <strong>1 + 2 = 3</strong>. Tá an cóimheas 3 ÷ 2 = <strong>1.500000</strong>
+      níos gaire cheana féin. Laghdaíonn gach céim an bhearna níos mó.
+    sec_addition: Breisiú
+    sec_chart: Comhtháthú i dtreo φ
+    sec_sequence: Seicheamh go dtí seo
+    sec_steps: Céim tríd an seicheamh Fibonacci
+    step_label: Céim {step} de {total}
+  hexagon-angles:
+    2quads: 2 cheathairshleasán × 360°
+    4triangles: 4 thriantán × 180°
+    _name: Uillinneacha Heicseagáin
+    interiorAngles: Uillinneacha inmheánacha
+    reset: ↺ Athshocraigh
+    total: Iomlán
+  incentre:
+    _name: Lárionad
+    angleA: Uillinn A
+    angleB: Uillinn B
+    angleC: Uillinn C
+    area: Limistéar
+    centre: Ionad I
+    circumference: Imlíne
+    formula: r = Achar / s
+    hint: 'Tarraing aon bhuaicphointe · Scála: 1 cm = 40 px'
+    incircle: I gciorcal
+    perimeter: Imlíne
+    radius: Ga (r)
+    scaleUnit: cm
+    sideA: Taobh a (BC)
+    sideB: Taobh b (CA)
+    sideC: Taobh c (AB)
+    touchAB: Teagmháil pt. AB
+    touchBC: Teagmháil pt. BC
+    touchCA: Teagmháil pt. CA
+    triangle: Triantán
+  marble-jar:
+    _name: Jar Dóchúlachta
+    colorBlue: Gorm
+    colorGreen: Glas
+    colorRed: Dearg
+    colorYellow: Buí
+    impossible: Dodhéanta
+    probTitle: An dóchúlacht go roghnófar marmair agus go mbuailfear a dhath…
+    shake: Croith!
+    total: Iomlán
+  monte-carlo:
+    _name: Pi Monte Carlo
+    addPoints: + Cuir pointí leis
+    approxPi: Measúnú ar π
+    insideCircle: Ciorcal istigh
+    insideRed: Taobh istigh (dearg)
+    outsideBlue: Lasmuigh (gorm)
+    outsideCircle: Ciorcal lasmuigh
+    pointsPerStep: Pointí in aghaidh an chéime
+    reset: ↺ Athshocraigh
+    totalPoints: Iomlán na bpointí
+  pentagon-angles:
+    3triangles: 3 thriantán × 180°
+    _name: Uillinneacha an Pheinteagáin
+    interiorAngles: Uillinneacha inmheánacha
+    reset: ↺ Athshocraigh
+    total: Iomlán
+  percent:
+    _name: Céatadáin
+    axis_neg: −100%
+    axis_pos: +100%
+    axis_zero: 0%
+    hint: Tarraing an sleamhnán ar chlé le haghaidh caillteanas, ar dheis le haghaidh
+      gnóthachan.
+    insight_full_loss: Tugann caillteanas <strong>100%</strong> an luach go <strong>0</strong>.
+      Tá sé <strong>dodhéanta</strong> é a aisghabháil ó náid — is ionann aon chéatadán
+      de 0 agus 0 fós.
+    insight_gain: Tugann gnóthachan de <strong>+{pct}%</strong> 100 suas go <strong>{result}</strong>.
+      Tá an leithead céanna ag an réimse glas thuas agus an réimse dearg thíos — ach
+      tá na céatadáin difriúil. Ní thógann sé ach <strong>{recovery}%</strong> chun
+      filleadh ar 100, ní −{pct}%.
+    insight_loss: Le cailliúint <strong>{pct}%</strong>, tugtar 100 síos go <strong>{result}</strong>.
+      Clúdaíonn an réise dhearg thuas agus an réise uaine thíos an fad fisiceach céanna
+      — ach tá na céatadáin difriúil toisc go mbaineann siad le bunáiteanna difriúla.
+      Teastaíonn <strong>+{recovery}%</strong> ón téarnamh, ní +{pct}%.
+    insight_zero: Níor cuireadh aon athrú i bhfeidhm. Tarraing an sleamhnán chun iniúchadh
+      a dhéanamh.
+    label_after: tar éis athraithe
+    label_apply: CUIR ATHRÚ CÉATÁNACH I bhFEIDHM
+    label_recovered: aisghafa
+    label_scale: 'SCÁLA: LEITHEAD AN BHARRA IOMLÁN = 200'
+    label_start: tús
+  pythagoras:
+    _name: Teoirim Phíotagaráis
+    angleDeg: uillinn =
+    lockRight: uillinn dheis
+    reset: Athshocraigh
+  quadrangle-angles:
+    _name: Uillinneacha Ceathairshleasacha
+    interiorAngles: Uillinneacha inmheánacha
+    reset: Athshocraigh
+    sum: Suim
+    total: Iomlán
+  quadrangles:
+    _name: Ceathairshleasáin
+    areaDiagHalf: |-
+      Foirmle: A = (d₁ × d₂) / 2
+      d₁ (AC) = {0} cm
+      d₂ (BD) = {1} cm
+      = ({0} × {1}) / 2
+    areaGaussHeader: |-
+      Foirmle Gauss (shoelace):
+      A = ½ |Σ(xᵢ·yᵢ₊₁ − xᵢ₊₁·yᵢ)|
+    areaGaussSum: |2-
+
+      Σ = {0}
+      A = ½ × |{0}|
+    areaGaussTerm: '  (x{0}·y{1} − x{1}·y{0}) = {2}'
+    areaParallelogram: |-
+      Foirmle: A = bonn × airde
+      bonn (AB) = {0} cm
+      airde = {1} cm
+      = {0} × {1}
+    areaRectangle: |-
+      Foirmle: A = leithead × airde
+      = {0} × {1}
+    areaSquare: 'Foirmle: A = taobh² = {0}²'
+    areaTrapezoid: |-
+      Foirmle: A = (b₁ + b₂) / 2 × h
+      b₁ (AB) = {0} cm
+      b₂ (CD) = {1} cm
+      airde = {2} cm
+      = ({0} + {1}) / 2 × {2}
+    headingArea: Limistéar
+    headingClassification: Aicmiú
+    headingSides: Taobhanna agus trasnáin
+    labelDiag1: d₁ (AC)
+    labelDiag2: d₂ (BD)
+    labelPerimeter: Imlíne
+    presetKite: Eitleog
+    presetParallelogram: Paraileagram
+    presetRectangle: Dronuilleog
+    presetSquare: Cearnóg
+    presetTrapezoid: Traipéisóideach
+    shapeCrossed: ceathairshleasán trasnaithe
+    shapeGeneral: ceathairshleasán ginearálta
+    shapeKite: eitleog
+    shapeParallelogram: comhthreomharán
+    shapeRectangle: dronuilleog
+    shapeRhombus: rombas
+    shapeSquare: cearnóg
+    shapeTrapezoid: traipéisóideach
+    unitCm: cm
+    unitCm2: cm²
+  radian:
+    _name: Raidiáin
+    rad: rad
+  slope:
+    _name: Fána
+    undefined: Líne ingearach → fána neamhshainithe
+  transformation:
+    _name: Claochluithe
+    angle: Uillinn
+    enlargement: Méadú
+    hintEnlargement: Bog an pointe oráiste chun lár an mhéadaithe a shocrú.
+    hintReflection: Bog an dá phointe oráiste chun an líne scátháin a chruthú.
+    hintRotation: Bog an pointe oráiste chun lár an rothlaithe a shocrú.
+    hintTranslation: Bain úsáid as na sleamhnáin chun an réad a aistriú.
+    horizontal: Cothrománach
+    reflection: Machnamh
+    rotation: Rothlú
+    transformations: Claochluithe
+    translation: Aistriúchán
+    vertical: Ingearach
+  triangle-angles:
+    _name: Uillinneacha Triantáin
+    reset: Athshocraigh
+  triangle-area:
+    _name: Limistéar an Triantáin
+    btnProve: Cruthaigh é
+    btnReset: Athshocraigh
+    labelArea: Limistéar
+    labelBase: Bonn (b)
+    labelHeight: Airde (u)
+    labelBaseShort: b
+    labelHeightShort: h
+    proofResultPara: Achar comhthreomharáin = b × h = <strong>{b} × {h} = {area} cm²</strong>
+    proofResultTri: → Triantán = ½ × {area} = <strong>{triArea} cm²</strong>
+    unitCm: cm
+    unitCm2: cm²
+  triangle-centroid:
+    _name: Lárphointe Triantáin
+    centroid: Lárphointe
+    hint: Bog na buaicphointí chun a fheiceáil conas a athraíonn suíomh an mheánphointe
+  triangles:
+    _name: Triantáin
+    acute: géarmhíochaine
+    angles: Uillinneacha
+    area: Limistéar
+    byAngles: 'De réir uillinneacha:'
+    bySides: 'De réir taobhanna:'
+    classification: Aicmiú
+    equilateral: comhshleasach
+    isosceles: comhchosach
+    measurements: Tomhais
+    obtuse: maol
+    perimeter: Imlíne
+    reset: Athshocraigh ↺
+    right: ar dheis
+    scalene: corrshleasach
+    sides: Taobhanna
+    sideA: taobh a (RC)
+    sideB: taobh b (CA)
+    sideC: taobh c (AB)
+    unitCm: cm
+    unitCm2: cm²
+  trigonometry:
+    _name: Triantánacht
+    angle: Uillinn &theta;
+    cosDesc: Is í an líne ghorm an taobh **cóngarach** &mdash; an fad cothrománach
+      ón mbunphointe go dtí bun an ingearaigh. cos &theta;&nbsp;=&nbsp;cóngarach&nbsp;&nbsp;&nbsp;hipotenuse&nbsp;(=&nbsp;1).
+    cosFormula: cóngarach / taobhagán
+    hideProof: Folaigh cruthúnas
+    prove: Cruthaigh
+    sinDesc: Is í an líne uaine an taobh **os coinne** &mdash; an fad ingearach ón
+      bpointe ar an gciorcal go dtí an ais-x. sin &theta;&nbsp;=&nbsp;os coinne&nbsp;&nbsp;divide;&nbsp;hipotenuse&nbsp;(=&nbsp;1).
+    sinFormula: os coinne / taobhagán
+    tanDesc: Tarraingítear an líne oráiste ag  x&nbsp;=&nbsp;1, tadhlaí don chiorcal.
+      Is é a airde tan&nbsp;&theta;, ós rud é tan&nbsp;&theta;&nbsp;=&nbsp;opposite&nbsp;&divide;&nbsp;adjacent&nbsp;=&nbsp;sin&nbsp;&theta;&nbsp;&divide;&nbsp;cos&nbsp;&theta;.
+    tanFormula: os coinne / cóngarach
+  integer-coordinates:
+    _name: Comhordanáidí Dearfacha
+    btnChallenge: "\U0001F3AF Dúshlán"
+    btnCheck: Seiceáil ✓
+    btnExplore: "\U0001F52D Taiscéal"
+    btnNext: Ar Aghaidh →
+    feedbackCorrect: ✓ Ceart!
+    feedbackWrong: ✗ Mícheart. Ba é an réalta lag an freagra ceart.
+    hintChallenge: Bog ★ go dtí na comhordanáidí atá beartaithe agus cliceáil Seiceáil
+    hintExplore: Bog ★ trí chliceáil air — snapálann sé chuig slánuimhreacha
+    movePrompt: Bog ★ go:<br>({targetX}, {targetY})
+    pointLabel: 'Pointe:'
+    titleExplore: Iniúchadh a dhéanamh ar an gCóras Comhordanáidí
+  positive-coordinates:
+    _name: Comhordanáidí Dearfacha
+    btnChallenge: "\U0001F3AF Dúshlán"
+    btnCheck: Seiceáil ✓
+    btnExplore: "\U0001F52D Taiscéal"
+    btnNext: Ar Aghaidh →
+    feedbackCorrect: ✓ Ceart!
+    feedbackWrong: ✗ Mícheart. Ba é an réalta lag an freagra ceart.
+    hintChallenge: Bog ★ go dtí na comhordanáidí atá beartaithe agus cliceáil Seiceáil
+    hintExplore: Bog ★ trí chliceáil air — snap sé chuig slánuimhreacha
+    movePrompt: Bog ★ go:<br>({targetX}, {targetY})
+    pointLabel: 'Pointe:'
+    titleExplore: Iniúchadh a dhéanamh ar an gCóras Comhordanáidí
+...

@@ -1,3 +1,7 @@
+# Messages for French (français)
+# Exported from translatewiki.net
+# Export driver: phpyaml
+---
 fr:
   angle-guess:
     _name: Deviner l’angle
@@ -71,7 +75,7 @@ fr:
       est le reste.'
   factors:
     _name: Facteurs premiers
-    gcd_formula_eq: ' = '
+    gcd_formula_eq: ' ='
     gcd_none: (aucun — premiers entre eux)
     gcd_title: PGCD — ne garder que les facteurs partagés
     insight_coprime: '<strong>{A}</strong> et <strong>{B}</strong> sont premiers entre
@@ -91,7 +95,7 @@ fr:
     label_choose: Choisissez deux nombres
     label_factors: Facteurs premiers
     label_how: Comment le PGCD et le PPCM sont construits
-    lcm_formula_eq: ' = '
+    lcm_formula_eq: ' ='
     lcm_title: PPCM — union de tous les facteurs
     legend_onlyA: unique à A
     legend_onlyB: unique à B
@@ -103,7 +107,7 @@ fr:
     card_ratio_error: 'erreur par rapport à φ :'
     card_ratio_lbl: Rapport actuel F(n+1) ÷ F(n)
     chart_step: étape
-    diff: 'diff : '
+    diff: 'diff :'
     insight_close: <strong>{fa} + {fb} = {fr}</strong>. Le rapport = <strong>{ratio}</strong>
       — à <strong>{error}</strong> de φ près. Presque totalement convergé.
     insight_converged: <strong>{fa} + {fb} = {fr}</strong>. Le rapport = <strong>{ratio}</strong>
@@ -200,7 +204,7 @@ fr:
     label_start: début
   pythagoras:
     _name: Théorème de Pythagore
-    angleDeg: 'angle = '
+    angleDeg: angle =
     lockRight: angle droit
     reset: Réinitialiser
   quadrangle-angles:
@@ -211,46 +215,36 @@ fr:
     total: Total
   quadrangles:
     _name: Quadrilatères
-    areaDiagHalf: 'Formule : A = (d₁ × d₂) / 2
-
+    areaDiagHalf: |-
+      Formule : A = (d₁ × d₂) / 2
       d₁ (AC) = {0} cm
-
       d₂ (BD) = {1} cm
-
-      = ({0} × {1}) / 2'
-    areaGaussHeader: 'Formule de Gauss (shoelace) :
-
+      = ({0} × {1}) / 2
+    areaGaussHeader: |-
+      Formule de Gauss (shoelace) :
       A = ½ |Σ(xᵢ·yᵢ₊₁ − xᵢ₊₁·yᵢ)|
-
-      '
-    areaGaussSum: '
+    areaGaussSum: |2-
 
       Σ = {0}
-
-      A = ½ × |{0}|'
+      A = ½ × |{0}|
     areaGaussTerm: '  (x{0}·y{1} − x{1}·y{0}) = {2}'
-    areaParallelogram: 'Formule : A = base × hauteur
-
+    areaParallelogram: |-
+      Formule : A = base × hauteur
       base (AB) = {0} cm
-
       hauteur = {1} cm
-
-      = {0} × {1}'
-    areaRectangle: 'Formule : A = largeur × hauteur
-
-      = {0} × {1}'
-    areaSquare: 'Formule : A = côté²
-
-      = {0}²'
-    areaTrapezoid: 'Formule : A = (b₁ + b₂) / 2 × h
-
+      = {0} × {1}
+    areaRectangle: |-
+      Formule : A = largeur × hauteur
+      = {0} × {1}
+    areaSquare: |-
+      Formule : A = côté²
+      = {0}²
+    areaTrapezoid: |-
+      Formule : A = (b₁ + b₂) / 2 × h
       b₁ (AB) = {0} cm
-
       b₂ (CD) = {1} cm
-
       hauteur = {2} cm
-
-      = ({0} + {1}) / 2 × {2}'
+      = ({0} + {1}) / 2 × {2}
     headingArea: Aire
     headingClassification: Classification
     headingSides: Côtés et diagonales
@@ -304,7 +298,8 @@ fr:
     labelHeight: Hauteur (h)
     labelBaseShort: b
     labelHeightShort: h
-    proofResultPara: Aire du parallélogramme = b × h = <strong>{b} × {h} = {area} cm²</strong>
+    proofResultPara: Aire du parallélogramme = b × h = <strong>{b} × {h} = {area}
+      cm²</strong>
     proofResultTri: ' → Triangle = ½ × {area} = <strong>{triArea} cm²</strong>'
     unitCm: cm
     unitCm2: cm²
@@ -318,8 +313,8 @@ fr:
     acute: acutangle
     angles: Angles
     area: Aire
-    byAngles: 'Par angles : '
-    bySides: 'Par côtés : '
+    byAngles: 'Par angles :'
+    bySides: 'Par côtés :'
     classification: Classification
     equilateral: équilatéral
     isosceles: isocèle
@@ -351,9 +346,9 @@ fr:
     tanFormula: opposé / adjacent
   integer-coordinates:
     _name: Coordonnées positives
-    btnChallenge: 🎯 Défi
+    btnChallenge: "\U0001F3AF Défi"
     btnCheck: Vérifier ✓
-    btnExplore: 🔭 Explorer
+    btnExplore: "\U0001F52D Explorer"
     btnNext: Suivant →
     feedbackCorrect: ✓ Correct !
     feedbackWrong: ✗ Incorrect. L'étoile pâle était la bonne réponse.
@@ -364,9 +359,9 @@ fr:
     titleExplore: Explorer le système de coordonnées
   positive-coordinates:
     _name: Coordonnées positives
-    btnChallenge: 🎯 Défi
+    btnChallenge: "\U0001F3AF Défi"
     btnCheck: Vérifier ✓
-    btnExplore: 🔭 Explorer
+    btnExplore: "\U0001F52D Explorer"
     btnNext: Suivant →
     feedbackCorrect: ✓ Correct !
     feedbackWrong: ✗ Incorrect. L'étoile pâle était la bonne réponse.
@@ -375,3 +370,4 @@ fr:
     movePrompt: Déplacez ★ vers :<br>({targetX}, {targetY})
     pointLabel: 'Point :'
     titleExplore: Explorer le système de coordonnées
+...

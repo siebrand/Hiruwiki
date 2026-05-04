@@ -1,0 +1,220 @@
+# Messages for Korean (한국어)
+# Exported from translatewiki.net
+# Export driver: phpyaml
+# Author: Tensama0415
+---
+ko:
+  angle-guess:
+    _name: 각도 추측
+    difference: '차이:'
+    finalScore: 최종 점수
+    points: '점수:'
+    pts: 점
+    round: '라운드:'
+    roundOver: 라운드 종료
+    target: '목표:'
+  angles:
+    _name: 각도
+    bisector: 이등분
+    bisectorResult: '이등분: {0}°'
+    complement: 여각
+    explement: 공액각
+    resultAngle: '{0}: {1}°'
+    supplement: 보각
+  circle-proof:
+    _name: 원 증명
+    animStopped: 애니메이션이 멈췄습니다.
+    area: 면적
+    areaReviewStatus: ✓ 너비 = πr, 높이 = r → A = πr².
+    circumference: 원둘레
+    radius: 반지름
+    stop: 정지 ■
+    tabArea: 면적
+    tabCirc: 원둘레
+    title: 원 계산기
+    visualProof: 시각적 증명
+  dividend:
+    _name: 피제수과 제수
+    eq_lbl_dividend: 피제수
+    eq_lbl_divisor: 제수
+    eq_lbl_quotient: 몫
+    eq_lbl_remainder: 나머지
+    label_bar_units: 단위
+    label_choose: 피제수와 제수를 선택
+    label_dividend: 피제수 (나누어지는 수)
+    label_divisor: 제수 (나누는 수)
+    label_repadd: 반복 덧셈
+    repadd_exact: — 정확히 나누어집니다!
+  factors:
+    _name: 소인수
+    gcd_formula_eq: ' ='
+    gcd_none: (없음 — 서로소)
+    label_factors: 소인수
+  fibonacci:
+    _name: 피보나치 수열
+    card_phi_lbl: 황금비 φ
+    card_phi_sub: (1 + √5) / 2 = 1.6180339887…
+  hexagon-angles:
+    reset: ↺ 초기화
+  incentre:
+    angleA: 각 A
+    angleB: 각 B
+    angleC: 각 C
+    area: 면적
+    centre: 내심 I
+    circumference: 원둘레
+    formula: r = 면적 / s
+    incircle: 내접원
+    perimeter: 둘레
+    radius: 반지름 (r)
+    scaleUnit: cm
+    sideA: 선분 a (BC)
+    sideB: 선분 b (CA)
+    sideC: 선분 c (AB)
+    touchAB: AB 위 수선의 발
+    touchBC: BC 위 수선의 발
+    touchCA: CA 위 수선의 발
+    triangle: 삼각형
+  marble-jar:
+    _name: 확률 항아리
+    colorBlue: 파란색
+    colorGreen: 녹색
+    colorRed: 빨간색
+    colorYellow: 노란색
+    impossible: 불가능
+    shake: 흔들기!
+    total: 합계
+  monte-carlo:
+    approxPi: π의 근사값
+    reset: ↺ 초기화
+    totalPoints: 총점
+  pentagon-angles:
+    reset: ↺ 초기화
+    total: 합계
+  percent:
+    _name: 백분율
+    axis_neg: −100%
+    axis_pos: +100%
+    axis_zero: 0%
+  pythagoras:
+    _name: 피타고라스 정리
+    angleDeg: 각도 =
+    lockRight: 직각
+    reset: 초기화
+  quadrangle-angles:
+    reset: 초기화
+    sum: 총합
+    total: 합계
+  quadrangles:
+    _name: 사각형
+    areaDiagHalf: |-
+      공식: A = (d₁ × d₂) / 2
+      d₁ (AC) = {0} cm
+      d₂ (BD) = {1} cm
+      = ({0} × {1}) / 2
+    areaGaussHeader: |-
+      가우스 공식 (신발끈):
+      A = ½ |Σ(xᵢ·yᵢ₊₁ − xᵢ₊₁·yᵢ)|
+    areaGaussSum: |2-
+
+      Σ = {0}
+      A = ½ × |{0}|
+    areaGaussTerm: '  (x{0}·y{1} − x{1}·y{0}) = {2}'
+    areaParallelogram: |-
+      공식: A = 밑변 × 높이
+      밑변 (AB) = {0} cm
+      높이 = {1} cm
+      = {0} × {1}
+    areaRectangle: |-
+      공식: A = 너비 × 높이
+      = {0} × {1}
+    areaSquare: |-
+      공식: A = 한 변²
+      = {0}²
+    areaTrapezoid: |-
+      공식: A = (b₁ + b₂) / 2 × h
+      b₁ (AB) = {0} cm
+      b₂ (CD) = {1} cm
+      높이 = {2} cm
+      = ({0} + {1}) / 2 × {2}
+    headingArea: 면적
+    headingClassification: 분류
+    labelDiag1: d₁ (AC)
+    labelDiag2: d₂ (BD)
+    labelPerimeter: 둘레
+    presetKite: 연꼴
+    presetParallelogram: 평행사변형
+    presetRectangle: 직사각형
+    presetSquare: 정사각형
+    presetTrapezoid: 사다리꼴
+    shapeKite: 연꼴
+    shapeParallelogram: 평행사변형
+    shapeRectangle: 직사각형
+    shapeRhombus: 마름모
+    shapeSquare: 정사각형
+    shapeTrapezoid: 사다리꼴
+    unitCm: cm
+    unitCm2: cm²
+  radian:
+    _name: 라디안
+    rad: rad
+  slope:
+    _name: 기울기
+    undefined: 수직선 → 기울기 정의 안 됨
+  transformation:
+    _name: 변환
+    angle: 각
+    enlargement: 확대
+    horizontal: 수평
+    reflection: 반전
+    rotation: 회전
+    transformations: 변환
+    translation: 평행 이동
+    vertical: 수직
+  triangle-angles:
+    reset: 초기화
+  triangle-area:
+    _name: 삼각형 면적
+    btnReset: 초기화
+    labelArea: 면적
+    labelBase: 밑변 (b)
+    labelHeight: 높이 (h)
+    proofResultPara: 평행사변형 넓이 = b × h = <strong>{b} × {h} = {area} cm²</strong>
+    proofResultTri: ' → 삼각형 = ½ × {area} = <strong>{triArea} cm²</strong>'
+  triangle-centroid:
+    _name: 삼각형 무게중심
+    centroid: 무게중심
+  triangles:
+    _name: 삼각형
+    acute: 예각 삼각형
+    angles: 각
+    area: 면적
+    classification: 분류
+    equilateral: 정삼각형
+    isosceles: 이등변삼각형
+    measurements: 측정
+    obtuse: 둔각 삼각형
+    perimeter: 둘레
+    reset: 초기화 ↺
+    right: 직각 삼각형
+    scalene: 부등변삼각형
+    sideA: 선분 a (BC)
+    sideB: 선분 b (CA)
+    sideC: 선분 c (AB)
+    unitCm: cm
+    unitCm2: cm²
+  trigonometry:
+    _name: 삼각법
+    angle: 각도 &theta;
+    hideProof: 증명 숨기기
+  integer-coordinates:
+    btnCheck: 확인 ✓
+    btnNext: 다음 →
+    feedbackCorrect: ✓ 정답입니다!
+    pointLabel: '점수:'
+  positive-coordinates:
+    btnCheck: 확인 ✓
+    btnNext: 다음 →
+    feedbackCorrect: ✓ 정답입니다!
+    pointLabel: '점수:'
+...
