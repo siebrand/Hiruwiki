@@ -121,6 +121,7 @@ function t(key, vars) {
 
 
 
+
 /* -------------------------
    APPLET INITIALIZATION
 ------------------------- */
