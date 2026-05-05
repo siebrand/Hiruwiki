@@ -11,7 +11,7 @@ from http.cookiejar import CookieJar
 
 # --- Configuration ---
 DEFAULT_SITE = "https://en.wikipedia.org/w/api.php"
-TEMPLATES_BASE = "Template:Hiruwiki/"
+TEMPLATES_BASE = "Template:Wikipedia:Hiruwiki/"
 TEMPLATES_DIR = "templates"
 
 class MediaWikiClient:
