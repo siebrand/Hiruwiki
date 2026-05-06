@@ -33,7 +33,7 @@
 	color: white;
 	border: 0px;padding: 6px;
 	border-radius: 2px;
-	    cursor: pointer;
+	    cursor: grab;
 }
 
 .hiruwiki[data-module="triangle-angles"] .resetBtn:hover {
