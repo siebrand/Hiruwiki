@@ -1,6 +1,7 @@
 # Messages for French (français)
 # Exported from translatewiki.net
 # Export driver: phpyaml
+# Author: ItsNyoty
 ---
 fr:
   angle-guess:
@@ -12,7 +13,7 @@ fr:
     points: 'Points :'
     pts: pts
     round: 'Manche :'
-    roundOver: Manche terminée
+    roundOver: Jeu terminé
     target: 'Cible :'
     tryAgain: Réessayer
     yourGuess: 'Votre estimation :'
@@ -62,8 +63,6 @@ fr:
       morceau bleu (<strong>{D}</strong>). Le reste est toujours strictement inférieur
       au diviseur. Vérification : <strong>{Q} × {D} + {R} = {QD} + {R} = {N}</strong>
       ✓'
-    label_bar: Vue en barre — chaque morceau bleu =
-    label_bar_units: unités
     label_choose: Choisissez le dividende et le diviseur
     label_dividend: Dividende (le nombre à diviser)
     label_divisor: Diviseur (la taille du morceau)

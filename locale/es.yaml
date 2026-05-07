@@ -63,8 +63,6 @@ es:
       Nota que la pieza roja (<strong>{R}</strong>) siempre es más corta que un fragmento
       azul (<strong>{D}</strong>). El resto siempre es estrictamente menor que el
       divisor. Comprobación: <strong>{Q} × {D} + {R} = {QD} + {R} = {N}</strong> ✓'
-    label_bar: Vista de barra — cada fragmento azul =
-    label_bar_units: unidades
     label_choose: Elige el dividendo y el divisor
     label_dividend: Dividendo (el número a dividir)
     label_divisor: Divisor (el tamaño del fragmento)

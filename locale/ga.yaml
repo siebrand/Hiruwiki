@@ -64,8 +64,6 @@ ga:
       níos giorra ná smután gorm amháin (<strong>{D}</strong>). Bíonn an fuílleach
       i gcónaí níos lú ná an roinnteoir. Seiceáil: <strong>{Q} × {D} + {R} = {QD}
       + {R} = {N}</strong> ✓'
-    label_bar: Radharc barra — gach píosa gorm =
-    label_bar_units: aonaid
     label_choose: Roghnaigh díbhinn agus roinnteoir
     label_dividend: Díbhinn (an uimhir atá á roinnt)
     label_divisor: Roinnteoir (méid an phíosa)

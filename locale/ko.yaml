@@ -11,7 +11,7 @@ ko:
     points: '점수:'
     pts: 점
     round: '라운드:'
-    roundOver: 라운드 종료
+    roundOver: 게임 종료
     target: '목표:'
   angles:
     _name: 각도
@@ -39,7 +39,6 @@ ko:
     eq_lbl_divisor: 제수
     eq_lbl_quotient: 몫
     eq_lbl_remainder: 나머지
-    label_bar_units: 단위
     label_choose: 피제수와 제수를 선택
     label_dividend: 피제수 (나누어지는 수)
     label_divisor: 제수 (나누는 수)
@@ -181,6 +180,8 @@ ko:
     labelHeight: 높이 (h)
     proofResultPara: 평행사변형 넓이 = b × h = <strong>{b} × {h} = {area} cm²</strong>
     proofResultTri: ' → 삼각형 = ½ × {area} = <strong>{triArea} cm²</strong>'
+    unitCm: cm
+    unitCm2: cm²
   triangle-centroid:
     _name: 삼각형 무게중심
     centroid: 무게중심

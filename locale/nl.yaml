@@ -16,7 +16,7 @@ nl:
     round: 'Ronde:'
     roundOver: Spel voorbij
     target: 'Doel:'
-    tryAgain: Probeer opnieuw
+    tryAgain: Opnieuw proberen
     yourGuess: 'Uw schatting:'
   angles:
     _name: Hoeken
@@ -63,8 +63,6 @@ nl:
       op dat het rode stuk (<strong>{R}</strong>) altijd korter is dan een blauw stuk
       (<strong>{D}</strong>). De rest is altijd strikt kleiner dan de deler. Controle:
       <strong>{Q} × {D} + {R} = {QD} + {R} = {N}</strong> ✓'
-    label_bar: Balkweergave — elk blauw stuk =
-    label_bar_units: eenheden
     label_choose: Kies deeltal en deler
     label_dividend: Deeltal (het getal dat gedeeld wordt)
     label_divisor: Deler (de grootte van het stuk)
@@ -104,7 +102,7 @@ nl:
   fibonacci:
     _name: Rij van Fibonacci
     card_phi_lbl: Gulden snede φ
-    card_phi_sub: (1 + √5) / 2 = 1.6180339887…
+    card_phi_sub: (1 + √5) / 2 = 1,6180339887…
     card_ratio_error: 'fout ten opzichte van φ:'
     card_ratio_lbl: Huidige verhouding F(n+1) ÷ F(n)
     chart_step: stap
@@ -129,10 +127,10 @@ nl:
     4triangles: 4 driehoeken × 180°
     _name: Hoeken van een zeshoek
     interiorAngles: Binnenhoeken
-    reset: ↺ Reset
+    reset: ↺ Opnieuw instellen
     total: Totaal
   incentre:
-    _name: Incentrum
+    _name: Aangeschreven middelpunt
     angleA: Hoek A
     angleB: Hoek B
     angleC: Hoek C
@@ -201,7 +199,7 @@ nl:
     label_apply: PAS EEN PROCENTUELE VERANDERING TOE
     label_recovered: hersteld
     label_scale: 'SCHAAL: VOLLEDIGE BREEDTE = 200'
-    label_start: start
+    label_start: begin
   pythagoras:
     _name: Stelling van Pythagoras
     angleDeg: hoek =
@@ -289,7 +287,7 @@ nl:
     vertical: Verticaal
   triangle-angles:
     _name: Hoeken van een driehoek
-    reset: Reset
+    reset: Opnieuw instellen
   triangle-area:
     _name: Oppervlakte van een driehoek
     btnProve: Bewijs het
@@ -321,7 +319,7 @@ nl:
     measurements: Afmetingen
     obtuse: stomphoekig
     perimeter: Omtrek
-    reset: ↺ Reset
+    reset: Opnieuw instellen ↺
     right: rechthoekig
     scalene: ongelijkzijdig
     sides: Zijden
@@ -353,7 +351,7 @@ nl:
     feedbackCorrect: ✓ Klopt!
     feedbackWrong: ✗ Onjuist. De zwakke ster was het juiste antwoord.
     hintChallenge: Verplaats ★ naar de voorgestelde coördinaten en klik op Controleren
-    hintExplore: Verplaats ★ door erop te klikken — springt naar gehele getallen
+    hintExplore: Verplaats ★ door erop te klikken — springt naar hele getallen
     movePrompt: Verplaats ★ naar:<br>({targetX}, {targetY})
     pointLabel: 'Punt:'
     titleExplore: Verken het coördinatenstelsel
@@ -366,7 +364,7 @@ nl:
     feedbackCorrect: ✓ Klopt!
     feedbackWrong: ✗ Onjuist. De zwakke ster was het juiste antwoord.
     hintChallenge: Verplaats ★ naar de voorgestelde coördinaten en klik op Controleren
-    hintExplore: Verplaats ★ door erop te klikken — springt naar gehele getallen
+    hintExplore: Verplaats ★ door erop te klikken — springt naar hele getallen
     movePrompt: Verplaats ★ naar:<br>({targetX}, {targetY})
     pointLabel: 'Punt:'
     titleExplore: Verken het coördinatenstelsel

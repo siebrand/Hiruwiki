@@ -50,7 +50,6 @@ it:
     eq_lbl_divisor: divisore
     eq_lbl_quotient: quoziente
     eq_lbl_remainder: resto
-    label_bar_units: unità
     repadd_exact: — divide esattamente!
   factors:
     gcd_formula_eq: ' ='

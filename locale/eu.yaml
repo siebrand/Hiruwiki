@@ -63,8 +63,6 @@ eu:
       Kontuan hartu pieza gorria (<strong>{R}</strong>) beti zati urdin bat (<strong>{D}</strong>)
       baino motzagoa dela. Hondarra beti zatitzailea baino txikiagoa da. Egiaztatu:
       <strong>{Q} × {D} + {R} = {QD} + {R} = {N}</strong> ✓'
-    label_bar: Barra ikuspegia — zati urdin bakoitza =
-    label_bar_units: unitate
     label_choose: Aukeratu zatikizuna eta zatitzailea
     label_dividend: Zatikizuna (zatitu beharreko zenbakia)
     label_divisor: Zatitzailea (zatiaren tamaina)

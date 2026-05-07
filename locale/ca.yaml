@@ -45,8 +45,6 @@ ca:
     eq_lbl_divisor: divisor
     eq_lbl_quotient: quocient
     eq_lbl_remainder: residu
-    label_bar: 'Vista de barra: cada tros blau ='
-    label_bar_units: unitats
     label_choose: Trieu el dividend i el divisor
   factors:
     gcd_formula_eq: =
