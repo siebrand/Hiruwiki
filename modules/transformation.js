@@ -25,7 +25,7 @@ var messages = /* I18N_START */ {
         "transformations": "Transformations",
         "translation": "Translation",
         "vertical": "Vertical",
-        "hint": "Choose a transformation to see it in action"
+        "hint": "Choose a transformation to see it in action. Use the blue dots to change the form of the triangle"
     },
     "es": {
         "_name": "Transformaciones",
@@ -144,6 +144,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

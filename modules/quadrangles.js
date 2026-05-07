@@ -322,6 +322,8 @@ function t(key, vars) {
 
 
 
+
+
 // ── Widget ───────────────────────────────────────────────────────────────────
 
 function initQuadWidget(container) {
@@ -799,7 +801,7 @@ var fText = document.createElement("span");
 fText.innerHTML = t('hint');
 footer.appendChild(fLogo);
 footer.appendChild(fText);
-wrap.appendChild(footer);
+container.appendChild(footer);
 } // end initQuadWidget
 
 // ── Bootstrap ─────────────────────────────────────────────────────────────────

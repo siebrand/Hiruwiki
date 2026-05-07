@@ -143,7 +143,8 @@ var messages = /* I18N_START */ {
         "lcm_title": "KGV — unie van alle factoren",
         "legend_onlyA": "alleen van A",
         "legend_onlyB": "alleen van B",
-        "legend_shared": "gedeeld (voor GGD)"
+        "legend_shared": "gedeeld (voor GGD)",
+        "hint": "Kies getallen om hun priemfactoren te zien"
     },
     "qqq": {
         "_name": "Name of the Prime Factors module",
@@ -178,6 +179,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

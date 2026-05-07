@@ -91,7 +91,7 @@ var messages = /* I18N_START */ {
         "notDefined": "Niet gedefinieerd voor deze hoek",
         "resultAngle": "Hoek $1: $2°",
         "supplement": "Supplementair",
-        "hint": "Sleep de hendel om de hoek te veranderen"
+        "hint": "Sleep de witte stip om de hoek te veranderen"
     },
     "qqq": {
         "_name": "Name of the Angles module",
@@ -119,6 +119,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

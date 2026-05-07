@@ -28,7 +28,7 @@ var messages = /* I18N_START */ {
         "proofResultTri": "→ Triangle = ½ × {area} = <strong>{triArea} cm²</strong>",
         "unitCm": "cm",
         "unitCm2": "cm²",
-        "hint": "Drag vertices to see how the area relates to a parallelogram"
+        "hint": "Drag the vertices to change the triangle's shape"
     },
     "es": {
         "_name": "Área del triángulo",
@@ -114,7 +114,7 @@ var messages = /* I18N_START */ {
         "proofResultTri": "→ Driehoek = ½ × {area} = <strong>{triArea} cm²</strong>",
         "unitCm": "cm",
         "unitCm2": "cm²",
-        "hint": "Sleep hoekpunten om te zien hoe de oppervlakte zich verhoudt tot een parallelogram"
+        "hint": "Sleep de hoekpunten om de vorm van de driehoek te veranderen"
     },
     "qqq": {
         "_name": "Name of the Triangle Area module",
@@ -146,6 +146,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

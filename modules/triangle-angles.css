@@ -3,7 +3,8 @@
 .hiruwiki[data-module="triangle-angles"] {
     font-family: sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin: 1em 0;
 }
 

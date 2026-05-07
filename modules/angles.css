@@ -1,5 +1,6 @@
 .hiruwiki-angles {
     display: flex;
+    flex-wrap: wrap;
     gap: 16px;
     align-items: flex-start;
     margin: 10px 0;
@@ -35,4 +36,8 @@
 
 .hiruwiki-angles-info .invalid {
     color: var(--color-destructive, #c00);
+}
+
+.hiruwiki-angles .hw-footer {
+    flex-basis: 100%;
 }

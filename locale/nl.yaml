@@ -27,7 +27,7 @@ nl:
     notDefined: Niet gedefinieerd voor deze hoek
     resultAngle: 'Hoek {0}: {1}°'
     supplement: Supplementair
-    hint: 'Sleep de hendel om de hoek te veranderen'
+    hint: 'Sleep de witte stip om de hoek te veranderen'
   circle-proof:
     _name: Cirkel bewijs
     animStopped: Animatie gestopt.
@@ -102,6 +102,7 @@ nl:
     legend_onlyA: alleen van A
     legend_onlyB: alleen van B
     legend_shared: gedeeld (voor GGD)
+    hint: Kies getallen om hun priemfactoren te zien
   fibonacci:
     _name: Rij van Fibonacci
     card_phi_lbl: Gulden snede φ
@@ -314,7 +315,7 @@ nl:
     proofResultTri: ' → Driehoek = ½ × {area} = <strong>{triArea} cm²</strong>'
     unitCm: cm
     unitCm2: cm²
-    hint: 'Sleep hoekpunten om te zien hoe de oppervlakte zich verhoudt tot een parallelogram'
+    hint: Sleep de hoekpunten om de vorm van de driehoek te veranderen
   triangle-centroid:
     _name: Zwaartepunt van een driehoek
     centroid: Zwaartepunt
@@ -356,7 +357,7 @@ nl:
     tanDesc: De oranje lijn is getekend op x&nbsp;=&nbsp;1, rakend aan de cirkel.
       De hoogte is tan&nbsp;&theta;, aangezien tan&nbsp;&theta;&nbsp;=&nbsp;overstaande&nbsp;&divide;&nbsp;aanliggende&nbsp;=&nbsp;sin&nbsp;&theta;&nbsp;&divide;&nbsp;cos&nbsp;&theta;.
     tanFormula: overstaande / aanliggende
-    hint: 'Sleep het punt op de eenheidscirkel'
+    hint: Gebruik de schuifregelaar om de hoek te veranderen
   integer-coordinates:
     _name: Positieve coördinaten
     btnChallenge: "\U0001F3AF Uitdaging"

@@ -301,7 +301,7 @@ en:
     transformations: Transformations
     translation: Translation
     vertical: Vertical
-    hint: 'Choose a transformation to see it in action'
+    hint: 'Choose a transformation to see it in action. Use the blue dots to change the form of the triangle'
   triangle-angles:
     _name: Triangle Angles
     reset: Reset
@@ -319,7 +319,7 @@ en:
     proofResultTri: ' → Triangle = ½ × {area} = <strong>{triArea} cm²</strong>'
     unitCm: cm
     unitCm2: cm²
-    hint: 'Drag vertices to see how the area relates to a parallelogram'
+    hint: Drag the vertices to change the triangle's shape
   triangle-centroid:
     _name: Triangle Centroid
     centroid: Centroid
@@ -361,7 +361,7 @@ en:
     tanDesc: The orange line is drawn at x&nbsp;=&nbsp;1, tangent to the circle. Its
       height is tan&nbsp;&theta;, since tan&nbsp;&theta;&nbsp;=&nbsp;opposite&nbsp;&divide;&nbsp;adjacent&nbsp;=&nbsp;sin&nbsp;&theta;&nbsp;&divide;&nbsp;cos&nbsp;&theta;.
     tanFormula: opposite / adjacent
-    hint: 'Drag the point on the unit circle'
+    hint: Use the slider to change the angle
   integer-coordinates:
     _name: Positive Coordinates
     btnChallenge: 🎯 Challenge

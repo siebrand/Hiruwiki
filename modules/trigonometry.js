@@ -23,7 +23,7 @@ var messages = /* I18N_START */ {
         "sinFormula": "opposite / hypotenuse",
         "tanDesc": "The orange line is drawn at x&nbsp;=&nbsp;1, tangent to the circle. Its height is tan&nbsp;&theta;, since tan&nbsp;&theta;&nbsp;=&nbsp;opposite&nbsp;&divide;&nbsp;adjacent&nbsp;=&nbsp;sin&nbsp;&theta;&nbsp;&divide;&nbsp;cos&nbsp;&theta;.",
         "tanFormula": "opposite / adjacent",
-        "hint": "Drag the point on the unit circle"
+        "hint": "Use the slider to change the angle"
     },
     "es": {
         "_name": "Trigonometría",
@@ -93,7 +93,7 @@ var messages = /* I18N_START */ {
         "sinFormula": "overstaande / schuine",
         "tanDesc": "De oranje lijn is getekend op x&nbsp;=&nbsp;1, rakend aan de cirkel. De hoogte is tan&nbsp;&theta;, aangezien tan&nbsp;&theta;&nbsp;=&nbsp;overstaande&nbsp;&divide;&nbsp;aanliggende&nbsp;=&nbsp;sin&nbsp;&theta;&nbsp;&divide;&nbsp;cos&nbsp;&theta;.",
         "tanFormula": "overstaande / aanliggende",
-        "hint": "Sleep het punt op de eenheidscirkel"
+        "hint": "Gebruik de schuifregelaar om de hoek te veranderen"
     },
     "qqq": {
         "_name": "Name of the Trigonometry module",
@@ -123,6 +123,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

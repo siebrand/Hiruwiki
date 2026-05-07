@@ -1,5 +1,6 @@
 .quadrangle-angles {
   display: flex;
+  flex-wrap: wrap;
   align-items: stretch;
   font-family: Arial, sans-serif;
   box-sizing: border-box;
@@ -161,4 +162,8 @@ background-color: var(--background-color-destructive, #bf3c2c);
 
 .quadrangle-angles .qa-reset-btn:active {
 	background-color: var(--background-color-destructive--active, #612419);
+}
+
+.quadrangle-angles .hw-footer {
+  flex-basis: 100%;
 }

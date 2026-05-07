@@ -189,6 +189,8 @@ function t(key, vars) {
 
 
 
+
+
 /* ── HELPERS ──────────────────────────────────────────────────────────────── */
 function fmt( n ) {
     // Round to 1 decimal, drop the .0 if whole
@@ -284,7 +286,6 @@ function initText( root ) {
     root.querySelector( '#hw-pct-axis-neg'      ).textContent = t( 'axis_neg'        );
     root.querySelector( '#hw-pct-axis-zero'     ).textContent = t( 'axis_zero'       );
     root.querySelector( '#hw-pct-axis-pos'      ).textContent = t( 'axis_pos'        );
-    root.querySelector( '#hw-pct-insight'       ).textContent = t( 'hint'            );
 }
 
 /* ── ARROW HELPER ─────────────────────────────────────────────────────────── */

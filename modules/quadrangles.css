@@ -5,6 +5,7 @@
 
 .hiruwiki[data-module="quadrangles"] .quad-wrap {
   display: flex;
+  flex-wrap: wrap;
   gap: 0;
   min-height: 520px;
   border: 1px solid var(--border-color-base, #ccc);
@@ -212,4 +213,8 @@
   font-size: 12px;
   font-weight: normal;
   color: var(--color-placeholder, #888);
+}
+
+.hiruwiki[data-module="quadrangles"] .hw-footer {
+  flex-basis: 100%;
 }
