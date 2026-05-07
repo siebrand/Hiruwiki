@@ -192,6 +192,9 @@ banana.load(messages);
 function t(key, vars) {
     var args = Array.isArray(vars) ? vars : [];
     var str = banana.i18n(key, ...args);
+    if (str === key || str === '<' + key + '>') {
+        str = (messages.en && messages.en[key]) || str;
+    }
     if (vars && typeof vars === 'object' && !Array.isArray(vars)) {
         Object.keys(vars).forEach(function(k) {
             str = str.replace(new RegExp('\\{' + k + '\\}', 'g'), vars[k]);

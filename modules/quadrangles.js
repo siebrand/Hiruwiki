@@ -776,7 +776,12 @@
     // ── Init ──────────────────────────────────────────────────────────────────────
 
     function init() {
-      px = svg.getBoundingClientRect().width / boardWidth;
+      var w = svg.getBoundingClientRect().width;
+      if (w === 0) {
+        requestAnimationFrame(init);
+        return;
+      }
+      px = w / boardWidth;
       drawGrid();
       update();
     }
@@ -796,7 +801,8 @@
     fText.innerHTML = t('hint');
     footer.appendChild(fLogo);
     footer.appendChild(fText);
-    el.appendChild(footer);
+    container.appendChild(footer);
+
   } // end initQuadWidget
 
   // ── Bootstrap ─────────────────────────────────────────────────────────────────
