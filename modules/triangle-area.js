@@ -165,6 +165,7 @@ function t(key, vars) {
 
 
 
+
 var W = 680, H = 430, CM = 37.8, DUR = 1600;
 
     function init(container) {
@@ -498,8 +499,10 @@ var W = 680, H = 430, CM = 37.8, DUR = 1600;
         // Footer — hint text defined in this module's own i18n, not loaded externally
         var footer = document.createElement('div');
         footer.className = 'hw-footer';
-        var fLogo = document.createElement('div');
+        var fLogo = document.createElement('a');
         fLogo.className = 'hw-footer-icon';
+        fLogo.href = mw.util.getUrl('Wikipedia:Hiruwiki');
+        fLogo.title = 'Hiruwiki';
         fLogo.innerHTML = hiruwiki.getLogoSvg(22);
         footer.appendChild(fLogo);
         

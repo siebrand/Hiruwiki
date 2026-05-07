@@ -82,6 +82,7 @@ function t(key, vars) {
 
 
 
+
 function initCentroid( container ) {
         var canvas = document.createElement( 'canvas' );
         canvas.height = 460;
@@ -89,8 +90,10 @@ function initCentroid( container ) {
 
         var caption = document.createElement( 'div' );
         caption.className = 'hw-footer';
-        var fLogo = document.createElement( 'div' );
+        var fLogo = document.createElement( 'a' );
         fLogo.className = 'hw-footer-icon';
+        fLogo.href = mw.util.getUrl('Wikipedia:Hiruwiki');
+        fLogo.title = 'Hiruwiki';
         fLogo.innerHTML = hiruwiki.getLogoSvg(22);
         var fText = document.createElement( 'span' );
         fText.innerHTML = t( 'hint' );

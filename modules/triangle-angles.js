@@ -76,6 +76,7 @@ function t(key, vars) {
 
 
 
+
 let widgetCounter = 0;
 
 function createWidget(container) {
@@ -353,8 +354,10 @@ updateTriangle();
 // Footer — hint text defined in this module's own i18n, not loaded externally
 var footer = document.createElement('div');
 footer.className = 'hw-footer';
-var fLogo = document.createElement('div');
+var fLogo = document.createElement('a');
 fLogo.className = 'hw-footer-icon';
+fLogo.href = mw.util.getUrl('Wikipedia:Hiruwiki');
+fLogo.title = 'Hiruwiki';
 fLogo.innerHTML = hiruwiki.getLogoSvg(22);
 var fText = document.createElement('span');
 fText.innerHTML = t('hint');
