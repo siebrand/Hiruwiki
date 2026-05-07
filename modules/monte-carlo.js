@@ -18,7 +18,8 @@ var messages = /* I18N_START */ {
         "outsideCircle": "Outside circle",
         "pointsPerStep": "Points per step",
         "reset": "↺ Reset",
-        "totalPoints": "Total points"
+        "totalPoints": "Total points",
+        "hint": "Add points to approximate π using probability"
     },
     "es": {
         "_name": "Monte Carlo Pi",
@@ -86,7 +87,8 @@ var messages = /* I18N_START */ {
         "outsideCircle": "Buiten de cirkel",
         "pointsPerStep": "Punten per stap",
         "reset": "↺ Reset",
-        "totalPoints": "Totaal aantal punten"
+        "totalPoints": "Totaal aantal punten",
+        "hint": "Voeg punten toe om π te benaderen met kansberekening"
     },
     "qqq": {
         "_name": "Name of the Monte Carlo Pi module",
@@ -98,7 +100,8 @@ var messages = /* I18N_START */ {
         "outsideCircle": "Label for the count of points outside the circle",
         "pointsPerStep": "Label for the number of points added per step",
         "reset": "Button label to reset the simulation",
-        "totalPoints": "Label for the total number of points"
+        "totalPoints": "Label for the total number of points",
+        "hint": "Instruction text for the Monte Carlo simulation interaction"
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -115,6 +118,7 @@ function t(key, vars) {
     }
     return str;
 }
+
 
 
 
@@ -324,8 +328,21 @@ var SIZE = 320;
         wrap.querySelector( '#mc-btn-reset' ).addEventListener( 'click', reset );
 
         // ── Init ─────────────────────────────────────────────────────────────
-        drawBase();
         updateStats();
+
+        // Footer branding
+        var footer = document.createElement("div");
+        footer.className = "hw-footer";
+        var fLogo = document.createElement("a");
+        fLogo.className = "hw-footer-icon";
+        fLogo.href = mw.util.getUrl('Wikipedia:Hiruwiki');
+        fLogo.title = 'Hiruwiki';
+        fLogo.innerHTML = hiruwiki.getLogoSvg(22);
+        var fText = document.createElement("span");
+        fText.innerHTML = t('hint');
+        footer.appendChild(fLogo);
+        footer.appendChild(fText);
+        container.appendChild(footer);
     }
 
     // ── Entry point: initialise all matching containers ──────────────────────

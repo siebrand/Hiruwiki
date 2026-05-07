@@ -22,7 +22,8 @@ var messages = /* I18N_START */ {
         "sinDesc": "The green line is the <strong>opposite</strong> side &mdash; the vertical distance from the point on the circle to the x-axis. sin&nbsp;&theta;&nbsp;=&nbsp;opposite&nbsp;&divide;&nbsp;hypotenuse&nbsp;(=&nbsp;1).",
         "sinFormula": "opposite / hypotenuse",
         "tanDesc": "The orange line is drawn at x&nbsp;=&nbsp;1, tangent to the circle. Its height is tan&nbsp;&theta;, since tan&nbsp;&theta;&nbsp;=&nbsp;opposite&nbsp;&divide;&nbsp;adjacent&nbsp;=&nbsp;sin&nbsp;&theta;&nbsp;&divide;&nbsp;cos&nbsp;&theta;.",
-        "tanFormula": "opposite / adjacent"
+        "tanFormula": "opposite / adjacent",
+        "hint": "Drag the point on the unit circle"
     },
     "es": {
         "_name": "Trigonometría",
@@ -91,7 +92,8 @@ var messages = /* I18N_START */ {
         "sinDesc": "De groene lijn is de <strong>overstaande</strong> zijde &mdash; de verticale afstand van het punt op de cirkel tot de x-as. sin&nbsp;&theta;&nbsp;=&nbsp;overstaande&nbsp;&divide;&nbsp;schuine&nbsp;zijde&nbsp;(=&nbsp;1).",
         "sinFormula": "overstaande / schuine",
         "tanDesc": "De oranje lijn is getekend op x&nbsp;=&nbsp;1, rakend aan de cirkel. De hoogte is tan&nbsp;&theta;, aangezien tan&nbsp;&theta;&nbsp;=&nbsp;overstaande&nbsp;&divide;&nbsp;aanliggende&nbsp;=&nbsp;sin&nbsp;&theta;&nbsp;&divide;&nbsp;cos&nbsp;&theta;.",
-        "tanFormula": "overstaande / aanliggende"
+        "tanFormula": "overstaande / aanliggende",
+        "hint": "Sleep het punt op de eenheidscirkel"
     },
     "qqq": {
         "_name": "Name of the Trigonometry module",
@@ -103,7 +105,8 @@ var messages = /* I18N_START */ {
         "sinDesc": "Description of the sine function shown in the proof panel. Uses HTML entities and formatting.",
         "sinFormula": "Formula for sine (opposite / hypotenuse)",
         "tanDesc": "Description of the tangent function shown in the proof panel. Uses HTML entities and formatting.",
-        "tanFormula": "Formula for tangent (opposite / adjacent)"
+        "tanFormula": "Formula for tangent (opposite / adjacent)",
+        "hint": "Instruction text for the unit circle interaction"
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -120,6 +123,7 @@ function t(key, vars) {
     }
     return str;
 }
+
 
 
 
@@ -446,6 +450,20 @@ function initTrigonometry(container) {
         /* ── Init ───────────────────────────────────────────────── */
         updateValues();
         draw(1);
+
+        // Footer branding
+        var footer = document.createElement("div");
+        footer.className = "hw-footer";
+        var fLogo = document.createElement("a");
+        fLogo.className = "hw-footer-icon";
+        fLogo.href = mw.util.getUrl('Wikipedia:Hiruwiki');
+        fLogo.title = 'Hiruwiki';
+        fLogo.innerHTML = hiruwiki.getLogoSvg(22);
+        var fText = document.createElement("span");
+        fText.innerHTML = t('hint');
+        footer.appendChild(fLogo);
+        footer.appendChild(fText);
+        container.appendChild(footer);
     }
 
     /* ── Wire up all matching containers on the page ──────────── */

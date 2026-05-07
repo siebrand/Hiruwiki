@@ -31,6 +31,7 @@ qqq:
     resultAngle: 'Result text showing a computed angle. Parameters: {0} = angle type
       name (e.g. "Complementary"), {1} = angle in degrees.'
     supplement: Button label for the supplementary angle mode
+    hint: Instruction text explaining how to interact with the angle applet
   circle-proof:
     _name: Name of the Circle Proof module
     animStopped: Status message shown when the user stops the animation
@@ -55,6 +56,7 @@ qqq:
     tabCirc: Tab label for the circumference proof
     title: Title of the circle calculator sidebar
     visualProof: Section heading for the visual proof controls
+    hint: Instruction text explaining that the radius slider is interactive
   dividend:
     _name: Name of the Dividend and Divisor module
     eq_lbl_dividend: Label for the dividend in the division equation display
@@ -81,6 +83,7 @@ qqq:
     repadd_leftover: Text shown after the leftover value in the repeated addition
     repadd_less: 'Text shown in the repeated addition section when the dividend is
       less than the divisor. Parameters: {N} = dividend, {D} = divisor.'
+    hint: Instruction text explaining how to use the division sliders
   factors:
     _name: Name of the Prime Factors module
     gcd_formula_eq: Equals sign used in the GCD formula display
@@ -105,6 +108,7 @@ qqq:
     legend_onlyB: Legend label for factor blocks unique to number B
     legend_shared: Legend label for factor blocks shared between A and B (used for
       GCD)
+    hint: Instruction text explaining how to use the number sliders
   fibonacci:
     _name: Name of the Fibonacci Sequence module
     card_phi_lbl: Label for the golden ratio φ card
@@ -133,6 +137,7 @@ qqq:
     sec_steps: Section heading for the step-through controls
     step_label: 'Label showing the current step. Parameters: {step} = current step
       number, {total} = total number of steps.'
+    hint: Instruction text for the Fibonacci step-through controls
   hexagon-angles:
     2quads: Decomposition label showing 2 quadrilaterals × 360°
     4triangles: Decomposition label showing 4 triangles × 180°
@@ -140,6 +145,7 @@ qqq:
     interiorAngles: Heading for the interior angles section
     reset: Button label to reset the visualisation
     total: Label for the total sum of interior angles
+    hint: Instruction text for the hexagon angle decomposition applet
   incentre:
     _name: Name of the Incentre module
     angleA: Label for angle A of the triangle
@@ -172,6 +178,7 @@ qqq:
     probTitle: Heading describing the probability scenario
     shake: Button label to shake the jar and randomise marbles
     total: Label for the total number of marbles
+    hint: Instruction text for the probability jar interaction
   monte-carlo:
     _name: Name of the Monte Carlo Pi module
     addPoints: Button label to add more random points to the simulation
@@ -183,12 +190,14 @@ qqq:
     pointsPerStep: Label for the number of points added per step
     reset: Button label to reset the simulation
     totalPoints: Label for the total number of points
+    hint: Instruction text for the Monte Carlo simulation interaction
   pentagon-angles:
     3triangles: Decomposition label showing 3 triangles × 180°
     _name: Name of the Pentagon Angles module
     interiorAngles: Heading for the interior angles section
     reset: Button label to reset the visualisation
     total: Label for the total sum of interior angles
+    hint: Instruction text for the pentagon angle decomposition applet
   percent:
     _name: Name of the Percentages module
     axis_neg: Label at the left end of the slider axis (−100%)
@@ -214,12 +223,14 @@ qqq:
     angleDeg: Label prefix for the angle value. Followed by a number in degrees.
     lockRight: Checkbox label to lock the triangle to a right angle
     reset: Button label to reset the triangle
+    hint: Instruction text for the Pythagoras theorem interaction
   quadrangle-angles:
     _name: Name of the Quadrangle Angles module
     interiorAngles: Heading for the interior angles section
     reset: Button label to reset the visualisation
     sum: Label for the sum of angles
     total: Label for the total sum of interior angles
+    hint: Instruction text for the quadrangle angle interaction
   quadrangles:
     _name: Name of the Quadrilaterals module
     areaDiagHalf: 'Area formula for a kite using diagonals. Parameters: {0} = diagonal
@@ -256,12 +267,15 @@ qqq:
     shapeTrapezoid: Classification name for a trapezoid
     unitCm: Unit abbreviation for centimetres
     unitCm2: Unit abbreviation for square centimetres
+    hint: Instruction text for the quadrilateral classification applet
   radian:
     _name: Name of the Radians module
     rad: Abbreviation for radians
+    hint: Instruction text for the radian-degree relationship applet
   slope:
     _name: Name of the Slope module
     undefined: Message shown when the line is vertical and the slope is undefined
+    hint: Instruction text for the slope calculation interaction
   transformation:
     _name: Name of the Transformations module
     angle: Label for the rotation angle slider
@@ -276,6 +290,7 @@ qqq:
     transformations: Main heading for the transformations panel
     translation: Button label and heading for the translation transformation
     vertical: Label for the vertical translation slider
+    hint: Instruction text for the transformation module
   triangle-angles:
     _name: Name of the Triangle Angles module
     reset: Button label to reset the triangle
@@ -339,6 +354,7 @@ qqq:
     tanDesc: Description of the tangent function shown in the proof panel. Uses HTML
       entities and formatting.
     tanFormula: Formula for tangent (opposite / adjacent)
+    hint: Instruction text for the unit circle interaction
   integer-coordinates:
     _name: Name of the Positive Coordinates module (integer grid variant)
     btnChallenge: Button label to switch to challenge mode
@@ -353,6 +369,7 @@ qqq:
       {targetX} = target X coordinate, {targetY} = target Y coordinate.'
     pointLabel: Label for the current point coordinates. Followed by coordinate values.
     titleExplore: Title shown in explore mode
+    hint: Instruction text for the coordinate system interaction
   positive-coordinates:
     _name: Name of the Positive Coordinates module
     btnChallenge: Button label to switch to challenge mode
@@ -367,6 +384,7 @@ qqq:
       {targetX} = target X coordinate, {targetY} = target Y coordinate.'
     pointLabel: Label for the current point coordinates. Followed by coordinate values.
     titleExplore: Title shown in explore mode
+    hint: Instruction text for the coordinate system interaction
   gauss-legendre:
     _name: Name of the Gauss-Legendre Algorithm module
     iteration: Label for the current iteration number
@@ -382,4 +400,5 @@ qqq:
     calculation_heading: Heading for the step-by-step calculation breakdown
     formula_label: Label for the mathematical formula being used
     update_rules_heading: Heading for the section explaining how variables change each step
+    hint: Instruction text for the Gauss-Legendre algorithm interaction
 ...

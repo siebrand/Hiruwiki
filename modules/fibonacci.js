@@ -45,7 +45,8 @@ var messages = /* I18N_START */ {
         "sec_chart": "Convergence toward φ",
         "sec_sequence": "Sequence so far",
         "sec_steps": "Step through the Fibonacci sequence",
-        "step_label": "Step {step} of {total}"
+        "step_label": "Step {step} of {total}",
+        "hint": "Step through the sequence to see convergence"
     },
     "es": {
         "_name": "Sucesión de Fibonacci",
@@ -145,7 +146,8 @@ var messages = /* I18N_START */ {
         "sec_chart": "Convergentie naar φ",
         "sec_sequence": "Reeks tot nu toe",
         "sec_steps": "Stap door de Fibonacci-reeks",
-        "step_label": "Stap {step} van {total}"
+        "step_label": "Stap {step} van {total}",
+        "hint": "Stap door de reeks om de convergentie te zien"
     },
     "qqq": {
         "_name": "Name of the Fibonacci Sequence module",
@@ -164,7 +166,8 @@ var messages = /* I18N_START */ {
         "sec_chart": "Section heading for the convergence chart",
         "sec_sequence": "Section heading for the sequence display",
         "sec_steps": "Section heading for the step-through controls",
-        "step_label": "Label showing the current step. Parameters: {step} = current step number, {total} = total number of steps."
+        "step_label": "Label showing the current step. Parameters: {step} = current step number, {total} = total number of steps.",
+        "hint": "Instruction text for the Fibonacci step-through controls"
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -181,6 +184,7 @@ function t(key, vars) {
     }
     return str;
 }
+
 
 
 
@@ -490,6 +494,20 @@ function mount( root ) {
 
     window.addEventListener( 'resize', function () { drawChart( root, step ); } );
     update( root, step );
+    
+    // Footer branding
+    var footer = document.createElement("div");
+    footer.className = "hw-footer";
+    var fLogo = document.createElement("a");
+    fLogo.className = "hw-footer-icon";
+    fLogo.href = mw.util.getUrl('Wikipedia:Hiruwiki');
+    fLogo.title = 'Hiruwiki';
+    fLogo.innerHTML = hiruwiki.getLogoSvg(22);
+    var fText = document.createElement("span");
+    fText.innerHTML = t('hint');
+    footer.appendChild(fLogo);
+    footer.appendChild(fText);
+    root.appendChild(footer);
 }
 
 /* ── SCAN & INIT ──────────────────────────────────────────────────────────── */

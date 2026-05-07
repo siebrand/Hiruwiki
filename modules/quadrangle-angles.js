@@ -15,7 +15,8 @@ var messages = /* I18N_START */ {
         "interiorAngles": "Interior angles",
         "reset": "Reset",
         "sum": "Sum",
-        "total": "Total"
+        "total": "Total",
+        "hint": "Drag vertices to see the sum of interior angles"
     },
     "es": {
         "_name": "Ángulos del cuadrilátero",
@@ -62,7 +63,8 @@ var messages = /* I18N_START */ {
         "interiorAngles": "Heading for the interior angles section",
         "reset": "Button label to reset the visualisation",
         "sum": "Label for the sum of angles",
-        "total": "Label for the total sum of interior angles"
+        "total": "Label for the total sum of interior angles",
+        "hint": "Instruction text for the quadrangle angle interaction"
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -79,6 +81,7 @@ function t(key, vars) {
     }
     return str;
 }
+
 
 
 
@@ -451,6 +454,20 @@ var SVG_W  = 540, SVG_H = 480;
     resetBtn.addEventListener( 'click', function () { resetPos(initPos); updateQuad(); } );
 
     updateQuad();
+
+    // Footer branding
+    var footer = document.createElement("div");
+    footer.className = "hw-footer";
+    var fLogo = document.createElement("a");
+    fLogo.className = "hw-footer-icon";
+    fLogo.href = mw.util.getUrl('Wikipedia:Hiruwiki');
+    fLogo.title = 'Hiruwiki';
+    fLogo.innerHTML = hiruwiki.getLogoSvg(22);
+    var fText = document.createElement("span");
+    fText.innerHTML = t('hint');
+    footer.appendChild(fLogo);
+    footer.appendChild(fText);
+    wrapper.appendChild(footer);
   }
 
   // ── Init: find all hiruwiki placeholders for this module ──────────────────

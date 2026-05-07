@@ -18,7 +18,8 @@
         "precision_note": "Converges quadratically: digits double each step.",
         "calculation_heading": "How it's calculated",
         "formula_label": "Formula",
-        "update_rules_heading": "Update Rules"
+        "update_rules_heading": "Update Rules",
+        "hint": "Compute iterations to see quadratic convergence"
     },
     "nl": {
         "_name": "Gauss-Legendre-algoritme",
@@ -34,7 +35,8 @@
         "precision_note": "Convergeert kwadratisch: het aantal cijfers verdubbelt bij elke stap.",
         "calculation_heading": "Hoe het wordt berekend",
         "formula_label": "Formule",
-        "update_rules_heading": "Updateregels"
+        "update_rules_heading": "Updateregels",
+        "hint": "Bereken iteraties om kwadratische convergentie te zien"
     },
     "qqq": {
         "_name": "Name of the Gauss-Legendre Algorithm module",
@@ -50,7 +52,8 @@
         "precision_note": "Note explaining the quadratic convergence of the algorithm",
         "calculation_heading": "Heading for the step-by-step calculation breakdown",
         "formula_label": "Label for the mathematical formula being used",
-        "update_rules_heading": "Heading for the section explaining how variables change each step"
+        "update_rules_heading": "Heading for the section explaining how variables change each step",
+        "hint": "Instruction text for the Gauss-Legendre algorithm interaction"
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -67,6 +70,7 @@ function t(key, vars) {
     }
     return str;
 }
+
 
 
 
@@ -314,6 +318,20 @@ function t(key, vars) {
         el.btnReset.addEventListener('click', reset);
 
         updateUI();
+
+        // Footer branding
+        var footer = document.createElement("div");
+        footer.className = "hw-footer";
+        var fLogo = document.createElement("a");
+        fLogo.className = "hw-footer-icon";
+        fLogo.href = mw.util.getUrl('Wikipedia:Hiruwiki');
+        fLogo.title = 'Hiruwiki';
+        fLogo.innerHTML = hiruwiki.getLogoSvg(22);
+        var fText = document.createElement("span");
+        fText.innerHTML = t('hint');
+        footer.appendChild(fLogo);
+        footer.appendChild(fText);
+        container.appendChild(footer);
     }
 
     function init() {

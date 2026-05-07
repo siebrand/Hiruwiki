@@ -13,7 +13,8 @@ var messages = /* I18N_START */ {
         "_name": "Hexagon Angles",
         "interiorAngles": "Interior angles",
         "reset": "↺ Reset",
-        "total": "Total"
+        "total": "Total",
+        "hint": "Decompose the hexagon into triangles or quadrilaterals"
     },
     "es": {
         "2quads": "2 cuadriláteros × 360°",
@@ -56,7 +57,8 @@ var messages = /* I18N_START */ {
         "_name": "Hoeken van een zeshoek",
         "interiorAngles": "Binnenhoeken",
         "reset": "↺ Opnieuw instellen",
-        "total": "Totaal"
+        "total": "Totaal",
+        "hint": "Schud de pot om de waarschijnlijkheid in actie te zien"
     },
     "qqq": {
         "2quads": "Decomposition label showing 2 quadrilaterals × 360°",
@@ -64,7 +66,8 @@ var messages = /* I18N_START */ {
         "_name": "Name of the Hexagon Angles module",
         "interiorAngles": "Heading for the interior angles section",
         "reset": "Button label to reset the visualisation",
-        "total": "Label for the total sum of interior angles"
+        "total": "Label for the total sum of interior angles",
+        "hint": "Instruction text for the hexagon angle decomposition applet"
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -81,6 +84,7 @@ function t(key, vars) {
     }
     return str;
 }
+
 
 
 
@@ -568,6 +572,20 @@ var SVG_W  = 580, SVG_H = 520;
     resetBtn.addEventListener('click',  function(){resetPos(initPos);updatePoly();});
 
     updatePoly();
+
+    // Footer branding
+    var footer = document.createElement("div");
+    footer.className = "hw-footer";
+    var fLogo = document.createElement("a");
+    fLogo.className = "hw-footer-icon";
+    fLogo.href = mw.util.getUrl('Wikipedia:Hiruwiki');
+    fLogo.title = 'Hiruwiki';
+    fLogo.innerHTML = hiruwiki.getLogoSvg(22);
+    var fText = document.createElement("span");
+    fText.innerHTML = t('hint');
+    footer.appendChild(fLogo);
+    footer.appendChild(fText);
+    wrapper.appendChild(footer);
   }
 
   document.querySelectorAll('.hiruwiki[data-module="hexagon-angles"]').forEach(function(el){

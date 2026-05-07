@@ -188,6 +188,7 @@ function t(key, vars) {
 
 
 
+
 /* ── HELPERS ──────────────────────────────────────────────────────────────── */
 function fmt( n ) {
     // Round to 1 decimal, drop the .0 if whole
@@ -448,6 +449,20 @@ function mount( root ) {
     var slider = root.querySelector( '#hw-pct-slider' );
     slider.addEventListener( 'input', function () { update( root ); } );
     update( root );
+    
+    // Footer branding
+    var footer = document.createElement("div");
+    footer.className = "hw-footer";
+    var fLogo = document.createElement("a");
+    fLogo.className = "hw-footer-icon";
+    fLogo.href = mw.util.getUrl('Wikipedia:Hiruwiki');
+    fLogo.title = 'Hiruwiki';
+    fLogo.innerHTML = hiruwiki.getLogoSvg(22);
+    var fText = document.createElement("span");
+    fText.innerHTML = t('hint');
+    footer.appendChild(fLogo);
+    footer.appendChild(fText);
+    root.appendChild(footer);
 }
 
 /* ── SCAN & INIT ──────────────────────────────────────────────────────────── */

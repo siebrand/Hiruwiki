@@ -21,6 +21,7 @@ en:
     notDefined: Not defined for this angle
     resultAngle: '{0} angle: {1}°'
     supplement: Supplementary
+    hint: 'Drag the handle to change the angle'
   circle-proof:
     _name: Circle Proof
     animStopped: Animation stopped.
@@ -40,6 +41,7 @@ en:
     tabCirc: Circumference
     title: Circle Calculator
     visualProof: Visual proof
+    hint: 'Drag the radius slider to see the calculation'
   dividend:
     _name: Dividend and Divisor
     eq_lbl_dividend: dividend
@@ -66,6 +68,7 @@ en:
     repadd_leftover: left over
     repadd_less: '{N} is less than {D}, so the quotient is 0 and the whole value is
       the remainder.'
+    hint: 'Adjust dividend and divisor to see the division breakdown'
   factors:
     _name: Prime Factors
     gcd_formula_eq: ' = '
@@ -92,6 +95,7 @@ en:
     legend_onlyA: unique to A
     legend_onlyB: unique to B
     legend_shared: shared (used for GCD)
+    hint: 'Choose numbers to see their prime factors'
   fibonacci:
     _name: Fibonacci Sequence
     card_phi_lbl: Golden ratio φ
@@ -116,6 +120,7 @@ en:
     sec_sequence: Sequence so far
     sec_steps: Step through the Fibonacci sequence
     step_label: Step {step} of {total}
+    hint: 'Step through the sequence to see convergence'
   hexagon-angles:
     2quads: 2 quadrilaterals × 360°
     4triangles: 4 triangles × 180°
@@ -123,6 +128,7 @@ en:
     interiorAngles: Interior angles
     reset: ↺ Reset
     total: Total
+    hint: 'Decompose the hexagon into triangles or quadrilaterals'
   incentre:
     _name: Incentre
     angleA: Angle A
@@ -154,6 +160,7 @@ en:
     probTitle: Probability of picking a marble and guessing its color…
     shake: Shake!
     total: Total
+    hint: 'Shake the jar to see the probability in action'
   monte-carlo:
     _name: Monte Carlo Pi
     addPoints: + Add points
@@ -165,12 +172,14 @@ en:
     pointsPerStep: Points per step
     reset: ↺ Reset
     totalPoints: Total points
+    hint: 'Add points to approximate π using probability'
   pentagon-angles:
     3triangles: 3 triangles × 180°
     _name: Pentagon Angles
     interiorAngles: Interior angles
     reset: ↺ Reset
     total: Total
+    hint: 'Decompose the pentagon into triangles'
   percent:
     _name: Percentages
     axis_neg: −100%
@@ -198,12 +207,14 @@ en:
     angleDeg: 'angle = '
     lockRight: right angle
     reset: Reset
+    hint: 'Drag vertices to verify a² + b² = c²'
   quadrangle-angles:
     _name: Quadrangle Angles
     interiorAngles: Interior angles
     reset: Reset
     sum: Sum
     total: Total
+    hint: 'Drag vertices to see the sum of interior angles'
   quadrangles:
     _name: Quadrilaterals
     areaDiagHalf: 'Formula: A = (d₁ × d₂) / 2
@@ -267,12 +278,15 @@ en:
     shapeTrapezoid: trapezoid
     unitCm: cm
     unitCm2: cm²
+    hint: 'Drag vertices to classify the quadrilateral'
   radian:
     _name: Radians
     rad: rad
+    hint: 'Drag the handle to see the relationship between degrees and radians'
   slope:
     _name: Slope
     undefined: Vertical line → slope undefined
+    hint: 'Drag the points to see the slope calculation'
   transformation:
     _name: Transformations
     angle: Angle
@@ -287,6 +301,7 @@ en:
     transformations: Transformations
     translation: Translation
     vertical: Vertical
+    hint: 'Choose a transformation to see it in action'
   triangle-angles:
     _name: Triangle Angles
     reset: Reset
@@ -346,6 +361,7 @@ en:
     tanDesc: The orange line is drawn at x&nbsp;=&nbsp;1, tangent to the circle. Its
       height is tan&nbsp;&theta;, since tan&nbsp;&theta;&nbsp;=&nbsp;opposite&nbsp;&divide;&nbsp;adjacent&nbsp;=&nbsp;sin&nbsp;&theta;&nbsp;&divide;&nbsp;cos&nbsp;&theta;.
     tanFormula: opposite / adjacent
+    hint: 'Drag the point on the unit circle'
   integer-coordinates:
     _name: Positive Coordinates
     btnChallenge: 🎯 Challenge
@@ -359,6 +375,7 @@ en:
     movePrompt: Move ★ to:<br>({targetX}, {targetY})
     pointLabel: 'Point:'
     titleExplore: Explore Coordinate System
+    hint: 'Move the star to explore coordinates'
   positive-coordinates:
     _name: Positive Coordinates
     btnChallenge: 🎯 Challenge
@@ -372,6 +389,7 @@ en:
     movePrompt: Move ★ to:<br>({targetX}, {targetY})
     pointLabel: 'Point:'
     titleExplore: Explore Coordinate System
+    hint: 'Move the star to explore coordinates'
   gauss-legendre:
     _name: Gauss-Legendre Algorithm
     iteration: Iteration
@@ -387,3 +405,4 @@ en:
     calculation_heading: How it's calculated
     formula_label: Formula
     update_rules_heading: Update Rules
+    hint: 'Compute iterations to see quadratic convergence'

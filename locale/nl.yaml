@@ -27,6 +27,7 @@ nl:
     notDefined: Niet gedefinieerd voor deze hoek
     resultAngle: 'Hoek {0}: {1}°'
     supplement: Supplementair
+    hint: 'Sleep de hendel om de hoek te veranderen'
   circle-proof:
     _name: Cirkel bewijs
     animStopped: Animatie gestopt.
@@ -47,6 +48,7 @@ nl:
     tabCirc: Omtrek
     title: Cirkel Calculator
     visualProof: Visueel bewijs
+    hint: 'Sleep de straalschuifregelaar om de berekening te zien'
   dividend:
     _name: Deeltal en deler
     eq_lbl_dividend: deeltal
@@ -72,6 +74,7 @@ nl:
     repadd_leftover: blijft over
     repadd_less: '{N} is kleiner dan {D}, dus het quotiënt is 0 en de gehele waarde
       is de rest.'
+    hint: 'Pas deeltal en deler aan om de deling te zien'
   factors:
     _name: Priemfactoren
     gcd_formula_eq: ' ='
@@ -122,6 +125,8 @@ nl:
     sec_sequence: Reeks tot nu toe
     sec_steps: Stap door de Fibonacci-reeks
     step_label: Stap {step} van {total}
+    hint: 'Stap door de reeks om de convergentie te zien'
+    hint: 'Stap door de reeks om de convergentie te zien'
   hexagon-angles:
     2quads: 2 vierhoeken × 360°
     4triangles: 4 driehoeken × 180°
@@ -129,6 +134,7 @@ nl:
     interiorAngles: Binnenhoeken
     reset: ↺ Opnieuw instellen
     total: Totaal
+    hint: 'Schud de pot om de waarschijnlijkheid in actie te zien'
   incentre:
     _name: Aangeschreven middelpunt
     angleA: Hoek A
@@ -171,12 +177,15 @@ nl:
     pointsPerStep: Punten per stap
     reset: ↺ Reset
     totalPoints: Totaal aantal punten
+    hint: 'Voeg punten toe om π te benaderen met kansberekening'
+    hint: 'Voeg punten toe om π te benaderen met kansberekening'
   pentagon-angles:
     3triangles: 3 driehoeken × 180°
     _name: Hoeken van een vijfhoek
     interiorAngles: Binnenhoeken
     reset: ↺ Reset
     total: Totaal
+    hint: 'Verdeel de vijfhoek in driehoeken'
   percent:
     _name: Percentages
     axis_neg: −100%
@@ -267,9 +276,11 @@ nl:
   radian:
     _name: Radialen
     rad: rad
+    hint: 'Sleep de hendel om de relatie tussen graden en radialen te zien'
   slope:
     _name: Helling
     undefined: Verticale lijn → helling ongedefinieerd
+    hint: 'Sleep de punten om de hellingsberekening te zien'
   transformation:
     _name: Transformaties
     angle: Hoek
@@ -345,6 +356,7 @@ nl:
     tanDesc: De oranje lijn is getekend op x&nbsp;=&nbsp;1, rakend aan de cirkel.
       De hoogte is tan&nbsp;&theta;, aangezien tan&nbsp;&theta;&nbsp;=&nbsp;overstaande&nbsp;&divide;&nbsp;aanliggende&nbsp;=&nbsp;sin&nbsp;&theta;&nbsp;&divide;&nbsp;cos&nbsp;&theta;.
     tanFormula: overstaande / aanliggende
+    hint: 'Sleep het punt op de eenheidscirkel'
   integer-coordinates:
     _name: Positieve coördinaten
     btnChallenge: "\U0001F3AF Uitdaging"
@@ -373,6 +385,7 @@ nl:
     calculation_heading: Hoe het wordt berekend
     formula_label: Formule
     update_rules_heading: Updateregels
+    hint: 'Bereken iteraties om kwadratische convergentie te zien'
   positive-coordinates:
     _name: Positieve coördinaten
     btnChallenge: "\U0001F3AF Uitdaging"

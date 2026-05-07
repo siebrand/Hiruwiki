@@ -20,7 +20,8 @@ var messages = /* I18N_START */ {
         "explement": "Explementary",
         "notDefined": "Not defined for this angle",
         "resultAngle": "$1 angle: $2°",
-        "supplement": "Supplementary"
+        "supplement": "Supplementary",
+        "hint": "Drag the handle to change the angle"
     },
     "es": {
         "_name": "Ángulos",
@@ -89,7 +90,8 @@ var messages = /* I18N_START */ {
         "explement": "Explementair",
         "notDefined": "Niet gedefinieerd voor deze hoek",
         "resultAngle": "Hoek $1: $2°",
-        "supplement": "Supplementair"
+        "supplement": "Supplementair",
+        "hint": "Sleep de hendel om de hoek te veranderen"
     },
     "qqq": {
         "_name": "Name of the Angles module",
@@ -99,7 +101,8 @@ var messages = /* I18N_START */ {
         "explement": "Button label for the explementary angle mode",
         "notDefined": "Message shown when the selected angle operation is not defined for the current angle (e.g. complement of an angle ≥ 90°)",
         "resultAngle": "Result text showing a computed angle. Parameters: $1 = angle type name (e.g. \"Complementary\"), $2 = angle in degrees.",
-        "supplement": "Button label for the supplementary angle mode"
+        "supplement": "Button label for the supplementary angle mode",
+        "hint": "Instruction text explaining how to interact with the angle applet"
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -116,6 +119,7 @@ function t(key, vars) {
     }
     return str;
 }
+
 
 
 
@@ -411,6 +415,20 @@ function initAngleApplet(container){
         });
 
     });
+
+    // Footer branding
+    var footer = document.createElement("div");
+    footer.className = "hw-footer";
+    var fLogo = document.createElement("a");
+    fLogo.className = "hw-footer-icon";
+    fLogo.href = mw.util.getUrl('Wikipedia:Hiruwiki');
+    fLogo.title = 'Hiruwiki';
+    fLogo.innerHTML = hiruwiki.getLogoSvg(22);
+    var fText = document.createElement("span");
+    fText.innerHTML = t('hint');
+    footer.appendChild(fLogo);
+    footer.appendChild(fText);
+    container.appendChild(footer);
 
 }
 

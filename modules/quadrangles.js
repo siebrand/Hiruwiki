@@ -55,7 +55,8 @@ var messages = /* I18N_START */ {
         "shapeSquare": "square",
         "shapeTrapezoid": "trapezoid",
         "unitCm": "cm",
-        "unitCm2": "cm²"
+        "unitCm2": "cm²",
+        "hint": "Drag vertices to classify the quadrilateral"
     },
     "es": {
         "_name": "Cuadriláteros",
@@ -281,7 +282,8 @@ var messages = /* I18N_START */ {
         "shapeSquare": "Classification name for a square",
         "shapeTrapezoid": "Classification name for a trapezoid",
         "unitCm": "Unit abbreviation for centimetres",
-        "unitCm2": "Unit abbreviation for square centimetres"
+        "unitCm2": "Unit abbreviation for square centimetres",
+        "hint": "Instruction text for the quadrilateral classification applet"
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -298,6 +300,7 @@ function t(key, vars) {
     }
     return str;
 }
+
 
 
 
@@ -784,6 +787,19 @@ function init() {
 requestAnimationFrame(init);
 window.addEventListener("resize", function () { requestAnimationFrame(init); });
 
+// Footer branding
+var footer = document.createElement("div");
+footer.className = "hw-footer";
+var fLogo = document.createElement("a");
+fLogo.className = "hw-footer-icon";
+fLogo.href = mw.util.getUrl('Wikipedia:Hiruwiki');
+fLogo.title = 'Hiruwiki';
+fLogo.innerHTML = hiruwiki.getLogoSvg(22);
+var fText = document.createElement("span");
+fText.innerHTML = t('hint');
+footer.appendChild(fLogo);
+footer.appendChild(fText);
+wrap.appendChild(footer);
 } // end initQuadWidget
 
 // ── Bootstrap ─────────────────────────────────────────────────────────────────

@@ -13,7 +13,8 @@ var messages = /* I18N_START */ {
         "_name": "Pythagorean Theorem",
         "angleDeg": "angle =",
         "lockRight": "right angle",
-        "reset": "Reset"
+        "reset": "Reset",
+        "hint": "Drag vertices to verify a² + b² = c²"
     },
     "es": {
         "_name": "Teorema de Pitágoras",
@@ -55,7 +56,8 @@ var messages = /* I18N_START */ {
         "_name": "Name of the Pythagorean Theorem module",
         "angleDeg": "Label prefix for the angle value. Followed by a number in degrees.",
         "lockRight": "Checkbox label to lock the triangle to a right angle",
-        "reset": "Button label to reset the triangle"
+        "reset": "Button label to reset the triangle",
+        "hint": "Instruction text for the Pythagoras theorem interaction"
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -72,6 +74,7 @@ function t(key, vars) {
     }
     return str;
 }
+
 
 
 
@@ -463,6 +466,20 @@ resetBtn.onclick = () => {
 }
 
 update()
+
+// Footer branding
+var footer = document.createElement("div");
+footer.className = "hw-footer";
+var fLogo = document.createElement("a");
+fLogo.className = "hw-footer-icon";
+fLogo.href = mw.util.getUrl('Wikipedia:Hiruwiki');
+fLogo.title = 'Hiruwiki';
+fLogo.innerHTML = hiruwiki.getLogoSvg(22);
+var fText = document.createElement("span");
+fText.innerHTML = t('hint');
+footer.appendChild(fLogo);
+footer.appendChild(fText);
+box.appendChild(footer);
 }
 
 function init(){

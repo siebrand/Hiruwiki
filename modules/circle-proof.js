@@ -36,7 +36,8 @@ var messages = /* I18N_START */ {
         "tabArea": "Area",
         "tabCirc": "Circumference",
         "title": "Circle Calculator",
-        "visualProof": "Visual proof"
+        "visualProof": "Visual proof",
+        "hint": "Drag the radius slider to see the calculation"
     },
     "es": {
         "_name": "Prueba del círculo",
@@ -166,7 +167,8 @@ var messages = /* I18N_START */ {
         "tabArea": "Oppervlakte",
         "tabCirc": "Omtrek",
         "title": "Cirkel Calculator",
-        "visualProof": "Visueel bewijs"
+        "visualProof": "Visueel bewijs",
+        "hint": "Sleep de straalschuifregelaar om de berekening te zien"
     },
     "qqq": {
         "_name": "Name of the Circle Proof module",
@@ -186,7 +188,8 @@ var messages = /* I18N_START */ {
         "tabArea": "Tab label for the area proof",
         "tabCirc": "Tab label for the circumference proof",
         "title": "Title of the circle calculator sidebar",
-        "visualProof": "Section heading for the visual proof controls"
+        "visualProof": "Section heading for the visual proof controls",
+        "hint": "Instruction text explaining that the radius slider is interactive"
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -203,6 +206,7 @@ function t(key, vars) {
     }
     return str;
 }
+
 
 
 
@@ -563,6 +567,20 @@ var PX_PER_CM = 30;
         // ── Bootstrap ────────────────────────────────────────────────
         resizeCanvas();
         updateMetrics();
+
+        // Footer branding
+        var footer = document.createElement("div");
+        footer.className = "hw-footer";
+        var fLogo = document.createElement("a");
+        fLogo.className = "hw-footer-icon";
+        fLogo.href = mw.util.getUrl('Wikipedia:Hiruwiki');
+        fLogo.title = 'Hiruwiki';
+        fLogo.innerHTML = hiruwiki.getLogoSvg(22);
+        var fText = document.createElement("span");
+        fText.innerHTML = t('hint');
+        footer.appendChild(fLogo);
+        footer.appendChild(fText);
+        container.appendChild(footer);
     }
 
     // ── Scan for containers and initialise ───────────────────────────

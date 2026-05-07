@@ -176,6 +176,7 @@ function t(key, vars) {
 
 
 
+
 // ── Find mount point ──────────────────────────────────────────
   var root = document.querySelector( '.hiruwiki[data-module="angle-guess"]' );
   if ( !root ) return;
@@ -480,5 +481,19 @@ function t(key, vars) {
 
   // ── Boot ──────────────────────────────────────────────────────
   startGame();
+  
+  // Footer branding
+  var footer = document.createElement("div");
+  footer.className = "hw-footer";
+  var fLogo = document.createElement("a");
+  fLogo.className = "hw-footer-icon";
+  fLogo.href = mw.util.getUrl('Wikipedia:Hiruwiki');
+  fLogo.title = 'Hiruwiki';
+  fLogo.innerHTML = hiruwiki.getLogoSvg(22);
+  var fText = document.createElement("span");
+  fText.innerHTML = t('hint');
+  footer.appendChild(fLogo);
+  footer.appendChild(fText);
+  root.appendChild(footer);
 
 }() );

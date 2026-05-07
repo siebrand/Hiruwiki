@@ -9,7 +9,8 @@ var messages = /* I18N_START */ {
     },
     "en": {
         "_name": "Radians",
-        "rad": "rad"
+        "rad": "rad",
+        "hint": "Drag the handle to see the relationship between degrees and radians"
     },
     "es": {
         "_name": "Radianes",
@@ -33,11 +34,13 @@ var messages = /* I18N_START */ {
     },
     "nl": {
         "_name": "Radialen",
-        "rad": "rad"
+        "rad": "rad",
+        "hint": "Sleep de hendel om de relatie tussen graden en radialen te zien"
     },
     "qqq": {
         "_name": "Name of the Radians module",
-        "rad": "Abbreviation for radians"
+        "rad": "Abbreviation for radians",
+        "hint": "Instruction text for the radian-degree relationship applet"
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -54,6 +57,7 @@ function t(key, vars) {
     }
     return str;
 }
+
 
 
 
@@ -267,5 +271,19 @@ function t(key, vars) {
     document.addEventListener("touchend",()=>dragging=false);
 
     update();
+
+    // Footer branding
+    var footer = document.createElement("div");
+    footer.className = "hw-footer";
+    var fLogo = document.createElement("a");
+    fLogo.className = "hw-footer-icon";
+    fLogo.href = mw.util.getUrl('Wikipedia:Hiruwiki');
+    fLogo.title = 'Hiruwiki';
+    fLogo.innerHTML = hiruwiki.getLogoSvg(22);
+    var fText = document.createElement("span");
+    fText.innerHTML = t('hint');
+    footer.appendChild(fLogo);
+    footer.appendChild(fText);
+    container.appendChild(footer);
   });
 })();

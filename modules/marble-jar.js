@@ -16,7 +16,8 @@ var messages = /* I18N_START */ {
         "impossible": "Impossible",
         "probTitle": "Probability of picking a marble and guessing its color…",
         "shake": "Shake!",
-        "total": "Total"
+        "total": "Total",
+        "hint": "Shake the jar to see the probability in action"
     },
     "es": {
         "_name": "Frasco de probabilidades",
@@ -98,7 +99,8 @@ var messages = /* I18N_START */ {
         "impossible": "Label shown when the probability is zero (impossible event)",
         "probTitle": "Heading describing the probability scenario",
         "shake": "Button label to shake the jar and randomise marbles",
-        "total": "Label for the total number of marbles"
+        "total": "Label for the total number of marbles",
+        "hint": "Instruction text for the probability jar interaction"
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -115,6 +117,7 @@ function t(key, vars) {
     }
     return str;
 }
+
 
 
 
@@ -450,6 +453,20 @@ function t(key, vars) {
         rebuildOrder();
         renderMarbles();
         renderProbs();
+
+        // Footer branding
+        var footer = document.createElement("div");
+        footer.className = "hw-footer";
+        var fLogo = document.createElement("a");
+        fLogo.className = "hw-footer-icon";
+        fLogo.href = mw.util.getUrl('Wikipedia:Hiruwiki');
+        fLogo.title = 'Hiruwiki';
+        fLogo.innerHTML = hiruwiki.getLogoSvg(22);
+        var fText = document.createElement("span");
+        fText.innerHTML = t('hint');
+        footer.appendChild(fLogo);
+        footer.appendChild(fText);
+        root.appendChild(footer);
     }
 
     // --- Scan for containers and initialise ---

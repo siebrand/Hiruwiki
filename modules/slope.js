@@ -5,7 +5,8 @@
 var messages = /* I18N_START */ {
     "en": {
         "_name": "Slope",
-        "undefined": "Vertical line → slope undefined"
+        "undefined": "Vertical line → slope undefined",
+        "hint": "Drag the points to see the slope calculation"
     },
     "es": {
         "_name": "Pendiente",
@@ -29,11 +30,13 @@ var messages = /* I18N_START */ {
     },
     "nl": {
         "_name": "Helling",
-        "undefined": "Verticale lijn → helling ongedefinieerd"
+        "undefined": "Verticale lijn → helling ongedefinieerd",
+        "hint": "Sleep de punten om de hellingsberekening te zien"
     },
     "qqq": {
         "_name": "Name of the Slope module",
-        "undefined": "Message shown when the line is vertical and the slope is undefined"
+        "undefined": "Message shown when the line is vertical and the slope is undefined",
+        "hint": "Instruction text for the slope calculation interaction"
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -50,6 +53,7 @@ function t(key, vars) {
     }
     return str;
 }
+
 
 
 
@@ -377,6 +381,19 @@ canvas.addEventListener("pointerleave",pointerUp);
 
 draw();
 
+// Footer branding
+var footer = document.createElement("div");
+footer.className = "hw-footer";
+var fLogo = document.createElement("a");
+fLogo.className = "hw-footer-icon";
+fLogo.href = mw.util.getUrl('Wikipedia:Hiruwiki');
+fLogo.title = 'Hiruwiki';
+fLogo.innerHTML = hiruwiki.getLogoSvg(22);
+var fText = document.createElement("span");
+fText.innerHTML = t('hint');
+footer.appendChild(fLogo);
+footer.appendChild(fText);
+container.appendChild(footer);
 }
 
 function initAll(){

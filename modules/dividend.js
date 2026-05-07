@@ -50,7 +50,8 @@ var messages = /* I18N_START */ {
         "label_repadd": "Repeated addition",
         "repadd_exact": "— divides exactly!",
         "repadd_leftover": "left over",
-        "repadd_less": "{N} is less than {D}, so the quotient is 0 and the whole value is the remainder."
+        "repadd_less": "{N} is less than {D}, so the quotient is 0 and the whole value is the remainder.",
+        "hint": "Adjust dividend and divisor to see the division breakdown"
     },
     "es": {
         "_name": "Dividendo y divisor",
@@ -160,7 +161,8 @@ var messages = /* I18N_START */ {
         "label_repadd": "Herhaalde optelling",
         "repadd_exact": "— is precies deelbaar!",
         "repadd_leftover": "blijft over",
-        "repadd_less": "{N} is kleiner dan {D}, dus het quotiënt is 0 en de gehele waarde is de rest."
+        "repadd_less": "{N} is kleiner dan {D}, dus het quotiënt is 0 en de gehele waarde is de rest.",
+        "hint": "Pas deeltal en deler aan om de deling te zien"
     },
     "qqq": {
         "_name": "Name of the Dividend and Divisor module",
@@ -179,7 +181,8 @@ var messages = /* I18N_START */ {
         "label_repadd": "Heading for the repeated addition section",
         "repadd_exact": "Text appended to the repeated addition when division is exact",
         "repadd_leftover": "Text shown after the leftover value in the repeated addition",
-        "repadd_less": "Text shown in the repeated addition section when the dividend is less than the divisor. Parameters: {N} = dividend, {D} = divisor."
+        "repadd_less": "Text shown in the repeated addition section when the dividend is less than the divisor. Parameters: {N} = dividend, {D} = divisor.",
+        "hint": "Instruction text explaining how to use the division sliders"
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -196,6 +199,7 @@ function t(key, vars) {
     }
     return str;
 }
+
 
 
 
@@ -415,6 +419,20 @@ function mount( root ) {
     sDividend.addEventListener( 'input', function () { update( root ); } );
     sDivisor.addEventListener(  'input', function () { update( root ); } );
     update( root );
+
+    // Footer branding
+    var footer = document.createElement("div");
+    footer.className = "hw-footer";
+    var fLogo = document.createElement("a");
+    fLogo.className = "hw-footer-icon";
+    fLogo.href = mw.util.getUrl('Wikipedia:Hiruwiki');
+    fLogo.title = 'Hiruwiki';
+    fLogo.innerHTML = hiruwiki.getLogoSvg(22);
+    var fText = document.createElement("span");
+    fText.innerHTML = t('hint');
+    footer.appendChild(fLogo);
+    footer.appendChild(fText);
+    root.appendChild(footer);
 }
 
 /* ── SCAN & INIT ──────────────────────────────────────────────────────────── */

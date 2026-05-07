@@ -20,7 +20,8 @@ var messages = /* I18N_START */ {
         "hintExplore": "Move ★ by clicking on it — it snaps to integers",
         "movePrompt": "Move ★ to:<br>({targetX}, {targetY})",
         "pointLabel": "Point:",
-        "titleExplore": "Explore Coordinate System"
+        "titleExplore": "Explore Coordinate System",
+        "hint": "Move the star to explore coordinates"
     },
     "es": {
         "_name": "Coordenadas positivas",
@@ -116,7 +117,8 @@ var messages = /* I18N_START */ {
         "hintExplore": "Instruction text shown in explore mode",
         "movePrompt": "Prompt telling the player where to move the star. Uses HTML. Parameters: {targetX} = target X coordinate, {targetY} = target Y coordinate.",
         "pointLabel": "Label for the current point coordinates. Followed by coordinate values.",
-        "titleExplore": "Title shown in explore mode"
+        "titleExplore": "Title shown in explore mode",
+        "hint": "Instruction text for the coordinate system interaction"
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -133,6 +135,7 @@ function t(key, vars) {
     }
     return str;
 }
+
 
 
 
@@ -188,6 +191,20 @@ document.querySelectorAll( '.hiruwiki[data-module="integer-coordinates"]' ).forE
 
 
     initInstance( host );
+    
+    // Footer branding
+    var footer = document.createElement("div");
+    footer.className = "hw-footer";
+    var fLogo = document.createElement("a");
+    fLogo.className = "hw-footer-icon";
+    fLogo.href = mw.util.getUrl('Wikipedia:Hiruwiki');
+    fLogo.title = 'Hiruwiki';
+    fLogo.innerHTML = hiruwiki.getLogoSvg(22);
+    var fText = document.createElement("span");
+    fText.innerHTML = t('hint');
+    footer.appendChild(fLogo);
+    footer.appendChild(fText);
+    host.appendChild(footer);
   } );
 
   function initInstance( host ) {

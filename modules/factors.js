@@ -44,7 +44,8 @@ var messages = /* I18N_START */ {
         "lcm_title": "LCM — union of all factors",
         "legend_onlyA": "unique to A",
         "legend_onlyB": "unique to B",
-        "legend_shared": "shared (used for GCD)"
+        "legend_shared": "shared (used for GCD)",
+        "hint": "Choose numbers to see their prime factors"
     },
     "es": {
         "_name": "Factores primos",
@@ -159,7 +160,8 @@ var messages = /* I18N_START */ {
         "lcm_title": "Heading for the LCM (Least Common Multiple) section",
         "legend_onlyA": "Legend label for factor blocks unique to number A",
         "legend_onlyB": "Legend label for factor blocks unique to number B",
-        "legend_shared": "Legend label for factor blocks shared between A and B (used for GCD)"
+        "legend_shared": "Legend label for factor blocks shared between A and B (used for GCD)",
+        "hint": "Instruction text explaining how to use the number sliders"
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -176,6 +178,7 @@ function t(key, vars) {
     }
     return str;
 }
+
 
 
 
@@ -449,6 +452,20 @@ function mount( root ) {
     sA.addEventListener( 'input', function () { update( root ); } );
     sB.addEventListener( 'input', function () { update( root ); } );
     update( root );
+
+    // Footer branding
+    var footer = document.createElement("div");
+    footer.className = "hw-footer";
+    var fLogo = document.createElement("a");
+    fLogo.className = "hw-footer-icon";
+    fLogo.href = mw.util.getUrl('Wikipedia:Hiruwiki');
+    fLogo.title = 'Hiruwiki';
+    fLogo.innerHTML = hiruwiki.getLogoSvg(22);
+    var fText = document.createElement("span");
+    fText.innerHTML = t('hint');
+    footer.appendChild(fLogo);
+    footer.appendChild(fText);
+    root.appendChild(footer);
 }
 
 /* ── SCAN & INIT ──────────────────────────────────────────────────────────── */

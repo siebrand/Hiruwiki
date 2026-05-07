@@ -24,7 +24,8 @@ var messages = /* I18N_START */ {
         "rotation": "Rotation",
         "transformations": "Transformations",
         "translation": "Translation",
-        "vertical": "Vertical"
+        "vertical": "Vertical",
+        "hint": "Choose a transformation to see it in action"
     },
     "es": {
         "_name": "Transformaciones",
@@ -125,7 +126,8 @@ var messages = /* I18N_START */ {
         "rotation": "Button label and heading for the rotation transformation",
         "transformations": "Main heading for the transformations panel",
         "translation": "Button label and heading for the translation transformation",
-        "vertical": "Label for the vertical translation slider"
+        "vertical": "Label for the vertical translation slider",
+        "hint": "Instruction text for the transformation module"
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -142,6 +144,7 @@ function t(key, vars) {
     }
     return str;
 }
+
 
 
 
@@ -515,6 +518,20 @@ function init( el ) {
             window.addEventListener( 'resize', resize );
         }
         resize();
+
+        // Footer branding
+        var footer = document.createElement("div");
+        footer.className = "hw-footer";
+        var fLogo = document.createElement("a");
+        fLogo.className = "hw-footer-icon";
+        fLogo.href = mw.util.getUrl('Wikipedia:Hiruwiki');
+        fLogo.title = 'Hiruwiki';
+        fLogo.innerHTML = hiruwiki.getLogoSvg(22);
+        var fText = document.createElement("span");
+        fText.innerHTML = t('hint');
+        footer.appendChild(fLogo);
+        footer.appendChild(fText);
+        el.appendChild(footer);
     }
 
     /* ── bootstrap: find all target elements ── */

@@ -15,7 +15,8 @@ var messages = /* I18N_START */ {
         "_name": "Pentagon Angles",
         "interiorAngles": "Interior angles",
         "reset": "↺ Reset",
-        "total": "Total"
+        "total": "Total",
+        "hint": "Decompose the pentagon into triangles"
     },
     "es": {
         "3triangles": "3 triángulos × 180°",
@@ -54,14 +55,16 @@ var messages = /* I18N_START */ {
         "_name": "Hoeken van een vijfhoek",
         "interiorAngles": "Binnenhoeken",
         "reset": "↺ Reset",
-        "total": "Totaal"
+        "total": "Totaal",
+        "hint": "Verdeel de vijfhoek in driehoeken"
     },
     "qqq": {
         "3triangles": "Decomposition label showing 3 triangles × 180°",
         "_name": "Name of the Pentagon Angles module",
         "interiorAngles": "Heading for the interior angles section",
         "reset": "Button label to reset the visualisation",
-        "total": "Label for the total sum of interior angles"
+        "total": "Label for the total sum of interior angles",
+        "hint": "Instruction text for the pentagon angle decomposition applet"
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -78,6 +81,7 @@ function t(key, vars) {
     }
     return str;
 }
+
 
 
 
@@ -562,6 +566,20 @@ var SVG_W  = 540, SVG_H = 480;
     resetBtn.addEventListener('click',   function(){resetPos(initPos);updatePoly();});
 
     updatePoly();
+
+    // Footer branding
+    var footer = document.createElement("div");
+    footer.className = "hw-footer";
+    var fLogo = document.createElement("a");
+    fLogo.className = "hw-footer-icon";
+    fLogo.href = mw.util.getUrl('Wikipedia:Hiruwiki');
+    fLogo.title = 'Hiruwiki';
+    fLogo.innerHTML = hiruwiki.getLogoSvg(22);
+    var fText = document.createElement("span");
+    fText.innerHTML = t('hint');
+    footer.appendChild(fLogo);
+    footer.appendChild(fText);
+    wrapper.appendChild(footer);
   }
 
   document.querySelectorAll('.hiruwiki[data-module="pentagon-angles"]').forEach(function(el){
