@@ -81,6 +81,18 @@ var messages = /* I18N_START */ {
         "angle": "각도 &theta;",
         "hideProof": "증명 숨기기"
     },
+    "nl": {
+        "_name": "Goniometrie",
+        "angle": "Hoek &theta;",
+        "cosDesc": "De blauwe lijn is de <strong>aanliggende</strong> zijde &mdash; de horizontale afstand van de oorsprong tot de basis van de loodlijn. cos&nbsp;&theta;&nbsp;=&nbsp;aanliggende&nbsp;&divide;&nbsp;schuine&nbsp;zijde&nbsp;(=&nbsp;1).",
+        "cosFormula": "aanliggende / schuine",
+        "hideProof": "Verberg bewijs",
+        "prove": "Bewijs",
+        "sinDesc": "De groene lijn is de <strong>overstaande</strong> zijde &mdash; de verticale afstand van het punt op de cirkel tot de x-as. sin&nbsp;&theta;&nbsp;=&nbsp;overstaande&nbsp;&divide;&nbsp;schuine&nbsp;zijde&nbsp;(=&nbsp;1).",
+        "sinFormula": "overstaande / schuine",
+        "tanDesc": "De oranje lijn is getekend op x&nbsp;=&nbsp;1, rakend aan de cirkel. De hoogte is tan&nbsp;&theta;, aangezien tan&nbsp;&theta;&nbsp;=&nbsp;overstaande&nbsp;&divide;&nbsp;aanliggende&nbsp;=&nbsp;sin&nbsp;&theta;&nbsp;&divide;&nbsp;cos&nbsp;&theta;.",
+        "tanFormula": "overstaande / aanliggende"
+    },
     "qqq": {
         "_name": "Name of the Trigonometry module",
         "angle": "Label for the angle θ slider. Uses &theta; HTML entity.",
@@ -108,6 +120,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

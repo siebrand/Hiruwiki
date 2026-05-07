@@ -148,6 +148,26 @@ var messages = /* I18N_START */ {
         "title": "원 계산기",
         "visualProof": "시각적 증명"
     },
+    "nl": {
+        "_name": "Cirkel bewijs",
+        "animStopped": "Animatie gestopt.",
+        "area": "Oppervlakte",
+        "areaAnimStatus": "De sectoren vormen een rechthoek: breedte = πr, hoogte = r.",
+        "areaReviewStatus": "✓ Breedte = πr, hoogte = r → A = πr².",
+        "circAnimStatus": "Elke halve cirkel (πr) rolt uit tot een lijn, wat in totaal 2πr maakt.",
+        "circReviewStatus": "✓ Bovenste πr + Onderste πr = C = 2πr.",
+        "circumference": "Omtrek",
+        "initStatus": "Kies een bewijs en klik op 'Bewijs het'.",
+        "proveIt": "Bewijs het ▶",
+        "radius": "Straal",
+        "readyStatus": "Klik op 'Bewijs het' om de animatie te zien.",
+        "review": "Beoordelen ▶",
+        "stop": "Stop ■",
+        "tabArea": "Oppervlakte",
+        "tabCirc": "Omtrek",
+        "title": "Cirkel Calculator",
+        "visualProof": "Visueel bewijs"
+    },
     "qqq": {
         "_name": "Name of the Circle Proof module",
         "animStopped": "Status message shown when the user stops the animation",
@@ -183,6 +203,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

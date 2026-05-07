@@ -38,6 +38,11 @@ var messages = /* I18N_START */ {
         "_name": "삼각형 무게중심",
         "centroid": "무게중심"
     },
+    "nl": {
+        "_name": "Zwaartepunt van een driehoek",
+        "centroid": "Zwaartepunt",
+        "hint": "Verplaats de hoekpunten om te zien hoe de positie van het zwaartepunt verandert."
+    },
     "qqq": {
         "_name": "Name of the Triangle Centroid module",
         "centroid": "Label for the centroid point",
@@ -58,6 +63,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

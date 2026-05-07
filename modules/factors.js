@@ -127,6 +127,23 @@ var messages = /* I18N_START */ {
         "gcd_none": "(없음 — 서로소)",
         "label_factors": "소인수"
     },
+    "nl": {
+        "_name": "Priemfactoren",
+        "gcd_formula_eq": "=",
+        "gcd_none": "(geen — onderling ondeelbaar)",
+        "gcd_title": "GGD — behoud alleen gedeelde factoren",
+        "insight_coprime": "<strong>{A}</strong> en <strong>{B}</strong> zijn onderling ondeelbaar — ze delen geen priemfactoren, dus GGD = 1. Het KGV is simpelweg hun product. Altijd waar: <strong>{A} × {B} = {AB}</strong> = GGD × KGV = <strong>1 × {L} = {L}</strong>.",
+        "insight_shared_many": "<strong>{A}</strong> en <strong>{B}</strong> delen de priemfactoren <strong>{primes}</strong>. De GGD neemt alleen de groene gedeelde blokken. Het KGV neemt alle blokken — groen gedeeld, blauw extra van A, rood extra van B — zonder een priemfactor twee keer te tellen. Altijd waar: <strong>{A} × {B} = {AB}</strong> = GGD × KGV = <strong>{G} × {L} = {GL}</strong>.",
+        "insight_shared_one": "<strong>{A}</strong> en <strong>{B}</strong> delen de priemfactor <strong>{primes}</strong>. De GGD neemt alleen de groene gedeelde blokken. Het KGV neemt alle blokken — groen gedeeld, blauw extra van A, rood extra van B — zonder een priemfactor twee keer te tellen. Altijd waar: <strong>{A} × {B} = {AB}</strong> = GGD × KGV = <strong>{G} × {L} = {GL}</strong>.",
+        "label_choose": "Kies twee getallen",
+        "label_factors": "Priemfactoren",
+        "label_how": "Hoe GGD en KGV worden opgebouwd",
+        "lcm_formula_eq": "=",
+        "lcm_title": "KGV — unie van alle factoren",
+        "legend_onlyA": "alleen van A",
+        "legend_onlyB": "alleen van B",
+        "legend_shared": "gedeeld (voor GGD)"
+    },
     "qqq": {
         "_name": "Name of the Prime Factors module",
         "gcd_formula_eq": "Equals sign used in the GCD formula display",
@@ -159,6 +176,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

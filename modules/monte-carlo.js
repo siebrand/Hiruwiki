@@ -76,6 +76,18 @@ var messages = /* I18N_START */ {
         "reset": "↺ 초기화",
         "totalPoints": "총점"
     },
+    "nl": {
+        "_name": "Monte Carlo Pi",
+        "addPoints": "+ Punten toevoegen",
+        "approxPi": "Benadering van π",
+        "insideCircle": "Binnen de cirkel",
+        "insideRed": "Binnen (rood)",
+        "outsideBlue": "Buiten (blauw)",
+        "outsideCircle": "Buiten de cirkel",
+        "pointsPerStep": "Punten per stap",
+        "reset": "↺ Reset",
+        "totalPoints": "Totaal aantal punten"
+    },
     "qqq": {
         "_name": "Name of the Monte Carlo Pi module",
         "addPoints": "Button label to add more random points to the simulation",
@@ -103,6 +115,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

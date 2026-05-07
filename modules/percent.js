@@ -119,6 +119,22 @@ var messages = /* I18N_START */ {
         "axis_pos": "+100%",
         "axis_zero": "0%"
     },
+    "nl": {
+        "_name": "Percentages",
+        "axis_neg": "−100%",
+        "axis_pos": "+100%",
+        "axis_zero": "0%",
+        "hint": "Sleep de schuifregelaar naar links voor verlies, naar rechts voor winst.",
+        "insight_full_loss": "Een verlies van <strong>100%</strong> brengt de waarde naar <strong>0</strong>. Herstel vanaf nul is <strong>onmogelijk</strong> — elk percentage van 0 is nog steeds 0.",
+        "insight_gain": "Een winst van <strong>+{pct}%</strong> brengt 100 omhoog naar <strong>{result}</strong>. De groene balk bovenaan en de rode balk onderaan zijn even breed — maar de percentages verschillen. Om terug te keren naar 100 is slechts <strong>{recovery}%</strong> nodig, niet −{pct}%.",
+        "insight_loss": "Een verlies van <strong>{pct}%</strong> brengt 100 terug naar <strong>{result}</strong>. De rode balk bovenaan en de groene balk onderaan bedekken dezelfde fysieke afstand — maar de percentages verschillen omdat ze op verschillende bases worden toegepast. Om te herstellen is <strong>+{recovery}%</strong> nodig, niet +{pct}%.",
+        "insight_zero": "Geen verandering toegepast. Sleep de schuifregelaar om te verkennen.",
+        "label_after": "na verandering",
+        "label_apply": "PAS EEN PROCENTUELE VERANDERING TOE",
+        "label_recovered": "hersteld",
+        "label_scale": "SCHAAL: VOLLEDIGE BREEDTE = 200",
+        "label_start": "begin"
+    },
     "qqq": {
         "_name": "Name of the Percentages module",
         "axis_neg": "Label at the left end of the slider axis (−100%)",
@@ -150,6 +166,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

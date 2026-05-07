@@ -366,7 +366,7 @@ nl:
     reset: Reset
     pi_approx: Benadering van π
     correct_digits: "{{PLURAL:$1|$1 correct cijfer|$1 correcte cijfers}}"
-    precision_note: Convergeert kwadratisch: het aantal cijfers verdubbelt bij elke stap.
+    precision_note: 'Convergeert kwadratisch: het aantal cijfers verdubbelt bij elke stap.'
     calculation_heading: Hoe het wordt berekend
     formula_label: Formule
     update_rules_heading: Updateregels

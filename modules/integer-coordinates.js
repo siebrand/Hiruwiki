@@ -90,6 +90,20 @@ var messages = /* I18N_START */ {
         "feedbackCorrect": "✓ 정답입니다!",
         "pointLabel": "점수:"
     },
+    "nl": {
+        "_name": "Positieve coördinaten",
+        "btnChallenge": "🎯 Uitdaging",
+        "btnCheck": "Controleren ✓",
+        "btnExplore": "🔭 Verkennen",
+        "btnNext": "Volgende →",
+        "feedbackCorrect": "✓ Klopt!",
+        "feedbackWrong": "✗ Onjuist. De zwakke ster was het juiste antwoord.",
+        "hintChallenge": "Verplaats ★ naar de voorgestelde coördinaten en klik op Controleren",
+        "hintExplore": "Verplaats ★ door erop te klikken — springt naar hele getallen",
+        "movePrompt": "Verplaats ★ naar:<br>({targetX}, {targetY})",
+        "pointLabel": "Punt:",
+        "titleExplore": "Verken het coördinatenstelsel"
+    },
     "qqq": {
         "_name": "Name of the Positive Coordinates module (integer grid variant)",
         "btnChallenge": "Button label to switch to challenge mode",
@@ -119,6 +133,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

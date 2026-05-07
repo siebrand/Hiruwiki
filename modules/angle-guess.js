@@ -71,7 +71,7 @@ var messages = /* I18N_START */ {
         "points": "Points :",
         "pts": "pts",
         "round": "Manche :",
-        "roundOver": "Manche terminée",
+        "roundOver": "Jeu terminé",
         "target": "Cible :",
         "tryAgain": "Réessayer",
         "yourGuess": "Votre estimation :"
@@ -110,8 +110,22 @@ var messages = /* I18N_START */ {
         "points": "점수:",
         "pts": "점",
         "round": "라운드:",
-        "roundOver": "라운드 종료",
+        "roundOver": "게임 종료",
         "target": "목표:"
+    },
+    "nl": {
+        "_name": "Hoek schatten",
+        "difference": "Verschil:",
+        "finalScore": "Eindscore",
+        "hint": "Verplaats de blauwe stip om de hoek in te stellen",
+        "nextAngle": "Volgende hoek &rsaquo;",
+        "points": "Punten:",
+        "pts": "ptn",
+        "round": "Ronde:",
+        "roundOver": "Spel voorbij",
+        "target": "Doel:",
+        "tryAgain": "Opnieuw proberen",
+        "yourGuess": "Uw schatting:"
     },
     "qqq": {
         "_name": "Name of the Angle Guess module",
@@ -142,6 +156,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

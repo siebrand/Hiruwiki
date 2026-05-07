@@ -153,6 +153,28 @@ var messages = /* I18N_START */ {
         "touchCA": "CA 위 수선의 발",
         "triangle": "삼각형"
     },
+    "nl": {
+        "_name": "Aangeschreven middelpunt",
+        "angleA": "Hoek A",
+        "angleB": "Hoek B",
+        "angleC": "Hoek C",
+        "area": "Oppervlakte",
+        "centre": "Middelpunt I",
+        "circumference": "Omtrek",
+        "formula": "r = Oppervlakte / s",
+        "hint": "Sleep een hoekpunt · Schaal: 1 cm = 40 px",
+        "incircle": "Ingebedde cirkel",
+        "perimeter": "Omtrek",
+        "radius": "Straal (r)",
+        "scaleUnit": "cm",
+        "sideA": "Zijde a (BC)",
+        "sideB": "Zijde b (CA)",
+        "sideC": "Zijde c (AB)",
+        "touchAB": "Raakpunt AB",
+        "touchBC": "Raakpunt BC",
+        "touchCA": "Raakpunt CA",
+        "triangle": "Driehoek"
+    },
     "qqq": {
         "_name": "Name of the Incentre module",
         "angleA": "Label for angle A of the triangle",
@@ -162,7 +184,7 @@ var messages = /* I18N_START */ {
         "centre": "Label for the incentre point I",
         "circumference": "Label for the incircle circumference",
         "formula": "Formula showing how the inradius is calculated (r = Area / s)",
-        "hint": "Instruction text for the interactive triangle. Includes scale information.",
+        "hint": "Explanation about how the module is interactive",
         "incircle": "Section heading for the incircle properties",
         "perimeter": "Label for the triangle perimeter",
         "radius": "Label for the inradius, with variable name in parentheses",
@@ -190,6 +212,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

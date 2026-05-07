@@ -31,7 +31,6 @@ var messages = /* I18N_START */ {
     },
     "es": {
         "_name": "Área del triángulo",
-        "hint": "Esta es una visualización interactiva. Arrastra los vértices para modificar el triángulo.",
         "btnProve": "Pruébalo",
         "btnReset": "Reiniciar",
         "labelArea": "Área",
@@ -60,7 +59,6 @@ var messages = /* I18N_START */ {
     },
     "fr": {
         "_name": "Aire du triangle",
-        "hint": "Ceci est une visualisation interactive. Faites glisser les sommets pour modifier le triangle.",
         "btnProve": "Prouver",
         "btnReset": "Réinitialiser",
         "labelArea": "Aire",
@@ -75,7 +73,6 @@ var messages = /* I18N_START */ {
     },
     "ga": {
         "_name": "Limistéar an Triantáin",
-        "hint": "Is léirshamhlú idirghníomhach é seo. Tarraing na buaicphointí chun an triantán a athrú.",
         "btnProve": "Cruthaigh é",
         "btnReset": "Athshocraigh",
         "labelArea": "Limistéar",
@@ -99,7 +96,23 @@ var messages = /* I18N_START */ {
         "labelBase": "밑변 (b)",
         "labelHeight": "높이 (h)",
         "proofResultPara": "평행사변형 넓이 = b × h = <strong>{b} × {h} = {area} cm²</strong>",
-        "proofResultTri": "→ 삼각형 = ½ × {area} = <strong>{triArea} cm²</strong>"
+        "proofResultTri": "→ 삼각형 = ½ × {area} = <strong>{triArea} cm²</strong>",
+        "unitCm": "cm",
+        "unitCm2": "cm²"
+    },
+    "nl": {
+        "_name": "Oppervlakte van een driehoek",
+        "btnProve": "Bewijs het",
+        "btnReset": "Reset",
+        "labelArea": "Oppervlakte",
+        "labelBase": "Basis (b)",
+        "labelHeight": "Hoogte (h)",
+        "labelBaseShort": "b",
+        "labelHeightShort": "h",
+        "proofResultPara": "Oppervlakte parallellogram = b × h = <strong>{b} × {h} = {area} cm²</strong>",
+        "proofResultTri": "→ Driehoek = ½ × {area} = <strong>{triArea} cm²</strong>",
+        "unitCm": "cm",
+        "unitCm2": "cm²"
     },
     "qqq": {
         "_name": "Name of the Triangle Area module",
@@ -113,7 +126,8 @@ var messages = /* I18N_START */ {
         "proofResultPara": "Proof result text for the parallelogram area. Uses HTML. Parameters: {b} = base, {h} = height, {area} = parallelogram area.",
         "proofResultTri": "Proof result text for the triangle area (half the parallelogram). Uses HTML. Parameters: {area} = parallelogram area, {triArea} = triangle area.",
         "unitCm": "Unit of length (centimeters)",
-        "unitCm2": "Unit of area (square centimeters)"
+        "unitCm2": "Unit of area (square centimeters)",
+        "hint": "Explanation about how the module is interactive"
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -130,6 +144,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

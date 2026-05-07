@@ -14,7 +14,6 @@ var messages = /* I18N_START */ {
     },
     "es": {
         "_name": "Ángulos del triángulo",
-        "hint": "Esta es una visualización interactiva. Arrastra los vértices para modificar el triángulo.",
         "reset": "Reiniciar"
     },
     "eu": {
@@ -23,21 +22,23 @@ var messages = /* I18N_START */ {
     },
     "fr": {
         "_name": "Angles du triangle",
-        "hint": "Ceci est une visualisation interactive. Faites glisser les sommets pour modifier le triangle.",
         "reset": "Réinitialiser"
     },
     "ga": {
         "_name": "Uillinneacha Triantáin",
-        "hint": "Is léirshamhlú idirghníomhach é seo. Tarraing na buaicphointí chun an triantán a athrú.",
         "reset": "Athshocraigh"
     },
     "ko": {
         "reset": "초기화"
     },
+    "nl": {
+        "_name": "Hoeken van een driehoek",
+        "reset": "Opnieuw instellen"
+    },
     "qqq": {
         "_name": "Name of the Triangle Angles module",
-        "hint": "Footer hint text telling the user to drag the vertices to reshape the triangle",
-        "reset": "Button label to reset the triangle"
+        "reset": "Button label to reset the triangle",
+        "hint": "Explanation about how the module is interactive"
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -54,6 +55,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

@@ -53,30 +53,6 @@ var messages = /* I18N_START */ {
         "sideB": "lado b (CA)",
         "sideC": "lado c (AB)",
         "unitCm": "cm",
-        "unitCm2": "cm²",
-        "hint": "Esta es una visualización interactiva. Arrastra los vértices para modificar el triángulo."
-    },
-    "eu": {
-        "_name": "Hirukiak",
-        "acute": "zorrotza",
-        "angles": "Angeluak",
-        "area": "Azalera",
-        "byAngles": "Angeluen arabera:",
-        "bySides": "Aldeen arabera:",
-        "classification": "Sailkapena",
-        "equilateral": "aldekidea",
-        "isosceles": "isoszelea",
-        "measurements": "Neurriak",
-        "obtuse": "kamutsa",
-        "perimeter": "Perimetroa",
-        "reset": "Berrezarri ↺",
-        "right": "zuzena",
-        "scalene": "eskaleno",
-        "sides": "Aldeak",
-        "sideA": "a aldea (BC)",
-        "sideB": "b aldea (CA)",
-        "sideC": "c aldea (AB)",
-        "unitCm": "cm",
         "unitCm2": "cm²"
     },
     "eu": {
@@ -123,8 +99,7 @@ var messages = /* I18N_START */ {
         "sideB": "côté b (CA)",
         "sideC": "côté c (AB)",
         "unitCm": "cm",
-        "unitCm2": "cm²",
-        "hint": "Ceci est une visualisation interactive. Faites glisser les sommets pour modifier le triangle."
+        "unitCm2": "cm²"
     },
     "ga": {
         "_name": "Triantáin",
@@ -147,8 +122,7 @@ var messages = /* I18N_START */ {
         "sideB": "taobh b (CA)",
         "sideC": "taobh c (AB)",
         "unitCm": "cm",
-        "unitCm2": "cm²",
-        "hint": "Is léirshamhlú idirghníomhach é seo. Tarraing na buaicphointí chun an triantán a athrú."
+        "unitCm2": "cm²"
     },
     "it": {
         "angles": "Angoli",
@@ -159,8 +133,7 @@ var messages = /* I18N_START */ {
         "measurements": "Misure",
         "perimeter": "Perimetro",
         "unitCm": "cm",
-        "unitCm2": "cm²",
-        "hint": "Questa è una visualizzazione interattiva. Trascina i vertici per modificare il triangolo."
+        "unitCm2": "cm²"
     },
     "ko": {
         "_name": "삼각형",
@@ -180,8 +153,30 @@ var messages = /* I18N_START */ {
         "sideB": "선분 b (CA)",
         "sideC": "선분 c (AB)",
         "unitCm": "cm",
-        "unitCm2": "cm²",
-        "hint": "이것은 대화형 시각화입니다. 꼭짓점을 드래그하여 삼각형을 바꾸세요."
+        "unitCm2": "cm²"
+    },
+    "nl": {
+        "_name": "Driehoeken",
+        "acute": "scherphoekig",
+        "angles": "Hoeken",
+        "area": "Oppervlakte",
+        "byAngles": "Op basis van hoeken:",
+        "bySides": "Op basis van zijden:",
+        "classification": "Classificatie",
+        "equilateral": "gelijkzijdig",
+        "isosceles": "gelijkbenig",
+        "measurements": "Afmetingen",
+        "obtuse": "stomphoekig",
+        "perimeter": "Omtrek",
+        "reset": "Opnieuw instellen ↺",
+        "right": "rechthoekig",
+        "scalene": "ongelijkzijdig",
+        "sides": "Zijden",
+        "sideA": "zijde a (BC)",
+        "sideB": "zijde b (CA)",
+        "sideC": "zijde c (AB)",
+        "unitCm": "cm",
+        "unitCm2": "cm²"
     },
     "qqq": {
         "_name": "Name of the Triangles module",
@@ -204,7 +199,8 @@ var messages = /* I18N_START */ {
         "sideB": "Label for side b (the one connecting vertices C and A)",
         "sideC": "Label for side c (the one connecting vertices A and B)",
         "unitCm": "Unit of length (centimeters)",
-        "unitCm2": "Unit of area (square centimeters)"
+        "unitCm2": "Unit of area (square centimeters)",
+        "hint": "Explanation about how the module is interactive"
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -221,6 +217,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

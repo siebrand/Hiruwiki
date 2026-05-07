@@ -50,6 +50,14 @@ var messages = /* I18N_START */ {
     "ko": {
         "reset": "↺ 초기화"
     },
+    "nl": {
+        "2quads": "2 vierhoeken × 360°",
+        "4triangles": "4 driehoeken × 180°",
+        "_name": "Hoeken van een zeshoek",
+        "interiorAngles": "Binnenhoeken",
+        "reset": "↺ Opnieuw instellen",
+        "total": "Totaal"
+    },
     "qqq": {
         "2quads": "Decomposition label showing 2 quadrilaterals × 360°",
         "4triangles": "Decomposition label showing 4 triangles × 180°",
@@ -73,6 +81,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

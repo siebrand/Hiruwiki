@@ -31,8 +31,6 @@ var messages = /* I18N_START */ {
         "eq_lbl_divisor": "divisor",
         "eq_lbl_quotient": "quocient",
         "eq_lbl_remainder": "residu",
-        "label_bar": "Vista de barra: cada tros blau =",
-        "label_bar_units": "unitats",
         "label_choose": "Trieu el dividend i el divisor"
     },
     "en": {
@@ -63,8 +61,6 @@ var messages = /* I18N_START */ {
         "insight_exact": "<strong>{N} ÷ {D} = {Q}</strong> exacto — sin resto. La barra se llena perfectamente en <strong>{Q}</strong> fragmentos iguales. Esto significa que <strong>{D}</strong> es un divisor de <strong>{N}</strong>.<!--{{s}}-->",
         "insight_less": "<strong>{N}</strong> es menor que el divisor <strong>{D}</strong>, por lo que cabe en <strong>0</strong> fragmentos enteros. Todo el valor es el resto. El resto es siempre menor que el divisor.",
         "insight_normal": "<strong>{N} ÷ {D} = {Q}</strong> resto <strong>{R}</strong>. Nota que la pieza roja (<strong>{R}</strong>) siempre es más corta que un fragmento azul (<strong>{D}</strong>). El resto siempre es estrictamente menor que el divisor. Comprobación: <strong>{Q} × {D} + {R} = {QD} + {R} = {N}</strong> ✓",
-        "label_bar": "Vista de barra — cada fragmento azul =",
-        "label_bar_units": "unidades",
         "label_choose": "Elige el dividendo y el divisor",
         "label_dividend": "Dividendo (el número a dividir)",
         "label_divisor": "Divisor (el tamaño del fragmento)",
@@ -83,8 +79,6 @@ var messages = /* I18N_START */ {
         "insight_exact": "<strong>{N} ÷ {D} = {Q}</strong> zenbaki osoa — hondarrik gabe. Barra <strong>{Q}</strong> zati berdinetan betetzen da. Horrek esan nahi du <strong>{D}</strong> <strong>{N}</strong>-ren zatitzailea dela.<!--{s}-->",
         "insight_less": "<strong>{N}</strong> zatitzailea baino txikiagoa da (<strong>{D}</strong>), beraz ez da zati oso bat sartzen. Balio osoa hondarra da. Hondarra beti zatitzailea baino txikiagoa da.",
         "insight_normal": "<strong>{N} ÷ {D} = {Q}</strong> hondarra <strong>{R}</strong>. Kontuan hartu pieza gorria (<strong>{R}</strong>) beti zati urdin bat (<strong>{D}</strong>) baino motzagoa dela. Hondarra beti zatitzailea baino txikiagoa da. Egiaztatu: <strong>{Q} × {D} + {R} = {QD} + {R} = {N}</strong> ✓",
-        "label_bar": "Barra ikuspegia — zati urdin bakoitza =",
-        "label_bar_units": "unitate",
         "label_choose": "Aukeratu zatikizuna eta zatitzailea",
         "label_dividend": "Zatikizuna (zatitu beharreko zenbakia)",
         "label_divisor": "Zatitzailea (zatiaren tamaina)",
@@ -103,8 +97,6 @@ var messages = /* I18N_START */ {
         "insight_exact": "<strong>{N} ÷ {D} = {Q}</strong> exactement — pas de reste. La barre se remplit parfaitement en <strong>{Q}</strong> morceaux égaux. Cela signifie que <strong>{D}</strong> est un diviseur de <strong>{N}</strong>.",
         "insight_less": "<strong>{N}</strong> est plus petit que le diviseur <strong>{D}</strong>, donc il contient <strong>0</strong> morceau entier. Toute la valeur est le reste. Le reste est toujours inférieur au diviseur.",
         "insight_normal": "<strong>{N} ÷ {D} = {Q}</strong> reste <strong>{R}</strong>. Notez que la pièce rouge (<strong>{R}</strong>) est toujours plus courte qu'un morceau bleu (<strong>{D}</strong>). Le reste est toujours strictement inférieur au diviseur. Vérification : <strong>{Q} × {D} + {R} = {QD} + {R} = {N}</strong> ✓",
-        "label_bar": "Vue en barre — chaque morceau bleu =",
-        "label_bar_units": "unités",
         "label_choose": "Choisissez le dividende et le diviseur",
         "label_dividend": "Dividende (le nombre à diviser)",
         "label_divisor": "Diviseur (la taille du morceau)",
@@ -123,8 +115,6 @@ var messages = /* I18N_START */ {
         "insight_exact": "<strong>{N} ÷ {D} = {Q}</strong> go díreach — gan aon fhuíoll. Líonann an barra go foirfe isteach i <strong>{Q}</strong> píosa{s} cothroma. Ciallaíonn sé seo gur roinnteoir de <strong>{N}</strong> é <strong>{D}</strong>.",
         "insight_less": "Tá <strong>{N}</strong> níos lú ná an roinnteoir <strong>{D}</strong>, mar sin oireann sé do <strong>0</strong> píosa iomlán. Is é an luach iomlán an t-iarmhar. Bíonn an t-iarmhar níos lú ná an roinnteoir i gcónaí.",
         "insight_normal": "<strong>{N} ÷ {D} = {Q}</strong> fuílleach <strong>{R}</strong>. Tabhair faoi deara go mbíonn an píosa dearg (<strong>{R}</strong>) i gcónaí níos giorra ná smután gorm amháin (<strong>{D}</strong>). Bíonn an fuílleach i gcónaí níos lú ná an roinnteoir. Seiceáil: <strong>{Q} × {D} + {R} = {QD} + {R} = {N}</strong> ✓",
-        "label_bar": "Radharc barra — gach píosa gorm =",
-        "label_bar_units": "aonaid",
         "label_choose": "Roghnaigh díbhinn agus roinnteoir",
         "label_dividend": "Díbhinn (an uimhir atá á roinnt)",
         "label_divisor": "Roinnteoir (méid an phíosa)",
@@ -140,7 +130,6 @@ var messages = /* I18N_START */ {
         "eq_lbl_divisor": "divisore",
         "eq_lbl_quotient": "quoziente",
         "eq_lbl_remainder": "resto",
-        "label_bar_units": "unità",
         "repadd_exact": "— divide esattamente!"
     },
     "ko": {
@@ -149,12 +138,29 @@ var messages = /* I18N_START */ {
         "eq_lbl_divisor": "제수",
         "eq_lbl_quotient": "몫",
         "eq_lbl_remainder": "나머지",
-        "label_bar_units": "단위",
         "label_choose": "피제수와 제수를 선택",
         "label_dividend": "피제수 (나누어지는 수)",
         "label_divisor": "제수 (나누는 수)",
         "label_repadd": "반복 덧셈",
         "repadd_exact": "— 정확히 나누어집니다!"
+    },
+    "nl": {
+        "_name": "Deeltal en deler",
+        "eq_lbl_dividend": "deeltal",
+        "eq_lbl_divisor": "deler",
+        "eq_lbl_quotient": "quotiënt",
+        "eq_lbl_remainder": "rest",
+        "insight_exact": "<strong>{N} ÷ {D} = {Q}</strong> precies — geen rest. De balk past perfect in <strong>{Q}</strong> gelijke stukken{s}. Dit betekent dat <strong>{D}</strong> een deler is van <strong>{N}</strong>.",
+        "insight_less": "<strong>{N}</strong> is kleiner dan de deler <strong>{D}</strong>, dus het past in <strong>0</strong> hele stukken. De hele waarde is de rest. De rest is altijd kleiner dan de deler.",
+        "insight_normal": "<strong>{N} ÷ {D} = {Q}</strong> rest <strong>{R}</strong>. Merk op dat het rode stuk (<strong>{R}</strong>) altijd korter is dan een blauw stuk (<strong>{D}</strong>). De rest is altijd strikt kleiner dan de deler. Controle: <strong>{Q} × {D} + {R} = {QD} + {R} = {N}</strong> ✓",
+        "label_choose": "Kies deeltal en deler",
+        "label_dividend": "Deeltal (het getal dat gedeeld wordt)",
+        "label_divisor": "Deler (de grootte van het stuk)",
+        "label_equation": "Deelvergelijking",
+        "label_repadd": "Herhaalde optelling",
+        "repadd_exact": "— is precies deelbaar!",
+        "repadd_leftover": "blijft over",
+        "repadd_less": "{N} is kleiner dan {D}, dus het quotiënt is 0 en de gehele waarde is de rest."
     },
     "qqq": {
         "_name": "Name of the Dividend and Divisor module",
@@ -190,6 +196,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

@@ -27,6 +27,10 @@ var messages = /* I18N_START */ {
         "_name": "기울기",
         "undefined": "수직선 → 기울기 정의 안 됨"
     },
+    "nl": {
+        "_name": "Helling",
+        "undefined": "Verticale lijn → helling ongedefinieerd"
+    },
     "qqq": {
         "_name": "Name of the Slope module",
         "undefined": "Message shown when the line is vertical and the slope is undefined"
@@ -46,6 +50,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

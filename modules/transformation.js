@@ -97,6 +97,21 @@ var messages = /* I18N_START */ {
         "translation": "평행 이동",
         "vertical": "수직"
     },
+    "nl": {
+        "_name": "Transformaties",
+        "angle": "Hoek",
+        "enlargement": "Vergroting",
+        "hintEnlargement": "Verplaats het oranje punt om het centrum van de vergroting in te stellen.",
+        "hintReflection": "Verplaats beide oranje punten om de spiegellijn te maken.",
+        "hintRotation": "Verplaats het oranje punt om het draaipunt in te stellen.",
+        "hintTranslation": "Gebruik de schuifregelaars om het object te verplaatsen.",
+        "horizontal": "Horizontaal",
+        "reflection": "Spiegeling",
+        "rotation": "Rotatie",
+        "transformations": "Transformaties",
+        "translation": "Translatie",
+        "vertical": "Verticaal"
+    },
     "qqq": {
         "_name": "Name of the Transformations module",
         "angle": "Label for the rotation angle slider",
@@ -127,6 +142,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

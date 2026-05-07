@@ -219,6 +219,38 @@ var messages = /* I18N_START */ {
         "unitCm": "cm",
         "unitCm2": "cm²"
     },
+    "nl": {
+        "_name": "Vierhoeken",
+        "areaDiagHalf": "Formule: A = (d₁ × d₂) / 2\nd₁ (AC) = $1 cm\nd₂ (BD) = $2 cm\n= ($1 × $2) / 2",
+        "areaGaussHeader": "Gauss formule (shoelace):\nA = ½ |Σ(xᵢ·yᵢ₊₁ − xᵢ₊₁·yᵢ)|",
+        "areaGaussSum": "Σ = $1\nA = ½ × |$1|",
+        "areaGaussTerm": "(x$1·y$2 − x$2·y$1) = $3",
+        "areaParallelogram": "Formule: A = basis × hoogte\nbasis (AB) = $1 cm\nhoogte = $2 cm\n= $1 × $2",
+        "areaRectangle": "Formule: A = breedte × hoogte\n= $1 × $2",
+        "areaSquare": "Formule: A = zijde²\n= $1²",
+        "areaTrapezoid": "Formule: A = (b₁ + b₂) / 2 × h\nb₁ (AB) = $1 cm\nb₂ (CD) = $2 cm\nhoogte = $3 cm\n= ($1 + $2) / 2 × $3",
+        "headingArea": "Oppervlakte",
+        "headingClassification": "Classificatie",
+        "headingSides": "Zijden en diagonalen",
+        "labelDiag1": "d₁ (AC)",
+        "labelDiag2": "d₂ (BD)",
+        "labelPerimeter": "Omtrek",
+        "presetKite": "Vlieger",
+        "presetParallelogram": "Parallellogram",
+        "presetRectangle": "Rechthoek",
+        "presetSquare": "Vierkant",
+        "presetTrapezoid": "Trapezium",
+        "shapeCrossed": "gekruiste vierhoek",
+        "shapeGeneral": "algemene vierhoek",
+        "shapeKite": "vlieger",
+        "shapeParallelogram": "parallellogram",
+        "shapeRectangle": "rechthoek",
+        "shapeRhombus": "ruit",
+        "shapeSquare": "vierkant",
+        "shapeTrapezoid": "trapezium",
+        "unitCm": "cm",
+        "unitCm2": "cm²"
+    },
     "qqq": {
         "_name": "Name of the Quadrilaterals module",
         "areaDiagHalf": "Area formula for a kite using diagonals. Parameters: $1 = diagonal d₁ length, $2 = diagonal d₂ length.",
@@ -266,6 +298,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

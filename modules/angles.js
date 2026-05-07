@@ -81,6 +81,16 @@ var messages = /* I18N_START */ {
         "resultAngle": "$1: $2°",
         "supplement": "보각"
     },
+    "nl": {
+        "_name": "Hoeken",
+        "bisector": "Bissectrice",
+        "bisectorResult": "Bissectrice: $1°",
+        "complement": "Complementair",
+        "explement": "Explementair",
+        "notDefined": "Niet gedefinieerd voor deze hoek",
+        "resultAngle": "Hoek $1: $2°",
+        "supplement": "Supplementair"
+    },
     "qqq": {
         "_name": "Name of the Angles module",
         "bisector": "Button label for the bisector mode",
@@ -106,6 +116,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

@@ -78,6 +78,17 @@ var messages = /* I18N_START */ {
         "shake": "흔들기!",
         "total": "합계"
     },
+    "nl": {
+        "_name": "Kanspot",
+        "colorBlue": "Blauw",
+        "colorGreen": "Groen",
+        "colorRed": "Rood",
+        "colorYellow": "Geel",
+        "impossible": "Onmogelijk",
+        "probTitle": "Kans om een knikker te pakken en de kleur te raden…",
+        "shake": "Schudden!",
+        "total": "Totaal"
+    },
     "qqq": {
         "_name": "Name of the Probability Jar module",
         "colorBlue": "Name of the blue marble colour",
@@ -104,6 +115,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

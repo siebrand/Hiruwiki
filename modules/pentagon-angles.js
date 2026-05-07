@@ -49,6 +49,13 @@ var messages = /* I18N_START */ {
         "reset": "↺ 초기화",
         "total": "합계"
     },
+    "nl": {
+        "3triangles": "3 driehoeken × 180°",
+        "_name": "Hoeken van een vijfhoek",
+        "interiorAngles": "Binnenhoeken",
+        "reset": "↺ Reset",
+        "total": "Totaal"
+    },
     "qqq": {
         "3triangles": "Decomposition label showing 3 triangles × 180°",
         "_name": "Name of the Pentagon Angles module",
@@ -71,6 +78,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

@@ -31,6 +31,10 @@ var messages = /* I18N_START */ {
         "_name": "라디안",
         "rad": "rad"
     },
+    "nl": {
+        "_name": "Radialen",
+        "rad": "rad"
+    },
     "qqq": {
         "_name": "Name of the Radians module",
         "rad": "Abbreviation for radians"
@@ -50,6 +54,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

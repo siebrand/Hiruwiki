@@ -128,6 +128,25 @@ var messages = /* I18N_START */ {
         "card_phi_lbl": "황금비 φ",
         "card_phi_sub": "(1 + √5) / 2 = 1.6180339887…"
     },
+    "nl": {
+        "_name": "Rij van Fibonacci",
+        "card_phi_lbl": "Gulden snede φ",
+        "card_phi_sub": "(1 + √5) / 2 = 1,6180339887…",
+        "card_ratio_error": "fout ten opzichte van φ:",
+        "card_ratio_lbl": "Huidige verhouding F(n+1) ÷ F(n)",
+        "chart_step": "stap",
+        "diff": "verschil:",
+        "insight_close": "<strong>{fa} + {fb} = {fr}</strong>. De verhouding = <strong>{ratio}</strong> — binnen <strong>{error}</strong> van φ. Bijna volledig geconvergeerd.",
+        "insight_converged": "<strong>{fa} + {fb} = {fr}</strong>. De verhouding = <strong>{ratio}</strong> — binnen <strong>{error}</strong> van φ. De reeks is geconvergeerd tot 6 decimalen.",
+        "insight_normal": "<strong>{fa} + {fb} = {fr}</strong>. De verhouding = <strong>{ratio}</strong>, nog <strong>{error}</strong> verwijderd van φ = 1.61803…",
+        "insight_step1": "We beginnen met <strong>1 + 1 = 2</strong>. De verhouding 2 ÷ 1 = <strong>2.000000</strong> — nog ver van φ ≈ 1.61803.",
+        "insight_step2": "<strong>1 + 2 = 3</strong>. De verhouding 3 ÷ 2 = <strong>1.500000</strong> — al dichterbij. Elke stap verkleint het verschil.",
+        "sec_addition": "Optelling",
+        "sec_chart": "Convergentie naar φ",
+        "sec_sequence": "Reeks tot nu toe",
+        "sec_steps": "Stap door de Fibonacci-reeks",
+        "step_label": "Stap {step} van {total}"
+    },
     "qqq": {
         "_name": "Name of the Fibonacci Sequence module",
         "card_phi_lbl": "Label for the golden ratio φ card",
@@ -162,6 +181,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

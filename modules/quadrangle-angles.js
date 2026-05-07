@@ -50,6 +50,13 @@ var messages = /* I18N_START */ {
         "sum": "총합",
         "total": "합계"
     },
+    "nl": {
+        "_name": "Hoeken van een vierhoek",
+        "interiorAngles": "Binnenhoeken",
+        "reset": "Reset",
+        "sum": "Som",
+        "total": "Totaal"
+    },
     "qqq": {
         "_name": "Name of the Quadrangle Angles module",
         "interiorAngles": "Heading for the interior angles section",
@@ -72,6 +79,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

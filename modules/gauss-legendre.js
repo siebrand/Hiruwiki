@@ -20,6 +20,22 @@
         "formula_label": "Formula",
         "update_rules_heading": "Update Rules"
     },
+    "nl": {
+        "_name": "Gauss-Legendre-algoritme",
+        "iteration": "Iteratie",
+        "variable_a": "Rekenkundig gemiddelde (a)",
+        "variable_b": "Meetkundig gemiddelde (b)",
+        "variable_t": "Foutterm (t)",
+        "variable_p": "Machtsterm (p)",
+        "step": "Volgende stap",
+        "reset": "Reset",
+        "pi_approx": "Benadering van π",
+        "correct_digits": "{{PLURAL:$1|$1 correct cijfer|$1 correcte cijfers}}",
+        "precision_note": "Convergeert kwadratisch: het aantal cijfers verdubbelt bij elke stap.",
+        "calculation_heading": "Hoe het wordt berekend",
+        "formula_label": "Formule",
+        "update_rules_heading": "Updateregels"
+    },
     "qqq": {
         "_name": "Name of the Gauss-Legendre Algorithm module",
         "iteration": "Label for the current iteration number",
@@ -51,6 +67,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

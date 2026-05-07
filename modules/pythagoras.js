@@ -45,6 +45,12 @@ var messages = /* I18N_START */ {
         "lockRight": "직각",
         "reset": "초기화"
     },
+    "nl": {
+        "_name": "Stelling van Pythagoras",
+        "angleDeg": "hoek =",
+        "lockRight": "rechte hoek",
+        "reset": "Reset"
+    },
     "qqq": {
         "_name": "Name of the Pythagorean Theorem module",
         "angleDeg": "Label prefix for the angle value. Followed by a number in degrees.",
@@ -66,6 +72,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 
