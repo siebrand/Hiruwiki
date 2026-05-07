@@ -136,4 +136,5 @@ html.client-dark-mode            .hiruwiki[data-module="triangle-area"],
     --hw-text-muted:        #B4B2A9;
     --hw-text-placeholder:  #888780;
     --hw-color-primary:     #AFA9EC;
+    --hw-color-destructive: #BF3C2C;
 }
