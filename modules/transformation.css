@@ -110,3 +110,19 @@
     color: var(--color-placeholder, #72777d);
     line-height: 1.5;
 }
+
+@media (max-width: 550px) {
+    .hwt-wrap {
+        flex-direction: column;
+        min-height: auto;
+    }
+    .hwt-panel {
+        width: 100%;
+        border-left: none;
+        border-top: 1px solid var(--color-placeholder, #a2a9b1);
+    }
+    .hwt-canvas-wrap canvas {
+        aspect-ratio: 1 / 1;
+        height: auto;
+    }
+}

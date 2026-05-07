@@ -82,6 +82,8 @@ function t(key, vars) {
 
 
 
+
+
 // Find all radian modules
   document.querySelectorAll('.hiruwiki[data-module="radian"]').forEach(function(container) {
 
@@ -252,8 +254,10 @@ function t(key, vars) {
 
     function setAngle(e){
       const rect=svg.getBoundingClientRect();
-      const x=(e.touches?e.touches[0].clientX:e.clientX)-rect.left;
-      const y=(e.touches?e.touches[0].clientY:e.clientY)-rect.top;
+      const sx = width / rect.width;
+      const sy = height / rect.height;
+      const x=((e.touches?e.touches[0].clientX:e.clientX)-rect.left) * sx;
+      const y=((e.touches?e.touches[0].clientY:e.clientY)-rect.top) * sy;
       let a=Math.atan2(cy-y,x-cx);
       if(a<0) a+=2*Math.PI;
 

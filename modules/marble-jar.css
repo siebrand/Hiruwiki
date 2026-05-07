@@ -160,10 +160,6 @@
 }
 
 /* ---- Probability section ---- */
-.hmj-prob-section {
-    /* nothing needed */
-}
-
 .hmj-prob-title {
     font-size: 13px;
     color: var(--color-subtle, #54595d);
@@ -228,4 +224,26 @@
     font-size: 12px;
     font-style: italic;
     color: var(--color-placeholder, #72777d);
+}
+
+@media (max-width: 550px) {
+    .hmj-wrap {
+        flex-wrap: nowrap;
+        gap: 12px;
+        justify-content: center;
+    }
+    .hmj-jar-section {
+        flex: 0 0 130px;
+    }
+    .hmj-jar-container, .hmj-jar-svg {
+        width: 130px;
+        height: 200px;
+    }
+    .hmj-controls {
+        max-width: 200px;
+        min-width: 150px;
+    }
+    .hmj-slider-label {
+        font-size: 11px;
+    }
 }

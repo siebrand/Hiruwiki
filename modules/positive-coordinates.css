@@ -182,3 +182,17 @@
   font-style: italic;
   line-height: 1.4;
 }
+
+@media (max-width: 600px) {
+  .cex-body {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .cex-canvas {
+    max-width: 100%;
+    height: auto;
+  }
+  .cex-sidebar {
+    width: 100%;
+  }
+}

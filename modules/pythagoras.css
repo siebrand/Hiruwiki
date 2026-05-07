@@ -36,6 +36,14 @@
   background-size: 38px 38px;
   display: block;
   margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 500px) {
+  .pytha-controls {
+    justify-content: center;
+  }
 }
 
 /* Squares */

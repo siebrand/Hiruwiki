@@ -10,6 +10,8 @@
     color: var(--color-base, #202122);
     padding: 0.75em 0;
     max-width: 720px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /* ── Section labels ─────────────────────────────────────────────────────────── */

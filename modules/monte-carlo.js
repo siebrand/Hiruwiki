@@ -143,6 +143,8 @@ function t(key, vars) {
 
 
 
+
+
 var SIZE = 320;
 
     function euFmt( n ) {
@@ -270,8 +272,8 @@ var SIZE = 320;
             // Quarter-circle arc
             ctx.beginPath();
             ctx.arc( 0, SIZE, SIZE - 1, -Math.PI / 2, 0 );
-            ctx.strokeStyle = hiruwiki.getThemeColor('color-base', 'rgba(60,60,60,0.6)');
-            ctx.lineWidth = 1.5;
+            ctx.strokeStyle = hiruwiki.getThemeColor('color-base', '#333');
+            ctx.lineWidth = 3.0;
             ctx.stroke();
         }
 
@@ -290,7 +292,7 @@ var SIZE = 320;
                     outside++;
                 }
                 ctx.beginPath();
-                ctx.arc( cx, cy, 2, 0, Math.PI * 2 );
+                ctx.arc( cx, cy, 3, 0, Math.PI * 2 );
                 ctx.fill();
             }
             updateStats();

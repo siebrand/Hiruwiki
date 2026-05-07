@@ -186,7 +186,7 @@ nl:
     interiorAngles: Binnenhoeken
     reset: ↺ Reset
     total: Totaal
-    hint: 'Verdeel de vijfhoek in driehoeken'
+    hint: Verplaats de hoeken om de figuur te vervormen
   percent:
     _name: Percentages
     axis_neg: −100%

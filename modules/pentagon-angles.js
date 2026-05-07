@@ -56,7 +56,7 @@ var messages = /* I18N_START */ {
         "interiorAngles": "Binnenhoeken",
         "reset": "↺ Reset",
         "total": "Totaal",
-        "hint": "Verdeel de vijfhoek in driehoeken"
+        "hint": "Verplaats de hoeken om de figuur te vervormen"
     },
     "qqq": {
         "3triangles": "Decomposition label showing 3 triangles × 180°",
@@ -81,6 +81,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

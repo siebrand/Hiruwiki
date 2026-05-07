@@ -4,12 +4,18 @@
    No CSS custom properties — compatible with all MediaWiki skins.
    ───────────────────────────────────────────────────────────────────────────── */
 
+.hiruwiki[data-module="factors"] {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .hw-factors {
     font-family: sans-serif;
     font-size: 14px;
     color: var(--color-base, #202122);
     padding: 0.75em 0;
     max-width: 720px;
+    width: 100%;
 }
 
 /* ── Section labels ─────────────────────────────────────────────────────────── */
@@ -197,4 +203,8 @@
     .hw-fct-results {
         grid-template-columns: 1fr;
     }
+}
+
+.hw-footer {
+  flex-basis: 100%;
 }

@@ -215,6 +215,14 @@
   color: var(--color-placeholder, #888);
 }
 
+@media (max-width: 600px) {
+  .hiruwiki[data-module="quadrangles"] .quad-side {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid var(--border-color-base, #ccc);
+  }
+}
+
 .hiruwiki[data-module="quadrangles"] .hw-footer {
   flex-basis: 100%;
 }

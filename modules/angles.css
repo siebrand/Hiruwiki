@@ -9,6 +9,8 @@
 .hiruwiki-angles canvas {
     border: 1px solid var(--border-color-base, #bbb);
     background: white;
+    max-width: 100%;
+    height: auto !important;
 }
 
 .hiruwiki-angles-panel {
@@ -16,13 +18,15 @@
     flex-direction: column;
     gap: 6px;
     min-width: 150px;
+    flex: 1 1 150px;
 }
 
 .hiruwiki-angles-panel button {
-    padding: 6px 8px;
+    padding: 8px 12px;
     cursor: pointer;
     border: 1px solid var(--color-placeholder, #aaa);
     background: var(--background-color-neutral-subtle, #f6f6f6);
+    font-size: 14px;
 }
 
 .hiruwiki-angles-panel button:hover {
@@ -40,4 +44,15 @@
 
 .hiruwiki-angles .hw-footer {
     flex-basis: 100%;
+    width: 100%;
+}
+
+@media (max-width: 500px) {
+    .hiruwiki-angles {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .hiruwiki-angles-panel {
+        width: 100%;
+    }
 }

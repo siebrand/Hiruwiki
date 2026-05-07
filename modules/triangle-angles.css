@@ -13,6 +13,8 @@
     background: var(--background-color-base, #f9f9f9);
     cursor: crosshair;
     touch-action: none;
+    max-width: 100%;
+    height: auto;
 }
 
 .hiruwiki[data-module="triangle-angles"] .angle-label {

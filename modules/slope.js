@@ -78,6 +78,8 @@ function t(key, vars) {
 
 
 
+
+
 function initSlope(container) {
 
 const size = 520;
@@ -344,28 +346,26 @@ function draw(){
 }
 
 function pointerDown(e){
-
  const rect=canvas.getBoundingClientRect();
- const x=e.clientX-rect.left;
- const y=e.clientY-rect.top;
+ const sx = size / rect.width;
+ const sy = size / rect.height;
+ const x=(e.clientX-rect.left) * sx;
+ const y=(e.clientY-rect.top) * sy;
 
  for(let i=0;i<points.length;i++){
-
   const px=toCanvasX(points[i].x);
   const py=toCanvasY(points[i].y);
-
-  if(Math.hypot(px-x,py-y)<10) dragging=i;
+  if(Math.hypot(px-x,py-y)<25) dragging=i;
  }
 }
 
 function pointerMove(e){
-
  if(dragging===null) return;
-
  const rect=canvas.getBoundingClientRect();
- const x=e.clientX-rect.left;
- const y=e.clientY-rect.top;
-
+ const sx = size / rect.width;
+ const sy = size / rect.height;
+ const x=(e.clientX-rect.left) * sx;
+ const y=(e.clientY-rect.top) * sy;
  const p=fromCanvas(x,y);
 
  p.x=Math.max(-range,Math.min(range,p.x));

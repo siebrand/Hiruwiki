@@ -6,6 +6,7 @@
   box-sizing: border-box;
   width: 100%;
   max-width: 940px;
+  flex-wrap: wrap;
 }
 
 .hexagon-angles .qa-svg {
@@ -226,4 +227,5 @@ background-color: var(--background-color-destructive, #bf3c2c);
 
 .hexagon-angles .hw-footer {
   flex-basis: 100%;
+  width: 100%;
 }

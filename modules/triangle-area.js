@@ -171,6 +171,8 @@ function t(key, vars) {
 
 
 
+
+
 var W = 680, H = 430, CM = 37.8, DUR = 1600;
 
     function init(container) {
@@ -462,7 +464,7 @@ var W = 680, H = 430, CM = 37.8, DUR = 1600;
         function hitV(pos) {
             var keys = Object.keys(V);
             for (var i = 0; i < keys.length; i++) {
-                if (dist(pos, V[keys[i]]) < 16) { return keys[i]; }
+                if (dist(pos, V[keys[i]]) < 25) { return keys[i]; }
             }
             return null;
         }

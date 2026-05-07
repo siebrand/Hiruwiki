@@ -177,4 +177,5 @@ background-color: var(--background-color-destructive, #bf3c2c);
 
 .pentagon-angles .hw-footer {
   flex-basis: 100%;
+  width: 100%;
 }
