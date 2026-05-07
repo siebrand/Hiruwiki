@@ -4,6 +4,40 @@
     
 /* ── I18N ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ── */
 var messages = /* I18N_START */ {
+    "ca": {
+        "animStopped": "S'ha aturat l'animació.",
+        "area": "Àrea",
+        "areaReviewStatus": "✓ Amplada = πr, alçada = r → A = πr².",
+        "circumference": "Circumferència",
+        "initStatus": "Trieu una prova i feu clic a \"Demostra-ho\".",
+        "proveIt": "Demostra-ho ▶",
+        "radius": "Radi",
+        "stop": "Atura ■",
+        "tabArea": "Àrea",
+        "tabCirc": "Circumferència",
+        "title": "Calculadora de cercles",
+        "visualProof": "Prova visual"
+    },
+    "en": {
+        "_name": "Circle Proof",
+        "animStopped": "Animation stopped.",
+        "area": "Area",
+        "areaAnimStatus": "Sectors reassemble into a rectangle: width = πr, height = r.",
+        "areaReviewStatus": "✓ Width = πr, height = r → A = πr².",
+        "circAnimStatus": "Each semi-circle (πr) unrolls into a line, making 2πr in total.",
+        "circReviewStatus": "✓ Top πr + Bottom πr = C = 2πr.",
+        "circumference": "Circumference",
+        "initStatus": "Choose a proof and click 'Prove it'.",
+        "proveIt": "Prove it ▶",
+        "radius": "Radius",
+        "readyStatus": "Click 'Prove it' to watch the animation.",
+        "review": "Review ▶",
+        "stop": "Stop ■",
+        "tabArea": "Area",
+        "tabCirc": "Circumference",
+        "title": "Circle Calculator",
+        "visualProof": "Visual proof"
+    },
     "es": {
         "_name": "Prueba del círculo",
         "animStopped": "Animación detenida.",
@@ -23,6 +57,26 @@ var messages = /* I18N_START */ {
         "tabCirc": "Circunferencia",
         "title": "Calculadora de Círculos",
         "visualProof": "Prueba visual"
+    },
+    "eu": {
+        "_name": "Zirkuluaren froga",
+        "animStopped": "Animazioa gelditu da.",
+        "area": "Azalera",
+        "areaAnimStatus": "Zatiak elkartzen dira laukizuzen bat egiteko: zabalera = πr, altuera = r.",
+        "areaReviewStatus": "✓ Zabalera = πr, altuera = r → A = πr².",
+        "circAnimStatus": "Zirkulu-erdi bakoitza (πr) lerro bat izatera pasatzen da, eta bi 2πr dira.",
+        "circReviewStatus": "✓ Goiko πr + Beheko πr = C = 2πr.",
+        "circumference": "Zirkunferentzia",
+        "initStatus": "Aukeratu froga bat eta sakatu 'Froga ezazu'.",
+        "proveIt": "Froga ezazu ▶",
+        "radius": "Erradioa",
+        "readyStatus": "Sakatu 'Froga ezazu' animazioa ikusteko.",
+        "review": "Berrikusi ▶",
+        "stop": "Gelditu ■",
+        "tabArea": "Azalera",
+        "tabCirc": "Zirkunferentzia",
+        "title": "Zirkulu kalkuladorea",
+        "visualProof": "Froga bisuala"
     },
     "fr": {
         "_name": "Preuve du cercle",
@@ -64,6 +118,36 @@ var messages = /* I18N_START */ {
         "title": "Áireamhán Ciorcail",
         "visualProof": "Cruthúnas amhairc"
     },
+    "it": {
+        "animStopped": "Animazione interrotta.",
+        "area": "Area",
+        "areaAnimStatus": "I settori si riassemblano in un rettangolo: larghezza = πr, altezza = r.",
+        "areaReviewStatus": "✓ Larghezza = πr, altezza = r → A = πr².",
+        "circAnimStatus": "Ogni semicerchio (πr) si srotola in una linea, per un totale di 2πr.",
+        "circumference": "Circonferenza",
+        "initStatus": "Scegli una prova e fai clic su \"Dimostrala\".",
+        "proveIt": "Dimostralo ▶",
+        "radius": "Raggio",
+        "readyStatus": "Clicca su 'Dimostralo' per guardare l'animazione.",
+        "review": "Rivedi ▶",
+        "stop": "Stop ■",
+        "tabArea": "Area",
+        "tabCirc": "Circonferenza",
+        "visualProof": "Prova visiva"
+    },
+    "ko": {
+        "_name": "원 증명",
+        "animStopped": "애니메이션이 멈췄습니다.",
+        "area": "면적",
+        "areaReviewStatus": "✓ 너비 = πr, 높이 = r → A = πr².",
+        "circumference": "원둘레",
+        "radius": "반지름",
+        "stop": "정지 ■",
+        "tabArea": "면적",
+        "tabCirc": "원둘레",
+        "title": "원 계산기",
+        "visualProof": "시각적 증명"
+    },
     "qqq": {
         "_name": "Name of the Circle Proof module",
         "animStopped": "Status message shown when the user stops the animation",
@@ -83,110 +167,6 @@ var messages = /* I18N_START */ {
         "tabCirc": "Tab label for the circumference proof",
         "title": "Title of the circle calculator sidebar",
         "visualProof": "Section heading for the visual proof controls"
-    },
-    "it": {
-        "animStopped": "Animazione interrotta.",
-        "area": "Area",
-        "areaAnimStatus": "I settori si riassemblano in un rettangolo: larghezza = πr, altezza = r.",
-        "areaReviewStatus": "✓ Larghezza = πr, altezza = r → A = πr².",
-        "circAnimStatus": "Ogni semicerchio (πr) si srotola in una linea, per un totale di 2πr.",
-        "circumference": "Circonferenza",
-        "initStatus": "Scegli una prova e fai clic su \"Dimostrala\".",
-        "proveIt": "Dimostralo ▶",
-        "radius": "Raggio",
-        "readyStatus": "Clicca su 'Dimostralo' per guardare l'animazione.",
-        "review": "Rivedi ▶",
-        "stop": "Stop ■",
-        "tabArea": "Area",
-        "tabCirc": "Circonferenza",
-        "visualProof": "Prova visiva"
-    },
-    "nl": {
-        "_name": "Cirkel bewijs",
-        "animStopped": "Animatie gestopt.",
-        "area": "Oppervlakte",
-        "areaAnimStatus": "De sectoren vormen een rechthoek: breedte = πr, hoogte = r.",
-        "areaReviewStatus": "✓ Breedte = πr, hoogte = r → A = πr².",
-        "circAnimStatus": "Elke halve cirkel (πr) rolt uit tot een lijn, wat in totaal 2πr maakt.",
-        "circReviewStatus": "✓ Bovenste πr + Onderste πr = C = 2πr.",
-        "circumference": "Omtrek",
-        "initStatus": "Kies een bewijs en klik op 'Bewijs het'.",
-        "proveIt": "Bewijs het ▶",
-        "radius": "Straal",
-        "readyStatus": "Klik op 'Bewijs het' om de animatie te zien.",
-        "review": "Beoordelen ▶",
-        "stop": "Stop ■",
-        "tabArea": "Oppervlakte",
-        "tabCirc": "Omtrek",
-        "title": "Cirkel Calculator",
-        "visualProof": "Visueel bewijs"
-    },
-    "en": {
-        "_name": "Circle Proof",
-        "animStopped": "Animation stopped.",
-        "area": "Area",
-        "areaAnimStatus": "Sectors reassemble into a rectangle: width = πr, height = r.",
-        "areaReviewStatus": "✓ Width = πr, height = r → A = πr².",
-        "circAnimStatus": "Each semi-circle (πr) unrolls into a line, making 2πr in total.",
-        "circReviewStatus": "✓ Top πr + Bottom πr = C = 2πr.",
-        "circumference": "Circumference",
-        "initStatus": "Choose a proof and click 'Prove it'.",
-        "proveIt": "Prove it ▶",
-        "radius": "Radius",
-        "readyStatus": "Click 'Prove it' to watch the animation.",
-        "review": "Review ▶",
-        "stop": "Stop ■",
-        "tabArea": "Area",
-        "tabCirc": "Circumference",
-        "title": "Circle Calculator",
-        "visualProof": "Visual proof"
-    },
-    "ca": {
-        "animStopped": "S'ha aturat l'animació.",
-        "area": "Àrea",
-        "areaReviewStatus": "✓ Amplada = πr, alçada = r → A = πr².",
-        "circumference": "Circumferència",
-        "initStatus": "Trieu una prova i feu clic a \"Demostra-ho\".",
-        "proveIt": "Demostra-ho ▶",
-        "radius": "Radi",
-        "stop": "Atura ■",
-        "tabArea": "Àrea",
-        "tabCirc": "Circumferència",
-        "title": "Calculadora de cercles",
-        "visualProof": "Prova visual"
-    },
-    "ko": {
-        "_name": "원 증명",
-        "animStopped": "애니메이션이 멈췄습니다.",
-        "area": "면적",
-        "areaReviewStatus": "✓ 너비 = πr, 높이 = r → A = πr².",
-        "circumference": "원둘레",
-        "radius": "반지름",
-        "stop": "정지 ■",
-        "tabArea": "면적",
-        "tabCirc": "원둘레",
-        "title": "원 계산기",
-        "visualProof": "시각적 증명"
-    },
-    "eu": {
-        "_name": "Zirkuluaren froga",
-        "animStopped": "Animazioa gelditu da.",
-        "area": "Azalera",
-        "areaAnimStatus": "Zatiak elkartzen dira laukizuzen bat egiteko: zabalera = πr, altuera = r.",
-        "areaReviewStatus": "✓ Zabalera = πr, altuera = r → A = πr².",
-        "circAnimStatus": "Zirkulu-erdi bakoitza (πr) lerro bat izatera pasatzen da, eta bi 2πr dira.",
-        "circReviewStatus": "✓ Goiko πr + Beheko πr = C = 2πr.",
-        "circumference": "Zirkunferentzia",
-        "initStatus": "Aukeratu froga bat eta sakatu 'Froga ezazu'.",
-        "proveIt": "Froga ezazu ▶",
-        "radius": "Erradioa",
-        "readyStatus": "Sakatu 'Froga ezazu' animazioa ikusteko.",
-        "review": "Berrikusi ▶",
-        "stop": "Gelditu ■",
-        "tabArea": "Azalera",
-        "tabCirc": "Zirkunferentzia",
-        "title": "Zirkulu kalkuladorea",
-        "visualProof": "Froga bisuala"
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -203,6 +183,16 @@ function t(key, vars) {
     }
     return str;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 

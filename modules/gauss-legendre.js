@@ -2,8 +2,8 @@
 
 (function () {
 
-/* ── I18N ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ── */
-var messages = /* I18N_START */ {
+    /* ── I18N ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ── */
+    var messages = /* I18N_START */ {
     "en": {
         "_name": "Gauss-Legendre Algorithm",
         "iteration": "Iteration",
@@ -14,11 +14,29 @@ var messages = /* I18N_START */ {
         "step": "Next Step",
         "reset": "Reset",
         "pi_approx": "Approximation of π",
-        "correct_digits": "{count} correct digits",
-        "precision_note": "Converges quadratically: digits double each step."
+        "correct_digits": "{{PLURAL:$1|$1 correct digit|$1 correct digits}}",
+        "precision_note": "Converges quadratically: digits double each step.",
+        "calculation_heading": "How it's calculated",
+        "formula_label": "Formula",
+        "update_rules_heading": "Update Rules"
+    },
+    "qqq": {
+        "_name": "Name of the Gauss-Legendre Algorithm module",
+        "iteration": "Label for the current iteration number",
+        "variable_a": "Label for the arithmetic mean variable 'a'",
+        "variable_b": "Label for the geometric mean variable 'b'",
+        "variable_t": "Label for the error term variable 't'",
+        "variable_p": "Label for the power term variable 'p'",
+        "step": "Button label to compute the next iteration",
+        "reset": "Button label to reset the algorithm to its initial state",
+        "pi_approx": "Label for the current approximation of π",
+        "correct_digits": "Label showing the number of correct digits found. Uses PLURAL. Parameters: $1 = the number of correct digits.",
+        "precision_note": "Note explaining the quadratic convergence of the algorithm",
+        "calculation_heading": "Heading for the step-by-step calculation breakdown",
+        "formula_label": "Label for the mathematical formula being used",
+        "update_rules_heading": "Heading for the section explaining how variables change each step"
     }
 } /* I18N_END */
-
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
 var banana = new Banana(lang.split('-')[0]);
 banana.load(messages);
@@ -34,78 +52,132 @@ function t(key, vars) {
     return str;
 }
 
-const MATH_PI_STR = "3.141592653589793238462643383279";
 
-function getCorrectDigitsMarkup(approxStr) {
-    let markup = "";
-    let match = true;
-    for (let i = 0; i < approxStr.length; i++) {
-        const char = approxStr[i];
-        const target = MATH_PI_STR[i];
-        
-        if (match && char === target) {
-            markup += `<span class="gl-correct-digit">${char}</span>`;
-        } else {
-            match = false;
-            markup += `<span class="gl-wrong-digit">${char}</span>`;
+
+
+
+
+
+
+
+    const MATH_PI_STR = "3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679";
+
+    // High precision BigInt constants
+    const SCALE = 10n ** 105n;
+    const HALF = SCALE / 2n;
+
+    function bigIntSqrt(value) {
+        if (value < 0n) return null;
+        if (value < 2n) return value;
+        let x = value / 2n + 1n;
+        let y = (x + value / x) / 2n;
+        while (y < x) {
+            x = y;
+            y = (x + value / x) / 2n;
         }
+        return x;
     }
-    return markup;
-}
 
-function countCorrectDigits(approxStr) {
-    let count = 0;
-    for (let i = 0; i < Math.min(approxStr.length, MATH_PI_STR.length); i++) {
-        if (approxStr[i] === MATH_PI_STR[i]) {
-            if (approxStr[i] !== '.') count++;
-        } else {
-            break;
+    function formatBig(val, decimals = 14) {
+        let s = val.toString();
+        if (val < SCALE) {
+            s = s.padStart(106, '0');
         }
+        let integerPart = s.slice(0, s.length - 105);
+        if (integerPart === "") integerPart = "0";
+        let fractionalPart = s.slice(s.length - 105);
+        return integerPart + "." + fractionalPart.slice(0, decimals);
     }
-    return count;
-}
 
-function createWidget(container) {
-    if (container.dataset.glInit) return;
-    container.dataset.glInit = "1";
+    function getCorrectDigitsMarkup(approxStr) {
+        let markup = "";
+        let match = true;
+        for (let i = 0; i < Math.min(approxStr.length, MATH_PI_STR.length); i++) {
+            const char = approxStr[i];
+            const target = MATH_PI_STR[i];
 
-    let n = 0;
-    let a = 1.0;
-    let b = 1.0 / Math.sqrt(2);
-    let t_val = 0.25;
-    let p = 1.0;
+            if (match && char === target) {
+                markup += `<span class="gl-correct-digit">${char}</span>`;
+            } else {
+                match = false;
+                markup += `<span class="gl-wrong-digit">${char}</span>`;
+            }
+        }
+        if (approxStr.length > MATH_PI_STR.length) {
+            markup += `<span class="gl-wrong-digit">${approxStr.slice(MATH_PI_STR.length)}</span>`;
+        }
+        return markup;
+    }
 
-    container.innerHTML = `
+    function countCorrectDigits(approxStr) {
+        let count = 0;
+        for (let i = 0; i < Math.min(approxStr.length, MATH_PI_STR.length); i++) {
+            if (approxStr[i] === MATH_PI_STR[i]) {
+                if (approxStr[i] !== '.') count++;
+            } else {
+                break;
+            }
+        }
+        return count;
+    }
+
+    function createWidget(container) {
+        if (container.dataset.glInit) return;
+        container.dataset.glInit = "1";
+
+        let n = 0;
+        let a = SCALE;
+        // b = 1/sqrt(2) = sqrt(1/2) = sqrt(0.5)
+        let b = bigIntSqrt(SCALE * SCALE / 2n);
+        // t = 1/4 = 0.25
+        let t_val = SCALE / 4n;
+        let p = SCALE;
+
+        container.innerHTML = `
         <div class="gl-wrap">
             <div class="gl-header">
-                <div class="gl-title">${t('_name')}</div>
                 <div class="gl-iteration-badge">${t('iteration')}: <span id="gl-n">0</span></div>
             </div>
 
-            <div class="gl-dashboard">
-                <div class="gl-card">
-                    <span class="gl-card-label">${t('variable_a')}</span>
-                    <span class="gl-card-value" id="gl-a">1.0000000000</span>
+            <div class="gl-variables-grid">
+                <div class="gl-var-item">
+                    <span class="gl-var-label">${t('variable_a')}</span>
+                    <div class="gl-var-val-row">
+                        <span class="gl-var-val" id="gl-a">1.000</span>
+                        <div class="gl-info-icon" id="gl-ti-a">i<div class="gl-tooltip" id="gl-tt-a"></div></div>
+                    </div>
                 </div>
-                <div class="gl-card">
-                    <span class="gl-card-label">${t('variable_b')}</span>
-                    <span class="gl-card-value" id="gl-b">0.7071067811</span>
+                <div class="gl-var-item">
+                    <span class="gl-var-label">${t('variable_b')}</span>
+                    <div class="gl-var-val-row">
+                        <span class="gl-var-val" id="gl-b">0.707</span>
+                        <div class="gl-info-icon" id="gl-ti-b">i<div class="gl-tooltip" id="gl-tt-b"></div></div>
+                    </div>
                 </div>
-                <div class="gl-card">
-                    <span class="gl-card-label">${t('variable_t')}</span>
-                    <span class="gl-card-value" id="gl-t">0.2500000000</span>
+                <div class="gl-var-item">
+                    <span class="gl-var-label">${t('variable_t')}</span>
+                    <div class="gl-var-val-row">
+                        <span class="gl-var-val" id="gl-t">0.250</span>
+                        <div class="gl-info-icon" id="gl-ti-t">i<div class="gl-tooltip" id="gl-tt-t"></div></div>
+                    </div>
                 </div>
-                <div class="gl-card">
-                    <span class="gl-card-label">${t('variable_p')}</span>
-                    <span class="gl-card-value" id="gl-p">1.0000000000</span>
+                <div class="gl-var-item">
+                    <span class="gl-var-label">${t('variable_p')}</span>
+                    <div class="gl-var-val-row">
+                        <span class="gl-var-val" id="gl-p">1</span>
+                        <div class="gl-info-icon" id="gl-ti-p">i<div class="gl-tooltip" id="gl-tt-p"></div></div>
+                    </div>
                 </div>
             </div>
 
             <div class="gl-result-section">
-                <span class="gl-card-label">${t('pi_approx')}</span>
-                <div class="gl-pi-display" id="gl-pi-val">–</div>
+                <span class="gl-card-label">
+                    ${t('pi_approx')}
+                    <div class="gl-info-icon" id="gl-ti-pi">i<div class="gl-tooltip" id="gl-tt-pi"></div></div>
+                </span>
+                <div class="gl-pi-display" id="gl-pi-val">-</div>
                 <div class="gl-digit-info">
-                    <span id="gl-digit-count">0 ${t('correct_digits', {count: 0})}</span>
+                    <span id="gl-digit-count">0 ${t('correct_digits', [0])}</span>
                     <span>${t('precision_note')}</span>
                 </div>
             </div>
@@ -117,51 +189,83 @@ function createWidget(container) {
         </div>
     `;
 
-    const el = {
-        n: container.querySelector('#gl-n'),
-        a: container.querySelector('#gl-a'),
-        b: container.querySelector('#gl-b'),
-        t: container.querySelector('#gl-t'),
-        p: container.querySelector('#gl-p'),
-        pi: container.querySelector('#gl-pi-val'),
-        digits: container.querySelector('#gl-digit-count'),
-        btnStep: container.querySelector('#gl-btn-step'),
-        btnReset: container.querySelector('#gl-btn-reset')
-    };
+        const el = {
+            n: container.querySelector('#gl-n'),
+            a: container.querySelector('#gl-a'),
+            b: container.querySelector('#gl-b'),
+            t: container.querySelector('#gl-t'),
+            p: container.querySelector('#gl-p'),
+            pi: container.querySelector('#gl-pi-val'),
+            digits: container.querySelector('#gl-digit-count'),
+            ttA: container.querySelector('#gl-tt-a'),
+            ttB: container.querySelector('#gl-tt-b'),
+            ttT: container.querySelector('#gl-tt-t'),
+            ttP: container.querySelector('#gl-tt-p'),
+            ttPi: container.querySelector('#gl-tt-pi'),
+            btnStep: container.querySelector('#gl-btn-step'),
+            btnReset: container.querySelector('#gl-btn-reset')
+        };
 
-    function updateUI() {
-        el.n.textContent = n;
-        el.a.textContent = a.toFixed(14);
-        el.b.textContent = b.toFixed(14);
-        el.t.textContent = t_val.toFixed(14);
-        el.p.textContent = p.toFixed(0);
+        let prev_a = null;
+        let prev_b = null;
+        let prev_t = null;
+        let prev_p = null;
 
-        const pi_approx = Math.pow(a + b, 2) / (4 * t_val);
-        const piStr = pi_approx.toFixed(15);
-        
-        el.pi.innerHTML = getCorrectDigitsMarkup(piStr);
-        
-        const count = countCorrectDigits(piStr);
-        el.digits.textContent = t('correct_digits', {count: count});
-        
-        if (n >= 4) {
-            el.btnStep.disabled = true;
-            el.btnStep.style.opacity = "0.5";
-            el.btnStep.style.cursor = "not-allowed";
-        } else {
-            el.btnStep.disabled = false;
-            el.btnStep.style.opacity = "1";
-            el.btnStep.style.cursor = "pointer";
+        function updateUI() {
+            el.n.textContent = n;
+            el.a.textContent = formatBig(a);
+            el.b.textContent = formatBig(b);
+            el.t.textContent = formatBig(t_val);
+            el.p.textContent = formatBig(p, 0);
+
+            if (n === 0) {
+                const initialText = 'Initial value';
+                el.ttA.textContent = initialText;
+                el.ttB.textContent = initialText;
+                el.ttT.textContent = initialText;
+                el.ttP.textContent = initialText;
+            } else {
+                el.ttA.innerHTML = `a = (a<span class="gl-sub">prev</span> + b<span class="gl-sub">prev</span>) / 2 = (${formatBig(prev_a, 3)} + ${formatBig(prev_b, 3)}) / 2`;
+                el.ttB.innerHTML = `b = <span class="gl-sqrt-prefix">√</span><span class="gl-sqrt">a<span class="gl-sub">prev</span> · b<span class="gl-sub">prev</span></span> = <span class="gl-sqrt-prefix">√</span><span class="gl-sqrt">${formatBig(prev_a, 3)} · ${formatBig(prev_b, 3)}</span>`;
+                el.ttT.innerHTML = `t = t<span class="gl-sub">prev</span> − p<span class="gl-sub">prev</span>(a<span class="gl-sub">prev</span> − a)<span class="gl-sup">2</span> = ${formatBig(prev_t, 3)} − ${formatBig(prev_p, 0)}(${formatBig(prev_a, 3)} − ${formatBig(a, 3)})<span class="gl-sup">2</span>`;
+                el.ttP.innerHTML = `p = 2 · p<span class="gl-sub">prev</span> = 2 · ${formatBig(prev_p, 0)}`;
+            }
+
+            const sum = a + b;
+            const pi_approx_scaled = (sum * sum / (4n * t_val));
+            const piStrFull = formatBig(pi_approx_scaled, 101);
+
+            el.ttPi.innerHTML = `π ≈ (a + b)<span class="gl-sup">2</span> / 4t = (${formatBig(a, 3)} + ${formatBig(b, 3)})<span class="gl-sup">2</span> / (4 · ${formatBig(t_val, 3)})`;
+            
+            el.pi.innerHTML = getCorrectDigitsMarkup(piStrFull);
+            const count = countCorrectDigits(piStrFull);
+            el.digits.textContent = t('correct_digits', [count]);
+
+            if (n >= 6) {
+                el.btnStep.disabled = true;
+                el.btnStep.style.opacity = "0.5";
+                el.btnStep.style.cursor = "not-allowed";
+            } else {
+                el.btnStep.disabled = false;
+                el.btnStep.style.opacity = "1";
+                el.btnStep.style.cursor = "pointer";
+            }
         }
-    }
 
     function step() {
-        if (n >= 4) return; // Precision limit for JS Number reached
+        if (n >= 6) return;
 
-        const next_a = (a + b) / 2.0;
-        const next_b = Math.sqrt(a * b);
-        const next_t = t_val - p * Math.pow(a - next_a, 2);
-        const next_p = 2.0 * p;
+        // Save previous values for tooltips
+        prev_a = a;
+        prev_b = b;
+        prev_t = t_val;
+        prev_p = p;
+
+        const next_a = (a + b) / 2n;
+        const next_b = bigIntSqrt(a * b);
+        const diff = a - next_a;
+        const next_t = t_val - (p * diff * diff / (SCALE * SCALE));
+        const next_p = 2n * p;
 
         a = next_a;
         b = next_b;
@@ -174,27 +278,31 @@ function createWidget(container) {
 
     function reset() {
         n = 0;
-        a = 1.0;
-        b = 1.0 / Math.sqrt(2);
-        t_val = 0.25;
-        p = 1.0;
+        a = SCALE;
+        b = bigIntSqrt(SCALE * SCALE / 2n);
+        t_val = SCALE / 4n;
+        p = SCALE; // Keep p scaled by SCALE to represent 2^0 * SCALE
+        prev_a = null;
+        prev_b = null;
+        prev_t = null;
+        prev_p = null;
         updateUI();
     }
 
-    el.btnStep.addEventListener('click', step);
-    el.btnReset.addEventListener('click', reset);
+        el.btnStep.addEventListener('click', step);
+        el.btnReset.addEventListener('click', reset);
 
-    updateUI();
-}
+        updateUI();
+    }
 
-function init() {
-    document.querySelectorAll('.hiruwiki[data-module="gauss-legendre"]').forEach(createWidget);
-}
+    function init() {
+        document.querySelectorAll('.hiruwiki[data-module="gauss-legendre"]').forEach(createWidget);
+    }
 
-if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", init);
-} else {
-    init();
-}
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", init);
+    } else {
+        init();
+    }
 
 })();

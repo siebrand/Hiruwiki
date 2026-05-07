@@ -3,6 +3,25 @@
 
 /* ── I18N ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ── */
 var messages = /* I18N_START */ {
+    "ca": {
+        "_name": "Angles",
+        "bisector": "Bisectriu",
+        "bisectorResult": "Bisectriu: $1°",
+        "complement": "Complementari",
+        "explement": "Explementari",
+        "notDefined": "No definit per a aquest angle",
+        "supplement": "Suplementari"
+    },
+    "en": {
+        "_name": "Angles",
+        "bisector": "Bisector",
+        "bisectorResult": "Bisector: $1°",
+        "complement": "Complementary",
+        "explement": "Explementary",
+        "notDefined": "Not defined for this angle",
+        "resultAngle": "$1 angle: $2°",
+        "supplement": "Supplementary"
+    },
     "es": {
         "_name": "Ángulos",
         "bisector": "Bisectriz",
@@ -12,6 +31,16 @@ var messages = /* I18N_START */ {
         "notDefined": "No definido para este ángulo",
         "resultAngle": "Ángulo $1: $2°",
         "supplement": "Suplementario"
+    },
+    "eu": {
+        "_name": "Angeluak",
+        "bisector": "Erdikaria",
+        "bisectorResult": "Erdikaria: $1°",
+        "complement": "Osagarria",
+        "explement": "Konjubatua",
+        "notDefined": "Angelu honentzat definitu gabe",
+        "resultAngle": "Angelu $1: $2°",
+        "supplement": "Betegarria"
     },
     "fr": {
         "_name": "Angles",
@@ -33,16 +62,6 @@ var messages = /* I18N_START */ {
         "resultAngle": "uillinn $1: $2°",
         "supplement": "Forlíontach"
     },
-    "qqq": {
-        "_name": "Name of the Angles module",
-        "bisector": "Button label for the bisector mode",
-        "bisectorResult": "Result text showing the bisector angle. Parameters: $1 = bisector angle in degrees.",
-        "complement": "Button label for the complementary angle mode",
-        "explement": "Button label for the explementary angle mode",
-        "notDefined": "Message shown when the selected angle operation is not defined for the current angle (e.g. complement of an angle ≥ 90°)",
-        "resultAngle": "Result text showing a computed angle. Parameters: $1 = angle type name (e.g. \"Complementary\"), $2 = angle in degrees.",
-        "supplement": "Button label for the supplementary angle mode"
-    },
     "it": {
         "_name": "Angoli",
         "bisector": "Bisettrice",
@@ -53,35 +72,6 @@ var messages = /* I18N_START */ {
         "resultAngle": "$1 angolo: $2°",
         "supplement": "Supplementare"
     },
-    "nl": {
-        "_name": "Hoeken",
-        "bisector": "Bissectrice",
-        "bisectorResult": "Bissectrice: $1°",
-        "complement": "Complementair",
-        "explement": "Explementair",
-        "notDefined": "Niet gedefinieerd voor deze hoek",
-        "resultAngle": "Hoek $1: $2°",
-        "supplement": "Supplementair"
-    },
-    "en": {
-        "_name": "Angles",
-        "bisector": "Bisector",
-        "bisectorResult": "Bisector: $1°",
-        "complement": "Complementary",
-        "explement": "Explementary",
-        "notDefined": "Not defined for this angle",
-        "resultAngle": "$1 angle: $2°",
-        "supplement": "Supplementary"
-    },
-    "ca": {
-        "_name": "Angles",
-        "bisector": "Bisectriu",
-        "bisectorResult": "Bisectriu: $1°",
-        "complement": "Complementari",
-        "explement": "Explementari",
-        "notDefined": "No definit per a aquest angle",
-        "supplement": "Suplementari"
-    },
     "ko": {
         "_name": "각도",
         "bisector": "이등분",
@@ -91,15 +81,15 @@ var messages = /* I18N_START */ {
         "resultAngle": "$1: $2°",
         "supplement": "보각"
     },
-    "eu": {
-        "_name": "Angeluak",
-        "bisector": "Erdikaria",
-        "bisectorResult": "Erdikaria: $1°",
-        "complement": "Osagarria",
-        "explement": "Konjubatua",
-        "notDefined": "Angelu honentzat definitu gabe",
-        "resultAngle": "Angelu $1: $2°",
-        "supplement": "Betegarria"
+    "qqq": {
+        "_name": "Name of the Angles module",
+        "bisector": "Button label for the bisector mode",
+        "bisectorResult": "Result text showing the bisector angle. Parameters: $1 = bisector angle in degrees.",
+        "complement": "Button label for the complementary angle mode",
+        "explement": "Button label for the explementary angle mode",
+        "notDefined": "Message shown when the selected angle operation is not defined for the current angle (e.g. complement of an angle ≥ 90°)",
+        "resultAngle": "Result text showing a computed angle. Parameters: $1 = angle type name (e.g. \"Complementary\"), $2 = angle in degrees.",
+        "supplement": "Button label for the supplementary angle mode"
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -116,6 +106,16 @@ function t(key, vars) {
     }
     return str;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 

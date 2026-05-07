@@ -5,10 +5,21 @@
 
 /* ── I18N ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ── */
 var messages = /* I18N_START */ {
+    "ca": {
+        "reset": "Reinicia"
+    },
+    "en": {
+        "_name": "Triangle Angles",
+        "reset": "Reset"
+    },
     "es": {
         "_name": "Ángulos del triángulo",
         "hint": "Esta es una visualización interactiva. Arrastra los vértices para modificar el triángulo.",
         "reset": "Reiniciar"
+    },
+    "eu": {
+        "_name": "Hirukiaren angeluak",
+        "reset": "Berrezarri"
     },
     "fr": {
         "_name": "Angles du triangle",
@@ -20,33 +31,13 @@ var messages = /* I18N_START */ {
         "hint": "Is léirshamhlú idirghníomhach é seo. Tarraing na buaicphointí chun an triantán a athrú.",
         "reset": "Athshocraigh"
     },
+    "ko": {
+        "reset": "초기화"
+    },
     "qqq": {
         "_name": "Name of the Triangle Angles module",
         "hint": "Footer hint text telling the user to drag the vertices to reshape the triangle",
         "reset": "Button label to reset the triangle"
-    },
-    "nl": {
-        "_name": "Hoeken van een driehoek",
-        "hint": "Dit is een interactieve visualisatie. Sleep de hoekpunten om de driehoek te wijzigen.",
-        "reset": "Reset"
-    },
-    "en": {
-        "_name": "Triangle Angles",
-        "hint": "This is an interactive visualization. Drag the vertices to reshape the triangle.",
-        "reset": "Reset"
-    },
-    "ca": {
-        "hint": "Aquesta és una visualització interactiva. Arrossega els vèrtexs per modificar el triangle.",
-        "reset": "Reinicia"
-    },
-    "ko": {
-        "hint": "이것은 대화형 시각화입니다. 꼭짓점을 드래그하여 삼각형을 바꾸세요.",
-        "reset": "초기화"
-    },
-    "eu": {
-        "_name": "Hirukiaren angeluak",
-        "hint": "Bistaratzaile interaktibo bat da. Arrastatu erpinak hirukia aldatzeko.",
-        "reset": "Berrezarri"
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -63,6 +54,16 @@ function t(key, vars) {
     }
     return str;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 

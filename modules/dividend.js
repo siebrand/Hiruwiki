@@ -25,6 +25,35 @@
 
 /* ── I18N ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ── */
 var messages = /* I18N_START */ {
+    "ca": {
+        "_name": "Dividend i Divisor",
+        "eq_lbl_dividend": "dividend",
+        "eq_lbl_divisor": "divisor",
+        "eq_lbl_quotient": "quocient",
+        "eq_lbl_remainder": "residu",
+        "label_bar": "Vista de barra: cada tros blau =",
+        "label_bar_units": "unitats",
+        "label_choose": "Trieu el dividend i el divisor"
+    },
+    "en": {
+        "_name": "Dividend and Divisor",
+        "eq_lbl_dividend": "dividend",
+        "eq_lbl_divisor": "divisor",
+        "eq_lbl_quotient": "quotient",
+        "eq_lbl_remainder": "remainder",
+        "insight_exact": "<strong>{N} ÷ {D} = {Q}</strong> exactly — no remainder. The bar fills perfectly into <strong>{Q}</strong> equal chunk{s}. This means <strong>{D}</strong> is a divisor of <strong>{N}</strong>.",
+        "insight_less": "<strong>{N}</strong> is smaller than the divisor <strong>{D}</strong>, so it fits <strong>0</strong> whole chunks. The entire value is the remainder. The remainder is always less than the divisor.",
+        "insight_normal": "<strong>{N} ÷ {D} = {Q}</strong> remainder <strong>{R}</strong>. Notice the red piece (<strong>{R}</strong>) is always shorter than one blue chunk (<strong>{D}</strong>). The remainder is always strictly less than the divisor. Check: <strong>{Q} × {D} + {R} = {QD} + {R} = {N}</strong> ✓",
+        "label_bar_description": "Bar view — each blue chunk = {{PLURAL:$1|$1 unit|$1 units}}",
+        "label_choose": "Choose dividend and divisor",
+        "label_dividend": "Dividend (the number being divided)",
+        "label_divisor": "Divisor (the chunk size)",
+        "label_equation": "Division equation",
+        "label_repadd": "Repeated addition",
+        "repadd_exact": "— divides exactly!",
+        "repadd_leftover": "left over",
+        "repadd_less": "{N} is less than {D}, so the quotient is 0 and the whole value is the remainder."
+    },
     "es": {
         "_name": "Dividendo y divisor",
         "eq_lbl_dividend": "dividendo",
@@ -44,6 +73,26 @@ var messages = /* I18N_START */ {
         "repadd_exact": "— se divide exactamente!",
         "repadd_leftover": "sobra",
         "repadd_less": "{N} es menor que {D}, por lo que el cociente es 0 y el valor completo es el resto."
+    },
+    "eu": {
+        "_name": "Zatikizuna eta zatitzailea",
+        "eq_lbl_dividend": "zatikizuna",
+        "eq_lbl_divisor": "zatitzailea",
+        "eq_lbl_quotient": "zatidura",
+        "eq_lbl_remainder": "hondarra",
+        "insight_exact": "<strong>{N} ÷ {D} = {Q}</strong> zenbaki osoa — hondarrik gabe. Barra <strong>{Q}</strong> zati berdinetan betetzen da. Horrek esan nahi du <strong>{D}</strong> <strong>{N}</strong>-ren zatitzailea dela.<!--{s}-->",
+        "insight_less": "<strong>{N}</strong> zatitzailea baino txikiagoa da (<strong>{D}</strong>), beraz ez da zati oso bat sartzen. Balio osoa hondarra da. Hondarra beti zatitzailea baino txikiagoa da.",
+        "insight_normal": "<strong>{N} ÷ {D} = {Q}</strong> hondarra <strong>{R}</strong>. Kontuan hartu pieza gorria (<strong>{R}</strong>) beti zati urdin bat (<strong>{D}</strong>) baino motzagoa dela. Hondarra beti zatitzailea baino txikiagoa da. Egiaztatu: <strong>{Q} × {D} + {R} = {QD} + {R} = {N}</strong> ✓",
+        "label_bar": "Barra ikuspegia — zati urdin bakoitza =",
+        "label_bar_units": "unitate",
+        "label_choose": "Aukeratu zatikizuna eta zatitzailea",
+        "label_dividend": "Zatikizuna (zatitu beharreko zenbakia)",
+        "label_divisor": "Zatitzailea (zatiaren tamaina)",
+        "label_equation": "Zatiketa ekuazioa",
+        "label_repadd": "Batuketa errepikatua",
+        "repadd_exact": "— zehaztasunez zatitzen da!",
+        "repadd_leftover": "hondarra",
+        "repadd_less": "{N} {D} baino txikiagoa da, beraz zatidura 0 da eta balio osoa hondarra da."
     },
     "fr": {
         "_name": "Dividende et diviseur",
@@ -85,26 +134,6 @@ var messages = /* I18N_START */ {
         "repadd_leftover": "fágtha",
         "repadd_less": "Tá {N} níos lú ná {D}, mar sin is é 0 an cóimheas agus is é an luach iomlán an fuíoll."
     },
-    "qqq": {
-        "_name": "Name of the Dividend and Divisor module",
-        "eq_lbl_dividend": "Label for the dividend in the division equation display",
-        "eq_lbl_divisor": "Label for the divisor in the division equation display",
-        "eq_lbl_quotient": "Label for the quotient in the division equation display",
-        "eq_lbl_remainder": "Label for the remainder in the division equation display",
-        "insight_exact": "Insight text shown when division is exact (no remainder). Uses HTML. Parameters: {N} = dividend, {D} = divisor, {Q} = quotient, {s} = plural suffix for \"chunk\" (empty when Q=1, \"s\" otherwise).",
-        "insight_less": "Insight text shown when the dividend is smaller than the divisor. Uses HTML. Parameters: {N} = dividend, {D} = divisor.",
-        "insight_normal": "Insight text shown for normal division with a remainder. Uses HTML. Parameters: {N} = dividend, {D} = divisor, {Q} = quotient, {R} = remainder, {QD} = quotient × divisor.",
-        "label_bar": "Label for the bar visualisation section. Followed by the divisor value and units.",
-        "label_bar_units": "Unit label displayed after the divisor value in the bar view",
-        "label_choose": "Heading for the input section where the user selects dividend and divisor",
-        "label_dividend": "Label for the dividend input slider, with a parenthetical explanation",
-        "label_divisor": "Label for the divisor input slider, with a parenthetical explanation",
-        "label_equation": "Heading for the division equation section",
-        "label_repadd": "Heading for the repeated addition section",
-        "repadd_exact": "Text appended to the repeated addition when division is exact",
-        "repadd_leftover": "Text shown after the leftover value in the repeated addition",
-        "repadd_less": "Text shown in the repeated addition section when the dividend is less than the divisor. Parameters: {N} = dividend, {D} = divisor."
-    },
     "it": {
         "_name": "Dividendo e divisore",
         "eq_lbl_dividend": "dividendo",
@@ -113,55 +142,6 @@ var messages = /* I18N_START */ {
         "eq_lbl_remainder": "resto",
         "label_bar_units": "unità",
         "repadd_exact": "— divide esattamente!"
-    },
-    "nl": {
-        "_name": "Deeltal en deler",
-        "eq_lbl_dividend": "deeltal",
-        "eq_lbl_divisor": "deler",
-        "eq_lbl_quotient": "quotiënt",
-        "eq_lbl_remainder": "rest",
-        "insight_exact": "<strong>{N} ÷ {D} = {Q}</strong> precies — geen rest. De balk past perfect in <strong>{Q}</strong> gelijke stukken{s}. Dit betekent dat <strong>{D}</strong> een deler is van <strong>{N}</strong>.",
-        "insight_less": "<strong>{N}</strong> is kleiner dan de deler <strong>{D}</strong>, dus het past in <strong>0</strong> hele stukken. De hele waarde is de rest. De rest is altijd kleiner dan de deler.",
-        "insight_normal": "<strong>{N} ÷ {D} = {Q}</strong> rest <strong>{R}</strong>. Merk op dat het rode stuk (<strong>{R}</strong>) altijd korter is dan een blauw stuk (<strong>{D}</strong>). De rest is altijd strikt kleiner dan de deler. Controle: <strong>{Q} × {D} + {R} = {QD} + {R} = {N}</strong> ✓",
-        "label_bar": "Balkweergave — elk blauw stuk =",
-        "label_bar_units": "eenheden",
-        "label_choose": "Kies deeltal en deler",
-        "label_dividend": "Deeltal (het getal dat gedeeld wordt)",
-        "label_divisor": "Deler (de grootte van het stuk)",
-        "label_equation": "Deelvergelijking",
-        "label_repadd": "Herhaalde optelling",
-        "repadd_exact": "— is precies deelbaar!",
-        "repadd_leftover": "blijft over",
-        "repadd_less": "{N} is kleiner dan {D}, dus het quotiënt is 0 en de gehele waarde is de rest."
-    },
-    "en": {
-        "_name": "Dividend and Divisor",
-        "eq_lbl_dividend": "dividend",
-        "eq_lbl_divisor": "divisor",
-        "eq_lbl_quotient": "quotient",
-        "eq_lbl_remainder": "remainder",
-        "insight_exact": "<strong>{N} ÷ {D} = {Q}</strong> exactly — no remainder. The bar fills perfectly into <strong>{Q}</strong> equal chunk{s}. This means <strong>{D}</strong> is a divisor of <strong>{N}</strong>.",
-        "insight_less": "<strong>{N}</strong> is smaller than the divisor <strong>{D}</strong>, so it fits <strong>0</strong> whole chunks. The entire value is the remainder. The remainder is always less than the divisor.",
-        "insight_normal": "<strong>{N} ÷ {D} = {Q}</strong> remainder <strong>{R}</strong>. Notice the red piece (<strong>{R}</strong>) is always shorter than one blue chunk (<strong>{D}</strong>). The remainder is always strictly less than the divisor. Check: <strong>{Q} × {D} + {R} = {QD} + {R} = {N}</strong> ✓",
-        "label_bar_description": "Bar view — each blue chunk = {{PLURAL:$1|$1 unit|$1 units}}",
-        "label_choose": "Choose dividend and divisor",
-        "label_dividend": "Dividend (the number being divided)",
-        "label_divisor": "Divisor (the chunk size)",
-        "label_equation": "Division equation",
-        "label_repadd": "Repeated addition",
-        "repadd_exact": "— divides exactly!",
-        "repadd_leftover": "left over",
-        "repadd_less": "{N} is less than {D}, so the quotient is 0 and the whole value is the remainder."
-    },
-    "ca": {
-        "_name": "Dividend i Divisor",
-        "eq_lbl_dividend": "dividend",
-        "eq_lbl_divisor": "divisor",
-        "eq_lbl_quotient": "quocient",
-        "eq_lbl_remainder": "residu",
-        "label_bar": "Vista de barra: cada tros blau =",
-        "label_bar_units": "unitats",
-        "label_choose": "Trieu el dividend i el divisor"
     },
     "ko": {
         "_name": "피제수과 제수",
@@ -176,25 +156,24 @@ var messages = /* I18N_START */ {
         "label_repadd": "반복 덧셈",
         "repadd_exact": "— 정확히 나누어집니다!"
     },
-    "eu": {
-        "_name": "Zatikizuna eta zatitzailea",
-        "eq_lbl_dividend": "zatikizuna",
-        "eq_lbl_divisor": "zatitzailea",
-        "eq_lbl_quotient": "zatidura",
-        "eq_lbl_remainder": "hondarra",
-        "insight_exact": "<strong>{N} ÷ {D} = {Q}</strong> zenbaki osoa — hondarrik gabe. Barra <strong>{Q}</strong> zati berdinetan betetzen da. Horrek esan nahi du <strong>{D}</strong> <strong>{N}</strong>-ren zatitzailea dela.<!--{s}-->",
-        "insight_less": "<strong>{N}</strong> zatitzailea baino txikiagoa da (<strong>{D}</strong>), beraz ez da zati oso bat sartzen. Balio osoa hondarra da. Hondarra beti zatitzailea baino txikiagoa da.",
-        "insight_normal": "<strong>{N} ÷ {D} = {Q}</strong> hondarra <strong>{R}</strong>. Kontuan hartu pieza gorria (<strong>{R}</strong>) beti zati urdin bat (<strong>{D}</strong>) baino motzagoa dela. Hondarra beti zatitzailea baino txikiagoa da. Egiaztatu: <strong>{Q} × {D} + {R} = {QD} + {R} = {N}</strong> ✓",
-        "label_bar": "Barra ikuspegia — zati urdin bakoitza =",
-        "label_bar_units": "unitate",
-        "label_choose": "Aukeratu zatikizuna eta zatitzailea",
-        "label_dividend": "Zatikizuna (zatitu beharreko zenbakia)",
-        "label_divisor": "Zatitzailea (zatiaren tamaina)",
-        "label_equation": "Zatiketa ekuazioa",
-        "label_repadd": "Batuketa errepikatua",
-        "repadd_exact": "— zehaztasunez zatitzen da!",
-        "repadd_leftover": "hondarra",
-        "repadd_less": "{N} {D} baino txikiagoa da, beraz zatidura 0 da eta balio osoa hondarra da."
+    "qqq": {
+        "_name": "Name of the Dividend and Divisor module",
+        "eq_lbl_dividend": "Label for the dividend in the division equation display",
+        "eq_lbl_divisor": "Label for the divisor in the division equation display",
+        "eq_lbl_quotient": "Label for the quotient in the division equation display",
+        "eq_lbl_remainder": "Label for the remainder in the division equation display",
+        "insight_exact": "Insight text shown when division is exact (no remainder). Uses HTML. Parameters: {N} = dividend, {D} = divisor, {Q} = quotient, {s} = plural suffix for \"chunk\" (empty when Q=1, \"s\" otherwise).",
+        "insight_less": "Insight text shown when the dividend is smaller than the divisor. Uses HTML. Parameters: {N} = dividend, {D} = divisor.",
+        "insight_normal": "Insight text shown for normal division with a remainder. Uses HTML. Parameters: {N} = dividend, {D} = divisor, {Q} = quotient, {R} = remainder, {QD} = quotient × divisor.",
+        "label_bar_description": "Label for the bar visualisation section showing the chunk size. Uses PLURAL. Parameters: $1 = the divisor (chunk size).",
+        "label_choose": "Heading for the input section where the user selects dividend and divisor",
+        "label_dividend": "Label for the dividend input slider, with a parenthetical explanation",
+        "label_divisor": "Label for the divisor input slider, with a parenthetical explanation",
+        "label_equation": "Heading for the division equation section",
+        "label_repadd": "Heading for the repeated addition section",
+        "repadd_exact": "Text appended to the repeated addition when division is exact",
+        "repadd_leftover": "Text shown after the leftover value in the repeated addition",
+        "repadd_less": "Text shown in the repeated addition section when the dividend is less than the divisor. Parameters: {N} = dividend, {D} = divisor."
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -211,6 +190,16 @@ function t(key, vars) {
     }
     return str;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 

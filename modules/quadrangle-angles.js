@@ -4,12 +4,32 @@
   
 /* ── I18N ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ── */
 var messages = /* I18N_START */ {
+    "ca": {
+        "interiorAngles": "Angles interiors",
+        "reset": "Reinicia",
+        "sum": "Suma",
+        "total": "Total"
+    },
+    "en": {
+        "_name": "Quadrangle Angles",
+        "interiorAngles": "Interior angles",
+        "reset": "Reset",
+        "sum": "Sum",
+        "total": "Total"
+    },
     "es": {
         "_name": "Ángulos del cuadrilátero",
         "interiorAngles": "Ángulos interiores",
         "reset": "Reiniciar",
         "sum": "Suma",
         "total": "Total"
+    },
+    "eu": {
+        "_name": "Koadrilateroaren angeluak",
+        "interiorAngles": "Barne angeluak",
+        "reset": "Berrezarri",
+        "sum": "Batuketa",
+        "total": "Guztira"
     },
     "fr": {
         "_name": "Angles du quadrilatère",
@@ -25,44 +45,17 @@ var messages = /* I18N_START */ {
         "sum": "Suim",
         "total": "Iomlán"
     },
+    "ko": {
+        "reset": "초기화",
+        "sum": "총합",
+        "total": "합계"
+    },
     "qqq": {
         "_name": "Name of the Quadrangle Angles module",
         "interiorAngles": "Heading for the interior angles section",
         "reset": "Button label to reset the visualisation",
         "sum": "Label for the sum of angles",
         "total": "Label for the total sum of interior angles"
-    },
-    "nl": {
-        "_name": "Hoeken van een vierhoek",
-        "interiorAngles": "Binnenhoeken",
-        "reset": "Reset",
-        "sum": "Som",
-        "total": "Totaal"
-    },
-    "en": {
-        "_name": "Quadrangle Angles",
-        "interiorAngles": "Interior angles",
-        "reset": "Reset",
-        "sum": "Sum",
-        "total": "Total"
-    },
-    "ca": {
-        "interiorAngles": "Angles interiors",
-        "reset": "Reinicia",
-        "sum": "Suma",
-        "total": "Total"
-    },
-    "ko": {
-        "reset": "초기화",
-        "sum": "총합",
-        "total": "합계"
-    },
-    "eu": {
-        "_name": "Koadrilateroaren angeluak",
-        "interiorAngles": "Barne angeluak",
-        "reset": "Berrezarri",
-        "sum": "Batuketa",
-        "total": "Guztira"
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -79,6 +72,16 @@ function t(key, vars) {
     }
     return str;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 

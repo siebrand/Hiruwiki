@@ -6,6 +6,34 @@
   
 /* ── I18N ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ── */
 var messages = /* I18N_START */ {
+    "ca": {
+        "_name": "Endevina l'angle",
+        "difference": "Diferència",
+        "finalScore": "Puntuació final",
+        "hint": "Mou el punt blau per definir l'angle",
+        "nextAngle": "Angle següent &rsaquo;",
+        "points": "Punts:",
+        "pts": "pts",
+        "round": "Ronda:",
+        "roundOver": "Final de la partida",
+        "target": "Objectiu:",
+        "tryAgain": "Torneu-ho a provar",
+        "yourGuess": "La vostra estimació"
+    },
+    "en": {
+        "_name": "Angle Guess",
+        "difference": "Difference:",
+        "finalScore": "Final score",
+        "hint": "Move the blue dot to set the angle",
+        "nextAngle": "Next angle &rsaquo;",
+        "points": "Points:",
+        "pts": "pts",
+        "round": "Round:",
+        "roundOver": "Game over",
+        "target": "Target:",
+        "tryAgain": "Try again",
+        "yourGuess": "Your guess:"
+    },
     "es": {
         "_name": "Adivinar ángulo",
         "difference": "Diferencia:",
@@ -19,6 +47,20 @@ var messages = /* I18N_START */ {
         "target": "Objetivo:",
         "tryAgain": "Intentar de nuevo",
         "yourGuess": "Tu elección:"
+    },
+    "eu": {
+        "_name": "Angelua asmatu",
+        "difference": "Aldea:",
+        "finalScore": "Azken emaitza",
+        "hint": "Puntu urdina mugitu angelua zehazteko",
+        "nextAngle": "Hurrengo angelua &rsaquo;",
+        "points": "Puntuak:",
+        "pts": "pt",
+        "round": "Txanda:",
+        "roundOver": "Jokoa amaitu da",
+        "target": "Helburua:",
+        "tryAgain": "Berriz saiatu",
+        "yourGuess": "Zure aukera:"
     },
     "fr": {
         "_name": "Deviner l’angle",
@@ -48,20 +90,6 @@ var messages = /* I18N_START */ {
         "tryAgain": "Déan iarracht arís",
         "yourGuess": "Do bhuille faoi thuairim:"
     },
-    "qqq": {
-        "_name": "Name of the Angle Guess module",
-        "difference": "Label for the difference between the target angle and the player's guess. Followed by a value in degrees.",
-        "finalScore": "Heading shown when all rounds are complete, above the total score",
-        "hint": "Instruction telling the user how to set their angle guess",
-        "nextAngle": "Button label to proceed to the next angle. Uses &rsaquo; as a right-pointing arrow.",
-        "points": "Label for the points earned. Followed by a numeric value.",
-        "pts": "Abbreviation for \"points\", displayed after a numeric score",
-        "round": "Label for the current round number. Followed by \"X / Y\".",
-        "roundOver": "Heading shown in the overlay when all rounds are finished",
-        "target": "Label for the target angle the player must guess. Followed by a value in degrees.",
-        "tryAgain": "Button label to start a new game after all rounds are complete",
-        "yourGuess": "Label for the angle the player guessed. Followed by a value in degrees."
-    },
     "it": {
         "_name": "Indovina l'angolo",
         "difference": "Differenza:",
@@ -75,48 +103,6 @@ var messages = /* I18N_START */ {
         "tryAgain": "Riprova",
         "yourGuess": "La tua ipotesi:"
     },
-    "nl": {
-        "_name": "Hoek schatten",
-        "difference": "Verschil:",
-        "finalScore": "Eindscore",
-        "hint": "Verplaats de blauwe stip om de hoek in te stellen",
-        "nextAngle": "Volgende hoek &rsaquo;",
-        "points": "Punten:",
-        "pts": "ptn",
-        "round": "Ronde:",
-        "roundOver": "Spel voorbij",
-        "target": "Doel:",
-        "tryAgain": "Probeer opnieuw",
-        "yourGuess": "Uw schatting:"
-    },
-    "en": {
-        "_name": "Angle Guess",
-        "difference": "Difference:",
-        "finalScore": "Final score",
-        "hint": "Move the blue dot to set the angle",
-        "nextAngle": "Next angle &rsaquo;",
-        "points": "Points:",
-        "pts": "pts",
-        "round": "Round:",
-        "roundOver": "Game over",
-        "target": "Target:",
-        "tryAgain": "Try again",
-        "yourGuess": "Your guess:"
-    },
-    "ca": {
-        "_name": "Endevina l'angle",
-        "difference": "Diferència",
-        "finalScore": "Puntuació final",
-        "hint": "Mou el punt blau per definir l'angle",
-        "nextAngle": "Angle següent &rsaquo;",
-        "points": "Punts:",
-        "pts": "pts",
-        "round": "Ronda:",
-        "roundOver": "Final de la partida",
-        "target": "Objectiu:",
-        "tryAgain": "Torneu-ho a provar",
-        "yourGuess": "La vostra estimació"
-    },
     "ko": {
         "_name": "각도 추측",
         "difference": "차이:",
@@ -127,19 +113,19 @@ var messages = /* I18N_START */ {
         "roundOver": "라운드 종료",
         "target": "목표:"
     },
-    "eu": {
-        "_name": "Angelua asmatu",
-        "difference": "Aldea:",
-        "finalScore": "Azken emaitza",
-        "hint": "Puntu urdina mugitu angelua zehazteko",
-        "nextAngle": "Hurrengo angelua &rsaquo;",
-        "points": "Puntuak:",
-        "pts": "pt",
-        "round": "Txanda:",
-        "roundOver": "Jokoa amaitu da",
-        "target": "Helburua:",
-        "tryAgain": "Berriz saiatu",
-        "yourGuess": "Zure aukera:"
+    "qqq": {
+        "_name": "Name of the Angle Guess module",
+        "difference": "Label for the difference between the target angle and the player's guess. Followed by a value in degrees.",
+        "finalScore": "Heading shown when all rounds are complete, above the total score",
+        "hint": "Instruction telling the user how to set their angle guess",
+        "nextAngle": "Button label to proceed to the next angle. Uses &rsaquo; as a right-pointing arrow.",
+        "points": "Label for the points earned. Followed by a numeric value.",
+        "pts": "Abbreviation for \"points\", displayed after a numeric score",
+        "round": "Label for the current round number. Followed by \"X / Y\".",
+        "roundOver": "Heading shown in the overlay when all rounds are finished",
+        "target": "Label for the target angle the player must guess. Followed by a value in degrees.",
+        "tryAgain": "Button label to start a new game after all rounds are complete",
+        "yourGuess": "Label for the angle the player guessed. Followed by a value in degrees."
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -156,6 +142,16 @@ function t(key, vars) {
     }
     return str;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -165,7 +165,13 @@ def main():
     creds = load_credentials()
     
     username = args.username or creds.get("username")
-    password = args.password or creds.get("password")
+    password = args.password
+    if not password:
+        site_key = args.site or creds.get("apiUrl")
+        if site_key == "betanl":
+            password = creds.get("betapassword") or creds.get("password")
+        else:
+            password = creds.get("password")
     token = args.token or creds.get("accessToken")
     api_url = resolve_api_url(args.site or creds.get("apiUrl"))
 

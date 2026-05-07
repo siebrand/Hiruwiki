@@ -7,6 +7,28 @@
     
 /* ── I18N ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ── */
 var messages = /* I18N_START */ {
+    "ca": {
+        "btnReset": "Reinicia",
+        "labelArea": "Àrea",
+        "labelBaseShort": "b",
+        "labelHeightShort": "h",
+        "unitCm": "cm",
+        "unitCm2": "cm²"
+    },
+    "en": {
+        "_name": "Triangle Area",
+        "btnProve": "Prove it",
+        "btnReset": "Reset",
+        "labelArea": "Area",
+        "labelBase": "Base (b)",
+        "labelHeight": "Height (h)",
+        "labelBaseShort": "b",
+        "labelHeightShort": "h",
+        "proofResultPara": "Parallelogram area = b × h = <strong>{b} × {h} = {area} cm²</strong>",
+        "proofResultTri": "→ Triangle = ½ × {area} = <strong>{triArea} cm²</strong>",
+        "unitCm": "cm",
+        "unitCm2": "cm²"
+    },
     "es": {
         "_name": "Área del triángulo",
         "hint": "Esta es una visualización interactiva. Arrastra los vértices para modificar el triángulo.",
@@ -19,6 +41,20 @@ var messages = /* I18N_START */ {
         "labelHeightShort": "h",
         "proofResultPara": "Área del paralelogramo = b × h = <strong>{b} × {h} = {area} cm²</strong>",
         "proofResultTri": "→ Triángulo = ½ × {area} = <strong>{triArea} cm²</strong>",
+        "unitCm": "cm",
+        "unitCm2": "cm²"
+    },
+    "eu": {
+        "_name": "Hirukiaren azalera",
+        "btnProve": "Froga ezazu",
+        "btnReset": "Berrezarri",
+        "labelArea": "Azalera",
+        "labelBase": "Oinarria (b)",
+        "labelHeight": "Altuera (h)",
+        "labelBaseShort": "b",
+        "labelHeightShort": "h",
+        "proofResultPara": "Paralelogramoaren azalera = b × h = <strong>{b} × {h} = {area} cm²</strong>",
+        "proofResultTri": "→ Triangeluarena = ½ × {area} = <strong>{triArea} cm²</strong>",
         "unitCm": "cm",
         "unitCm2": "cm²"
     },
@@ -52,6 +88,19 @@ var messages = /* I18N_START */ {
         "unitCm": "cm",
         "unitCm2": "cm²"
     },
+    "it": {
+        "unitCm": "cm",
+        "unitCm2": "cm²"
+    },
+    "ko": {
+        "_name": "삼각형 면적",
+        "btnReset": "초기화",
+        "labelArea": "면적",
+        "labelBase": "밑변 (b)",
+        "labelHeight": "높이 (h)",
+        "proofResultPara": "평행사변형 넓이 = b × h = <strong>{b} × {h} = {area} cm²</strong>",
+        "proofResultTri": "→ 삼각형 = ½ × {area} = <strong>{triArea} cm²</strong>"
+    },
     "qqq": {
         "_name": "Name of the Triangle Area module",
         "btnProve": "Button label to start the area proof animation",
@@ -65,73 +114,6 @@ var messages = /* I18N_START */ {
         "proofResultTri": "Proof result text for the triangle area (half the parallelogram). Uses HTML. Parameters: {area} = parallelogram area, {triArea} = triangle area.",
         "unitCm": "Unit of length (centimeters)",
         "unitCm2": "Unit of area (square centimeters)"
-    },
-    "it": {
-        "unitCm": "cm",
-        "unitCm2": "cm²"
-    },
-    "nl": {
-        "_name": "Oppervlakte van een driehoek",
-        "hint": "Dit is een interactieve visualisatie. Sleep de hoekpunten om de driehoek te wijzigen.",
-        "btnProve": "Bewijs het",
-        "btnReset": "Reset",
-        "labelArea": "Oppervlakte",
-        "labelBase": "Basis (b)",
-        "labelHeight": "Hoogte (h)",
-        "labelBaseShort": "b",
-        "labelHeightShort": "h",
-        "proofResultPara": "Oppervlakte parallellogram = b × h = <strong>{b} × {h} = {area} cm²</strong>",
-        "proofResultTri": "→ Driehoek = ½ × {area} = <strong>{triArea} cm²</strong>",
-        "unitCm": "cm",
-        "unitCm2": "cm²"
-    },
-    "en": {
-        "_name": "Triangle Area",
-        "hint": "This is an interactive visualization. Drag the vertices to reshape the triangle.",
-        "btnProve": "Prove it",
-        "btnReset": "Reset",
-        "labelArea": "Area",
-        "labelBase": "Base (b)",
-        "labelHeight": "Height (h)",
-        "labelBaseShort": "b",
-        "labelHeightShort": "h",
-        "proofResultPara": "Parallelogram area = b × h = <strong>{b} × {h} = {area} cm²</strong>",
-        "proofResultTri": "→ Triangle = ½ × {area} = <strong>{triArea} cm²</strong>",
-        "unitCm": "cm",
-        "unitCm2": "cm²"
-    },
-    "ca": {
-        "btnReset": "Reinicia",
-        "labelArea": "Àrea",
-        "labelBaseShort": "b",
-        "labelHeightShort": "h",
-        "unitCm": "cm",
-        "unitCm2": "cm²"
-    },
-    "ko": {
-        "_name": "삼각형 면적",
-        "hint": "이것은 대화형 시각화입니다. 꼭짓점을 드래그하여 삼각형을 바꾸세요.",
-        "btnReset": "초기화",
-        "labelArea": "면적",
-        "labelBase": "밑변 (b)",
-        "labelHeight": "높이 (h)",
-        "proofResultPara": "평행사변형 넓이 = b × h = <strong>{b} × {h} = {area} cm²</strong>",
-        "proofResultTri": "→ 삼각형 = ½ × {area} = <strong>{triArea} cm²</strong>"
-    },
-    "eu": {
-        "_name": "Hirukiaren azalera",
-        "hint": "Bistaratzaile interaktibo bat da. Arrastatu erpinak hirukia aldatzeko.",
-        "btnProve": "Froga ezazu",
-        "btnReset": "Berrezarri",
-        "labelArea": "Azalera",
-        "labelBase": "Oinarria (b)",
-        "labelHeight": "Altuera (h)",
-        "labelBaseShort": "b",
-        "labelHeightShort": "h",
-        "proofResultPara": "Paralelogramoaren azalera = b × h = <strong>{b} × {h} = {area} cm²</strong>",
-        "proofResultTri": "→ Triangeluarena = ½ × {area} = <strong>{triArea} cm²</strong>",
-        "unitCm": "cm",
-        "unitCm2": "cm²"
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -148,6 +130,16 @@ function t(key, vars) {
     }
     return str;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 

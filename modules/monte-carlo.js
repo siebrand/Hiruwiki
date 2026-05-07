@@ -5,6 +5,21 @@
     
 /* ── I18N ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ── */
 var messages = /* I18N_START */ {
+    "ca": {
+        "totalPoints": "Punts totals"
+    },
+    "en": {
+        "_name": "Monte Carlo Pi",
+        "addPoints": "+ Add points",
+        "approxPi": "Approximation of π",
+        "insideCircle": "Inside circle",
+        "insideRed": "Inside (red)",
+        "outsideBlue": "Outside (blue)",
+        "outsideCircle": "Outside circle",
+        "pointsPerStep": "Points per step",
+        "reset": "↺ Reset",
+        "totalPoints": "Total points"
+    },
     "es": {
         "_name": "Monte Carlo Pi",
         "addPoints": "+ Añadir puntos",
@@ -16,6 +31,18 @@ var messages = /* I18N_START */ {
         "pointsPerStep": "Puntos por paso",
         "reset": "↺ Reiniciar",
         "totalPoints": "Total de puntos"
+    },
+    "eu": {
+        "_name": "Monte Carlo Pi",
+        "addPoints": "+ Puntuak gehitu",
+        "approxPi": "π-ren hurbilketa",
+        "insideCircle": "Zirkuluaren barruan",
+        "insideRed": "Barruan (gorria)",
+        "outsideBlue": "Kanpoan (urdina)",
+        "outsideCircle": "Zirkuluaren kanpoan",
+        "pointsPerStep": "Urrats bakoitzeko",
+        "reset": "↺ Berrezarri",
+        "totalPoints": "Puntu kopurua"
     },
     "fr": {
         "_name": "Monte Carlo Pi",
@@ -41,6 +68,14 @@ var messages = /* I18N_START */ {
         "reset": "↺ Athshocraigh",
         "totalPoints": "Iomlán na bpointí"
     },
+    "it": {
+        "approxPi": "Approssimazione di π"
+    },
+    "ko": {
+        "approxPi": "π의 근사값",
+        "reset": "↺ 초기화",
+        "totalPoints": "총점"
+    },
     "qqq": {
         "_name": "Name of the Monte Carlo Pi module",
         "addPoints": "Button label to add more random points to the simulation",
@@ -52,53 +87,6 @@ var messages = /* I18N_START */ {
         "pointsPerStep": "Label for the number of points added per step",
         "reset": "Button label to reset the simulation",
         "totalPoints": "Label for the total number of points"
-    },
-    "it": {
-        "approxPi": "Approssimazione di π"
-    },
-    "nl": {
-        "_name": "Monte Carlo Pi",
-        "addPoints": "+ Punten toevoegen",
-        "approxPi": "Benadering van π",
-        "insideCircle": "Binnen de cirkel",
-        "insideRed": "Binnen (rood)",
-        "outsideBlue": "Buiten (blauw)",
-        "outsideCircle": "Buiten de cirkel",
-        "pointsPerStep": "Punten per stap",
-        "reset": "↺ Reset",
-        "totalPoints": "Totaal aantal punten"
-    },
-    "en": {
-        "_name": "Monte Carlo Pi",
-        "addPoints": "+ Add points",
-        "approxPi": "Approximation of π",
-        "insideCircle": "Inside circle",
-        "insideRed": "Inside (red)",
-        "outsideBlue": "Outside (blue)",
-        "outsideCircle": "Outside circle",
-        "pointsPerStep": "Points per step",
-        "reset": "↺ Reset",
-        "totalPoints": "Total points"
-    },
-    "ca": {
-        "totalPoints": "Punts totals"
-    },
-    "ko": {
-        "approxPi": "π의 근사값",
-        "reset": "↺ 초기화",
-        "totalPoints": "총점"
-    },
-    "eu": {
-        "_name": "Monte Carlo Pi",
-        "addPoints": "+ Puntuak gehitu",
-        "approxPi": "π-ren hurbilketa",
-        "insideCircle": "Zirkuluaren barruan",
-        "insideRed": "Barruan (gorria)",
-        "outsideBlue": "Kanpoan (urdina)",
-        "outsideCircle": "Zirkuluaren kanpoan",
-        "pointsPerStep": "Urrats bakoitzeko",
-        "reset": "↺ Berrezarri",
-        "totalPoints": "Puntu kopurua"
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -115,6 +103,16 @@ function t(key, vars) {
     }
     return str;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 

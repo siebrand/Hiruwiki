@@ -25,6 +25,27 @@
 
 /* ── I18N ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ── */
 var messages = /* I18N_START */ {
+    "ca": {
+        "gcd_formula_eq": "=",
+        "lcm_formula_eq": "="
+    },
+    "en": {
+        "_name": "Prime Factors",
+        "gcd_formula_eq": "=",
+        "gcd_none": "(none — coprime)",
+        "gcd_title": "GCD — keep only shared factors",
+        "insight_coprime": "<strong>{A}</strong> and <strong>{B}</strong> are coprime — they share no prime factors, so GCD = 1. The LCM is simply their product. Always true: <strong>{A} × {B} = {AB}</strong> = GCD × LCM = <strong>1 × {L} = {L}</strong>.",
+        "insight_shared_many": "<strong>{A}</strong> and <strong>{B}</strong> share the primes <strong>{primes}</strong>. The GCD takes only the green shared blocks. The LCM takes all blocks — green shared, blue extras from A, red extras from B — with no prime counted twice. Always true: <strong>{A} × {B} = {AB}</strong> = GCD × LCM = <strong>{G} × {L} = {GL}</strong>.",
+        "insight_shared_one": "<strong>{A}</strong> and <strong>{B}</strong> share the prime <strong>{primes}</strong>. The GCD takes only the green shared blocks. The LCM takes all blocks — green shared, blue extras from A, red extras from B — with no prime counted twice. Always true: <strong>{A} × {B} = {AB}</strong> = GCD × LCM = <strong>{G} × {L} = {GL}</strong>.",
+        "label_choose": "Choose two numbers",
+        "label_factors": "Prime factors",
+        "label_how": "How GCD and LCM are built",
+        "lcm_formula_eq": "=",
+        "lcm_title": "LCM — union of all factors",
+        "legend_onlyA": "unique to A",
+        "legend_onlyB": "unique to B",
+        "legend_shared": "shared (used for GCD)"
+    },
     "es": {
         "_name": "Factores primos",
         "gcd_formula_eq": "=",
@@ -41,6 +62,23 @@ var messages = /* I18N_START */ {
         "legend_onlyA": "solo de A",
         "legend_onlyB": "solo de B",
         "legend_shared": "compartidos (usados para MCD)"
+    },
+    "eu": {
+        "_name": "Faktore lehenak",
+        "gcd_formula_eq": "=",
+        "gcd_none": "(bat ere ez — elkarrekiko lehenak)",
+        "gcd_title": "ZKH — partekatutako faktoreak bakarrik gordetzen dira",
+        "insight_coprime": "<strong>{A}</strong> eta <strong>{B}</strong> elkarrekiko lehenak dira — ez dute zenbaki lehenik partekatzen, beraz ZKH = 1. MKT haien biderkadura da, zuzenean. Beti egia: <strong>{A} × {B} = {AB}</strong> = <strong>ZKH × MKT</strong> = <strong>1 × {L} = {L}</strong>.",
+        "insight_shared_many": "<strong>{A}</strong> eta <strong>{B}</strong>-k <strong>{primes}</strong> zenbaki lehenak partekatzen dituzte. ZKHk bloke berde partekatuak bakarrik hartzen ditu. MKTk bloke guztiak hartzen ditu — berde partekatuak, A-ren soberakinak urdin, B-renak gorri — zenbaki lehenik birritan zenbatu gabe. Beti egia: <strong>{A} × {B} = {AB}</strong> = <strong>ZKH × MKT</strong> = <strong>{G} × {L} = {GL}</strong>.",
+        "insight_shared_one": "<strong>{A}</strong> eta <strong>{B}</strong>-k <strong>{primes}</strong> zenbaki lehena partekatzen dute. ZKHk bloke berde partekatuak bakarrik hartzen ditu. MKTk bloke guztiak hartzen ditu — berde partekatuak, A-ren soberakin urdinak, B-renak gorri — zenbaki lehenik birritan zenbatu gabe. Beti egia: <strong>{A} × {B} = {AB}</strong> = <strong>ZKH × MKT</strong> = <strong>{G} × {L} = {GL}</strong>.",
+        "label_choose": "Aukeratu bi zenbaki",
+        "label_factors": "Zenbaki lehenen faktorizazioa",
+        "label_how": "Nola eraikitzen dira ZKH eta MKT",
+        "lcm_formula_eq": "=",
+        "lcm_title": "MKT — faktore guztien biderketa",
+        "legend_onlyA": "Ari bakarrik dagokiona",
+        "legend_onlyB": "Bri bakarrik dagokiona",
+        "legend_shared": "partekatua (ZKHrako erabilia)"
     },
     "fr": {
         "_name": "Facteurs premiers",
@@ -76,6 +114,19 @@ var messages = /* I18N_START */ {
         "legend_onlyB": "uathúil do B",
         "legend_shared": "roinnte (a úsáidtear le haghaidh GCD)"
     },
+    "it": {
+        "gcd_formula_eq": "=",
+        "gcd_none": "(nessuno — coprimo)",
+        "label_choose": "Scegli due numeri",
+        "lcm_formula_eq": "=",
+        "lcm_title": "mcm — unione di tutti i fattori"
+    },
+    "ko": {
+        "_name": "소인수",
+        "gcd_formula_eq": "=",
+        "gcd_none": "(없음 — 서로소)",
+        "label_factors": "소인수"
+    },
     "qqq": {
         "_name": "Name of the Prime Factors module",
         "gcd_formula_eq": "Equals sign used in the GCD formula display",
@@ -92,74 +143,6 @@ var messages = /* I18N_START */ {
         "legend_onlyA": "Legend label for factor blocks unique to number A",
         "legend_onlyB": "Legend label for factor blocks unique to number B",
         "legend_shared": "Legend label for factor blocks shared between A and B (used for GCD)"
-    },
-    "it": {
-        "gcd_formula_eq": "=",
-        "gcd_none": "(nessuno — coprimo)",
-        "label_choose": "Scegli due numeri",
-        "lcm_formula_eq": "=",
-        "lcm_title": "mcm — unione di tutti i fattori"
-    },
-    "nl": {
-        "_name": "Priemfactoren",
-        "gcd_formula_eq": "=",
-        "gcd_none": "(geen — onderling ondeelbaar)",
-        "gcd_title": "GGD — behoud alleen gedeelde factoren",
-        "insight_coprime": "<strong>{A}</strong> en <strong>{B}</strong> zijn onderling ondeelbaar — ze delen geen priemfactoren, dus GGD = 1. Het KGV is simpelweg hun product. Altijd waar: <strong>{A} × {B} = {AB}</strong> = GGD × KGV = <strong>1 × {L} = {L}</strong>.",
-        "insight_shared_many": "<strong>{A}</strong> en <strong>{B}</strong> delen de priemfactoren <strong>{primes}</strong>. De GGD neemt alleen de groene gedeelde blokken. Het KGV neemt alle blokken — groen gedeeld, blauw extra van A, rood extra van B — zonder een priemfactor twee keer te tellen. Altijd waar: <strong>{A} × {B} = {AB}</strong> = GGD × KGV = <strong>{G} × {L} = {GL}</strong>.",
-        "insight_shared_one": "<strong>{A}</strong> en <strong>{B}</strong> delen de priemfactor <strong>{primes}</strong>. De GGD neemt alleen de groene gedeelde blokken. Het KGV neemt alle blokken — groen gedeeld, blauw extra van A, rood extra van B — zonder een priemfactor twee keer te tellen. Altijd waar: <strong>{A} × {B} = {AB}</strong> = GGD × KGV = <strong>{G} × {L} = {GL}</strong>.",
-        "label_choose": "Kies twee getallen",
-        "label_factors": "Priemfactoren",
-        "label_how": "Hoe GGD en KGV worden opgebouwd",
-        "lcm_formula_eq": "=",
-        "lcm_title": "KGV — unie van alle factoren",
-        "legend_onlyA": "alleen van A",
-        "legend_onlyB": "alleen van B",
-        "legend_shared": "gedeeld (voor GGD)"
-    },
-    "en": {
-        "_name": "Prime Factors",
-        "gcd_formula_eq": "=",
-        "gcd_none": "(none — coprime)",
-        "gcd_title": "GCD — keep only shared factors",
-        "insight_coprime": "<strong>{A}</strong> and <strong>{B}</strong> are coprime — they share no prime factors, so GCD = 1. The LCM is simply their product. Always true: <strong>{A} × {B} = {AB}</strong> = GCD × LCM = <strong>1 × {L} = {L}</strong>.",
-        "insight_shared_many": "<strong>{A}</strong> and <strong>{B}</strong> share the primes <strong>{primes}</strong>. The GCD takes only the green shared blocks. The LCM takes all blocks — green shared, blue extras from A, red extras from B — with no prime counted twice. Always true: <strong>{A} × {B} = {AB}</strong> = GCD × LCM = <strong>{G} × {L} = {GL}</strong>.",
-        "insight_shared_one": "<strong>{A}</strong> and <strong>{B}</strong> share the prime <strong>{primes}</strong>. The GCD takes only the green shared blocks. The LCM takes all blocks — green shared, blue extras from A, red extras from B — with no prime counted twice. Always true: <strong>{A} × {B} = {AB}</strong> = GCD × LCM = <strong>{G} × {L} = {GL}</strong>.",
-        "label_choose": "Choose two numbers",
-        "label_factors": "Prime factors",
-        "label_how": "How GCD and LCM are built",
-        "lcm_formula_eq": "=",
-        "lcm_title": "LCM — union of all factors",
-        "legend_onlyA": "unique to A",
-        "legend_onlyB": "unique to B",
-        "legend_shared": "shared (used for GCD)"
-    },
-    "ca": {
-        "gcd_formula_eq": "=",
-        "lcm_formula_eq": "="
-    },
-    "ko": {
-        "_name": "소인수",
-        "gcd_formula_eq": "=",
-        "gcd_none": "(없음 — 서로소)",
-        "label_factors": "소인수"
-    },
-    "eu": {
-        "_name": "Faktore lehenak",
-        "gcd_formula_eq": "=",
-        "gcd_none": "(bat ere ez — elkarrekiko lehenak)",
-        "gcd_title": "ZKH — partekatutako faktoreak bakarrik gordetzen dira",
-        "insight_coprime": "<strong>{A}</strong> eta <strong>{B}</strong> elkarrekiko lehenak dira — ez dute zenbaki lehenik partekatzen, beraz ZKH = 1. MKT haien biderkadura da, zuzenean. Beti egia: <strong>{A} × {B} = {AB}</strong> = <strong>ZKH × MKT</strong> = <strong>1 × {L} = {L}</strong>.",
-        "insight_shared_many": "<strong>{A}</strong> eta <strong>{B}</strong>-k <strong>{primes}</strong> zenbaki lehenak partekatzen dituzte. ZKHk bloke berde partekatuak bakarrik hartzen ditu. MKTk bloke guztiak hartzen ditu — berde partekatuak, A-ren soberakinak urdin, B-renak gorri — zenbaki lehenik birritan zenbatu gabe. Beti egia: <strong>{A} × {B} = {AB}</strong> = <strong>ZKH × MKT</strong> = <strong>{G} × {L} = {GL}</strong>.",
-        "insight_shared_one": "<strong>{A}</strong> eta <strong>{B}</strong>-k <strong>{primes}</strong> zenbaki lehena partekatzen dute. ZKHk bloke berde partekatuak bakarrik hartzen ditu. MKTk bloke guztiak hartzen ditu — berde partekatuak, A-ren soberakin urdinak, B-renak gorri — zenbaki lehenik birritan zenbatu gabe. Beti egia: <strong>{A} × {B} = {AB}</strong> = <strong>ZKH × MKT</strong> = <strong>{G} × {L} = {GL}</strong>.",
-        "label_choose": "Aukeratu bi zenbaki",
-        "label_factors": "Zenbaki lehenen faktorizazioa",
-        "label_how": "Nola eraikitzen dira ZKH eta MKT",
-        "lcm_formula_eq": "=",
-        "lcm_title": "MKT — faktore guztien biderketa",
-        "legend_onlyA": "Ari bakarrik dagokiona",
-        "legend_onlyB": "Bri bakarrik dagokiona",
-        "legend_shared": "partekatua (ZKHrako erabilia)"
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -176,6 +159,16 @@ function t(key, vars) {
     }
     return str;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 

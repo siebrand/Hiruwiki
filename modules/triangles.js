@@ -3,6 +3,35 @@
 
 /* ── I18N ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ── */
 var messages = /* I18N_START */ {
+    "ca": {
+        "angles": "Angles",
+        "right": "recte",
+        "unitCm": "cm",
+        "unitCm2": "cm²"
+    },
+    "en": {
+        "_name": "Triangles",
+        "acute": "acute",
+        "angles": "Angles",
+        "area": "Area",
+        "byAngles": "By angles:",
+        "bySides": "By sides:",
+        "classification": "Classification",
+        "equilateral": "equilateral",
+        "isosceles": "isosceles",
+        "measurements": "Measurements",
+        "obtuse": "obtuse",
+        "perimeter": "Perimeter",
+        "reset": "Reset ↺",
+        "right": "right",
+        "scalene": "scalene",
+        "sides": "Sides",
+        "sideA": "side a (BC)",
+        "sideB": "side b (CA)",
+        "sideC": "side c (AB)",
+        "unitCm": "cm",
+        "unitCm2": "cm²"
+    },
     "es": {
         "_name": "Triángulos",
         "acute": "acutángulo",
@@ -26,6 +55,52 @@ var messages = /* I18N_START */ {
         "unitCm": "cm",
         "unitCm2": "cm²",
         "hint": "Esta es una visualización interactiva. Arrastra los vértices para modificar el triángulo."
+    },
+    "eu": {
+        "_name": "Hirukiak",
+        "acute": "zorrotza",
+        "angles": "Angeluak",
+        "area": "Azalera",
+        "byAngles": "Angeluen arabera:",
+        "bySides": "Aldeen arabera:",
+        "classification": "Sailkapena",
+        "equilateral": "aldekidea",
+        "isosceles": "isoszelea",
+        "measurements": "Neurriak",
+        "obtuse": "kamutsa",
+        "perimeter": "Perimetroa",
+        "reset": "Berrezarri ↺",
+        "right": "zuzena",
+        "scalene": "eskaleno",
+        "sides": "Aldeak",
+        "sideA": "a aldea (BC)",
+        "sideB": "b aldea (CA)",
+        "sideC": "c aldea (AB)",
+        "unitCm": "cm",
+        "unitCm2": "cm²"
+    },
+    "eu": {
+        "_name": "Hirukiak",
+        "acute": "zorrotza",
+        "angles": "Angeluak",
+        "area": "Azalera",
+        "byAngles": "Angeluen arabera:",
+        "bySides": "Aldeen arabera:",
+        "classification": "Sailkapena",
+        "equilateral": "aldekidea",
+        "isosceles": "isoszelea",
+        "measurements": "Neurriak",
+        "obtuse": "kamutsa",
+        "perimeter": "Perimetroa",
+        "reset": "Berrezarri ↺",
+        "right": "zuzena",
+        "scalene": "eskaleno",
+        "sides": "Aldeak",
+        "sideA": "a aldea (BC)",
+        "sideB": "b aldea (CA)",
+        "sideC": "c aldea (AB)",
+        "unitCm": "cm",
+        "unitCm2": "cm²"
     },
     "fr": {
         "_name": "Triangles",
@@ -75,30 +150,6 @@ var messages = /* I18N_START */ {
         "unitCm2": "cm²",
         "hint": "Is léirshamhlú idirghníomhach é seo. Tarraing na buaicphointí chun an triantán a athrú."
     },
-    "qqq": {
-        "_name": "Name of the Triangles module",
-        "acute": "Classification name for an acute triangle (all angles < 90°)",
-        "angles": "Section heading for the angles display",
-        "area": "Label for the triangle area",
-        "byAngles": "Label prefix for the angle-based classification. Followed by the classification name.",
-        "bySides": "Label prefix for the side-based classification. Followed by the classification name.",
-        "classification": "Section heading for the triangle classification",
-        "equilateral": "Classification name for an equilateral triangle (all sides equal)",
-        "isosceles": "Classification name for an isosceles triangle (two sides equal)",
-        "measurements": "Section heading for the measurements display",
-        "obtuse": "Classification name for an obtuse triangle (one angle > 90°)",
-        "perimeter": "Label for the triangle perimeter",
-        "reset": "Button label to reset the triangle",
-        "right": "Classification name for a right triangle (one angle = 90°)",
-        "scalene": "Classification name for a scalene triangle (no sides equal)",
-        "sides": "Section heading for the sides display",
-        "sideA": "Label for side a (the one connecting vertices B and C)",
-        "sideB": "Label for side b (the one connecting vertices C and A)",
-        "sideC": "Label for side c (the one connecting vertices A and B)",
-        "unitCm": "Unit of length (centimeters)",
-        "unitCm2": "Unit of area (square centimeters)",
-        "hint": "Footer hint text telling the user to drag the vertices to reshape the triangle"
-    },
     "it": {
         "angles": "Angoli",
         "area": "Area",
@@ -110,61 +161,6 @@ var messages = /* I18N_START */ {
         "unitCm": "cm",
         "unitCm2": "cm²",
         "hint": "Questa è una visualizzazione interattiva. Trascina i vertici per modificare il triangolo."
-    },
-    "nl": {
-        "_name": "Driehoeken",
-        "acute": "scherphoekig",
-        "angles": "Hoeken",
-        "area": "Oppervlakte",
-        "byAngles": "Op basis van hoeken:",
-        "bySides": "Op basis van zijden:",
-        "classification": "Classificatie",
-        "equilateral": "gelijkzijdig",
-        "isosceles": "gelijkbenig",
-        "measurements": "Afmetingen",
-        "obtuse": "stomphoekig",
-        "perimeter": "Omtrek",
-        "reset": "↺ Reset",
-        "right": "rechthoekig",
-        "scalene": "ongelijkzijdig",
-        "sides": "Zijden",
-        "sideA": "zijde a (BC)",
-        "sideB": "zijde b (CA)",
-        "sideC": "zijde c (AB)",
-        "unitCm": "cm",
-        "unitCm2": "cm²",
-        "hint": "Dit is een interactieve visualisatie. Sleep de hoekpunten om de driehoek te wijzigen."
-    },
-    "en": {
-        "_name": "Triangles",
-        "acute": "acute",
-        "angles": "Angles",
-        "area": "Area",
-        "byAngles": "By angles:",
-        "bySides": "By sides:",
-        "classification": "Classification",
-        "equilateral": "equilateral",
-        "isosceles": "isosceles",
-        "measurements": "Measurements",
-        "obtuse": "obtuse",
-        "perimeter": "Perimeter",
-        "reset": "Reset ↺",
-        "right": "right",
-        "scalene": "scalene",
-        "sides": "Sides",
-        "sideA": "side a (BC)",
-        "sideB": "side b (CA)",
-        "sideC": "side c (AB)",
-        "unitCm": "cm",
-        "unitCm2": "cm²",
-        "hint": "This is an interactive visualization. Drag the vertices to reshape the triangle."
-    },
-    "ca": {
-        "angles": "Angles",
-        "right": "recte",
-        "unitCm": "cm",
-        "unitCm2": "cm²",
-        "hint": "Aquesta és una visualització interactiva. Arrossega els vèrtexs per modificar el triangle."
     },
     "ko": {
         "_name": "삼각형",
@@ -187,29 +183,28 @@ var messages = /* I18N_START */ {
         "unitCm2": "cm²",
         "hint": "이것은 대화형 시각화입니다. 꼭짓점을 드래그하여 삼각형을 바꾸세요."
     },
-    "eu": {
-        "_name": "Hirukiak",
-        "acute": "zorrotza",
-        "angles": "Angeluak",
-        "area": "Azalera",
-        "byAngles": "Angeluen arabera:",
-        "bySides": "Aldeen arabera:",
-        "classification": "Sailkapena",
-        "equilateral": "aldekidea",
-        "isosceles": "isoszelea",
-        "measurements": "Neurriak",
-        "obtuse": "kamutsa",
-        "perimeter": "Perimetroa",
-        "reset": "Berrezarri ↺",
-        "right": "zuzena",
-        "scalene": "eskaleno",
-        "sides": "Aldeak",
-        "sideA": "a aldea (BC)",
-        "sideB": "b aldea (CA)",
-        "sideC": "c aldea (AB)",
-        "unitCm": "cm",
-        "unitCm2": "cm²",
-        "hint": "Bistaratzaile interaktibo bat da. Arrastatu erpinak hirukia aldatzeko."
+    "qqq": {
+        "_name": "Name of the Triangles module",
+        "acute": "Classification name for an acute triangle (all angles < 90°)",
+        "angles": "Section heading for the angles display",
+        "area": "Label for the triangle area",
+        "byAngles": "Label prefix for the angle-based classification. Followed by the classification name.",
+        "bySides": "Label prefix for the side-based classification. Followed by the classification name.",
+        "classification": "Section heading for the triangle classification",
+        "equilateral": "Classification name for an equilateral triangle (all sides equal)",
+        "isosceles": "Classification name for an isosceles triangle (two sides equal)",
+        "measurements": "Section heading for the measurements display",
+        "obtuse": "Classification name for an obtuse triangle (one angle > 90°)",
+        "perimeter": "Label for the triangle perimeter",
+        "reset": "Button label to reset the triangle",
+        "right": "Classification name for a right triangle (one angle = 90°)",
+        "scalene": "Classification name for a scalene triangle (no sides equal)",
+        "sides": "Section heading for the sides display",
+        "sideA": "Label for side a (the one connecting vertices B and C)",
+        "sideB": "Label for side b (the one connecting vertices C and A)",
+        "sideC": "Label for side c (the one connecting vertices A and B)",
+        "unitCm": "Unit of length (centimeters)",
+        "unitCm2": "Unit of area (square centimeters)"
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -226,6 +221,19 @@ function t(key, vars) {
     }
     return str;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 function initTriangleWidget(container) {

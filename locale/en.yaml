@@ -369,3 +369,18 @@ en:
     movePrompt: Move ★ to:<br>({targetX}, {targetY})
     pointLabel: 'Point:'
     titleExplore: Explore Coordinate System
+  gauss-legendre:
+    _name: Gauss-Legendre Algorithm
+    iteration: Iteration
+    variable_a: Arithmetic Mean (a)
+    variable_b: Geometric Mean (b)
+    variable_t: Error Term (t)
+    variable_p: Power Term (p)
+    step: Next Step
+    reset: Reset
+    pi_approx: Approximation of π
+    correct_digits: "{{PLURAL:$1|$1 correct digit|$1 correct digits}}"
+    precision_note: "Converges quadratically: digits double each step."
+    calculation_heading: How it's calculated
+    formula_label: Formula
+    update_rules_heading: Update Rules

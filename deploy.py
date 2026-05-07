@@ -234,7 +234,12 @@ def main():
     
     username = args.username or creds.get("username")
 
-    password = args.password or creds.get("password")
+    password = args.password
+    if not password:
+        if site_key == "betanl":
+            password = creds.get("betapassword") or creds.get("password")
+        else:
+            password = creds.get("password")
     token = args.token or creds.get("accessToken")
     api_url = resolve_api_url(args.site or creds.get("apiUrl"))
 
@@ -291,7 +296,16 @@ def main():
         
         try:
             with open(local_path, "r", encoding="utf-8") as f:
-                local_content = ONWIKI_HEADER + f.read()
+                content = f.read()
+                
+            # Dynamic URL replacement for the core gadget file when deploying to non-mediawiki sites
+            if local_path == CORE_FILE and site_key != "mediawiki":
+                # Convert api.php URL to index.php URL
+                base_index_url = api_url.replace("api.php", "index.php")
+                content = content.replace("https://www.mediawiki.org/w/index.php", base_index_url)
+                print(f"  Applied dynamic URL replacement for {local_path}")
+
+            local_content = ONWIKI_HEADER + content
         except Exception as e:
             print(f"  Error reading {local_path}: {e}")
             continue

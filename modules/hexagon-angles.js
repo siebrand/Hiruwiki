@@ -4,6 +4,17 @@
   
 /* ── I18N ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ── */
 var messages = /* I18N_START */ {
+    "ca": {
+        "total": "Total"
+    },
+    "en": {
+        "2quads": "2 quadrilaterals × 360°",
+        "4triangles": "4 triangles × 180°",
+        "_name": "Hexagon Angles",
+        "interiorAngles": "Interior angles",
+        "reset": "↺ Reset",
+        "total": "Total"
+    },
     "es": {
         "2quads": "2 cuadriláteros × 360°",
         "4triangles": "4 triángulos × 180°",
@@ -11,6 +22,14 @@ var messages = /* I18N_START */ {
         "interiorAngles": "Ángulos interiores",
         "reset": "↺ Reiniciar",
         "total": "Total"
+    },
+    "eu": {
+        "2quads": "2 lauki × 360°",
+        "4triangles": "4 triangelu × 180°",
+        "_name": "Hexagonoaren angeluak",
+        "interiorAngles": "Barne angeluak",
+        "reset": "↺ Berrezarri",
+        "total": "Guztira"
     },
     "fr": {
         "2quads": "2 quadrilatères × 360°",
@@ -28,6 +47,9 @@ var messages = /* I18N_START */ {
         "reset": "↺ Athshocraigh",
         "total": "Iomlán"
     },
+    "ko": {
+        "reset": "↺ 초기화"
+    },
     "qqq": {
         "2quads": "Decomposition label showing 2 quadrilaterals × 360°",
         "4triangles": "Decomposition label showing 4 triangles × 180°",
@@ -35,36 +57,6 @@ var messages = /* I18N_START */ {
         "interiorAngles": "Heading for the interior angles section",
         "reset": "Button label to reset the visualisation",
         "total": "Label for the total sum of interior angles"
-    },
-    "nl": {
-        "2quads": "2 vierhoeken × 360°",
-        "4triangles": "4 driehoeken × 180°",
-        "_name": "Hoeken van een zeshoek",
-        "interiorAngles": "Binnenhoeken",
-        "reset": "↺ Reset",
-        "total": "Totaal"
-    },
-    "en": {
-        "2quads": "2 quadrilaterals × 360°",
-        "4triangles": "4 triangles × 180°",
-        "_name": "Hexagon Angles",
-        "interiorAngles": "Interior angles",
-        "reset": "↺ Reset",
-        "total": "Total"
-    },
-    "ca": {
-        "total": "Total"
-    },
-    "ko": {
-        "reset": "↺ 초기화"
-    },
-    "eu": {
-        "2quads": "2 lauki × 360°",
-        "4triangles": "4 triangelu × 180°",
-        "_name": "Hexagonoaren angeluak",
-        "interiorAngles": "Barne angeluak",
-        "reset": "↺ Berrezarri",
-        "total": "Guztira"
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -81,6 +73,16 @@ function t(key, vars) {
     }
     return str;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
