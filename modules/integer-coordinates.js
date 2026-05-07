@@ -151,6 +151,7 @@ function t(key, vars) {
 
 
 
+
 document.querySelectorAll( '.hiruwiki[data-module="integer-coordinates"]' ).forEach( function ( host ) {
 
     host.innerHTML = [

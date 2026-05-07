@@ -237,6 +237,7 @@ function t(key, vars) {
 
 
 
+
 function initTriangleWidget(container) {
 
 var boardWidth  = 20;
@@ -394,16 +395,14 @@ container.appendChild(layout);
 var footer = document.createElement("div");
 footer.className = "hw-footer";
 
-var fImg = document.createElement("img");
-fImg.src    = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Hiruwiki.svg/32px-Hiruwiki.svg.png";
-fImg.alt    = "Hiruwiki";
-fImg.width  = 22;
-fImg.height = 22;
+var fLogo = document.createElement("div");
+fLogo.className = "hw-footer-icon";
+fLogo.innerHTML = hiruwiki.getLogoSvg(22);
 
 var fText = document.createElement("span");
 fText.innerHTML = t('hint');
 
-footer.appendChild(fImg);
+footer.appendChild(fLogo);
 footer.appendChild(fText);
 container.appendChild(footer);
 
