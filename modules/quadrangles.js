@@ -1,812 +1,812 @@
 (function () {
 
 
-/* ── I18N ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ── */
-var messages = /* I18N_START */ {
+  /* ── I18N ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ── */
+  var messages = /* I18N_START */ {
     "ca": {
-        "_name": "Quadrilàters",
-        "areaDiagHalf": "Fórmula: A = (d₁ × d₂) / 2\nd₁ (AC) = $1 cm\nd₂ (BD) = $2 cm\n= ($1 × $2) / 2",
-        "areaGaussHeader": "Fórmula de Gauss:\nA = ½ |Σ(xᵢ·yᵢ₊₁ − xᵢ₊₁·yᵢ)|",
-        "areaGaussSum": "Σ = $1\nA = ½ × |$1|",
-        "areaGaussTerm": "(x$1·y$2 − x$2·y$1) = $3",
-        "headingArea": "Àrea",
-        "labelDiag1": "d₁ (AC)",
-        "labelDiag2": "d₂ (BD)",
-        "labelPerimeter": "Perímetre",
-        "presetParallelogram": "Paral·lelogram",
-        "presetRectangle": "Rectangle",
-        "presetSquare": "Quadrat",
-        "presetTrapezoid": "Trapezoide",
-        "shapeParallelogram": "paral·lelogram",
-        "shapeRectangle": "rectangle",
-        "shapeRhombus": "rombe",
-        "shapeSquare": "quadrat",
-        "shapeTrapezoid": "trapezoide",
-        "unitCm": "cm",
-        "unitCm2": "cm²"
+      "_name": "Quadrilàters",
+      "areaDiagHalf": "Fórmula: A = (d₁ × d₂) / 2\nd₁ (AC) = $1 cm\nd₂ (BD) = $2 cm\n= ($1 × $2) / 2",
+      "areaGaussHeader": "Fórmula de Gauss:\nA = ½ |Σ(xᵢ·yᵢ₊₁ − xᵢ₊₁·yᵢ)|",
+      "areaGaussSum": "Σ = $1\nA = ½ × |$1|",
+      "areaGaussTerm": "(x$1·y$2 − x$2·y$1) = $3",
+      "headingArea": "Àrea",
+      "labelDiag1": "d₁ (AC)",
+      "labelDiag2": "d₂ (BD)",
+      "labelPerimeter": "Perímetre",
+      "presetParallelogram": "Paral·lelogram",
+      "presetRectangle": "Rectangle",
+      "presetSquare": "Quadrat",
+      "presetTrapezoid": "Trapezoide",
+      "shapeParallelogram": "paral·lelogram",
+      "shapeRectangle": "rectangle",
+      "shapeRhombus": "rombe",
+      "shapeSquare": "quadrat",
+      "shapeTrapezoid": "trapezoide",
+      "unitCm": "cm",
+      "unitCm2": "cm²"
     },
     "en": {
-        "_name": "Quadrilaterals",
-        "areaDiagHalf": "Formula: A = (d₁ × d₂) / 2\nd₁ (AC) = $1 cm\nd₂ (BD) = $2 cm\n= ($1 × $2) / 2",
-        "areaGaussHeader": "Gauss formula (shoelace):\nA = ½ |Σ(xᵢ·yᵢ₊₁ − xᵢ₊₁·yᵢ)|",
-        "areaGaussSum": "Σ = $1\nA = ½ × |$1|",
-        "areaGaussTerm": "(x$1·y$2 − x$2·y$1) = $3",
-        "areaParallelogram": "Formula: A = base × height\nbase (AB) = $1 cm\nheight = $2 cm\n= $1 × $2",
-        "areaRectangle": "Formula: A = width × height\n= $1 × $2",
-        "areaSquare": "Formula: A = side²\n= $1²",
-        "areaTrapezoid": "Formula: A = (b₁ + b₂) / 2 × h\nb₁ (AB) = $1 cm\nb₂ (CD) = $2 cm\nheight = $3 cm\n= ($1 + $2) / 2 × $3",
-        "headingArea": "Area",
-        "headingClassification": "Classification",
-        "headingSides": "Sides and diagonals",
-        "labelDiag1": "d₁ (AC)",
-        "labelDiag2": "d₂ (BD)",
-        "labelPerimeter": "Perimeter",
-        "presetKite": "Kite",
-        "presetParallelogram": "Parallelogram",
-        "presetRectangle": "Rectangle",
-        "presetSquare": "Square",
-        "presetTrapezoid": "Trapezoid",
-        "shapeCrossed": "crossed quadrilateral",
-        "shapeGeneral": "general quadrilateral",
-        "shapeKite": "kite",
-        "shapeParallelogram": "parallelogram",
-        "shapeRectangle": "rectangle",
-        "shapeRhombus": "rhombus",
-        "shapeSquare": "square",
-        "shapeTrapezoid": "trapezoid",
-        "unitCm": "cm",
-        "unitCm2": "cm²",
-        "hint": "Drag vertices to classify the quadrilateral"
+      "_name": "Quadrilaterals",
+      "areaDiagHalf": "Formula: A = (d₁ × d₂) / 2\nd₁ (AC) = $1 cm\nd₂ (BD) = $2 cm\n= ($1 × $2) / 2",
+      "areaGaussHeader": "Gauss formula (shoelace):\nA = ½ |Σ(xᵢ·yᵢ₊₁ − xᵢ₊₁·yᵢ)|",
+      "areaGaussSum": "Σ = $1\nA = ½ × |$1|",
+      "areaGaussTerm": "(x$1·y$2 − x$2·y$1) = $3",
+      "areaParallelogram": "Formula: A = base × height\nbase (AB) = $1 cm\nheight = $2 cm\n= $1 × $2",
+      "areaRectangle": "Formula: A = width × height\n= $1 × $2",
+      "areaSquare": "Formula: A = side²\n= $1²",
+      "areaTrapezoid": "Formula: A = (b₁ + b₂) / 2 × h\nb₁ (AB) = $1 cm\nb₂ (CD) = $2 cm\nheight = $3 cm\n= ($1 + $2) / 2 × $3",
+      "headingArea": "Area",
+      "headingClassification": "Classification",
+      "headingSides": "Sides and diagonals",
+      "labelDiag1": "d₁ (AC)",
+      "labelDiag2": "d₂ (BD)",
+      "labelPerimeter": "Perimeter",
+      "presetKite": "Kite",
+      "presetParallelogram": "Parallelogram",
+      "presetRectangle": "Rectangle",
+      "presetSquare": "Square",
+      "presetTrapezoid": "Trapezoid",
+      "shapeCrossed": "crossed quadrilateral",
+      "shapeGeneral": "general quadrilateral",
+      "shapeKite": "kite",
+      "shapeParallelogram": "parallelogram",
+      "shapeRectangle": "rectangle",
+      "shapeRhombus": "rhombus",
+      "shapeSquare": "square",
+      "shapeTrapezoid": "trapezoid",
+      "unitCm": "cm",
+      "unitCm2": "cm²",
+      "hint": "Drag vertices to classify the quadrilateral"
     },
     "es": {
-        "_name": "Cuadriláteros",
-        "areaDiagHalf": "Fórmula: A = (d₁ × d₂) / 2\nd₁ (AC) = $1 cm\nd₂ (BD) = $2 cm\n= ($1 × $2) / 2",
-        "areaGaussHeader": "Fórmula de Gauss (shoelace):\nA = ½ |Σ(xᵢ·yᵢ₊₁ − xᵢ₊₁·yᵢ)|",
-        "areaGaussSum": "Σ = $1\nA = ½ × |$1|",
-        "areaGaussTerm": "(x$1·y$2 − x$2·y$1) = $3",
-        "areaParallelogram": "Fórmula: A = base × altura\nbase (AB) = $1 cm\naltura = $2 cm\n= $1 × $2",
-        "areaRectangle": "Fórmula: A = base × altura\n= $1 × $2",
-        "areaSquare": "Fórmula: A = lado²\n= $1²",
-        "areaTrapezoid": "Fórmula: A = (b₁ + b₂) / 2 × h\nb₁ (AB) = $1 cm\nb₂ (CD) = $2 cm\naltura = $3 cm\n= ($1 + $2) / 2 × $3",
-        "headingArea": "Área",
-        "headingClassification": "Clasificación",
-        "headingSides": "Lados y diagonales",
-        "labelDiag1": "d₁ (AC)",
-        "labelDiag2": "d₂ (BD)",
-        "labelPerimeter": "Perímetro",
-        "presetKite": "Cometa",
-        "presetParallelogram": "Paralelogramo",
-        "presetRectangle": "Rectángulo",
-        "presetSquare": "Cuadrado",
-        "presetTrapezoid": "Trapecio",
-        "shapeCrossed": "complejo",
-        "shapeGeneral": "trapezoide",
-        "shapeKite": "cometa",
-        "shapeParallelogram": "paralelogramo",
-        "shapeRectangle": "rectángulo",
-        "shapeRhombus": "rombo",
-        "shapeSquare": "cuadrado",
-        "shapeTrapezoid": "trapecio",
-        "unitCm": "cm",
-        "unitCm2": "cm²"
+      "_name": "Cuadriláteros",
+      "areaDiagHalf": "Fórmula: A = (d₁ × d₂) / 2\nd₁ (AC) = $1 cm\nd₂ (BD) = $2 cm\n= ($1 × $2) / 2",
+      "areaGaussHeader": "Fórmula de Gauss (shoelace):\nA = ½ |Σ(xᵢ·yᵢ₊₁ − xᵢ₊₁·yᵢ)|",
+      "areaGaussSum": "Σ = $1\nA = ½ × |$1|",
+      "areaGaussTerm": "(x$1·y$2 − x$2·y$1) = $3",
+      "areaParallelogram": "Fórmula: A = base × altura\nbase (AB) = $1 cm\naltura = $2 cm\n= $1 × $2",
+      "areaRectangle": "Fórmula: A = base × altura\n= $1 × $2",
+      "areaSquare": "Fórmula: A = lado²\n= $1²",
+      "areaTrapezoid": "Fórmula: A = (b₁ + b₂) / 2 × h\nb₁ (AB) = $1 cm\nb₂ (CD) = $2 cm\naltura = $3 cm\n= ($1 + $2) / 2 × $3",
+      "headingArea": "Área",
+      "headingClassification": "Clasificación",
+      "headingSides": "Lados y diagonales",
+      "labelDiag1": "d₁ (AC)",
+      "labelDiag2": "d₂ (BD)",
+      "labelPerimeter": "Perímetro",
+      "presetKite": "Cometa",
+      "presetParallelogram": "Paralelogramo",
+      "presetRectangle": "Rectángulo",
+      "presetSquare": "Cuadrado",
+      "presetTrapezoid": "Trapecio",
+      "shapeCrossed": "complejo",
+      "shapeGeneral": "trapezoide",
+      "shapeKite": "cometa",
+      "shapeParallelogram": "paralelogramo",
+      "shapeRectangle": "rectángulo",
+      "shapeRhombus": "rombo",
+      "shapeSquare": "cuadrado",
+      "shapeTrapezoid": "trapecio",
+      "unitCm": "cm",
+      "unitCm2": "cm²"
     },
     "eu": {
-        "_name": "Koadrilateroak",
-        "areaDiagHalf": "Formula: A = (d₁ × d₂) / 2\nd₁ (AC) = $1 cm\nd₂ (BD) = $2 cm\n= ($1 × $2) / 2",
-        "areaGaussHeader": "Gaussen formula:\nA = ½ |Σ(xᵢ·yᵢ₊₁ − xᵢ₊₁·yᵢ)|",
-        "areaGaussSum": "Σ = $1\nA = ½ × |$1|",
-        "areaGaussTerm": "(x$1·y$2 − x$2·y$1) = $3",
-        "areaParallelogram": "Formula: A = oinarria × altuera\noinarria (AB) = $1 cm\naltuera = $2 cm\n= $1 × $2",
-        "areaRectangle": "Formula: A = zabalera × altuera\n= $1 × $2",
-        "areaSquare": "Formula: A = aldea²\n= $1²",
-        "areaTrapezoid": "Formula: A = (b₁ + b₂) / 2 × h\nb₁ (AB) = $1 cm\nb₂ (CD) = $2 cm\naltuera = $3 cm\n= ($1 + $2) / 2 × $3",
-        "headingArea": "Azalera",
-        "headingClassification": "Sailkapena",
-        "headingSides": "Aldeak eta diagonalak",
-        "labelDiag1": "d₁ (AC)",
-        "labelDiag2": "d₂ (BD)",
-        "labelPerimeter": "Perimetroa",
-        "presetKite": "Kometa",
-        "presetParallelogram": "Paralelogramoa",
-        "presetRectangle": "Laukizuzena",
-        "presetSquare": "Karratua",
-        "presetTrapezoid": "Trapezioa",
-        "shapeCrossed": "konplexua",
-        "shapeGeneral": "trapezoidea",
-        "shapeKite": "kometa",
-        "shapeParallelogram": "paralelogramoa",
-        "shapeRectangle": "laukizuzena",
-        "shapeRhombus": "erronboa",
-        "shapeSquare": "karratua",
-        "shapeTrapezoid": "trapezioa",
-        "unitCm": "cm",
-        "unitCm2": "cm²"
+      "_name": "Koadrilateroak",
+      "areaDiagHalf": "Formula: A = (d₁ × d₂) / 2\nd₁ (AC) = $1 cm\nd₂ (BD) = $2 cm\n= ($1 × $2) / 2",
+      "areaGaussHeader": "Gaussen formula:\nA = ½ |Σ(xᵢ·yᵢ₊₁ − xᵢ₊₁·yᵢ)|",
+      "areaGaussSum": "Σ = $1\nA = ½ × |$1|",
+      "areaGaussTerm": "(x$1·y$2 − x$2·y$1) = $3",
+      "areaParallelogram": "Formula: A = oinarria × altuera\noinarria (AB) = $1 cm\naltuera = $2 cm\n= $1 × $2",
+      "areaRectangle": "Formula: A = zabalera × altuera\n= $1 × $2",
+      "areaSquare": "Formula: A = aldea²\n= $1²",
+      "areaTrapezoid": "Formula: A = (b₁ + b₂) / 2 × h\nb₁ (AB) = $1 cm\nb₂ (CD) = $2 cm\naltuera = $3 cm\n= ($1 + $2) / 2 × $3",
+      "headingArea": "Azalera",
+      "headingClassification": "Sailkapena",
+      "headingSides": "Aldeak eta diagonalak",
+      "labelDiag1": "d₁ (AC)",
+      "labelDiag2": "d₂ (BD)",
+      "labelPerimeter": "Perimetroa",
+      "presetKite": "Kometa",
+      "presetParallelogram": "Paralelogramoa",
+      "presetRectangle": "Laukizuzena",
+      "presetSquare": "Karratua",
+      "presetTrapezoid": "Trapezioa",
+      "shapeCrossed": "konplexua",
+      "shapeGeneral": "trapezoidea",
+      "shapeKite": "kometa",
+      "shapeParallelogram": "paralelogramoa",
+      "shapeRectangle": "laukizuzena",
+      "shapeRhombus": "erronboa",
+      "shapeSquare": "karratua",
+      "shapeTrapezoid": "trapezioa",
+      "unitCm": "cm",
+      "unitCm2": "cm²"
     },
     "fr": {
-        "_name": "Quadrilatères",
-        "areaDiagHalf": "Formule : A = (d₁ × d₂) / 2\nd₁ (AC) = $1 cm\nd₂ (BD) = $2 cm\n= ($1 × $2) / 2",
-        "areaGaussHeader": "Formule de Gauss (shoelace) :\nA = ½ |Σ(xᵢ·yᵢ₊₁ − xᵢ₊₁·yᵢ)|",
-        "areaGaussSum": "Σ = $1\nA = ½ × |$1|",
-        "areaGaussTerm": "(x$1·y$2 − x$2·y$1) = $3",
-        "areaParallelogram": "Formule : A = base × hauteur\nbase (AB) = $1 cm\nhauteur = $2 cm\n= $1 × $2",
-        "areaRectangle": "Formule : A = largeur × hauteur\n= $1 × $2",
-        "areaSquare": "Formule : A = côté²\n= $1²",
-        "areaTrapezoid": "Formule : A = (b₁ + b₂) / 2 × h\nb₁ (AB) = $1 cm\nb₂ (CD) = $2 cm\nhauteur = $3 cm\n= ($1 + $2) / 2 × $3",
-        "headingArea": "Aire",
-        "headingClassification": "Classification",
-        "headingSides": "Côtés et diagonales",
-        "labelDiag1": "d₁ (AC)",
-        "labelDiag2": "d₂ (BD)",
-        "labelPerimeter": "Périmètre",
-        "presetKite": "Cerf-volant",
-        "presetParallelogram": "Parallélogramme",
-        "presetRectangle": "Rectangle",
-        "presetSquare": "Carré",
-        "presetTrapezoid": "Trapèze",
-        "shapeCrossed": "quadrilatère croisé",
-        "shapeGeneral": "quadrilatère quelconque",
-        "shapeKite": "cerf-volant",
-        "shapeParallelogram": "parallélogramme",
-        "shapeRectangle": "rectangle",
-        "shapeRhombus": "losange",
-        "shapeSquare": "carré",
-        "shapeTrapezoid": "trapèze",
-        "unitCm": "cm",
-        "unitCm2": "cm²"
+      "_name": "Quadrilatères",
+      "areaDiagHalf": "Formule : A = (d₁ × d₂) / 2\nd₁ (AC) = $1 cm\nd₂ (BD) = $2 cm\n= ($1 × $2) / 2",
+      "areaGaussHeader": "Formule de Gauss (shoelace) :\nA = ½ |Σ(xᵢ·yᵢ₊₁ − xᵢ₊₁·yᵢ)|",
+      "areaGaussSum": "Σ = $1\nA = ½ × |$1|",
+      "areaGaussTerm": "(x$1·y$2 − x$2·y$1) = $3",
+      "areaParallelogram": "Formule : A = base × hauteur\nbase (AB) = $1 cm\nhauteur = $2 cm\n= $1 × $2",
+      "areaRectangle": "Formule : A = largeur × hauteur\n= $1 × $2",
+      "areaSquare": "Formule : A = côté²\n= $1²",
+      "areaTrapezoid": "Formule : A = (b₁ + b₂) / 2 × h\nb₁ (AB) = $1 cm\nb₂ (CD) = $2 cm\nhauteur = $3 cm\n= ($1 + $2) / 2 × $3",
+      "headingArea": "Aire",
+      "headingClassification": "Classification",
+      "headingSides": "Côtés et diagonales",
+      "labelDiag1": "d₁ (AC)",
+      "labelDiag2": "d₂ (BD)",
+      "labelPerimeter": "Périmètre",
+      "presetKite": "Cerf-volant",
+      "presetParallelogram": "Parallélogramme",
+      "presetRectangle": "Rectangle",
+      "presetSquare": "Carré",
+      "presetTrapezoid": "Trapèze",
+      "shapeCrossed": "quadrilatère croisé",
+      "shapeGeneral": "quadrilatère quelconque",
+      "shapeKite": "cerf-volant",
+      "shapeParallelogram": "parallélogramme",
+      "shapeRectangle": "rectangle",
+      "shapeRhombus": "losange",
+      "shapeSquare": "carré",
+      "shapeTrapezoid": "trapèze",
+      "unitCm": "cm",
+      "unitCm2": "cm²"
     },
     "ga": {
-        "_name": "Ceathairshleasáin",
-        "areaDiagHalf": "Foirmle: A = (d₁ × d₂) / 2\nd₁ (AC) = $1 cm\nd₂ (BD) = $2 cm\n= ($1 × $2) / 2",
-        "areaGaussHeader": "Foirmle Gauss (shoelace):\nA = ½ |Σ(xᵢ·yᵢ₊₁ − xᵢ₊₁·yᵢ)|",
-        "areaGaussSum": "Σ = $1\nA = ½ × |$1|",
-        "areaGaussTerm": "(x$1·y$2 − x$2·y$1) = $3",
-        "areaParallelogram": "Foirmle: A = bonn × airde\nbonn (AB) = $1 cm\nairde = $2 cm\n= $1 × $2",
-        "areaRectangle": "Foirmle: A = leithead × airde\n= $1 × $2",
-        "areaSquare": "Foirmle: A = taobh² = $1²",
-        "areaTrapezoid": "Foirmle: A = (b₁ + b₂) / 2 × h\nb₁ (AB) = $1 cm\nb₂ (CD) = $2 cm\nairde = $3 cm\n= ($1 + $2) / 2 × $3",
-        "headingArea": "Limistéar",
-        "headingClassification": "Aicmiú",
-        "headingSides": "Taobhanna agus trasnáin",
-        "labelDiag1": "d₁ (AC)",
-        "labelDiag2": "d₂ (BD)",
-        "labelPerimeter": "Imlíne",
-        "presetKite": "Eitleog",
-        "presetParallelogram": "Paraileagram",
-        "presetRectangle": "Dronuilleog",
-        "presetSquare": "Cearnóg",
-        "presetTrapezoid": "Traipéisóideach",
-        "shapeCrossed": "ceathairshleasán trasnaithe",
-        "shapeGeneral": "ceathairshleasán ginearálta",
-        "shapeKite": "eitleog",
-        "shapeParallelogram": "comhthreomharán",
-        "shapeRectangle": "dronuilleog",
-        "shapeRhombus": "rombas",
-        "shapeSquare": "cearnóg",
-        "shapeTrapezoid": "traipéisóideach",
-        "unitCm": "cm",
-        "unitCm2": "cm²"
+      "_name": "Ceathairshleasáin",
+      "areaDiagHalf": "Foirmle: A = (d₁ × d₂) / 2\nd₁ (AC) = $1 cm\nd₂ (BD) = $2 cm\n= ($1 × $2) / 2",
+      "areaGaussHeader": "Foirmle Gauss (shoelace):\nA = ½ |Σ(xᵢ·yᵢ₊₁ − xᵢ₊₁·yᵢ)|",
+      "areaGaussSum": "Σ = $1\nA = ½ × |$1|",
+      "areaGaussTerm": "(x$1·y$2 − x$2·y$1) = $3",
+      "areaParallelogram": "Foirmle: A = bonn × airde\nbonn (AB) = $1 cm\nairde = $2 cm\n= $1 × $2",
+      "areaRectangle": "Foirmle: A = leithead × airde\n= $1 × $2",
+      "areaSquare": "Foirmle: A = taobh² = $1²",
+      "areaTrapezoid": "Foirmle: A = (b₁ + b₂) / 2 × h\nb₁ (AB) = $1 cm\nb₂ (CD) = $2 cm\nairde = $3 cm\n= ($1 + $2) / 2 × $3",
+      "headingArea": "Limistéar",
+      "headingClassification": "Aicmiú",
+      "headingSides": "Taobhanna agus trasnáin",
+      "labelDiag1": "d₁ (AC)",
+      "labelDiag2": "d₂ (BD)",
+      "labelPerimeter": "Imlíne",
+      "presetKite": "Eitleog",
+      "presetParallelogram": "Paraileagram",
+      "presetRectangle": "Dronuilleog",
+      "presetSquare": "Cearnóg",
+      "presetTrapezoid": "Traipéisóideach",
+      "shapeCrossed": "ceathairshleasán trasnaithe",
+      "shapeGeneral": "ceathairshleasán ginearálta",
+      "shapeKite": "eitleog",
+      "shapeParallelogram": "comhthreomharán",
+      "shapeRectangle": "dronuilleog",
+      "shapeRhombus": "rombas",
+      "shapeSquare": "cearnóg",
+      "shapeTrapezoid": "traipéisóideach",
+      "unitCm": "cm",
+      "unitCm2": "cm²"
     },
     "it": {
-        "headingSides": "Lati e diagonali",
-        "presetRectangle": "Rettangolo",
-        "shapeRectangle": "rettangolo"
+      "headingSides": "Lati e diagonali",
+      "presetRectangle": "Rettangolo",
+      "shapeRectangle": "rettangolo"
     },
     "ko": {
-        "_name": "사각형",
-        "areaDiagHalf": "공식: A = (d₁ × d₂) / 2\nd₁ (AC) = $1 cm\nd₂ (BD) = $2 cm\n= ($1 × $2) / 2",
-        "areaGaussHeader": "가우스 공식 (신발끈):\nA = ½ |Σ(xᵢ·yᵢ₊₁ − xᵢ₊₁·yᵢ)|",
-        "areaGaussSum": "Σ = $1\nA = ½ × |$1|",
-        "areaGaussTerm": "(x$1·y$2 − x$2·y$1) = $3",
-        "areaParallelogram": "공식: A = 밑변 × 높이\n밑변 (AB) = $1 cm\n높이 = $2 cm\n= $1 × $2",
-        "areaRectangle": "공식: A = 너비 × 높이\n= $1 × $2",
-        "areaSquare": "공식: A = 한 변²\n= $1²",
-        "areaTrapezoid": "공식: A = (b₁ + b₂) / 2 × h\nb₁ (AB) = $1 cm\nb₂ (CD) = $2 cm\n높이 = $3 cm\n= ($1 + $2) / 2 × $3",
-        "headingArea": "면적",
-        "headingClassification": "분류",
-        "labelDiag1": "d₁ (AC)",
-        "labelDiag2": "d₂ (BD)",
-        "labelPerimeter": "둘레",
-        "presetKite": "연꼴",
-        "presetParallelogram": "평행사변형",
-        "presetRectangle": "직사각형",
-        "presetSquare": "정사각형",
-        "presetTrapezoid": "사다리꼴",
-        "shapeKite": "연꼴",
-        "shapeParallelogram": "평행사변형",
-        "shapeRectangle": "직사각형",
-        "shapeRhombus": "마름모",
-        "shapeSquare": "정사각형",
-        "shapeTrapezoid": "사다리꼴",
-        "unitCm": "cm",
-        "unitCm2": "cm²"
+      "_name": "사각형",
+      "areaDiagHalf": "공식: A = (d₁ × d₂) / 2\nd₁ (AC) = $1 cm\nd₂ (BD) = $2 cm\n= ($1 × $2) / 2",
+      "areaGaussHeader": "가우스 공식 (신발끈):\nA = ½ |Σ(xᵢ·yᵢ₊₁ − xᵢ₊₁·yᵢ)|",
+      "areaGaussSum": "Σ = $1\nA = ½ × |$1|",
+      "areaGaussTerm": "(x$1·y$2 − x$2·y$1) = $3",
+      "areaParallelogram": "공식: A = 밑변 × 높이\n밑변 (AB) = $1 cm\n높이 = $2 cm\n= $1 × $2",
+      "areaRectangle": "공식: A = 너비 × 높이\n= $1 × $2",
+      "areaSquare": "공식: A = 한 변²\n= $1²",
+      "areaTrapezoid": "공식: A = (b₁ + b₂) / 2 × h\nb₁ (AB) = $1 cm\nb₂ (CD) = $2 cm\n높이 = $3 cm\n= ($1 + $2) / 2 × $3",
+      "headingArea": "면적",
+      "headingClassification": "분류",
+      "labelDiag1": "d₁ (AC)",
+      "labelDiag2": "d₂ (BD)",
+      "labelPerimeter": "둘레",
+      "presetKite": "연꼴",
+      "presetParallelogram": "평행사변형",
+      "presetRectangle": "직사각형",
+      "presetSquare": "정사각형",
+      "presetTrapezoid": "사다리꼴",
+      "shapeKite": "연꼴",
+      "shapeParallelogram": "평행사변형",
+      "shapeRectangle": "직사각형",
+      "shapeRhombus": "마름모",
+      "shapeSquare": "정사각형",
+      "shapeTrapezoid": "사다리꼴",
+      "unitCm": "cm",
+      "unitCm2": "cm²"
     },
     "nl": {
-        "_name": "Vierhoeken",
-        "areaDiagHalf": "Formule: A = (d₁ × d₂) / 2\nd₁ (AC) = $1 cm\nd₂ (BD) = $2 cm\n= ($1 × $2) / 2",
-        "areaGaussHeader": "Gauss formule (shoelace):\nA = ½ |Σ(xᵢ·yᵢ₊₁ − xᵢ₊₁·yᵢ)|",
-        "areaGaussSum": "Σ = $1\nA = ½ × |$1|",
-        "areaGaussTerm": "(x$1·y$2 − x$2·y$1) = $3",
-        "areaParallelogram": "Formule: A = basis × hoogte\nbasis (AB) = $1 cm\nhoogte = $2 cm\n= $1 × $2",
-        "areaRectangle": "Formule: A = breedte × hoogte\n= $1 × $2",
-        "areaSquare": "Formule: A = zijde²\n= $1²",
-        "areaTrapezoid": "Formule: A = (b₁ + b₂) / 2 × h\nb₁ (AB) = $1 cm\nb₂ (CD) = $2 cm\nhoogte = $3 cm\n= ($1 + $2) / 2 × $3",
-        "headingArea": "Oppervlakte",
-        "headingClassification": "Classificatie",
-        "headingSides": "Zijden en diagonalen",
-        "labelDiag1": "d₁ (AC)",
-        "labelDiag2": "d₂ (BD)",
-        "labelPerimeter": "Omtrek",
-        "presetKite": "Vlieger",
-        "presetParallelogram": "Parallellogram",
-        "presetRectangle": "Rechthoek",
-        "presetSquare": "Vierkant",
-        "presetTrapezoid": "Trapezium",
-        "shapeCrossed": "gekruiste vierhoek",
-        "shapeGeneral": "algemene vierhoek",
-        "shapeKite": "vlieger",
-        "shapeParallelogram": "parallellogram",
-        "shapeRectangle": "rechthoek",
-        "shapeRhombus": "ruit",
-        "shapeSquare": "vierkant",
-        "shapeTrapezoid": "trapezium",
-        "unitCm": "cm",
-        "unitCm2": "cm²"
+      "_name": "Vierhoeken",
+      "areaDiagHalf": "Formule: A = (d₁ × d₂) / 2\nd₁ (AC) = $1 cm\nd₂ (BD) = $2 cm\n= ($1 × $2) / 2",
+      "areaGaussHeader": "Gauss formule (shoelace):\nA = ½ |Σ(xᵢ·yᵢ₊₁ − xᵢ₊₁·yᵢ)|",
+      "areaGaussSum": "Σ = $1\nA = ½ × |$1|",
+      "areaGaussTerm": "(x$1·y$2 − x$2·y$1) = $3",
+      "areaParallelogram": "Formule: A = basis × hoogte\nbasis (AB) = $1 cm\nhoogte = $2 cm\n= $1 × $2",
+      "areaRectangle": "Formule: A = breedte × hoogte\n= $1 × $2",
+      "areaSquare": "Formule: A = zijde²\n= $1²",
+      "areaTrapezoid": "Formule: A = (b₁ + b₂) / 2 × h\nb₁ (AB) = $1 cm\nb₂ (CD) = $2 cm\nhoogte = $3 cm\n= ($1 + $2) / 2 × $3",
+      "headingArea": "Oppervlakte",
+      "headingClassification": "Classificatie",
+      "headingSides": "Zijden en diagonalen",
+      "labelDiag1": "d₁ (AC)",
+      "labelDiag2": "d₂ (BD)",
+      "labelPerimeter": "Omtrek",
+      "presetKite": "Vlieger",
+      "presetParallelogram": "Parallellogram",
+      "presetRectangle": "Rechthoek",
+      "presetSquare": "Vierkant",
+      "presetTrapezoid": "Trapezium",
+      "shapeCrossed": "gekruiste vierhoek",
+      "shapeGeneral": "algemene vierhoek",
+      "shapeKite": "vlieger",
+      "shapeParallelogram": "parallellogram",
+      "shapeRectangle": "rechthoek",
+      "shapeRhombus": "ruit",
+      "shapeSquare": "vierkant",
+      "shapeTrapezoid": "trapezium",
+      "unitCm": "cm",
+      "unitCm2": "cm²"
     },
     "qqq": {
-        "_name": "Name of the Quadrilaterals module",
-        "areaDiagHalf": "Area formula for a kite using diagonals. Parameters: $1 = diagonal d₁ length, $2 = diagonal d₂ length.",
-        "areaGaussHeader": "Header text for the Gauss (shoelace) formula section",
-        "areaGaussSum": "Sum line of the Gauss formula. Parameters: $1 = the computed sum Σ.",
-        "areaGaussTerm": "Individual term of the Gauss formula. Parameters: $1 = first vertex index, $2 = second vertex index, $3 = computed term value.",
-        "areaParallelogram": "Area formula for a parallelogram. Parameters: $1 = base length, $2 = height.",
-        "areaRectangle": "Area formula for a rectangle. Parameters: $1 = width, $2 = height.",
-        "areaSquare": "Area formula for a square. Parameters: $1 = side length.",
-        "areaTrapezoid": "Area formula for a trapezoid. Parameters: $1 = base b₁ length, $2 = base b₂ length, $3 = height.",
-        "headingArea": "Section heading for the area calculation",
-        "headingClassification": "Section heading for the shape classification",
-        "headingSides": "Section heading for sides and diagonals measurements",
-        "labelDiag1": "Label for diagonal d₁ (AC)",
-        "labelDiag2": "Label for diagonal d₂ (BD)",
-        "labelPerimeter": "Label for the perimeter value",
-        "presetKite": "Preset button label for a kite shape",
-        "presetParallelogram": "Preset button label for a parallelogram shape",
-        "presetRectangle": "Preset button label for a rectangle shape",
-        "presetSquare": "Preset button label for a square shape",
-        "presetTrapezoid": "Preset button label for a trapezoid shape",
-        "shapeCrossed": "Classification name for a crossed (self-intersecting) quadrilateral",
-        "shapeGeneral": "Classification name for a general quadrilateral",
-        "shapeKite": "Classification name for a kite",
-        "shapeParallelogram": "Classification name for a parallelogram",
-        "shapeRectangle": "Classification name for a rectangle",
-        "shapeRhombus": "Classification name for a rhombus",
-        "shapeSquare": "Classification name for a square",
-        "shapeTrapezoid": "Classification name for a trapezoid",
-        "unitCm": "Unit abbreviation for centimetres",
-        "unitCm2": "Unit abbreviation for square centimetres",
-        "hint": "Instruction text for the quadrilateral classification applet"
+      "_name": "Name of the Quadrilaterals module",
+      "areaDiagHalf": "Area formula for a kite using diagonals. Parameters: $1 = diagonal d₁ length, $2 = diagonal d₂ length.",
+      "areaGaussHeader": "Header text for the Gauss (shoelace) formula section",
+      "areaGaussSum": "Sum line of the Gauss formula. Parameters: $1 = the computed sum Σ.",
+      "areaGaussTerm": "Individual term of the Gauss formula. Parameters: $1 = first vertex index, $2 = second vertex index, $3 = computed term value.",
+      "areaParallelogram": "Area formula for a parallelogram. Parameters: $1 = base length, $2 = height.",
+      "areaRectangle": "Area formula for a rectangle. Parameters: $1 = width, $2 = height.",
+      "areaSquare": "Area formula for a square. Parameters: $1 = side length.",
+      "areaTrapezoid": "Area formula for a trapezoid. Parameters: $1 = base b₁ length, $2 = base b₂ length, $3 = height.",
+      "headingArea": "Section heading for the area calculation",
+      "headingClassification": "Section heading for the shape classification",
+      "headingSides": "Section heading for sides and diagonals measurements",
+      "labelDiag1": "Label for diagonal d₁ (AC)",
+      "labelDiag2": "Label for diagonal d₂ (BD)",
+      "labelPerimeter": "Label for the perimeter value",
+      "presetKite": "Preset button label for a kite shape",
+      "presetParallelogram": "Preset button label for a parallelogram shape",
+      "presetRectangle": "Preset button label for a rectangle shape",
+      "presetSquare": "Preset button label for a square shape",
+      "presetTrapezoid": "Preset button label for a trapezoid shape",
+      "shapeCrossed": "Classification name for a crossed (self-intersecting) quadrilateral",
+      "shapeGeneral": "Classification name for a general quadrilateral",
+      "shapeKite": "Classification name for a kite",
+      "shapeParallelogram": "Classification name for a parallelogram",
+      "shapeRectangle": "Classification name for a rectangle",
+      "shapeRhombus": "Classification name for a rhombus",
+      "shapeSquare": "Classification name for a square",
+      "shapeTrapezoid": "Classification name for a trapezoid",
+      "unitCm": "Unit abbreviation for centimetres",
+      "unitCm2": "Unit abbreviation for square centimetres",
+      "hint": "Instruction text for the quadrilateral classification applet"
     }
-} /* I18N_END */
-var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
-var banana = new Banana(lang.split('-')[0]);
-banana.load(messages);
+  } /* I18N_END */
+  var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
+  var banana = new Banana(lang.split('-')[0]);
+  banana.load(messages);
 
-function t(key, vars) {
+  function t(key, vars) {
     var args = Array.isArray(vars) ? vars : [];
     var str = banana.i18n(key, ...args);
     if (vars && typeof vars === 'object' && !Array.isArray(vars)) {
-        Object.keys(vars).forEach(function(k) {
-            str = str.replace(new RegExp('\\{' + k + '\\}', 'g'), vars[k]);
-        });
+      Object.keys(vars).forEach(function (k) {
+        str = str.replace(new RegExp('\\{' + k + '\\}', 'g'), vars[k]);
+      });
     }
     return str;
-}
-
-// ── Widget ───────────────────────────────────────────────────────────────────
-
-function initQuadWidget(container) {
-
-var boardWidth  = 20;
-var boardHeight = 14;
-var names = ["A", "B", "C", "D"];
-
-// ── DOM structure ─────────────────────────────────────────────────────────────
-
-var wrap = document.createElement("div");
-wrap.className = "quad-wrap";
-container.appendChild(wrap);
-
-var canvasCol = document.createElement("div");
-canvasCol.className = "quad-canvas-col";
-wrap.appendChild(canvasCol);
-
-var controls = document.createElement("div");
-controls.className = "quad-controls";
-canvasCol.appendChild(controls);
-
-var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-canvasCol.appendChild(svg);
-
-var side = document.createElement("div");
-side.className = "quad-side";
-wrap.appendChild(side);
-
-function makeSection() {
-  var s = document.createElement("div");
-  s.className = "quad-side-section";
-  side.appendChild(s);
-  return s;
-}
-
-function makeHeading(key, parent) {
-  var d = document.createElement("div");
-  d.className = "quad-side-label";
-  d.textContent = t(key);
-  parent.appendChild(d);
-}
-
-function makeStatRow(labelText, keyExtraClass, valExtraClass, parent) {
-  var row = document.createElement("div");
-  row.className = "quad-stat-row";
-  var k = document.createElement("span");
-  k.className = "quad-stat-key" + (keyExtraClass ? " " + keyExtraClass : "");
-  k.textContent = labelText;
-  var v = document.createElement("span");
-  v.className = "quad-stat-val" + (valExtraClass ? " " + valExtraClass : "");
-  row.appendChild(k);
-  row.appendChild(v);
-  parent.appendChild(row);
-  return v;
-}
-
-function makeDividerRow(parent) {
-  var row = document.createElement("div");
-  row.className = "quad-stat-row quad-stat-divider";
-  parent.appendChild(row);
-  return row;
-}
-
-// Section 1 – classification
-var sec1 = makeSection();
-makeHeading("headingClassification", sec1);
-var elClass = document.createElement("div");
-elClass.className = "quad-badge";
-sec1.appendChild(elClass);
-
-// Section 2 – sides & diagonals
-var sec2 = makeSection();
-makeHeading("headingSides", sec2);
-var elAB = makeStatRow("AB", "", "", sec2);
-var elBC = makeStatRow("BC", "", "", sec2);
-var elCD = makeStatRow("CD", "", "", sec2);
-var elDA = makeStatRow("DA", "", "", sec2);
-
-var divDiag = makeDividerRow(sec2);
-var elD1Key = document.createElement("span");
-elD1Key.className = "quad-stat-key quad-diag-key";
-elD1Key.textContent = t("labelDiag1");
-var elD1 = document.createElement("span");
-elD1.className = "quad-stat-val quad-diag-val";
-divDiag.appendChild(elD1Key);
-divDiag.appendChild(elD1);
-
-var rowD2 = document.createElement("div");
-rowD2.className = "quad-stat-row";
-var elD2Key = document.createElement("span");
-elD2Key.className = "quad-stat-key quad-diag-key";
-elD2Key.textContent = t("labelDiag2");
-var elD2 = document.createElement("span");
-elD2.className = "quad-stat-val quad-diag-val";
-rowD2.appendChild(elD2Key);
-rowD2.appendChild(elD2);
-sec2.appendChild(rowD2);
-
-var divPerim = makeDividerRow(sec2);
-var elPerimKey = document.createElement("span");
-elPerimKey.className = "quad-stat-key quad-perim-key";
-elPerimKey.textContent = t("labelPerimeter");
-var elPerim = document.createElement("span");
-elPerim.className = "quad-stat-val";
-divPerim.appendChild(elPerimKey);
-divPerim.appendChild(elPerim);
-
-// Section 3 – area
-var sec3 = makeSection();
-makeHeading("headingArea", sec3);
-var areaBox = document.createElement("div");
-areaBox.className = "quad-area-box";
-sec3.appendChild(areaBox);
-var elSteps = document.createElement("div");
-elSteps.className = "quad-area-steps";
-areaBox.appendChild(elSteps);
-var elAreaResult = document.createElement("div");
-elAreaResult.className = "quad-area-result";
-areaBox.appendChild(elAreaResult);
-
-// ── Presets ───────────────────────────────────────────────────────────────────
-
-var presets = [
-  { labelKey: "presetSquare",       fn: function () { return [{x:7,y:4},{x:13,y:4},{x:13,y:10},{x:7,y:10}]; } },
-  { labelKey: "presetRectangle",    fn: function () { return [{x:4,y:5},{x:16,y:5},{x:16,y:9},{x:4,y:9}]; } },
-  { labelKey: "presetParallelogram",fn: function () { return [{x:4,y:9},{x:9,y:4},{x:16,y:4},{x:11,y:9}]; } },
-  { labelKey: "presetTrapezoid",    fn: function () { return [{x:4,y:9},{x:7,y:4},{x:13,y:4},{x:16,y:9}]; } },
-  { labelKey: "presetKite",         fn: function () { return [{x:10,y:3},{x:14,y:7},{x:10,y:11},{x:6,y:7}]; } },
-];
-
-var vertices = presets[0].fn();
-
-presets.forEach(function (p) {
-  var btn = document.createElement("button");
-  btn.textContent = t(p.labelKey);
-  btn.addEventListener("click", function () { vertices = p.fn(); update(); });
-  controls.appendChild(btn);
-});
-
-// ── SVG helpers ───────────────────────────────────────────────────────────────
-
-var px;
-var dragging = null, dragM, dragV;
-
-function cm(v) { return v * px; }
-
-function ns(type, attrs, parent) {
-  var e = document.createElementNS("http://www.w3.org/2000/svg", type);
-  for (var k in attrs) e.setAttribute(k, attrs[k]);
-  (parent || svg).appendChild(e);
-  return e;
-}
-
-var gridG  = ns("g",       { class: "quad-grid"     });
-var diagG  = ns("g",       { class: "quad-diagonal" });
-var diagL1 = ns("line",    {}, diagG);
-var diagL2 = ns("line",    {}, diagG);
-var shape  = ns("polygon", { class: "quad-shape"    });
-
-var verts = [], sides = [], pts = [], arcs = [], angTxts = [], rights = [];
-
-for (var i = 0; i < 4; i++) {
-  verts.push(   ns("circle", { r: 6, class: "quad-vertex"      }));
-  verts[i].dataset.i = i;
-  sides.push(   ns("text",   { class: "quad-side-label"        }));
-  pts.push(     ns("text",   { class: "quad-point-label"       }));
-  arcs.push(    ns("path",   { class: "quad-angle-arc"         }));
-  angTxts.push( ns("text",   { class: "quad-angle-label"       }));
-  rights.push(  ns("path",   { class: "quad-right-marker"      }));
-}
-
-// ── Geometry ──────────────────────────────────────────────────────────────────
-
-function dist(a, b) { return Math.hypot(a.x - b.x, a.y - b.y); }
-
-function angDeg(A, B, C) {
-  var bax = A.x-B.x, bay = A.y-B.y, bcx = C.x-B.x, bcy = C.y-B.y;
-  var dot = bax*bcx + bay*bcy;
-  var d = Math.hypot(bax, bay) * Math.hypot(bcx, bcy) || 1;
-  return Math.acos(Math.max(-1, Math.min(1, dot / d))) * 180 / Math.PI;
-}
-
-function centroid() {
-  return {
-    x: (vertices[0].x + vertices[1].x + vertices[2].x + vertices[3].x) / 4,
-    y: (vertices[0].y + vertices[1].y + vertices[2].y + vertices[3].y) / 4,
-  };
-}
-
-function arcR() {
-  var m = Infinity;
-  for (var i = 0; i < 4; i++) {
-    var d = dist(vertices[i], vertices[(i+1)%4]);
-    if (d < m) m = d;
-  }
-  return m * 0.18;
-}
-
-function bisDir(A, B, C) {
-  var ba = {x: A.x-B.x, y: A.y-B.y}, bc = {x: C.x-B.x, y: C.y-B.y};
-  var m1 = Math.hypot(ba.x, ba.y) || 1, m2 = Math.hypot(bc.x, bc.y) || 1;
-  return { x: ba.x/m1 + bc.x/m2, y: ba.y/m1 + bc.y/m2 };
-}
-
-function computeArc(A, B, C) {
-  var a1 = Math.atan2(A.y-B.y, A.x-B.x), a2 = Math.atan2(C.y-B.y, C.x-B.x);
-  var r = arcR();
-  var s = {x: B.x + r*Math.cos(a1), y: B.y + r*Math.sin(a1)};
-  var e = {x: B.x + r*Math.cos(a2), y: B.y + r*Math.sin(a2)};
-  var cross = (A.x-B.x)*(C.y-B.y) - (A.y-B.y)*(C.x-B.x);
-  var sw = cross > 0 ? 1 : 0;
-  return "M"+cm(s.x)+" "+cm(s.y)+"A"+cm(r)+" "+cm(r)+" 0 0 "+sw+" "+cm(e.x)+" "+cm(e.y);
-}
-
-function isRight(a) { return Math.abs(a - 90) < 0.6; }
-function eq(a, b, e) { e = e || 0.1; return Math.abs(a - b) < e; }
-
-function sidesParallel(p1, p2, p3, p4) {
-  var d1 = {x: p2.x-p1.x, y: p2.y-p1.y}, d2 = {x: p4.x-p3.x, y: p4.y-p3.y};
-  return Math.abs(d1.x*d2.y - d1.y*d2.x) / (Math.hypot(d1.x,d1.y) * Math.hypot(d2.x,d2.y) || 1) < 0.05;
-}
-
-function countPar() {
-  var c = 0;
-  if (sidesParallel(vertices[0], vertices[1], vertices[3], vertices[2])) c++;
-  if (sidesParallel(vertices[0], vertices[3], vertices[1], vertices[2])) c++;
-  return c;
-}
-
-function segsX(p1, p2, p3, p4) {
-  function c2(u, v) { return u.x*v.y - u.y*v.x; }
-  var d = {x: p2.x-p1.x, y: p2.y-p1.y}, e = {x: p4.x-p3.x, y: p4.y-p3.y};
-  var den = c2(d, e);
-  if (Math.abs(den) < 1e-9) return false;
-  var f = {x: p3.x-p1.x, y: p3.y-p1.y};
-  var t = c2(f, e) / den, u = c2(f, d) / den;
-  return t > 0.001 && t < 0.999 && u > 0.001 && u < 0.999;
-}
-
-function getSides() {
-  return [
-    dist(vertices[0], vertices[1]),
-    dist(vertices[1], vertices[2]),
-    dist(vertices[2], vertices[3]),
-    dist(vertices[3], vertices[0]),
-  ];
-}
-
-function getAngles() {
-  return [
-    angDeg(vertices[3], vertices[0], vertices[1]),
-    angDeg(vertices[0], vertices[1], vertices[2]),
-    angDeg(vertices[1], vertices[2], vertices[3]),
-    angDeg(vertices[2], vertices[3], vertices[0]),
-  ];
-}
-
-// ── Classification ────────────────────────────────────────────────────────────
-
-function classifyShape() {
-  if (segsX(vertices[0], vertices[1], vertices[2], vertices[3]) ||
-      segsX(vertices[1], vertices[2], vertices[3], vertices[0])) return t("shapeCrossed");
-
-  var s    = getSides(), ab = s[0], bc = s[1], cd = s[2], da = s[3];
-  var angs = getAngles();
-  var allR  = angs.every(isRight);
-  var allEq = eq(ab,bc) && eq(bc,cd) && eq(cd,da);
-  var oppEq = eq(ab,cd) && eq(bc,da);
-
-  if (allEq && allR) return t("shapeSquare");
-  if (allR)          return t("shapeRectangle");
-  if (allEq)         return t("shapeRhombus");
-
-  var par = countPar();
-  if (par >= 2 || oppEq) return t("shapeParallelogram");
-  if (par === 1)         return t("shapeTrapezoid");
-  if ((eq(ab,bc) && eq(cd,da)) || (eq(da,ab) && eq(bc,cd))) return t("shapeKite");
-
-  return t("shapeGeneral");
-}
-
-// ── Area ──────────────────────────────────────────────────────────────────────
-
-function getAreaInfo(cls) {
-  var s = getSides(), ab = s[0], bc = s[1], cd = s[2];
-  var d1 = dist(vertices[0], vertices[2]);
-  var d2 = dist(vertices[1], vertices[3]);
-
-  if (cls === t("shapeSquare")) {
-    return { steps: t("areaSquare", [ab.toFixed(2)]), area: ab * ab };
   }
 
-  if (cls === t("shapeRectangle")) {
-    return { steps: t("areaRectangle", [ab.toFixed(2), bc.toFixed(2)]), area: ab * bc };
-  }
+  // ── Widget ───────────────────────────────────────────────────────────────────
 
-  if (cls === t("shapeRhombus")) {
-    return { steps: t("areaDiagHalf", [d1.toFixed(2), d2.toFixed(2)]), area: d1 * d2 / 2 };
-  }
+  function initQuadWidget(container) {
 
-  if (cls === t("shapeParallelogram")) {
-    var A = vertices[0], B = vertices[1];
-    var bx = (B.x - A.x) / ab, by = (B.y - A.y) / ab;
-    var D = vertices[3];
-    var h = Math.abs((D.x - A.x) * (-by) + (D.y - A.y) * bx);
-    return { steps: t("areaParallelogram", [ab.toFixed(2), h.toFixed(2)]), area: ab * h };
-  }
+    var boardWidth = 20;
+    var boardHeight = 14;
+    var names = ["A", "B", "C", "D"];
 
-  if (cls === t("shapeTrapezoid")) {
-    var b1 = ab, b2 = cd;
-    var A2 = vertices[0], B2 = vertices[1];
-    var bx2 = (B2.x - A2.x) / b1, by2 = (B2.y - A2.y) / b1;
-    var D2 = vertices[3];
-    var h2 = Math.abs((D2.x - A2.x) * (-by2) + (D2.y - A2.y) * bx2);
-    return { steps: t("areaTrapezoid", [b1.toFixed(2), b2.toFixed(2), h2.toFixed(2)]), area: (b1 + b2) / 2 * h2 };
-  }
+    // ── DOM structure ─────────────────────────────────────────────────────────────
 
-  if (cls === t("shapeKite")) {
-    return { steps: t("areaDiagHalf", [d1.toFixed(2), d2.toFixed(2)]), area: d1 * d2 / 2 };
-  }
+    var wrap = document.createElement("div");
+    wrap.className = "quad-wrap";
+    container.appendChild(wrap);
 
-  // General case – Gauss (shoelace) with full term expansion
-  var termLines = [], sum = 0;
-  for (var j = 0; j < 4; j++) {
-    var va = vertices[j], vb = vertices[(j+1)%4];
-    var cross = va.x * vb.y - vb.x * va.y;
-    sum += cross;
-    termLines.push(t("areaGaussTerm", [names[j], names[(j+1)%4], cross.toFixed(2)]));
-  }
-  return {
-    steps: t("areaGaussHeader") + termLines.join("\n") + t("areaGaussSum", [sum.toFixed(2)]),
-    area:  Math.abs(sum) / 2,
-  };
-}
+    var canvasCol = document.createElement("div");
+    canvasCol.className = "quad-canvas-col";
+    wrap.appendChild(canvasCol);
 
-// ── Grid ──────────────────────────────────────────────────────────────────────
+    var controls = document.createElement("div");
+    controls.className = "quad-controls";
+    canvasCol.appendChild(controls);
 
-function drawGrid() {
-  gridG.innerHTML = "";
-  for (var x = 0; x <= boardWidth; x++) {
-    var lx = document.createElementNS("http://www.w3.org/2000/svg", "line");
-    lx.setAttribute("x1", cm(x)); lx.setAttribute("y1", 0);
-    lx.setAttribute("x2", cm(x)); lx.setAttribute("y2", cm(boardHeight));
-    gridG.appendChild(lx);
-  }
-  for (var y = 0; y <= boardHeight; y++) {
-    var ly = document.createElementNS("http://www.w3.org/2000/svg", "line");
-    ly.setAttribute("x1", 0);             ly.setAttribute("y1", cm(y));
-    ly.setAttribute("x2", cm(boardWidth)); ly.setAttribute("y2", cm(y));
-    gridG.appendChild(ly);
-  }
-}
+    var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    canvasCol.appendChild(svg);
 
-// ── Main update ───────────────────────────────────────────────────────────────
+    var side = document.createElement("div");
+    side.className = "quad-side";
+    wrap.appendChild(side);
 
-function update() {
-  shape.setAttribute("points", vertices.map(function (v) { return cm(v.x)+","+cm(v.y); }).join(" "));
-
-  diagL1.setAttribute("x1", cm(vertices[0].x)); diagL1.setAttribute("y1", cm(vertices[0].y));
-  diagL1.setAttribute("x2", cm(vertices[2].x)); diagL1.setAttribute("y2", cm(vertices[2].y));
-  diagL2.setAttribute("x1", cm(vertices[1].x)); diagL2.setAttribute("y1", cm(vertices[1].y));
-  diagL2.setAttribute("x2", cm(vertices[3].x)); diagL2.setAttribute("y2", cm(vertices[3].y));
-
-  for (var i = 0; i < 4; i++) {
-    verts[i].setAttribute("cx", cm(vertices[i].x));
-    verts[i].setAttribute("cy", cm(vertices[i].y));
-  }
-
-  var c = centroid();
-  for (var i = 0; i < 4; i++) {
-    var v  = vertices[i];
-    var dx = v.x - c.x, dy = v.y - c.y, m = Math.hypot(dx, dy) || 1;
-    pts[i].textContent = names[i];
-    pts[i].setAttribute("x", cm(v.x + (dx/m)*0.85));
-    pts[i].setAttribute("y", cm(v.y + (dy/m)*0.85));
-
-    var a = vertices[i], b = vertices[(i+1)%4];
-    var mid = {x: (a.x+b.x)/2, y: (a.y+b.y)/2};
-    sides[i].textContent = dist(a, b).toFixed(2);
-    sides[i].setAttribute("x", cm(mid.x));
-    sides[i].setAttribute("y", cm(mid.y));
-
-    var B = vertices[i], A = vertices[(i+3)%4], C = vertices[(i+1)%4];
-    var ang = angDeg(A, B, C), rAng = isRight(ang);
-    arcs[i].setAttribute("d", rAng ? "" : computeArc(A, B, C));
-
-    var bd = bisDir(A, B, C), bm = Math.hypot(bd.x, bd.y) || 1, r = arcR();
-    angTxts[i].textContent = ang.toFixed(1) + "\u00B0";
-    angTxts[i].setAttribute("x", cm(B.x + (bd.x/bm)*r*1.9));
-    angTxts[i].setAttribute("y", cm(B.y + (bd.y/bm)*r*1.9));
-
-    if (rAng) {
-      var sv = r * 0.55;
-      var v1 = {x: A.x-B.x, y: A.y-B.y}, v2 = {x: C.x-B.x, y: C.y-B.y};
-      var m1 = Math.hypot(v1.x,v1.y)||1, m2 = Math.hypot(v2.x,v2.y)||1;
-      v1.x/=m1; v1.y/=m1; v2.x/=m2; v2.y/=m2;
-      var p1={x:B.x+v1.x*sv,y:B.y+v1.y*sv}, p2={x:p1.x+v2.x*sv,y:p1.y+v2.y*sv}, p3={x:B.x+v2.x*sv,y:B.y+v2.y*sv};
-      rights[i].setAttribute("d","M"+cm(p1.x)+" "+cm(p1.y)+"L"+cm(p2.x)+" "+cm(p2.y)+"L"+cm(p3.x)+" "+cm(p3.y));
-    } else {
-      rights[i].setAttribute("d", "");
+    function makeSection() {
+      var s = document.createElement("div");
+      s.className = "quad-side-section";
+      side.appendChild(s);
+      return s;
     }
-  }
 
-  var cls  = classifyShape();
-  var sl   = getSides(), ab = sl[0], bc = sl[1], cd = sl[2], da = sl[3];
-  var d1   = dist(vertices[0], vertices[2]);
-  var d2   = dist(vertices[1], vertices[3]);
-  var perim = ab + bc + cd + da;
-  var ainfo = getAreaInfo(cls);
-  var u    = t("unitCm"), u2 = t("unitCm2");
+    function makeHeading(key, parent) {
+      var d = document.createElement("div");
+      d.className = "quad-side-label";
+      d.textContent = t(key);
+      parent.appendChild(d);
+    }
 
-  elClass.textContent = cls;
-  elAB.textContent    = ab.toFixed(2) + "\u00A0" + u;
-  elBC.textContent    = bc.toFixed(2) + "\u00A0" + u;
-  elCD.textContent    = cd.toFixed(2) + "\u00A0" + u;
-  elDA.textContent    = da.toFixed(2) + "\u00A0" + u;
-  elD1.textContent    = d1.toFixed(2) + "\u00A0" + u;
-  elD2.textContent    = d2.toFixed(2) + "\u00A0" + u;
-  elPerim.textContent = perim.toFixed(2) + "\u00A0" + u;
-  elSteps.textContent = ainfo.steps;
+    function makeStatRow(labelText, keyExtraClass, valExtraClass, parent) {
+      var row = document.createElement("div");
+      row.className = "quad-stat-row";
+      var k = document.createElement("span");
+      k.className = "quad-stat-key" + (keyExtraClass ? " " + keyExtraClass : "");
+      k.textContent = labelText;
+      var v = document.createElement("span");
+      v.className = "quad-stat-val" + (valExtraClass ? " " + valExtraClass : "");
+      row.appendChild(k);
+      row.appendChild(v);
+      parent.appendChild(row);
+      return v;
+    }
 
-  elAreaResult.textContent = "";
-  var valSpan  = document.createElement("span");
-  valSpan.textContent = ainfo.area.toFixed(2) + "\u00A0";
-  var unitSpan = document.createElement("span");
-  unitSpan.className   = "quad-area-unit";
-  unitSpan.textContent = u2;
-  elAreaResult.appendChild(valSpan);
-  elAreaResult.appendChild(unitSpan);
-}
+    function makeDividerRow(parent) {
+      var row = document.createElement("div");
+      row.className = "quad-stat-row quad-stat-divider";
+      parent.appendChild(row);
+      return row;
+    }
 
-// ── Drag ──────────────────────────────────────────────────────────────────────
+    // Section 1 – classification
+    var sec1 = makeSection();
+    makeHeading("headingClassification", sec1);
+    var elClass = document.createElement("div");
+    elClass.className = "quad-badge";
+    sec1.appendChild(elClass);
 
-function getPos(e) {
-  return {
-    x: e.touches ? e.touches[0].clientX : e.clientX,
-    y: e.touches ? e.touches[0].clientY : e.clientY
-  };
-}
+    // Section 2 – sides & diagonals
+    var sec2 = makeSection();
+    makeHeading("headingSides", sec2);
+    var elAB = makeStatRow("AB", "", "", sec2);
+    var elBC = makeStatRow("BC", "", "", sec2);
+    var elCD = makeStatRow("CD", "", "", sec2);
+    var elDA = makeStatRow("DA", "", "", sec2);
 
-function startDrag(e, v) {
-  dragging = parseInt(v.dataset.i);
-  var r = svg.getBoundingClientRect();
-  var pos = getPos(e);
-  dragM = {x: (pos.x - r.left) / px, y: (pos.y - r.top) / px};
-  dragV = {x: vertices[dragging].x, y: vertices[dragging].y};
-  e.preventDefault();
-}
+    var divDiag = makeDividerRow(sec2);
+    var elD1Key = document.createElement("span");
+    elD1Key.className = "quad-stat-key quad-diag-key";
+    elD1Key.textContent = t("labelDiag1");
+    var elD1 = document.createElement("span");
+    elD1.className = "quad-stat-val quad-diag-val";
+    divDiag.appendChild(elD1Key);
+    divDiag.appendChild(elD1);
 
-verts.forEach(function (v) {
-  v.addEventListener("mousedown", function (e) { startDrag(e, v); });
-  v.addEventListener("touchstart", function (e) { startDrag(e, v); }, {passive: false});
-});
+    var rowD2 = document.createElement("div");
+    rowD2.className = "quad-stat-row";
+    var elD2Key = document.createElement("span");
+    elD2Key.className = "quad-stat-key quad-diag-key";
+    elD2Key.textContent = t("labelDiag2");
+    var elD2 = document.createElement("span");
+    elD2.className = "quad-stat-val quad-diag-val";
+    rowD2.appendChild(elD2Key);
+    rowD2.appendChild(elD2);
+    sec2.appendChild(rowD2);
 
-function handleMove(e) {
-  if (dragging === null) return;
-  e.preventDefault();
-  var r  = svg.getBoundingClientRect();
-  var pos = getPos(e);
-  var mx = (pos.x - r.left) / px, my = (pos.y - r.top) / px;
-  vertices[dragging] = {x: dragV.x + Math.trunc(mx - dragM.x), y: dragV.y + Math.trunc(my - dragM.y)};
-  update();
-}
+    var divPerim = makeDividerRow(sec2);
+    var elPerimKey = document.createElement("span");
+    elPerimKey.className = "quad-stat-key quad-perim-key";
+    elPerimKey.textContent = t("labelPerimeter");
+    var elPerim = document.createElement("span");
+    elPerim.className = "quad-stat-val";
+    divPerim.appendChild(elPerimKey);
+    divPerim.appendChild(elPerim);
 
-function endDrag() { dragging = null; }
+    // Section 3 – area
+    var sec3 = makeSection();
+    makeHeading("headingArea", sec3);
+    var areaBox = document.createElement("div");
+    areaBox.className = "quad-area-box";
+    sec3.appendChild(areaBox);
+    var elSteps = document.createElement("div");
+    elSteps.className = "quad-area-steps";
+    areaBox.appendChild(elSteps);
+    var elAreaResult = document.createElement("div");
+    elAreaResult.className = "quad-area-result";
+    areaBox.appendChild(elAreaResult);
 
-window.addEventListener("mousemove", handleMove);
-window.addEventListener("touchmove", handleMove, {passive: false});
-window.addEventListener("mouseup", endDrag);
-window.addEventListener("touchend", endDrag);
+    // ── Presets ───────────────────────────────────────────────────────────────────
 
-// ── Init ──────────────────────────────────────────────────────────────────────
+    var presets = [
+      { labelKey: "presetSquare", fn: function () { return [{ x: 7, y: 4 }, { x: 13, y: 4 }, { x: 13, y: 10 }, { x: 7, y: 10 }]; } },
+      { labelKey: "presetRectangle", fn: function () { return [{ x: 4, y: 5 }, { x: 16, y: 5 }, { x: 16, y: 9 }, { x: 4, y: 9 }]; } },
+      { labelKey: "presetParallelogram", fn: function () { return [{ x: 4, y: 9 }, { x: 9, y: 4 }, { x: 16, y: 4 }, { x: 11, y: 9 }]; } },
+      { labelKey: "presetTrapezoid", fn: function () { return [{ x: 4, y: 9 }, { x: 7, y: 4 }, { x: 13, y: 4 }, { x: 16, y: 9 }]; } },
+      { labelKey: "presetKite", fn: function () { return [{ x: 10, y: 3 }, { x: 14, y: 7 }, { x: 10, y: 11 }, { x: 6, y: 7 }]; } },
+    ];
 
-function init() {
-  px = svg.getBoundingClientRect().width / boardWidth;
-  drawGrid();
-  update();
-}
+    var vertices = presets[0].fn();
 
-requestAnimationFrame(init);
-window.addEventListener("resize", function () { requestAnimationFrame(init); });
+    presets.forEach(function (p) {
+      var btn = document.createElement("button");
+      btn.textContent = t(p.labelKey);
+      btn.addEventListener("click", function () { vertices = p.fn(); update(); });
+      controls.appendChild(btn);
+    });
 
-// Footer branding
-var footer = document.createElement("div");
-footer.className = "hw-footer";
-var fLogo = document.createElement("a");
-fLogo.className = "hw-footer-icon";
-fLogo.href = mw.util.getUrl('Wikipedia:Hiruwiki');
-fLogo.title = 'Hiruwiki';
-fLogo.innerHTML = hiruwiki.getLogoSvg(22);
-var fText = document.createElement("span");
-fText.innerHTML = t('hint');
-footer.appendChild(fLogo);
-footer.appendChild(fText);
-container.appendChild(footer);
-} // end initQuadWidget
+    // ── SVG helpers ───────────────────────────────────────────────────────────────
 
-// ── Bootstrap ─────────────────────────────────────────────────────────────────
+    var px;
+    var dragging = null, dragM, dragV;
 
-mw.hook("wikipage.content").add(function () {
-  document.querySelectorAll('.hiruwiki[data-module="quadrangles"]').forEach(function (el) {
-    if (el.dataset.quadReady) return;
-    el.dataset.quadReady = true;
-    initQuadWidget(el);
+    function cm(v) { return v * px; }
+
+    function ns(type, attrs, parent) {
+      var e = document.createElementNS("http://www.w3.org/2000/svg", type);
+      for (var k in attrs) e.setAttribute(k, attrs[k]);
+      (parent || svg).appendChild(e);
+      return e;
+    }
+
+    var gridG = ns("g", { class: "quad-grid" });
+    var diagG = ns("g", { class: "quad-diagonal" });
+    var diagL1 = ns("line", {}, diagG);
+    var diagL2 = ns("line", {}, diagG);
+    var shape = ns("polygon", { class: "quad-shape" });
+
+    var verts = [], sides = [], pts = [], arcs = [], angTxts = [], rights = [];
+
+    for (var i = 0; i < 4; i++) {
+      verts.push(ns("circle", { r: 6, class: "quad-vertex" }));
+      verts[i].dataset.i = i;
+      sides.push(ns("text", { class: "quad-side-label" }));
+      pts.push(ns("text", { class: "quad-point-label" }));
+      arcs.push(ns("path", { class: "quad-angle-arc" }));
+      angTxts.push(ns("text", { class: "quad-angle-label" }));
+      rights.push(ns("path", { class: "quad-right-marker" }));
+    }
+
+    // ── Geometry ──────────────────────────────────────────────────────────────────
+
+    function dist(a, b) { return Math.hypot(a.x - b.x, a.y - b.y); }
+
+    function angDeg(A, B, C) {
+      var bax = A.x - B.x, bay = A.y - B.y, bcx = C.x - B.x, bcy = C.y - B.y;
+      var dot = bax * bcx + bay * bcy;
+      var d = Math.hypot(bax, bay) * Math.hypot(bcx, bcy) || 1;
+      return Math.acos(Math.max(-1, Math.min(1, dot / d))) * 180 / Math.PI;
+    }
+
+    function centroid() {
+      return {
+        x: (vertices[0].x + vertices[1].x + vertices[2].x + vertices[3].x) / 4,
+        y: (vertices[0].y + vertices[1].y + vertices[2].y + vertices[3].y) / 4,
+      };
+    }
+
+    function arcR() {
+      var m = Infinity;
+      for (var i = 0; i < 4; i++) {
+        var d = dist(vertices[i], vertices[(i + 1) % 4]);
+        if (d < m) m = d;
+      }
+      return m * 0.18;
+    }
+
+    function bisDir(A, B, C) {
+      var ba = { x: A.x - B.x, y: A.y - B.y }, bc = { x: C.x - B.x, y: C.y - B.y };
+      var m1 = Math.hypot(ba.x, ba.y) || 1, m2 = Math.hypot(bc.x, bc.y) || 1;
+      return { x: ba.x / m1 + bc.x / m2, y: ba.y / m1 + bc.y / m2 };
+    }
+
+    function computeArc(A, B, C) {
+      var a1 = Math.atan2(A.y - B.y, A.x - B.x), a2 = Math.atan2(C.y - B.y, C.x - B.x);
+      var r = arcR();
+      var s = { x: B.x + r * Math.cos(a1), y: B.y + r * Math.sin(a1) };
+      var e = { x: B.x + r * Math.cos(a2), y: B.y + r * Math.sin(a2) };
+      var cross = (A.x - B.x) * (C.y - B.y) - (A.y - B.y) * (C.x - B.x);
+      var sw = cross > 0 ? 1 : 0;
+      return "M" + cm(s.x) + " " + cm(s.y) + "A" + cm(r) + " " + cm(r) + " 0 0 " + sw + " " + cm(e.x) + " " + cm(e.y);
+    }
+
+    function isRight(a) { return Math.abs(a - 90) < 0.6; }
+    function eq(a, b, e) { e = e || 0.1; return Math.abs(a - b) < e; }
+
+    function sidesParallel(p1, p2, p3, p4) {
+      var d1 = { x: p2.x - p1.x, y: p2.y - p1.y }, d2 = { x: p4.x - p3.x, y: p4.y - p3.y };
+      return Math.abs(d1.x * d2.y - d1.y * d2.x) / (Math.hypot(d1.x, d1.y) * Math.hypot(d2.x, d2.y) || 1) < 0.05;
+    }
+
+    function countPar() {
+      var c = 0;
+      if (sidesParallel(vertices[0], vertices[1], vertices[3], vertices[2])) c++;
+      if (sidesParallel(vertices[0], vertices[3], vertices[1], vertices[2])) c++;
+      return c;
+    }
+
+    function segsX(p1, p2, p3, p4) {
+      function c2(u, v) { return u.x * v.y - u.y * v.x; }
+      var d = { x: p2.x - p1.x, y: p2.y - p1.y }, e = { x: p4.x - p3.x, y: p4.y - p3.y };
+      var den = c2(d, e);
+      if (Math.abs(den) < 1e-9) return false;
+      var f = { x: p3.x - p1.x, y: p3.y - p1.y };
+      var t = c2(f, e) / den, u = c2(f, d) / den;
+      return t > 0.001 && t < 0.999 && u > 0.001 && u < 0.999;
+    }
+
+    function getSides() {
+      return [
+        dist(vertices[0], vertices[1]),
+        dist(vertices[1], vertices[2]),
+        dist(vertices[2], vertices[3]),
+        dist(vertices[3], vertices[0]),
+      ];
+    }
+
+    function getAngles() {
+      return [
+        angDeg(vertices[3], vertices[0], vertices[1]),
+        angDeg(vertices[0], vertices[1], vertices[2]),
+        angDeg(vertices[1], vertices[2], vertices[3]),
+        angDeg(vertices[2], vertices[3], vertices[0]),
+      ];
+    }
+
+    // ── Classification ────────────────────────────────────────────────────────────
+
+    function classifyShape() {
+      if (segsX(vertices[0], vertices[1], vertices[2], vertices[3]) ||
+        segsX(vertices[1], vertices[2], vertices[3], vertices[0])) return t("shapeCrossed");
+
+      var s = getSides(), ab = s[0], bc = s[1], cd = s[2], da = s[3];
+      var angs = getAngles();
+      var allR = angs.every(isRight);
+      var allEq = eq(ab, bc) && eq(bc, cd) && eq(cd, da);
+      var oppEq = eq(ab, cd) && eq(bc, da);
+
+      if (allEq && allR) return t("shapeSquare");
+      if (allR) return t("shapeRectangle");
+      if (allEq) return t("shapeRhombus");
+
+      var par = countPar();
+      if (par >= 2 || oppEq) return t("shapeParallelogram");
+      if (par === 1) return t("shapeTrapezoid");
+      if ((eq(ab, bc) && eq(cd, da)) || (eq(da, ab) && eq(bc, cd))) return t("shapeKite");
+
+      return t("shapeGeneral");
+    }
+
+    // ── Area ──────────────────────────────────────────────────────────────────────
+
+    function getAreaInfo(cls) {
+      var s = getSides(), ab = s[0], bc = s[1], cd = s[2];
+      var d1 = dist(vertices[0], vertices[2]);
+      var d2 = dist(vertices[1], vertices[3]);
+
+      if (cls === t("shapeSquare")) {
+        return { steps: t("areaSquare", [ab.toFixed(2)]), area: ab * ab };
+      }
+
+      if (cls === t("shapeRectangle")) {
+        return { steps: t("areaRectangle", [ab.toFixed(2), bc.toFixed(2)]), area: ab * bc };
+      }
+
+      if (cls === t("shapeRhombus")) {
+        return { steps: t("areaDiagHalf", [d1.toFixed(2), d2.toFixed(2)]), area: d1 * d2 / 2 };
+      }
+
+      if (cls === t("shapeParallelogram")) {
+        var A = vertices[0], B = vertices[1];
+        var bx = (B.x - A.x) / ab, by = (B.y - A.y) / ab;
+        var D = vertices[3];
+        var h = Math.abs((D.x - A.x) * (-by) + (D.y - A.y) * bx);
+        return { steps: t("areaParallelogram", [ab.toFixed(2), h.toFixed(2)]), area: ab * h };
+      }
+
+      if (cls === t("shapeTrapezoid")) {
+        var b1 = ab, b2 = cd;
+        var A2 = vertices[0], B2 = vertices[1];
+        var bx2 = (B2.x - A2.x) / b1, by2 = (B2.y - A2.y) / b1;
+        var D2 = vertices[3];
+        var h2 = Math.abs((D2.x - A2.x) * (-by2) + (D2.y - A2.y) * bx2);
+        return { steps: t("areaTrapezoid", [b1.toFixed(2), b2.toFixed(2), h2.toFixed(2)]), area: (b1 + b2) / 2 * h2 };
+      }
+
+      if (cls === t("shapeKite")) {
+        return { steps: t("areaDiagHalf", [d1.toFixed(2), d2.toFixed(2)]), area: d1 * d2 / 2 };
+      }
+
+      // General case – Gauss (shoelace) with full term expansion
+      var termLines = [], sum = 0;
+      for (var j = 0; j < 4; j++) {
+        var va = vertices[j], vb = vertices[(j + 1) % 4];
+        var cross = va.x * vb.y - vb.x * va.y;
+        sum += cross;
+        termLines.push(t("areaGaussTerm", [names[j], names[(j + 1) % 4], cross.toFixed(2)]));
+      }
+      return {
+        steps: t("areaGaussHeader") + termLines.join("\n") + t("areaGaussSum", [sum.toFixed(2)]),
+        area: Math.abs(sum) / 2,
+      };
+    }
+
+    // ── Grid ──────────────────────────────────────────────────────────────────────
+
+    function drawGrid() {
+      gridG.innerHTML = "";
+      for (var x = 0; x <= boardWidth; x++) {
+        var lx = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        lx.setAttribute("x1", cm(x)); lx.setAttribute("y1", 0);
+        lx.setAttribute("x2", cm(x)); lx.setAttribute("y2", cm(boardHeight));
+        gridG.appendChild(lx);
+      }
+      for (var y = 0; y <= boardHeight; y++) {
+        var ly = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        ly.setAttribute("x1", 0); ly.setAttribute("y1", cm(y));
+        ly.setAttribute("x2", cm(boardWidth)); ly.setAttribute("y2", cm(y));
+        gridG.appendChild(ly);
+      }
+    }
+
+    // ── Main update ───────────────────────────────────────────────────────────────
+
+    function update() {
+      shape.setAttribute("points", vertices.map(function (v) { return cm(v.x) + "," + cm(v.y); }).join(" "));
+
+      diagL1.setAttribute("x1", cm(vertices[0].x)); diagL1.setAttribute("y1", cm(vertices[0].y));
+      diagL1.setAttribute("x2", cm(vertices[2].x)); diagL1.setAttribute("y2", cm(vertices[2].y));
+      diagL2.setAttribute("x1", cm(vertices[1].x)); diagL2.setAttribute("y1", cm(vertices[1].y));
+      diagL2.setAttribute("x2", cm(vertices[3].x)); diagL2.setAttribute("y2", cm(vertices[3].y));
+
+      for (var i = 0; i < 4; i++) {
+        verts[i].setAttribute("cx", cm(vertices[i].x));
+        verts[i].setAttribute("cy", cm(vertices[i].y));
+      }
+
+      var c = centroid();
+      for (var i = 0; i < 4; i++) {
+        var v = vertices[i];
+        var dx = v.x - c.x, dy = v.y - c.y, m = Math.hypot(dx, dy) || 1;
+        pts[i].textContent = names[i];
+        pts[i].setAttribute("x", cm(v.x + (dx / m) * 0.85));
+        pts[i].setAttribute("y", cm(v.y + (dy / m) * 0.85));
+
+        var a = vertices[i], b = vertices[(i + 1) % 4];
+        var mid = { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 };
+        sides[i].textContent = dist(a, b).toFixed(2);
+        sides[i].setAttribute("x", cm(mid.x));
+        sides[i].setAttribute("y", cm(mid.y));
+
+        var B = vertices[i], A = vertices[(i + 3) % 4], C = vertices[(i + 1) % 4];
+        var ang = angDeg(A, B, C), rAng = isRight(ang);
+        arcs[i].setAttribute("d", rAng ? "" : computeArc(A, B, C));
+
+        var bd = bisDir(A, B, C), bm = Math.hypot(bd.x, bd.y) || 1, r = arcR();
+        angTxts[i].textContent = ang.toFixed(1) + "\u00B0";
+        angTxts[i].setAttribute("x", cm(B.x + (bd.x / bm) * r * 1.9));
+        angTxts[i].setAttribute("y", cm(B.y + (bd.y / bm) * r * 1.9));
+
+        if (rAng) {
+          var sv = r * 0.55;
+          var v1 = { x: A.x - B.x, y: A.y - B.y }, v2 = { x: C.x - B.x, y: C.y - B.y };
+          var m1 = Math.hypot(v1.x, v1.y) || 1, m2 = Math.hypot(v2.x, v2.y) || 1;
+          v1.x /= m1; v1.y /= m1; v2.x /= m2; v2.y /= m2;
+          var p1 = { x: B.x + v1.x * sv, y: B.y + v1.y * sv }, p2 = { x: p1.x + v2.x * sv, y: p1.y + v2.y * sv }, p3 = { x: B.x + v2.x * sv, y: B.y + v2.y * sv };
+          rights[i].setAttribute("d", "M" + cm(p1.x) + " " + cm(p1.y) + "L" + cm(p2.x) + " " + cm(p2.y) + "L" + cm(p3.x) + " " + cm(p3.y));
+        } else {
+          rights[i].setAttribute("d", "");
+        }
+      }
+
+      var cls = classifyShape();
+      var sl = getSides(), ab = sl[0], bc = sl[1], cd = sl[2], da = sl[3];
+      var d1 = dist(vertices[0], vertices[2]);
+      var d2 = dist(vertices[1], vertices[3]);
+      var perim = ab + bc + cd + da;
+      var ainfo = getAreaInfo(cls);
+      var u = t("unitCm"), u2 = t("unitCm2");
+
+      elClass.textContent = cls;
+      elAB.textContent = ab.toFixed(2) + "\u00A0" + u;
+      elBC.textContent = bc.toFixed(2) + "\u00A0" + u;
+      elCD.textContent = cd.toFixed(2) + "\u00A0" + u;
+      elDA.textContent = da.toFixed(2) + "\u00A0" + u;
+      elD1.textContent = d1.toFixed(2) + "\u00A0" + u;
+      elD2.textContent = d2.toFixed(2) + "\u00A0" + u;
+      elPerim.textContent = perim.toFixed(2) + "\u00A0" + u;
+      elSteps.textContent = ainfo.steps;
+
+      elAreaResult.textContent = "";
+      var valSpan = document.createElement("span");
+      valSpan.textContent = ainfo.area.toFixed(2) + "\u00A0";
+      var unitSpan = document.createElement("span");
+      unitSpan.className = "quad-area-unit";
+      unitSpan.textContent = u2;
+      elAreaResult.appendChild(valSpan);
+      elAreaResult.appendChild(unitSpan);
+    }
+
+    // ── Drag ──────────────────────────────────────────────────────────────────────
+
+    function getPos(e) {
+      return {
+        x: e.touches ? e.touches[0].clientX : e.clientX,
+        y: e.touches ? e.touches[0].clientY : e.clientY
+      };
+    }
+
+    function startDrag(e, v) {
+      dragging = parseInt(v.dataset.i);
+      var r = svg.getBoundingClientRect();
+      var pos = getPos(e);
+      dragM = { x: (pos.x - r.left) / px, y: (pos.y - r.top) / px };
+      dragV = { x: vertices[dragging].x, y: vertices[dragging].y };
+      e.preventDefault();
+    }
+
+    verts.forEach(function (v) {
+      v.addEventListener("mousedown", function (e) { startDrag(e, v); });
+      v.addEventListener("touchstart", function (e) { startDrag(e, v); }, { passive: false });
+    });
+
+    function handleMove(e) {
+      if (dragging === null) return;
+      e.preventDefault();
+      var r = svg.getBoundingClientRect();
+      var pos = getPos(e);
+      var mx = (pos.x - r.left) / px, my = (pos.y - r.top) / px;
+      vertices[dragging] = { x: dragV.x + Math.trunc(mx - dragM.x), y: dragV.y + Math.trunc(my - dragM.y) };
+      update();
+    }
+
+    function endDrag() { dragging = null; }
+
+    window.addEventListener("mousemove", handleMove);
+    window.addEventListener("touchmove", handleMove, { passive: false });
+    window.addEventListener("mouseup", endDrag);
+    window.addEventListener("touchend", endDrag);
+
+    // ── Init ──────────────────────────────────────────────────────────────────────
+
+    function init() {
+      px = svg.getBoundingClientRect().width / boardWidth;
+      drawGrid();
+      update();
+    }
+
+    requestAnimationFrame(init);
+    window.addEventListener("resize", function () { requestAnimationFrame(init); });
+
+    // Footer branding
+    var footer = document.createElement("div");
+    footer.className = "hw-footer";
+    var fLogo = document.createElement("a");
+    fLogo.className = "hw-footer-icon";
+    fLogo.href = mw.util.getUrl('Wikipedia:Hiruwiki');
+    fLogo.title = 'Hiruwiki';
+    fLogo.innerHTML = hiruwiki.getLogoSvg(22);
+    var fText = document.createElement("span");
+    fText.innerHTML = t('hint');
+    footer.appendChild(fLogo);
+    footer.appendChild(fText);
+    el.appendChild(footer);
+  } // end initQuadWidget
+
+  // ── Bootstrap ─────────────────────────────────────────────────────────────────
+
+  mw.hook("wikipage.content").add(function () {
+    document.querySelectorAll('.hiruwiki[data-module="quadrangles"]').forEach(function (el) {
+      if (el.dataset.quadReady) return;
+      el.dataset.quadReady = true;
+      initQuadWidget(el);
+    });
   });
-});
 
 })();
