@@ -496,7 +496,7 @@ document.querySelectorAll( '.hiruwiki[data-module="integer-coordinates"]' ).forE
 
     function nearStar( cx, cy ) {
       var pt = toCanvas( ptX, ptY ), dx = cx - pt.x, dy = cy - pt.y;
-      return Math.sqrt( dx * dx + dy * dy ) < 20;
+      return Math.sqrt( dx * dx + dy * dy ) < 45;
     }
 
     function onMove( cx, cy ) {

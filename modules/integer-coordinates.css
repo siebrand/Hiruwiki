@@ -58,6 +58,7 @@
   cursor: grab;
   border-radius: 4px;
   flex-shrink: 0;
+  touch-action: none;
 }
 
 .icx-canvas.icx-dragging {

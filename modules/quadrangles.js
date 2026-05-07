@@ -776,7 +776,7 @@ function startDrag(e, v) {
   var pos = getPos(e);
   dragM = {x: (pos.x - r.left) / px, y: (pos.y - r.top) / px};
   dragV = {x: vertices[dragging].x, y: vertices[dragging].y};
-  if(e.touches) e.preventDefault();
+  e.preventDefault();
 }
 
 verts.forEach(function (v) {
@@ -786,7 +786,7 @@ verts.forEach(function (v) {
 
 function handleMove(e) {
   if (dragging === null) return;
-  if(e.touches) e.preventDefault();
+  e.preventDefault();
   var r  = svg.getBoundingClientRect();
   var pos = getPos(e);
   var mx = (pos.x - r.left) / px, my = (pos.y - r.top) / px;

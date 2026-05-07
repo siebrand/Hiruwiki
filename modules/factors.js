@@ -470,7 +470,10 @@ function mount( root ) {
     fLogo.title = 'Hiruwiki';
     fLogo.innerHTML = hiruwiki.getLogoSvg(22);
     var fText = document.createElement("span");
-    fText.innerHTML = t('hint');
+    fText.className = "hw-footer__text";
+    var hintStr = t('hint');
+    if (hintStr === '<hint>') hintStr = messages.en.hint || '';
+    fText.innerHTML = hintStr;
     footer.appendChild(fLogo);
     footer.appendChild(fText);
     

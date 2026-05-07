@@ -451,7 +451,7 @@ document.querySelectorAll( '.hiruwiki[data-module="positive-coordinates"]' ).for
 
     function nearStar( cx, cy ) {
       var pt = toCanvas( ptX, ptY ), dx = cx - pt.x, dy = cy - pt.y;
-      return Math.sqrt( dx * dx + dy * dy ) < 24;
+      return Math.sqrt( dx * dx + dy * dy ) < 45;
     }
 
     function onMove( cx, cy ) {

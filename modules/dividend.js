@@ -437,10 +437,18 @@ function mount( root ) {
     fLogo.innerHTML = hiruwiki.getLogoSvg(22);
     var fText = document.createElement("span");
     fText.className = "hw-footer__text";
-    fText.innerHTML = t('hint');
+    var hintStr = t('hint');
+    if (hintStr === '<hint>') hintStr = messages.en.hint || '';
+    fText.innerHTML = hintStr;
     footer.appendChild(fLogo);
     footer.appendChild(fText);
-    root.appendChild(footer);
+    
+    var hwDiv = root.querySelector('.hw-div');
+    if (hwDiv) {
+        hwDiv.appendChild(footer);
+    } else {
+        root.appendChild(footer);
+    }
 }
 
 /* ── SCAN & INIT ──────────────────────────────────────────────────────────── */
