@@ -133,7 +133,7 @@ nl:
     4triangles: 4 driehoeken × 180°
     _name: Hoeken van een zeshoek
     interiorAngles: Binnenhoeken
-    reset: ↺ Opnieuw instellen
+    reset: ↺ Reset
     total: Totaal
     hint: 'Schud de pot om de waarschijnlijkheid in actie te zien'
   incentre:
@@ -214,11 +214,11 @@ nl:
     _name: Stelling van Pythagoras
     angleDeg: hoek =
     lockRight: rechte hoek
-    reset: Reset
+    reset: ↺ Reset
   quadrangle-angles:
     _name: Hoeken van een vierhoek
     interiorAngles: Binnenhoeken
-    reset: Reset
+    reset: ↺ Reset
     sum: Som
     total: Totaal
   quadrangles:
@@ -299,12 +299,12 @@ nl:
     vertical: Verticaal
   triangle-angles:
     _name: Hoeken van een driehoek
-    reset: Opnieuw instellen
+    reset: ↺ Reset
     hint: 'Sleep hoekpunten om de driehoek te veranderen · Som van de hoeken is altijd 180°'
   triangle-area:
     _name: Oppervlakte van een driehoek
     btnProve: Bewijs het
-    btnReset: Reset
+    btnReset: ↺ Reset
     labelArea: Oppervlakte
     labelBase: Basis (b)
     labelHeight: Hoogte (h)
@@ -333,7 +333,7 @@ nl:
     measurements: Afmetingen
     obtuse: stomphoekig
     perimeter: Omtrek
-    reset: Opnieuw instellen ↺
+    reset: ↺ Reset
     right: rechthoekig
     scalene: ongelijkzijdig
     sides: Zijden
@@ -379,7 +379,7 @@ nl:
     variable_t: Foutterm (t)
     variable_p: Machtsterm (p)
     step: Volgende stap
-    reset: Reset
+    reset: ↺ Reset
     pi_approx: Benadering van π
     correct_digits: "{{PLURAL:$1|$1 correct cijfer|$1 correcte cijfers}}"
     precision_note: 'Convergeert kwadratisch: het aantal cijfers verdubbelt bij elke stap.'
