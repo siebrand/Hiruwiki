@@ -228,6 +228,7 @@ function t(key, vars) {
 
 
 
+
 /* ── BUILD HTML ───────────────────────────────────────────────────────────── */
 function buildHTML( root ) {
     root.innerHTML =
@@ -435,6 +436,7 @@ function mount( root ) {
     fLogo.title = 'Hiruwiki';
     fLogo.innerHTML = hiruwiki.getLogoSvg(22);
     var fText = document.createElement("span");
+    fText.className = "hw-footer__text";
     fText.innerHTML = t('hint');
     footer.appendChild(fLogo);
     footer.appendChild(fText);

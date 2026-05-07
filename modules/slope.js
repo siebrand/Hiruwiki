@@ -80,6 +80,7 @@ function t(key, vars) {
 
 
 
+
 function initSlope(container) {
 
 const size = 520;
@@ -345,43 +346,58 @@ function draw(){
  updateFormula();
 }
 
-function pointerDown(e){
- const rect=canvas.getBoundingClientRect();
- const sx = size / rect.width;
- const sy = size / rect.height;
- const x=(e.clientX-rect.left) * sx;
- const y=(e.clientY-rect.top) * sy;
+function getPos(e) {
+  return {
+    x: e.touches ? e.touches[0].clientX : e.clientX,
+    y: e.touches ? e.touches[0].clientY : e.clientY
+  };
+}
 
- for(let i=0;i<points.length;i++){
-  const px=toCanvasX(points[i].x);
-  const py=toCanvasY(points[i].y);
-  if(Math.hypot(px-x,py-y)<25) dragging=i;
- }
+function pointerDown(e){
+  const pos = getPos(e);
+  const rect=canvas.getBoundingClientRect();
+  const sx = size / rect.width;
+  const sy = size / rect.height;
+  const x=(pos.x-rect.left) * sx;
+  const y=(pos.y-rect.top) * sy;
+
+  for(let i=0;i<points.length;i++){
+    const px=toCanvasX(points[i].x);
+    const py=toCanvasY(points[i].y);
+    if(Math.hypot(px-x,py-y)<35) dragging=i; // increased hit radius
+  }
+  if(dragging !== null && e.touches) e.preventDefault();
 }
 
 function pointerMove(e){
- if(dragging===null) return;
- const rect=canvas.getBoundingClientRect();
- const sx = size / rect.width;
- const sy = size / rect.height;
- const x=(e.clientX-rect.left) * sx;
- const y=(e.clientY-rect.top) * sy;
- const p=fromCanvas(x,y);
+  if(dragging===null) return;
+  if(e.touches) e.preventDefault();
+  const pos = getPos(e);
+  const rect=canvas.getBoundingClientRect();
+  const sx = size / rect.width;
+  const sy = size / rect.height;
+  const x=(pos.x-rect.left) * sx;
+  const y=(pos.y-rect.top) * sy;
+  const p=fromCanvas(x,y);
 
- p.x=Math.max(-range,Math.min(range,p.x));
- p.y=Math.max(-range,Math.min(range,p.y));
+  p.x=Math.max(-range,Math.min(range,p.x));
+  p.y=Math.max(-range,Math.min(range,p.y));
 
- points[dragging]=p;
+  points[dragging]=p;
 
- draw();
+  draw();
 }
 
 function pointerUp(){ dragging=null; }
 
-canvas.addEventListener("pointerdown",pointerDown);
-canvas.addEventListener("pointermove",pointerMove);
-canvas.addEventListener("pointerup",pointerUp);
-canvas.addEventListener("pointerleave",pointerUp);
+canvas.addEventListener("mousedown",pointerDown);
+canvas.addEventListener("mousemove",pointerMove);
+canvas.addEventListener("mouseup",pointerUp);
+canvas.addEventListener("mouseleave",pointerUp);
+
+canvas.addEventListener("touchstart",pointerDown,{passive:false});
+canvas.addEventListener("touchmove",pointerMove,{passive:false});
+canvas.addEventListener("touchend",pointerUp);
 
 draw();
 

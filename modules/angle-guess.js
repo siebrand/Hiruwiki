@@ -183,6 +183,7 @@ function t(key, vars) {
 
 
 
+
 // ── Find mount point ──────────────────────────────────────────
   var root = document.querySelector( '.hiruwiki[data-module="angle-guess"]' );
   if ( !root ) return;
@@ -208,7 +209,6 @@ function t(key, vars) {
         '<span>' + t('points') + ' <span class="ag-val" id="ag-iPoints">—</span></span>' +
       '</div>' +
       '<button class="angle-guess-btn" id="ag-nextBtn" disabled>' + t('nextAngle') + '</button>' +
-      '<p class="angle-guess-hint">' + t('hint') + '</p>' +
     '</div>' +
     '<div class="angle-guess-overlay" id="ag-overlay">' +
       '<div class="angle-guess-popup">' +

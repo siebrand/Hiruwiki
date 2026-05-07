@@ -162,6 +162,7 @@ function t(key, vars) {
 
 
 
+
 document.querySelectorAll( '.hiruwiki[data-module="integer-coordinates"]' ).forEach( function ( host ) {
 
     host.innerHTML = [
@@ -229,12 +230,12 @@ document.querySelectorAll( '.hiruwiki[data-module="integer-coordinates"]' ).forE
     var nextBtn        = host.querySelector( '.icx-next-btn' );
 
     /* -- Grid constants -- */
-    var X_MIN      = -15;
-    var X_MAX      =  15;
-    var Y_MIN      = -10;
-    var Y_MAX      =  10;
-    var X_STEPS    = X_MAX - X_MIN;   /* 30 */
-    var Y_STEPS    = Y_MAX - Y_MIN;   /* 20 */
+    var X_MIN      = -12;
+    var X_MAX      =  12;
+    var Y_MIN      = -8;
+    var Y_MAX      =  8;
+    var X_STEPS    = X_MAX - X_MIN;   /* 24 */
+    var Y_STEPS    = Y_MAX - Y_MIN;   /* 16 */
     var COLOR_X    = hiruwiki.getThemeColor('color-destructive', '#e74c3c');
     var COLOR_Y    = hiruwiki.getThemeColor('color-progressive', '#2980b9');
     var COLOR_AXIS = hiruwiki.getThemeColor('color-base', '#2c3e50');
@@ -243,9 +244,9 @@ document.querySelectorAll( '.hiruwiki[data-module="integer-coordinates"]' ).forE
     var PAD_RIGHT  = 20;
     var PAD_TOP    = 20;
     var PAD_BOTTOM = 34;
-    var CELL       = 22;
-    var CW         = PAD_LEFT + X_STEPS * CELL + PAD_RIGHT;   /* 46+660+20 = 726 */
-    var CH         = PAD_TOP  + Y_STEPS * CELL + PAD_BOTTOM;  /* 20+440+34 = 494 */
+    var CELL       = 30;
+    var CW         = PAD_LEFT + X_STEPS * CELL + PAD_RIGHT;
+    var CH         = PAD_TOP  + Y_STEPS * CELL + PAD_BOTTOM;
 
     canvas.width  = CW;
     canvas.height = CH;

@@ -234,15 +234,18 @@
     font-weight: bold;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .hw-pct-connector {
-        flex-direction: column;
-        gap: 12px;
+        flex-direction: row;
+        overflow-x: auto;
+        padding-bottom: 10px;
     }
-    .hw-pct-conn-arrow {
-        transform: rotate(90deg);
-        padding: 6px 0;
+    .hw-pct-box {
+        min-width: 80px;
     }
+}
+
+@media (max-width: 500px) {
     .hw-pct-axis-wrap {
         padding-right: 0;
     }

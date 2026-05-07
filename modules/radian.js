@@ -84,6 +84,7 @@ function t(key, vars) {
 
 
 
+
 // Find all radian modules
   document.querySelectorAll('.hiruwiki[data-module="radian"]').forEach(function(container) {
 
@@ -100,8 +101,7 @@ function t(key, vars) {
 
     // Create SVG inside the container
     const svg = document.createElementNS("http://www.w3.org/2000/svg","svg");
-    svg.setAttribute("width", width);
-    svg.setAttribute("height", height);
+    svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
     svg.classList.add("hiruwiki-svg");
     container.appendChild(svg);
 

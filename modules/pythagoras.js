@@ -101,6 +101,7 @@ function t(key, vars) {
 
 
 
+
 const SCALE = 38;
 
 let dragging=null;
@@ -184,8 +185,9 @@ ${t('angleDeg')}<input class="inputAngle" size="6" type="number" step="1">
 container.appendChild(box)
 
 const svg=createSVG("svg")
-svg.setAttribute("width","100%")
-svg.setAttribute("height",600)
+svg.setAttribute("viewBox","0 0 600 600")
+svg.style.width="100%"
+svg.style.height="auto"
 box.appendChild(svg)
 
 
@@ -196,7 +198,7 @@ const lockRight=box.querySelector(".lockRight")
 
 const resetBtn=box.querySelector(".resetBtn")
 
-let origin={x:260,y:300}
+let origin={x:300,y:350}
 let pA={x:origin.x,y:origin.y-toPx(2)}
 let pB={x:origin.x+toPx(3),y:origin.y}
 
@@ -364,22 +366,41 @@ if(lockRight.checked){
 
 }
 
-function startDrag(p,e){
- dragging=p
- lastMouse={x:e.clientX,y:e.clientY}
+function getPos(e) {
+  return {
+    x: e.touches ? e.touches[0].clientX : e.clientX,
+    y: e.touches ? e.touches[0].clientY : e.clientY
+  };
 }
 
-originCircle.onmousedown=e=>startDrag(origin,e)
-pACircle.onmousedown=e=>startDrag(pA,e)
-pBCircle.onmousedown=e=>startDrag(pB,e)
+function startDrag(p,e){
+  e.preventDefault();
+  dragging=p;
+  lastMouse=getPos(e);
+}
 
-svg.onmousemove=e=>{
+function attachDrag(el, p) {
+  el.onmousedown=e=>startDrag(p,e);
+  el.addEventListener('touchstart', e=>startDrag(p,e), {passive:false});
+}
+
+attachDrag(originCircle, origin);
+attachDrag(pACircle, pA);
+attachDrag(pBCircle, pB);
+
+function handleMove(e){
  if(!dragging) return
+ e.preventDefault();
 
- const dx=e.clientX-lastMouse.x
- const dy=e.clientY-lastMouse.y
+ const pos = getPos(e);
+ const rect = svg.getBoundingClientRect();
+ const sx = 600 / rect.width;
+ const sy = 600 / rect.height;
 
- lastMouse={x:e.clientX,y:e.clientY}
+ const dx = (pos.x - lastMouse.x) * sx;
+ const dy = (pos.y - lastMouse.y) * sy;
+
+ lastMouse = pos;
 
  if(dragging===pA){
   if(lockRight.checked){
@@ -412,7 +433,15 @@ svg.onmousemove=e=>{
  update()
 }
 
-window.onmouseup=()=>dragging=null
+svg.addEventListener('mousemove', handleMove);
+svg.addEventListener('touchmove', handleMove, {passive:false});
+
+function stopDrag() {
+  dragging=null;
+}
+
+window.addEventListener('mouseup', stopDrag);
+window.addEventListener('touchend', stopDrag);
 
 inputA.oninput=()=>{
  const v=parseFloat(inputA.value)
@@ -464,7 +493,7 @@ lockRight.onchange = () => {
 };
 
 resetBtn.onclick = () => {
- origin={x:260,y:300}
+ origin={x:300,y:350}
  pA={x:origin.x,y:origin.y-toPx(2)}
  pB={x:origin.x+toPx(3),y:origin.y}
  lockRight.checked=true

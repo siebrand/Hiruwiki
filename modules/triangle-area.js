@@ -173,6 +173,7 @@ function t(key, vars) {
 
 
 
+
 var W = 680, H = 430, CM = 37.8, DUR = 1600;
 
     function init(container) {
@@ -209,13 +210,16 @@ var W = 680, H = 430, CM = 37.8, DUR = 1600;
         var elResult = container.querySelector('.ta-proof-result');
         var btnProof = container.querySelector('.ta-btn-proof');
 
+        var DRAG_HIT_R = 35;
+        var dragging = null;
+
         // State
         var V = {
-            A: { x: W / 2 - 2 * CM, y: 300 },
-            B: { x: W / 2 + 2 * CM, y: 300 },
-            C: { x: W / 2 + 0.3 * CM, y: 300 - 3 * CM }
+            A: { x: 100, y: 350 },
+            B: { x: 500, y: 350 },
+            C: { x: 300, y: 100 }
         };
-        var phase = 'idle', animStart = null, dragging = null;
+        var phase = 'idle', animStart = null;
 
         // --- Math helpers ---
         function dist(a, b) {

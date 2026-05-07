@@ -79,6 +79,7 @@ html.client-dark-mode,
 	line-height: 1.4;
 	user-select: none;
 	-webkit-user-select: none;
+	flex-basis: 100%;
 }
 
 .hw-footer-icon,
