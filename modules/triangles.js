@@ -30,7 +30,8 @@ var messages = /* I18N_START */ {
         "sideB": "side b (CA)",
         "sideC": "side c (AB)",
         "unitCm": "cm",
-        "unitCm2": "cm²"
+        "unitCm2": "cm²",
+        "hint": "Drag vertices to change shape and classification"
     },
     "es": {
         "_name": "Triángulos",
@@ -176,7 +177,8 @@ var messages = /* I18N_START */ {
         "sideB": "zijde b (CA)",
         "sideC": "zijde c (AB)",
         "unitCm": "cm",
-        "unitCm2": "cm²"
+        "unitCm2": "cm²",
+        "hint": "Sleep hoekpunten om de vorm en classificatie te veranderen"
     },
     "qqq": {
         "_name": "Name of the Triangles module",
@@ -217,6 +219,7 @@ function t(key, vars) {
     }
     return str;
 }
+
 
 
 
@@ -397,7 +400,8 @@ fImg.alt    = "Hiruwiki";
 fImg.width  = 22;
 fImg.height = 22;
 
-fText.innerHTML = hintHtml;
+var fText = document.createElement("span");
+fText.innerHTML = t('hint');
 
 footer.appendChild(fImg);
 footer.appendChild(fText);

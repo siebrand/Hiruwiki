@@ -230,6 +230,7 @@ function t(key, vars) {
 
 
 
+
 	/* ----------------------------------------------------------
 	 * Constants
 	 * ---------------------------------------------------------- */
@@ -340,6 +341,8 @@ function t(key, vars) {
 		var fImg = document.createElement( 'img' );
 		fImg.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Hiruwiki.svg/32px-Hiruwiki.svg.png';
 		fImg.alt = 'Hiruwiki'; fImg.width = 22; fImg.height = 22;
+		var fText = document.createElement( 'span' );
+		fText.innerHTML = t( 'hint' );
 		footer.appendChild( fImg );
 		footer.appendChild( fText );
 		container.appendChild( footer );

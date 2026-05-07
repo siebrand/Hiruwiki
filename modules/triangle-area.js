@@ -27,7 +27,8 @@ var messages = /* I18N_START */ {
         "proofResultPara": "Parallelogram area = b × h = <strong>{b} × {h} = {area} cm²</strong>",
         "proofResultTri": "→ Triangle = ½ × {area} = <strong>{triArea} cm²</strong>",
         "unitCm": "cm",
-        "unitCm2": "cm²"
+        "unitCm2": "cm²",
+        "hint": "Drag vertices to see how the area relates to a parallelogram"
     },
     "es": {
         "_name": "Área del triángulo",
@@ -112,7 +113,8 @@ var messages = /* I18N_START */ {
         "proofResultPara": "Oppervlakte parallellogram = b × h = <strong>{b} × {h} = {area} cm²</strong>",
         "proofResultTri": "→ Driehoek = ½ × {area} = <strong>{triArea} cm²</strong>",
         "unitCm": "cm",
-        "unitCm2": "cm²"
+        "unitCm2": "cm²",
+        "hint": "Sleep hoekpunten om te zien hoe de oppervlakte zich verhoudt tot een parallelogram"
     },
     "qqq": {
         "_name": "Name of the Triangle Area module",
@@ -144,6 +146,7 @@ function t(key, vars) {
     }
     return str;
 }
+
 
 
 
@@ -498,6 +501,8 @@ var W = 680, H = 430, CM = 37.8, DUR = 1600;
         fImg.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Hiruwiki.svg/32px-Hiruwiki.svg.png';
         fImg.alt = 'Hiruwiki'; fImg.width = 22; fImg.height = 22;
         footer.appendChild(fImg);
+        var fText = document.createElement('span');
+        fText.innerHTML = t('hint');
         footer.appendChild(fText);
         container.appendChild(footer);
     }

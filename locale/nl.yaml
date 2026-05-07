@@ -288,6 +288,7 @@ nl:
   triangle-angles:
     _name: Hoeken van een driehoek
     reset: Opnieuw instellen
+    hint: 'Sleep hoekpunten om de driehoek te veranderen · Som van de hoeken is altijd 180°'
   triangle-area:
     _name: Oppervlakte van een driehoek
     btnProve: Bewijs het
@@ -302,6 +303,7 @@ nl:
     proofResultTri: ' → Driehoek = ½ × {area} = <strong>{triArea} cm²</strong>'
     unitCm: cm
     unitCm2: cm²
+    hint: 'Sleep hoekpunten om te zien hoe de oppervlakte zich verhoudt tot een parallelogram'
   triangle-centroid:
     _name: Zwaartepunt van een driehoek
     centroid: Zwaartepunt
@@ -328,6 +330,7 @@ nl:
     sideC: zijde c (AB)
     unitCm: cm
     unitCm2: cm²
+    hint: 'Sleep hoekpunten om de vorm en classificatie te veranderen'
   trigonometry:
     _name: Goniometrie
     angle: Hoek &theta;

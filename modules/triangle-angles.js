@@ -10,7 +10,8 @@ var messages = /* I18N_START */ {
     },
     "en": {
         "_name": "Triangle Angles",
-        "reset": "Reset"
+        "reset": "Reset",
+        "hint": "Drag vertices to change the triangle · Sum of angles is always 180°"
     },
     "es": {
         "_name": "Ángulos del triángulo",
@@ -33,7 +34,8 @@ var messages = /* I18N_START */ {
     },
     "nl": {
         "_name": "Hoeken van een driehoek",
-        "reset": "Opnieuw instellen"
+        "reset": "Opnieuw instellen",
+        "hint": "Sleep hoekpunten om de driehoek te veranderen · Som van de hoeken is altijd 180°"
     },
     "qqq": {
         "_name": "Name of the Triangle Angles module",
@@ -55,6 +57,7 @@ function t(key, vars) {
     }
     return str;
 }
+
 
 
 
@@ -352,6 +355,8 @@ footer.className = 'hw-footer';
 var fImg = document.createElement('img');
 fImg.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Hiruwiki.svg/32px-Hiruwiki.svg.png';
 fImg.alt = 'Hiruwiki'; fImg.width = 22; fImg.height = 22;
+var fText = document.createElement('span');
+fText.innerHTML = t('hint');
 footer.appendChild(fImg);
 footer.appendChild(fText);
 container.appendChild(footer);
