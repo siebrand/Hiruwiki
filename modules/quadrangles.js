@@ -763,25 +763,43 @@ function update() {
 
 // ── Drag ──────────────────────────────────────────────────────────────────────
 
+function getPos(e) {
+  return {
+    x: e.touches ? e.touches[0].clientX : e.clientX,
+    y: e.touches ? e.touches[0].clientY : e.clientY
+  };
+}
+
+function startDrag(e, v) {
+  dragging = parseInt(v.dataset.i);
+  var r = svg.getBoundingClientRect();
+  var pos = getPos(e);
+  dragM = {x: (pos.x - r.left) / px, y: (pos.y - r.top) / px};
+  dragV = {x: vertices[dragging].x, y: vertices[dragging].y};
+  if(e.touches) e.preventDefault();
+}
+
 verts.forEach(function (v) {
-  v.addEventListener("mousedown", function (e) {
-    dragging = parseInt(v.dataset.i);
-    var r = svg.getBoundingClientRect();
-    dragM = {x: (e.clientX - r.left) / px, y: (e.clientY - r.top) / px};
-    dragV = {x: vertices[dragging].x, y: vertices[dragging].y};
-    e.preventDefault();
-  });
+  v.addEventListener("mousedown", function (e) { startDrag(e, v); });
+  v.addEventListener("touchstart", function (e) { startDrag(e, v); }, {passive: false});
 });
 
-window.addEventListener("mousemove", function (e) {
+function handleMove(e) {
   if (dragging === null) return;
+  if(e.touches) e.preventDefault();
   var r  = svg.getBoundingClientRect();
-  var mx = (e.clientX - r.left) / px, my = (e.clientY - r.top) / px;
+  var pos = getPos(e);
+  var mx = (pos.x - r.left) / px, my = (pos.y - r.top) / px;
   vertices[dragging] = {x: dragV.x + Math.trunc(mx - dragM.x), y: dragV.y + Math.trunc(my - dragM.y)};
   update();
-});
+}
 
-window.addEventListener("mouseup", function () { dragging = null; });
+function endDrag() { dragging = null; }
+
+window.addEventListener("mousemove", handleMove);
+window.addEventListener("touchmove", handleMove, {passive: false});
+window.addEventListener("mouseup", endDrag);
+window.addEventListener("touchend", endDrag);
 
 // ── Init ──────────────────────────────────────────────────────────────────────
 

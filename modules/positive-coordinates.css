@@ -194,5 +194,6 @@
   }
   .cex-sidebar {
     width: 100%;
+    order: -1;
   }
 }

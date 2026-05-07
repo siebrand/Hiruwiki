@@ -239,10 +239,10 @@ var SIZE = 320;
             '<button class="mc-btn" id="mc-btn-add">' + t('addPoints') + '</button>' +
             '<button class="mc-btn mc-btn--reset" id="mc-btn-reset">' + t('reset') + '</button>';
 
+        panel.appendChild( controls );
         panel.appendChild( formulaBox );
         panel.appendChild( statsRow );
         panel.appendChild( statTotal );
-        panel.appendChild( controls );
 
         wrap.appendChild( canvasCol );
         wrap.appendChild( panel );
@@ -335,6 +335,7 @@ var SIZE = 320;
         wrap.querySelector( '#mc-btn-reset' ).addEventListener( 'click', reset );
 
         // ── Init ─────────────────────────────────────────────────────────────
+        drawBase();
         updateStats();
 
         // Footer branding

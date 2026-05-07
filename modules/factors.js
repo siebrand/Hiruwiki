@@ -473,7 +473,13 @@ function mount( root ) {
     fText.innerHTML = t('hint');
     footer.appendChild(fLogo);
     footer.appendChild(fText);
-    root.appendChild(footer);
+    
+    var hwFactors = root.querySelector('.hw-factors');
+    if (hwFactors) {
+        hwFactors.appendChild(footer);
+    } else {
+        root.appendChild(footer);
+    }
 }
 
 /* ── SCAN & INIT ──────────────────────────────────────────────────────────── */
