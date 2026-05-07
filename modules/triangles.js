@@ -24,7 +24,8 @@ var messages = /* I18N_START */ {
         "sideB": "lado b (CA)",
         "sideC": "lado c (AB)",
         "unitCm": "cm",
-        "unitCm2": "cm²"
+        "unitCm2": "cm²",
+        "hint": "Esta es una visualización interactiva. Arrastra los vértices para modificar el triángulo."
     },
     "fr": {
         "_name": "Triangles",
@@ -47,7 +48,8 @@ var messages = /* I18N_START */ {
         "sideB": "côté b (CA)",
         "sideC": "côté c (AB)",
         "unitCm": "cm",
-        "unitCm2": "cm²"
+        "unitCm2": "cm²",
+        "hint": "Ceci est une visualisation interactive. Faites glisser les sommets pour modifier le triangle."
     },
     "ga": {
         "_name": "Triantáin",
@@ -70,7 +72,8 @@ var messages = /* I18N_START */ {
         "sideB": "taobh b (CA)",
         "sideC": "taobh c (AB)",
         "unitCm": "cm",
-        "unitCm2": "cm²"
+        "unitCm2": "cm²",
+        "hint": "Is léirshamhlú idirghníomhach é seo. Tarraing na buaicphointí chun an triantán a athrú."
     },
     "qqq": {
         "_name": "Name of the Triangles module",
@@ -93,7 +96,8 @@ var messages = /* I18N_START */ {
         "sideB": "Label for side b (the one connecting vertices C and A)",
         "sideC": "Label for side c (the one connecting vertices A and B)",
         "unitCm": "Unit of length (centimeters)",
-        "unitCm2": "Unit of area (square centimeters)"
+        "unitCm2": "Unit of area (square centimeters)",
+        "hint": "Footer hint text telling the user to drag the vertices to reshape the triangle"
     },
     "it": {
         "angles": "Angoli",
@@ -104,7 +108,8 @@ var messages = /* I18N_START */ {
         "measurements": "Misure",
         "perimeter": "Perimetro",
         "unitCm": "cm",
-        "unitCm2": "cm²"
+        "unitCm2": "cm²",
+        "hint": "Questa è una visualizzazione interattiva. Trascina i vertici per modificare il triangolo."
     },
     "nl": {
         "_name": "Driehoeken",
@@ -127,7 +132,8 @@ var messages = /* I18N_START */ {
         "sideB": "zijde b (CA)",
         "sideC": "zijde c (AB)",
         "unitCm": "cm",
-        "unitCm2": "cm²"
+        "unitCm2": "cm²",
+        "hint": "Dit is een interactieve visualisatie. Sleep de hoekpunten om de driehoek te wijzigen."
     },
     "en": {
         "_name": "Triangles",
@@ -150,13 +156,15 @@ var messages = /* I18N_START */ {
         "sideB": "side b (CA)",
         "sideC": "side c (AB)",
         "unitCm": "cm",
-        "unitCm2": "cm²"
+        "unitCm2": "cm²",
+        "hint": "This is an interactive visualization. Drag the vertices to reshape the triangle."
     },
     "ca": {
         "angles": "Angles",
         "right": "recte",
         "unitCm": "cm",
-        "unitCm2": "cm²"
+        "unitCm2": "cm²",
+        "hint": "Aquesta és una visualització interactiva. Arrossega els vèrtexs per modificar el triangle."
     },
     "ko": {
         "_name": "삼각형",
@@ -176,7 +184,8 @@ var messages = /* I18N_START */ {
         "sideB": "선분 b (CA)",
         "sideC": "선분 c (AB)",
         "unitCm": "cm",
-        "unitCm2": "cm²"
+        "unitCm2": "cm²",
+        "hint": "이것은 대화형 시각화입니다. 꼭짓점을 드래그하여 삼각형을 바꾸세요."
     },
     "eu": {
         "_name": "Hirukiak",
@@ -199,7 +208,8 @@ var messages = /* I18N_START */ {
         "sideB": "b aldea (CA)",
         "sideC": "c aldea (AB)",
         "unitCm": "cm",
-        "unitCm2": "cm²"
+        "unitCm2": "cm²",
+        "hint": "Bistaratzaile interaktibo bat da. Arrastatu erpinak hirukia aldatzeko."
     }
 } /* I18N_END */
 var lang = (window.mw && mw.config.get('wgUserLanguage')) || 'en';
@@ -216,9 +226,6 @@ function t(key, vars) {
     }
     return str;
 }
-
-
-
 
 
 function initTriangleWidget(container) {
@@ -253,15 +260,18 @@ badgeSidesLbl.textContent = t('bySides');
 var badgeSides = document.createElement("span");
 badgeSides.className = "triangle-badge triangle-badge-sides";
 badgeSidesWrap.appendChild(badgeSidesLbl);
+badgeSidesWrap.appendChild(document.createElement("br"));
 badgeSidesWrap.appendChild(badgeSides);
 
 var badgeAnglesWrap = document.createElement("div");
+badgeAnglesWrap.className = "triangle-badge-wrap";
 var badgeAnglesLbl = document.createElement("span");
 badgeAnglesLbl.className = "triangle-badge-sublabel";
 badgeAnglesLbl.textContent = t('byAngles');
 var badgeAngles = document.createElement("span");
 badgeAngles.className = "triangle-badge triangle-badge-angles";
 badgeAnglesWrap.appendChild(badgeAnglesLbl);
+badgeAnglesWrap.appendChild(document.createElement("br"));
 badgeAnglesWrap.appendChild(badgeAngles);
 
 secClass.appendChild(badgeSidesWrap);
@@ -277,9 +287,7 @@ lblSides.textContent = t('sides');
 secSides.appendChild(lblSides);
 
 var dotClasses       = ["triangle-dot--a",        "triangle-dot--b",        "triangle-dot--c"];
-/* sides[i] labels vertices[i]→vertices[(i+1)%3]:
-   i=0: A→B = side c, i=1: B→C = side a, i=2: C→A = side b */
-var sideLabelClasses = ["triangle-side-label--c", "triangle-side-label--a", "triangle-side-label--b"];
+var sideLabelClasses = ["triangle-side-label--c",  "triangle-side-label--a", "triangle-side-label--b"];
 var sideNames        = [t('sideA'), t('sideB'), t('sideC')];
 var sideValEls       = [];
 for (var si = 0; si < 3; si++) {
@@ -373,6 +381,32 @@ layout.appendChild(canvasWrap);
 layout.appendChild(panel);
 container.appendChild(layout);
 
+/* ── Footer — hint text injected here, copy not loaded externally ── */
+var footer = document.createElement("div");
+footer.className = "hw-footer";
+
+var fImg = document.createElement("img");
+fImg.src    = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Hiruwiki.svg/32px-Hiruwiki.svg.png";
+fImg.alt    = "Hiruwiki";
+fImg.width  = 22;
+fImg.height = 22;
+
+var fText = document.createElement("span");
+/* Wrap the key phrase in <strong> for accent colour */
+var hintRaw = t('hint');
+/* Bold "interactive visualization" / its translation (first two words after "is an" pattern) */
+var hintHtml = hintRaw.replace(
+    /(visualización interactiva|visualisation interactive|interactieve visualisatie|léirshamhlú idirghníomhach|visualització interactiva|대화형 시각화|visualizzazione interattiva|bistaratzaile interaktibo|interactive visualization)/i,
+    '<strong>$1</strong>'
+);
+fText.innerHTML = hintHtml;
+
+footer.appendChild(fImg);
+footer.appendChild(fText);
+container.appendChild(footer);
+
+/* ── rest of module unchanged below ── */
+
 var px;
 
 function equilateral() {
@@ -405,8 +439,6 @@ function createSVG(type, attrs, parent) {
 var grid       = createSVG("g", { "class": "triangle-grid" });
 var shapeFill  = createSVG("polygon", { "class": "triangle-fill" });
 var shapeLines = [];
-/* shapeLines[i] connects vertices[i] to vertices[(i+1)%3]:
-   i=0: A→B = side c, i=1: B→C = side a, i=2: C→A = side b */
 var shapeLineClasses = ["triangle-shape--c", "triangle-shape--a", "triangle-shape--b"];
 for (var li = 0; li < 3; li++) {
   shapeLines.push(createSVG("line", { "class": "triangle-shape " + shapeLineClasses[li] }));
@@ -520,7 +552,6 @@ function classifyAngles() {
   if (A > 90 || B > 90 || C > 90) { return t("obtuse"); }
   return t("acute");
 }
-
 
 function triangleArea() {
   var a = vertices[0], b = vertices[1], c = vertices[2];
@@ -675,7 +706,6 @@ function startDrag(idx, clientX, clientY) {
   dragStartVertex = { x: vertices[dragging].x, y: vertices[dragging].y };
 }
 
-/* ── Mouse drag ── */
 function makeMouseDown(el) {
   el.addEventListener("mousedown", function (e) {
     e.preventDefault();
@@ -683,13 +713,12 @@ function makeMouseDown(el) {
   });
 }
 
-/* ── Touch drag ── */
 function makeTouchStart(el) {
   el.addEventListener("touchstart", function (e) {
     if (e.touches.length !== 1) { return; }
     e.preventDefault();
-    var t = e.touches[0];
-    startDrag(parseInt(el.getAttribute("data-i"), 10), t.clientX, t.clientY);
+    var touch = e.touches[0];
+    startDrag(parseInt(el.getAttribute("data-i"), 10), touch.clientX, touch.clientY);
   }, false);
 }
 
@@ -707,9 +736,10 @@ function snapHalf(v) {
 window.addEventListener("mousemove", function (e) {
   if (dragging === null) { return; }
   var mouse = getPosSVG(e.clientX, e.clientY);
+  var margin = 0.6;
   vertices[dragging] = {
-    x: snapHalf(dragStartVertex.x + (mouse.x - dragStartMouse.x)),
-    y: snapHalf(dragStartVertex.y + (mouse.y - dragStartMouse.y))
+    x: snapHalf(Math.max(margin, Math.min(boardWidth  - margin, dragStartVertex.x + (mouse.x - dragStartMouse.x)))),
+    y: snapHalf(Math.max(margin, Math.min(boardHeight - margin, dragStartVertex.y + (mouse.y - dragStartMouse.y))))
   };
   update();
 });
@@ -719,11 +749,12 @@ window.addEventListener("mouseup", function () { dragging = null; });
 window.addEventListener("touchmove", function (e) {
   if (dragging === null || e.touches.length !== 1) { return; }
   e.preventDefault();
-  var t     = e.touches[0];
-  var mouse = getPosSVG(t.clientX, t.clientY);
+  var touch = e.touches[0];
+  var mouse = getPosSVG(touch.clientX, touch.clientY);
+  var margin = 0.6;
   vertices[dragging] = {
-    x: snapHalf(dragStartVertex.x + (mouse.x - dragStartMouse.x)),
-    y: snapHalf(dragStartVertex.y + (mouse.y - dragStartMouse.y))
+    x: snapHalf(Math.max(margin, Math.min(boardWidth  - margin, dragStartVertex.x + (mouse.x - dragStartMouse.x)))),
+    y: snapHalf(Math.max(margin, Math.min(boardHeight - margin, dragStartVertex.y + (mouse.y - dragStartMouse.y))))
   };
   update();
 }, false);
