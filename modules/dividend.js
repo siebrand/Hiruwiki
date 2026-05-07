@@ -191,7 +191,12 @@ banana.load(messages);
 
 function t(key, vars) {
     var args = Array.isArray(vars) ? vars : [];
-    var str = banana.i18n(key, ...args);
+    var str;
+    try {
+        str = banana.i18n(key, ...args);
+    } catch (e) {
+        str = key;
+    }
     if (str === key || str === '<' + key + '>') {
         str = (messages.en && messages.en[key]) || str;
     }
