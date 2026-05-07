@@ -161,6 +161,7 @@ qqq:
     touchBC: Label for the tangent point on side BC
     touchCA: Label for the tangent point on side CA
     triangle: Section heading for the triangle properties
+    hint: Explanation about how the module is interactive
   marble-jar:
     _name: Name of the Probability Jar module
     colorBlue: Name of the blue marble colour
@@ -278,6 +279,7 @@ qqq:
   triangle-angles:
     _name: Name of the Triangle Angles module
     reset: Button label to reset the triangle
+    hint: Explanation about how the module is interactive
   triangle-area:
     _name: Name of the Triangle Area module
     btnProve: Button label to start the area proof animation
@@ -293,6 +295,7 @@ qqq:
       Uses HTML. Parameters: {area} = parallelogram area, {triArea} = triangle area.'
     unitCm: Unit of length (centimeters)
     unitCm2: Unit of area (square centimeters)
+    hint: Explanation about how the module is interactive
   triangle-centroid:
     _name: Name of the Triangle Centroid module
     centroid: Label for the centroid point
@@ -321,6 +324,7 @@ qqq:
     sideC: Label for side c (the one connecting vertices A and B)
     unitCm: Unit of length (centimeters)
     unitCm2: Unit of area (square centimeters)
+    hint: Explanation about how the module is interactive
   trigonometry:
     _name: Name of the Trigonometry module
     angle: Label for the angle θ slider. Uses &theta; HTML entity.
