@@ -54,7 +54,7 @@ var messages = /* I18N_START */ {
     "nl": {
         "_name": "Hoeken van een vierhoek",
         "interiorAngles": "Binnenhoeken",
-        "reset": "Reset",
+        "reset": "↺ Reset",
         "sum": "Som",
         "total": "Totaal"
     },
@@ -81,6 +81,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

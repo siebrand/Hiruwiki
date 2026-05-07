@@ -56,9 +56,9 @@ var messages = /* I18N_START */ {
         "4triangles": "4 driehoeken × 180°",
         "_name": "Hoeken van een zeshoek",
         "interiorAngles": "Binnenhoeken",
-        "reset": "↺ Opnieuw instellen",
+        "reset": "↺ Reset",
         "total": "Totaal",
-        "hint": "Schud de pot om de waarschijnlijkheid in actie te zien"
+        "hint": "Verdeel de zeshoek in driehoeken of vierhoeken om de som van de hoeken te zien"
     },
     "qqq": {
         "2quads": "Decomposition label showing 2 quadrilaterals × 360°",
@@ -84,6 +84,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

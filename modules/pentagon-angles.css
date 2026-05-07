@@ -1,5 +1,6 @@
 .pentagon-angles {
   display: flex;
+  flex-wrap: wrap;
   align-items: stretch;
   font-family: Arial, sans-serif;
   box-sizing: border-box;
@@ -9,7 +10,6 @@
 
 .pentagon-angles .qa-svg {
   flex: 1 1 auto;
-  width: 100%;
   height: auto;
   display: block;
   border: 1px solid var(--border-color-base, #ccc);
@@ -173,4 +173,8 @@ background-color: var(--background-color-destructive, #bf3c2c);
 
 .pentagon-angles .qa-reset-btn:active {
 	background-color: var(--background-color-destructive--active, #612419);
+}
+
+.pentagon-angles .hw-footer {
+  flex-basis: 100%;
 }

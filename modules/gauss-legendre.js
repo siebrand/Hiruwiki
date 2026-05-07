@@ -29,7 +29,7 @@
         "variable_t": "Foutterm (t)",
         "variable_p": "Machtsterm (p)",
         "step": "Volgende stap",
-        "reset": "Reset",
+        "reset": "↺ Reset",
         "pi_approx": "Benadering van π",
         "correct_digits": "{{PLURAL:$1|$1 correct cijfer|$1 correcte cijfers}}",
         "precision_note": "Convergeert kwadratisch: het aantal cijfers verdubbelt bij elke stap.",
@@ -70,6 +70,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

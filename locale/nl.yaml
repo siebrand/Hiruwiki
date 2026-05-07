@@ -135,7 +135,7 @@ nl:
     interiorAngles: Binnenhoeken
     reset: ↺ Reset
     total: Totaal
-    hint: 'Schud de pot om de waarschijnlijkheid in actie te zien'
+    hint: Verdeel de zeshoek in driehoeken of vierhoeken om de som van de hoeken te zien
   incentre:
     _name: Aangeschreven middelpunt
     angleA: Hoek A

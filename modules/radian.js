@@ -80,6 +80,8 @@ function t(key, vars) {
 
 
 
+
+
 // Find all radian modules
   document.querySelectorAll('.hiruwiki[data-module="radian"]').forEach(function(container) {
 
@@ -265,11 +267,22 @@ function t(key, vars) {
     }
 
     let dragging=false;
-    svg.addEventListener("mousedown",e=>{dragging=true; setAngle(e);});
+    svg.addEventListener("mousedown",e=>{
+        e.preventDefault();
+        dragging=true; 
+        setAngle(e);
+    });
     svg.addEventListener("mousemove",e=>{if(dragging)setAngle(e);});
     document.addEventListener("mouseup",()=>dragging=false);
-    svg.addEventListener("touchstart",e=>{dragging=true; setAngle(e);});
-    svg.addEventListener("touchmove",e=>{setAngle(e);});
+    svg.addEventListener("touchstart",e=>{
+        e.preventDefault();
+        dragging=true; 
+        setAngle(e);
+    });
+    svg.addEventListener("touchmove",e=>{
+        e.preventDefault();
+        setAngle(e);
+    });
     document.addEventListener("touchend",()=>dragging=false);
 
     update();

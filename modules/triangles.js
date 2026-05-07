@@ -169,7 +169,7 @@ var messages = /* I18N_START */ {
         "measurements": "Afmetingen",
         "obtuse": "stomphoekig",
         "perimeter": "Omtrek",
-        "reset": "Opnieuw instellen ↺",
+        "reset": "↺ Reset",
         "right": "rechthoekig",
         "scalene": "ongelijkzijdig",
         "sides": "Zijden",
@@ -219,6 +219,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

@@ -104,7 +104,7 @@ var messages = /* I18N_START */ {
     "nl": {
         "_name": "Oppervlakte van een driehoek",
         "btnProve": "Bewijs het",
-        "btnReset": "Reset",
+        "btnReset": "↺ Reset",
         "labelArea": "Oppervlakte",
         "labelBase": "Basis (b)",
         "labelHeight": "Hoogte (h)",
@@ -146,6 +146,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

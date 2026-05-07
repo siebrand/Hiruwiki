@@ -50,7 +50,7 @@ var messages = /* I18N_START */ {
         "_name": "Stelling van Pythagoras",
         "angleDeg": "hoek =",
         "lockRight": "rechte hoek",
-        "reset": "Reset"
+        "reset": "↺ Reset"
     },
     "qqq": {
         "_name": "Name of the Pythagorean Theorem module",
@@ -74,6 +74,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 

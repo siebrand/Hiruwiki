@@ -1,5 +1,6 @@
 .hexagon-angles {
   display: flex;
+  flex-wrap: wrap;
   align-items: stretch;
   font-family: Arial, sans-serif;
   box-sizing: border-box;
@@ -9,7 +10,6 @@
 
 .hexagon-angles .qa-svg {
   flex: 1 1 auto;
-  width: 100%;
   height: auto;
   display: block;
   border: 1px solid var(--border-color-base, #ccc);
@@ -222,4 +222,8 @@ background-color: var(--background-color-destructive, #bf3c2c);
   font-size: 10px;
   color: var(--color-placeholder, #aaa);
   font-style: italic;
+}
+
+.hexagon-angles .hw-footer {
+  flex-basis: 100%;
 }

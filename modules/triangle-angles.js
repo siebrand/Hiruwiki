@@ -34,7 +34,7 @@ var messages = /* I18N_START */ {
     },
     "nl": {
         "_name": "Hoeken van een driehoek",
-        "reset": "Opnieuw instellen",
+        "reset": "↺ Reset",
         "hint": "Sleep hoekpunten om de driehoek te veranderen · Som van de hoeken is altijd 180°"
     },
     "qqq": {
@@ -57,6 +57,8 @@ function t(key, vars) {
     }
     return str;
 }
+
+
 
 
 
