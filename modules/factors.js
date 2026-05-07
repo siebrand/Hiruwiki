@@ -329,6 +329,11 @@ function buildHTML( root ) {
 
         '<div class="hw-fct-insight" id="hw-fct-insight"></div>' +
 
+        '<div class="hw-footer">' +
+            '<a class="hw-footer-icon" href="' + mw.util.getUrl('Wikipedia:Hiruwiki') + '" title="Hiruwiki">' + hiruwiki.getLogoSvg(22) + '</a>' +
+            '<span class="hw-footer__text">' + (t('hint') === 'hint' || t('hint') === '<hint>' ? (messages.en.hint || '') : t('hint')) + '</span>' +
+        '</div>' +
+
         '</div>';
 }
 
@@ -434,29 +439,6 @@ function mount( root ) {
     sA.addEventListener( 'input', function () { update( root ); } );
     sB.addEventListener( 'input', function () { update( root ); } );
     update( root );
-
-    // Footer branding
-    var footer = document.createElement("div");
-    footer.className = "hw-footer";
-    var fLogo = document.createElement("a");
-    fLogo.className = "hw-footer-icon";
-    fLogo.href = mw.util.getUrl('Wikipedia:Hiruwiki');
-    fLogo.title = 'Hiruwiki';
-    fLogo.innerHTML = hiruwiki.getLogoSvg(22);
-    var fText = document.createElement("span");
-    fText.className = "hw-footer__text";
-    var hintStr = t('hint');
-    if (hintStr === '<hint>') hintStr = messages.en.hint || '';
-    fText.innerHTML = hintStr;
-    footer.appendChild(fLogo);
-    footer.appendChild(fText);
-    
-    var hwFactors = root.querySelector('.hw-factors');
-    if (hwFactors) {
-        hwFactors.appendChild(footer);
-    } else {
-        root.appendChild(footer);
-    }
 }
 
 /* ── SCAN & INIT ──────────────────────────────────────────────────────────── */
