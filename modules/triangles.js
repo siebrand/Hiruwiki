@@ -391,14 +391,6 @@ fImg.alt    = "Hiruwiki";
 fImg.width  = 22;
 fImg.height = 22;
 
-var fText = document.createElement("span");
-/* Wrap the key phrase in <strong> for accent colour */
-var hintRaw = t('hint');
-/* Bold "interactive visualization" / its translation (first two words after "is an" pattern) */
-var hintHtml = hintRaw.replace(
-    /(visualización interactiva|visualisation interactive|interactieve visualisatie|léirshamhlú idirghníomhach|visualització interactiva|대화형 시각화|visualizzazione interattiva|bistaratzaile interaktibo|interactive visualization)/i,
-    '<strong>$1</strong>'
-);
 fText.innerHTML = hintHtml;
 
 footer.appendChild(fImg);
