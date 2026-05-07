@@ -301,34 +301,6 @@ function t(key, vars) {
     return str;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // ── Widget ───────────────────────────────────────────────────────────────────
 
 function initQuadWidget(container) {

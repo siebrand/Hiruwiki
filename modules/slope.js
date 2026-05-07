@@ -54,33 +54,6 @@ function t(key, vars) {
     return str;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function initSlope(container) {
 
 const size = 520;

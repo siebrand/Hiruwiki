@@ -119,33 +119,6 @@ function t(key, vars) {
     return str;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 var SIZE = 320;
 
     function euFmt( n ) {
