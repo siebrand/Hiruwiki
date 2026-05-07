@@ -796,9 +796,12 @@
     fLogo.className = "hw-footer-icon";
     fLogo.href = mw.util.getUrl('Wikipedia:Hiruwiki');
     fLogo.title = 'Hiruwiki';
-    fLogo.innerHTML = hiruwiki.getLogoSvg(22);
+    if (window.hiruwiki && window.hiruwiki.getLogoSvg) {
+        fLogo.insertAdjacentHTML('beforeend', hiruwiki.getLogoSvg(22));
+    }
     var fText = document.createElement("span");
-    fText.innerHTML = t('hint');
+    fText.className = "hw-footer__text";
+    fText.textContent = t('hint');
     footer.appendChild(fLogo);
     footer.appendChild(fText);
     container.appendChild(footer);
