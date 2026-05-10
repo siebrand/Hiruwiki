@@ -167,7 +167,6 @@ qqq:
     touchBC: Label for the tangent point on side BC
     touchCA: Label for the tangent point on side CA
     triangle: Section heading for the triangle properties
-    hint: Explanation about how the module is interactive
   marble-jar:
     _name: Name of the Probability Jar module
     colorBlue: Name of the blue marble colour
